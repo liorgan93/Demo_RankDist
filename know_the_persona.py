@@ -191,7 +191,7 @@ def know_the_persona_page():
         col1, col2, col3 = st.columns(3)
 
         with col3:
-            st.button("Dont Know ❌", key="dont_know", on_click=handle_dont_know_song)
+            st.button("Dont Know ✖️", key="dont_know", on_click=handle_dont_know_song)
 
         with col1:
             st.button("Know ✅", key="know", on_click=handle_know_song)
