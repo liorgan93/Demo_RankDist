@@ -4,7 +4,7 @@ from user_classification_intro import set_background
 import time
 
 def get_songs_by_persona(persona_num):
-    set_background("other images/Background.webp")
+    set_background("other images/background.webp")
     df = pd.read_csv('playlists_excel/personas_songs.csv')
     songs_df = df[df['cluster'] == persona_num]
     return songs_df

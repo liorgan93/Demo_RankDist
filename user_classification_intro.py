@@ -23,7 +23,7 @@ def set_background(image_file):
         st.markdown(page_background, unsafe_allow_html=True)
 
 def user_classification_intro_page():
-    set_background("other images/Background.webp")
+    set_background("other images/background.webp")
 
     st.markdown(
         """

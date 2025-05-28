@@ -13,7 +13,7 @@ def opening_page():
     def click_button():
         st.session_state.page = "user_classification_intro"
 
-    set_background("other images/Background.webp")
+    set_background("other images/background.webp")
 
     st.markdown(f"""
         <style>
