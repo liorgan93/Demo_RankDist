@@ -37,7 +37,7 @@ def thank_you_research():
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             }
             .thank-you-title {
-                font-size: 35px;
+                font-size: 32px;
                 font-weight: bold;
                 color: #222;
                 margin-bottom: 15px;
