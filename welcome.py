@@ -73,7 +73,7 @@ def welcome_page():
         .subtitle {{
             font-size: 18px;
             color: #81D4FA;
-            margin-bottom: 14px;
+            margin-bottom: 18px;
             margin-top: 5px;
         }}
         .logo-img {{
