@@ -41,7 +41,7 @@ def welcome_page():
             margin-top: 30px !important;
         }}
         .title-text {{
-            font-size: 20px !important;
+            font-size: 22px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
@@ -71,14 +71,14 @@ def welcome_page():
             margin-right: auto;
         }}
         .subtitle {{
-            font-size: 18px;
+            font-size: 16px;
             color: #81D4FA;
             margin-bottom: 18px;
             margin-top: 5px;
         }}
         .logo-img {{
-            width: 130px; 
-            margin-bottom: 5px;
+            width: 125px; 
+            margin-bottom: 3px;
         }}
         </style>
         <div class="container">
