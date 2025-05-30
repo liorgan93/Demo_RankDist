@@ -37,8 +37,8 @@ def welcome_page():
             overflow-x: hidden;
         }}
         .block-container {{
-            padding-top: 30px !important;
-            margin-top: 30px !important;
+            padding-top: 25px !important;
+            margin-top: 25px !important;
         }}
         .title-text {{
             font-size: 22px !important;
@@ -64,7 +64,7 @@ def welcome_page():
 
         }}
         .footer-note {{
-            font-size: 10px;
+            font-size: 9px;
             color: #CCCCCC;
             text-align: left;
             margin-left: auto;
@@ -77,7 +77,7 @@ def welcome_page():
             margin-top: 5px;
         }}
         .logo-img {{
-            width: 125px; 
+            width: 135px; 
             margin-bottom: 3px;
         }}
         </style>
