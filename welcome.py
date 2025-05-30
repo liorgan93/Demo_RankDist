@@ -14,7 +14,8 @@ def welcome_page():
 
     set_background("other images/background.webp")
 
-    image_base64 = get_base64_image("other images/Music_notes.jpg")
+    logo = get_base64_image("other images/logo.jpg")
+    music = get_base64_image("other images/Music_notes.jpg")
 
     st.markdown(
         f"""
@@ -45,9 +46,13 @@ def welcome_page():
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
             margin-bottom: 0px;
-            padding-top: 20px;
+            margin-top: 0px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+
         }}
         .treble-clef {{
+            padding-top: 0px;
             margin-bottom: 0px;
             max-width: 100%;
         }}
@@ -66,14 +71,19 @@ def welcome_page():
         .subtitle {{
             font-size: 18px;
             color: #81D4FA;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             margin-top: 10px;
+        }}
+        .logo-img {{
+            width: 150px; 
+            margin-bottom: 5px;
         }}
         </style>
         <div class="container">
-            <p class="title-text">Welcome to our Music Recommendation Experience 🎶</p>
+            <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
+            <p class="title-text">Welcome to our Music Recommendation Experience</p>
             <div class="subtitle">Can you beat the algorithm RankDist in music recommendation?</div>
-            <img src="data:image/webp;base64,{image_base64}" alt="Music Notes" class="music-image">
+            <img src="data:image/webp;base64,{music}" class="music-image">
             <div class="footer-note">
                 ✱ This demo offers an interactive music experience using songs played via Spotify.
                 All content remains the property of the respective rights holders and was used for educational and research purposes only.
