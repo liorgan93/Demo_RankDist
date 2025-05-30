@@ -71,7 +71,7 @@ def welcome_page():
         .subtitle {{
             font-size: 18px;
             color: #81D4FA;
-            margin-bottom: 0px;
+            margin-bottom: 10px;
             margin-top: 10px;
         }}
         .logo-img {{
@@ -81,7 +81,7 @@ def welcome_page():
         </style>
         <div class="container">
             <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
-            <p class="title-text">Welcome to our Music Recommendation Experience</p>
+            <p class="title-text">Welcome to our Music Recommendation Experience!</p>
             <div class="subtitle">Can you beat the algorithm RankDist in music recommendation?</div>
             <img src="data:image/webp;base64,{music}" class="music-image">
             <div class="footer-note">
