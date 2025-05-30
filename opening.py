@@ -54,7 +54,7 @@ def opening_page():
         }}
         .alg-image {{
             max-width: 100%;
-            max-height: 110px;
+            max-height: 100px;
             margin-bottom: 10px;
             border-radius: 20px;
         }}
