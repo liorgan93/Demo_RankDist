@@ -75,7 +75,7 @@ def welcome_page():
             margin-top: 10px;
         }}
         .logo-img {{
-            width: 150px; 
+            width: 140px; 
             margin-bottom: 5px;
         }}
         </style>
