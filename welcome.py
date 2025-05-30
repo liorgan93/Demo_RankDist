@@ -21,7 +21,7 @@ def welcome_page():
         f"""
         <style>
         .container {{
-            background: linear-gradient(135deg, rgba(10, 10, 40, 0.97), rgba(20, 20, 60, 0.97));
+            background: linear-gradient(135deg, rgba(10, 10, 40, 0.98), rgba(20, 20, 60, 0.98));
             border-radius: 20px;
             padding: 7px;
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
@@ -59,7 +59,7 @@ def welcome_page():
         .music-image {{
             max-width: 100%;
             max-height: 100px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }}
         .footer-note {{
             font-size: 10px;
@@ -71,11 +71,11 @@ def welcome_page():
         .subtitle {{
             font-size: 18px;
             color: #81D4FA;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             margin-top: 10px;
         }}
         .logo-img {{
-            width: 140px; 
+            width: 130px; 
             margin-bottom: 5px;
         }}
         </style>
