@@ -59,7 +59,9 @@ def welcome_page():
         .music-image {{
             max-width: 100%;
             max-height: 100px;
-            margin-bottom: 2px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+
         }}
         .footer-note {{
             font-size: 10px;
