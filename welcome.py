@@ -81,12 +81,19 @@ def welcome_page():
             height: 90px; 
             margin-bottom: 3px;
         }}
+        .time_est {{
+            font-size: 14px;
+            color: #CCCCCC;
+            text-align: left;
+            font-weight: bold;
+        }}
         </style>
         <div class="container">
             <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
             <p class="title-text">Welcome to our Music Recommendation Experience!</p>
             <div class="subtitle">Can you beat the algorithm RankDist in music recommendation?</div>
             <img src="data:image/webp;base64,{music}" class="music-image">
+            <div class="time_est"> Estimated time: <strong> 8–10 minutes </strong> </div>
             <div class="footer-note">
                 ✱ This demo offers an interactive music experience using songs played via Spotify.
                 All content remains the property of the respective rights holders and was used for educational and research purposes only.
