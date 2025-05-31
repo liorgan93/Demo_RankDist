@@ -47,7 +47,7 @@ def method_choose_page():
             .sub-header-text {
                 color: #CCCCCC;
                 font-size: 20px;
-                margin: 0;
+                margin: 0px;
                 font-weight: bold;
             }
 
