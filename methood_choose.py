@@ -37,7 +37,7 @@ def method_choose_page():
                 background-color: rgba(0, 0, 50, 0.99);
                 padding: 3px;
                 text-align: center;
-                margin: 0 auto 8px auto !important;
+                margin: 0 auto 1px auto !important;
 
             }
 
