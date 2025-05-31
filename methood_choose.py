@@ -40,7 +40,7 @@ def method_choose_page():
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 24px !important;
+                font-size: 22px !important;
                 margin: 0;
                 font-weight: bold;
             }
@@ -53,7 +53,7 @@ def method_choose_page():
 
             .explanation-container {
                 background-color: rgba(30, 30, 60, 0.95);
-                padding: 6px;
+                padding: 4px;
                 border-radius: 20px;
                 margin-top: 0px;
             }
@@ -62,14 +62,17 @@ def method_choose_page():
                 font-size: 14px;
                 margin: 5px 0;
             }
+            .explanation-container {
+                padding-bottom: 1px !important;
+                margin-bottom: 1px !important;
+            }
         </style>
     """, unsafe_allow_html=True)
 
-    # Currently all simulated choices lead the user to select TOP-K, this will be updated later
     st.markdown(f"""
         <div class="header-container">
             <p class="header-text">Now that you know {persona_name}, recommend songs!</p>
-            <p class="sub-header-text">Choose a task to compare your choices to the algorithm's results</p>
+            <p class="sub-header-text">Choose a task and compete against the algorithm</p>
         </div>
 
         <div class="explanation-container">
