@@ -40,8 +40,6 @@ def welcome_page():
         .block-container {{
             padding-top: 25px !important;
             margin-top: 25px !important;
-            adding-bottom: 0px !important;
-            margin-bottom: 0px !important;
         }}
         .title-text {{
             font-size: 22px !important;
@@ -61,7 +59,7 @@ def welcome_page():
         }}
         .music-image {{
             max-width: 100%;
-            max-height: 100px;
+            max-height: 95px;
             margin-bottom: 0px;
             padding-bottom: 0px;
 
