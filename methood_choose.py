@@ -48,7 +48,7 @@ def method_choose_page():
             }
             .sub-header-text {
                 color: #CCCCCC;
-                font-size: 17px;
+                font-size: 14px;
                 margin: 0px;
                 font-weight: bold;
             }
