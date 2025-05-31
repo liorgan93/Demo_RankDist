@@ -25,9 +25,13 @@ def compare_recommendations_page():
     user_column = matching_songs + non_matching_user_songs + [""] * (max_length - len(matching_songs) - len(non_matching_user_songs))
     algorithm_column = matching_songs + non_matching_algorithm_songs + [""] * (max_length - len(matching_songs) - len(non_matching_algorithm_songs))
 
+    real_top_k = ["Dancing Queen", "Imagine", "Hotel California"]
+    real_top_k_column = real_top_k + [""] * (max_length - len(real_top_k))
+
     comparison_df = pd.DataFrame({
         "User's Choice": user_column,
-        "Algorithm's Choice": algorithm_column
+        "RankDist's Choice": algorithm_column,
+        "Real Top K": real_top_k_column
     })
 
     # CSS for styling
@@ -35,7 +39,7 @@ def compare_recommendations_page():
         """
         <style>
         .block-container {
-            padding-top: 50px !important;
+            padding-top: 40px !important;
         }
 
         [data-testid="stAppViewContainer"] {
@@ -56,14 +60,20 @@ def compare_recommendations_page():
 
         .success-text {
             color: #4CAF50;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: bold;
             text-align: center;
         }
 
         .failure-text {
             color: #E53935;
-            font-size: 18px;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .tie-text {
+            color: ##2196F3;
+            font-size: 17px;
             font-weight: bold;
             text-align: center;
         }
@@ -72,7 +82,7 @@ def compare_recommendations_page():
         unsafe_allow_html=True
     )
 
-    st.markdown('<h3 class="center-text">Here\'s a direct comparison of your song choices and what the algorithm picked for you:</h3>',
+    st.markdown('<h3 class="center-text">Here\'s a direct comparison of your song choices and what the algorithm RankDist picked for you:</h3>',
         unsafe_allow_html=True
     )
 
@@ -80,10 +90,13 @@ def compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True)
 
-    if match_percentage >= 50:
-        st.markdown('<p class="success-text">Your recommendations are very similar to RankDist’s!</p>', unsafe_allow_html=True)
+    if match_percentage > 50:
+        st.markdown('<p class="success-text">The algorithm RankDist won! — look like the it’s can mimic and even surpass human intuition</p>', unsafe_allow_html=True)
     else:
-        st.markdown('<p class="failure-text">Your recommendations differ from RankDist’s</p>', unsafe_allow_html=True)
+        if match_percentage < 50:
+            st.markdown('<p class="failure-text">You beat the algorithm Randist! — algorithms probably still has some learning to do</p>', unsafe_allow_html=True)
+        else:
+            st.markdown('<p class="tie-text">it’s a tie between you and the algorithm! - great minds think alike</p>', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
