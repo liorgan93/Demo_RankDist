@@ -28,11 +28,11 @@ def method_choose_page():
     st.markdown("""
         <style>
             .block-container {
-                padding-top: 50px !important;
+                padding-top: 30px !important;
             }
             .header-container {
                 background-color: rgba(0, 0, 50, 0.99);
-                padding: 10px;
+                padding: 8px;
                 text-align: center;
                 margin: 0 auto 10px auto !important;
 
@@ -40,7 +40,7 @@ def method_choose_page():
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 26px !important;
+                font-size: 24px !important;
                 margin: 0;
                 font-weight: bold;
             }
@@ -53,7 +53,7 @@ def method_choose_page():
 
             .explanation-container {
                 background-color: rgba(30, 30, 60, 0.95);
-                padding: 8px;
+                padding: 6px;
                 border-radius: 20px;
                 margin-top: 0px;
             }
@@ -84,8 +84,8 @@ def method_choose_page():
     st.markdown("""
         <style>
         .st-key-aa button, .st-key-bb button, .st-key-cc button {
-            width: 130px;
-            height: 130px;
+            width: 105px;
+            height: 105px;
             background-color: transparent;
             border: none;
             cursor: pointer;
@@ -117,6 +117,6 @@ def method_choose_page():
     col1, col2, col3 = st.columns([1,1,1])
 
     with col2:
-        st.button("Perfect Precision", key="aa", on_click=click_a, use_container_width=True)
-        st.button("Relevant\nSet", key="bb", on_click=click_b, use_container_width=True)
-        st.button("Ordered\nList", key="cc", on_click=click_c, use_container_width=True)
+        st.button("", key="aa", on_click=click_a, use_container_width=True)
+        st.button("", key="bb", on_click=click_b, use_container_width=True)
+        st.button("", key="cc", on_click=click_c, use_container_width=True)
