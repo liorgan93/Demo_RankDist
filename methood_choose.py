@@ -35,7 +35,7 @@ def method_choose_page():
             }
             .header-container {
                 background-color: rgba(0, 0, 50, 0.99);
-                padding: 3px;
+                padding: 1px;
                 text-align: center;
                 margin: 0 auto 5px auto !important;
 
