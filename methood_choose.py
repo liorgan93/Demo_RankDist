@@ -25,6 +25,7 @@ def method_choose_page():
     persona_name = st.session_state.persona
 
 
+
     st.markdown("""
         <style>
             .block-container {
@@ -32,30 +33,28 @@ def method_choose_page():
             }
             .header-container {
                 background-color: rgba(0, 0, 50, 0.99);
-                padding-top: 5px !important; 
+                padding: 5px;
                 text-align: center;
-                margin: 0 auto 0px auto !important;
-                width: 100%; 
-                max-width: 100%; 
-                box-sizing: border-box; 
+                margin: 0 auto 10px auto !important;
+
             }
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 21px !important;
+                font-size: 20px !important;
                 margin: 0;
                 font-weight: bold;
             }
             .sub-header-text {
                 color: #CCCCCC;
-                font-size: 23px !important;
-                margin: 0px;
+                font-size: 19px !important;
+                margin: 0;
                 font-weight: bold;
             }
 
             .explanation-container {
                 background-color: rgba(30, 30, 60, 0.95);
-                padding: 4px;
+                padding: 3px;
                 border-radius: 20px;
                 margin-top: 0px;
             }
@@ -64,19 +63,15 @@ def method_choose_page():
                 font-size: 14px;
                 margin: 5px 0;
             }
-            .explanation-container {
-                padding-bottom: 0px !important;
-                margin-bottom: 0px !important;
-            }
-            
         </style>
     """, unsafe_allow_html=True)
 
     st.markdown(f"""
         <div class="header-container">
-            <p class="header-text">Now that you know {persona_name} you ready recommend songs!</p>
+            <p class="header-text">Now that you know {persona_name} and ready to recommend songs!</p>
             <p class="sub-header-text">Choose a task</p>
         </div>
+
 
         <div class="explanation-container">
             <p><strong>1️⃣ <span style="text-decoration: underline;">Perfect Precision:</span></strong> Pick exactly the TOP 3 songs, no mistakes allowed.</p>
@@ -90,8 +85,8 @@ def method_choose_page():
     st.markdown("""
         <style>
         .st-key-aa button, .st-key-bb button, .st-key-cc button {
-            width: 100px;
-            height: 100px;
+            width: 97px;
+            height: 97px;
             background-color: transparent;
             border: none;
             cursor: pointer;
