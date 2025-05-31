@@ -56,6 +56,8 @@ def user_classification_intro_page():
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
             margin-bottom: 5px;
+            margin-top: 0px;
+
         }
         .description {
             font-size: 22px;

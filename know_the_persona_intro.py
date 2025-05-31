@@ -43,12 +43,6 @@ def know_the_persona_intro_page():
             margin: auto;
             font-family: 'Poppins', sans-serif;
         }
-        .header {
-            font-size: 26px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
         .header-small {
             font-size: 14px;
             font-weight: 700;
@@ -63,7 +57,7 @@ def know_the_persona_intro_page():
             padding-top: 25px !important;
             margin-top: 25px !important;
         }
-        .header-main {
+        .header {
             margin-top: 10px;
             font-size: 26px;
             font-weight: 600;
@@ -75,6 +69,8 @@ def know_the_persona_intro_page():
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
             margin-bottom: 5px;
+            margin-top: 0px;
+
         }
         .description {
             font-size: 20px;
