@@ -7,7 +7,7 @@ import base64
 def top_k_choose_page():
     st.set_page_config(page_title="Select Your Songs", layout="wide")
     from user_classification_intro import set_background
-    set_background("other images/Background.webp")
+    set_background("other images/background.webp")
 
     audio_folder = "top_k_songs_audio"
     csv_file_path = "playlists_excel/top_k_songs.csv"
@@ -124,7 +124,7 @@ def top_k_choose_page():
             if len(selected_songs) != 3:
                 st.session_state.error_msg = "You must select exactly 3 songs before continuing."
             else:
-                st.session_state.page = "compare_lists"
+                st.session_state.page = "compare_recommendations"
                 st.session_state.user_choice = selected_songs
 
         col_next = st.columns([0.15, 0.7, 0.15])
