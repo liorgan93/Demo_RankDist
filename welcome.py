@@ -28,15 +28,14 @@ def welcome_page():
             text-align: center;
             margin: auto;
             margin-bottom: 10px;
-            width: 98%;
-            max-width: 98%;
+            width: 100%;
+            max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             overflow-x: hidden;
-            padding: 1px;
-
+            
         }}
         .block-container {{
             padding-top: 25px !important;
