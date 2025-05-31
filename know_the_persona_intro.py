@@ -71,7 +71,7 @@ def know_the_persona_intro_page():
             margin-bottom: 12px;
         }
         .sub-header {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 500;
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 

@@ -106,7 +106,7 @@ def persona_reveal_page():
         f"""
             <div class="container">
                 <div class="title">Meet {st.session_state.persona}!</div>
-                <div class="sub_title"> Based on your musical taste, you share the same vibe! </div>
+                <div class="sub_title"> Based on your musical taste you share the same vibe! </div>
             </div>
             """,
         unsafe_allow_html=True,

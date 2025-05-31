@@ -50,6 +50,13 @@ def user_classification_intro_page():
             margin-bottom: 20px;
             color: #ffffff;
         }
+        .sub-header {
+            font-size: 18px;
+            font-weight: 500;
+            color: #ffffff;
+            font-family: 'Verdana', sans-serif; 
+            margin-bottom: 15px;
+        }
         .description {
             font-size: 22px;
             font-weight: 300;
@@ -73,7 +80,8 @@ def user_classification_intro_page():
         }
         </style>
         <div class="container">
-            <div class="header"> Like or Dislike? <br> First, Let get familiar with your music taste!</div>
+            <div class="header"> Like or Dislike? </div>
+            <div class="sub-header"> First, Let get familiar with your music taste! </div>
             <div class="description">
                 <span class="green-text">Like the song?</span>&nbsp;&nbsp;Tap 👍 <br>
                 <span class="red-text">Not your vibe?</span>&nbsp;&nbsp;Tap 👎
