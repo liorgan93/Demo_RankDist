@@ -40,6 +40,8 @@ def welcome_page():
         .block-container {{
             padding-top: 25px !important;
             margin-top: 25px !important;
+            adding-bottom: 0px !important;
+            margin-bottom: 0px !important;
         }}
         .title-text {{
             font-size: 22px !important;
