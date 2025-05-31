@@ -10,6 +10,7 @@ def get_songs_by_persona(persona_num):
     return songs_df
 
 def know_the_persona_page():
+    persona_name = st.session_state.persona
     st.session_state.persona_songs_df = get_songs_by_persona(st.session_state.chosen_person_number)
 
     if "song_index" not in st.session_state:
@@ -126,6 +127,9 @@ def know_the_persona_page():
 
         st.markdown(
             f"""<div class="container">
+                <div style="text-align: left; margin-bottom: 10px; font-size: 15px; padding-left: 10px; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
+                    Songs that {persona_name} Likes – Song Number {completed_steps}
+                </div>
                 <div class="song-title">{song_title}</div>
                 <div class="song-artist">{song_artist}</div>
                     </div>
