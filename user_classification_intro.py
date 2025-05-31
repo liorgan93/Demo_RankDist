@@ -51,11 +51,11 @@ def user_classification_intro_page():
             color: #ffffff;
         }
         .sub-header {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 500;
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
         .description {
             font-size: 22px;
