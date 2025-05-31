@@ -18,7 +18,7 @@ def know_the_persona_page():
     current_index = st.session_state.song_index
 
     if current_index >= len(st.session_state.persona_songs_df):
-        st.session_state.page = "research_page"
+        st.session_state.page = "method_choose"
         st.rerun()
     else:
         song_title = st.session_state.persona_songs_df.iloc[current_index]["name"]

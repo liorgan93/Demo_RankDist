@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-def compare_lists_page():
+def compare_recommendations_page():
 
     selected_songs = st.session_state.user_choice
     algorithm_df = pd.read_csv("alg_results.csv")
@@ -10,7 +10,6 @@ def compare_lists_page():
         st.error("Error: The file must contain a 'top_k' column.")
         return
 
-    # Comparison page is incomplete and will be implemented later based on the selected method and real results
     algorithm_songs = sorted(set(algorithm_df['top_k'].dropna().tolist()))
     user_songs = sorted(set(selected_songs))
 
