@@ -15,10 +15,13 @@ def know_the_persona_page():
     if "song_index" not in st.session_state:
         st.session_state.song_index = 0
 
+    if "known_songs_count" not in st.session_state:
+        st.session_state.known_songs_count = 0
+
     current_index = st.session_state.song_index
 
-    if current_index >= len(st.session_state.persona_songs_df):
-        st.session_state.page = "method_choose"
+    if st.session_state.known_songs_count >= 3 or current_index >= len(st.session_state.persona_songs_df):
+        st.session_state.page = "research_page"
         st.rerun()
     else:
         song_title = st.session_state.persona_songs_df.iloc[current_index]["name"]
@@ -123,7 +126,6 @@ def know_the_persona_page():
 
         st.markdown(
             f"""<div class="container">
-                <div style="text-align: left; font-size: 13px; padding-left: 10px;">{progress} {completed_steps}/{total_steps}</div>
                 <div class="song-title">{song_title}</div>
                 <div class="song-artist">{song_artist}</div>
                     </div>
@@ -184,6 +186,7 @@ def know_the_persona_page():
 
         def handle_know_song():
             st.session_state.song_index += 1
+            st.session_state.known_songs_count += 1
 
         def handle_dont_know_song():
             st.session_state.song_index += 1
