@@ -32,7 +32,7 @@ def method_choose_page():
             }
             .header-container {
                 background-color: rgba(0, 0, 50, 0.99);
-                padding: 0px; 
+                padding-top: 5px !important; 
                 text-align: center;
                 margin: 0 auto 0px auto !important;
                 width: 100%; 
@@ -65,8 +65,8 @@ def method_choose_page():
                 margin: 5px 0;
             }
             .explanation-container {
-                padding-bottom: 1px !important;
-                margin-bottom: 1px !important;
+                padding-bottom: 0px !important;
+                margin-bottom: 0px !important;
             }
             
         </style>
@@ -90,8 +90,8 @@ def method_choose_page():
     st.markdown("""
         <style>
         .st-key-aa button, .st-key-bb button, .st-key-cc button {
-            width: 105px;
-            height: 105px;
+            width: 100px;
+            height: 100px;
             background-color: transparent;
             border: none;
             cursor: pointer;
