@@ -41,13 +41,13 @@ def method_choose_page():
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 20px !important;
+                font-size: 18px !important;
                 margin: 0;
                 font-weight: bold;
             }
             .sub-header-text {
                 color: #CCCCCC;
-                font-size: 19px !important;
+                font-size: 21px !important;
                 margin: 0;
                 font-weight: bold;
             }
@@ -61,7 +61,7 @@ def method_choose_page():
             .explanation-container p {
                 color: #FFFFFF;
                 font-size: 14px;
-                margin: 5px 0;
+                margin: 0 5px;
             }
         </style>
     """, unsafe_allow_html=True)
