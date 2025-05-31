@@ -35,6 +35,8 @@ def welcome_page():
             align-items: center;
             justify-content: center;
             overflow-x: hidden;
+            padding: 1px;
+
         }}
         .block-container {{
             padding-top: 25px !important;
