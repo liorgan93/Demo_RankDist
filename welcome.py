@@ -23,7 +23,7 @@ def welcome_page():
         .container {{
             background: linear-gradient(135deg, rgba(10, 10, 40, 0.98), rgba(20, 20, 60, 0.98));
             border-radius: 20px;
-            padding: 7px;
+            padding: 0px;
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
             text-align: center;
             margin: auto;
