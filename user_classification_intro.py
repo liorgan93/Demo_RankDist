@@ -45,10 +45,9 @@ def user_classification_intro_page():
             margin-top: 25px !important;
         }
         .header {
-            margin-top: 5px;
+            margin-top: 10px;
             font-size: 26px;
             font-weight: 600;
-            margin-bottom: 5px;
             color: #ffffff;
         }
         .sub-header {
