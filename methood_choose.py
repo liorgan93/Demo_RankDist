@@ -32,9 +32,9 @@ def method_choose_page():
             }
             .header-container {
                 background-color: rgba(0, 0, 50, 0.99);
-                padding: 5px; 
+                padding: 0px; 
                 text-align: center;
-                margin: 0 auto 10px auto !important;
+                margin: 0 auto 0px auto !important;
                 width: 100%; 
                 max-width: 100%; 
                 box-sizing: border-box; 
@@ -74,7 +74,7 @@ def method_choose_page():
 
     st.markdown(f"""
         <div class="header-container">
-            <p class="header-text">Now that you know {persona_name} and you ready recommend songs!</p>
+            <p class="header-text">Now that you know {persona_name} you ready recommend songs!</p>
             <p class="sub-header-text">Choose a task to compete with the algorithm</p>
         </div>
 
