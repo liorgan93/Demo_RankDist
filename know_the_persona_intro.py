@@ -64,18 +64,18 @@ def know_the_persona_intro_page():
             margin-top: 25px !important;
         }
         .header-main {
-            font-size: 18px;
+            margin-top: 5px;
+            font-size: 26px;
             font-weight: 600;
+            margin-bottom: 5px;
             color: #ffffff;
-            font-family: 'Arial', sans-serif; 
-            margin-bottom: 12px;
         }
         .sub-header {
             font-size: 20px;
             font-weight: 500;
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
         .description {
             font-size: 20px;
