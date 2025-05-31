@@ -46,7 +46,7 @@ def user_classification_intro_page():
         }
         .header {
             margin-top: 10px;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 600;
             color: #ffffff;
         }

@@ -59,7 +59,7 @@ def know_the_persona_intro_page():
         }
         .header {
             margin-top: 13px;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 600;
             color: #ffffff;
         }
@@ -100,7 +100,7 @@ def know_the_persona_intro_page():
         <div class="container">
             <div class="header-small">Soon you'll recommend songs for {persona_name}. But first, let’s get familiar with {gender_value}!</div>
             <div class="header"> Know or Don't Know? </div>
-            <div class="sub-header">We’ll now show you <strong> songs that {persona_name} likes</strong>. Listen to them to get to know {gender_value} better and select if you know or don’t know each one.</div>
+            <div class="sub-header">We’ll now show you <strong> songs that {persona_name} likes</strong>. Listen to them to get to know {gender_value} better and Indicate for each song if you know it or not</div>
             <div class="description">
                 <span class="green-text">Know this song?</span> Tap ✅<br>
                 <span class="red-text">Never heard of it?</span> Tap ✖️️
