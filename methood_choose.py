@@ -40,13 +40,13 @@ def method_choose_page():
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 22px !important;
+                font-size: 21px !important;
                 margin: 0;
                 font-weight: bold;
             }
             .sub-header-text {
                 color: #CCCCCC;
-                font-size: 18px;
+                font-size: 17px;
                 margin: 0px;
                 font-weight: bold;
             }
@@ -66,13 +66,14 @@ def method_choose_page():
                 padding-bottom: 1px !important;
                 margin-bottom: 1px !important;
             }
+            
         </style>
     """, unsafe_allow_html=True)
 
     st.markdown(f"""
         <div class="header-container">
             <p class="header-text">Now that you know {persona_name}, recommend songs!</p>
-            <p class="sub-header-text">Choose a task and compete against the algorithm</p>
+            <p class="sub-header-text">Choose a task and compete with the algorithm</p>
         </div>
 
         <div class="explanation-container">
