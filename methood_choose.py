@@ -30,6 +30,8 @@ def method_choose_page():
         <style>
             .block-container {
                 padding-top: 30px !important;
+                padding-bottom: 0px !important;
+
             }
             .header-container {
                 background-color: rgba(0, 0, 50, 0.99);
