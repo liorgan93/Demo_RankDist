@@ -32,10 +32,12 @@ def method_choose_page():
             }
             .header-container {
                 background-color: rgba(0, 0, 50, 0.99);
-                padding: 8px;
+                padding: 5px; 
                 text-align: center;
                 margin: 0 auto 10px auto !important;
-
+                width: 100%; 
+                max-width: 100%; 
+                box-sizing: border-box; 
             }
 
             .header-text {
