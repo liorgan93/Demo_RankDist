@@ -60,7 +60,6 @@ def compare_recommendations_page():
             padding-top: 5px;
             font-size: 23px !important;
             font-weight: bold;
-            color: black;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
 
         }
