@@ -2,6 +2,47 @@ import streamlit as st
 import base64
 from user_classification_intro import set_background
 
+if "page" not in st.session_state:
+    st.session_state.page = "welcome"
+
+elif st.session_state.page == "opening":
+    from opening import opening_page
+    opening_page()
+elif st.session_state.page == "user_classification_intro":
+    from user_classification_intro import user_classification_intro_page
+    user_classification_intro_page()
+elif st.session_state.page == "user_classification":
+    from user_classification import user_classification_page
+    user_classification_page()
+elif st.session_state.page == "persona_reveal":
+    from persona_reveal import persona_reveal_page
+    persona_reveal_page()
+elif st.session_state.page == "know_the_persona_intro":
+    from know_the_persona_intro import know_the_persona_intro_page
+    know_the_persona_intro_page()
+elif st.session_state.page == "know_the_persona":
+    from know_the_persona import know_the_persona_page
+    know_the_persona_page()
+elif st.session_state.page == "method_choose":
+    from methood_choose import method_choose_page
+    method_choose_page()
+elif st.session_state.page == "top_k_choose":
+    from top_k_choose import top_k_choose_page
+    top_k_choose_page()
+elif st.session_state.page == "compare_recommendations":
+    from compare_recommendations import compare_recommendations_page
+    compare_recommendations_page()
+elif st.session_state.page == "thank_you":
+    from thank_you import thank_you_page
+    thank_you_page()
+elif st.session_state.page == "research_page":
+    from research_page import research_page
+    research_page()
+elif st.session_state.page == "thank_you_research":
+    from thank_you_research import thank_you_research
+    thank_you_research()
+
+
 def get_base64_image(image_path):
     with open(image_path, "rb") as file:
         return base64.b64encode(file.read()).decode()
@@ -20,10 +61,6 @@ def welcome_page():
     st.markdown(
         f"""
         <style>
-        .block-container {{
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-        }}
         .container {{
             background: linear-gradient(135deg, rgba(10, 10, 40, 0.98), rgba(20, 20, 60, 0.98));
             border-radius: 20px;
@@ -135,49 +172,7 @@ def welcome_page():
     col1, col2, col3 = st.columns([1, 1, 1])
 
     with col2:
-        st.button("", key="start_button", on_click=click_button)
-
-
-if "page" not in st.session_state:
-    st.session_state.page = "welcome"
+        st.button("", key="start_button", on_click=click_button, use_container_width=True)
 
 if st.session_state.page == "welcome":
     welcome_page()
-elif st.session_state.page == "opening":
-    from opening import opening_page
-    opening_page()
-elif st.session_state.page == "user_classification_intro":
-    from user_classification_intro import user_classification_intro_page
-    user_classification_intro_page()
-elif st.session_state.page == "user_classification":
-    from user_classification import user_classification_page
-    user_classification_page()
-elif st.session_state.page == "persona_reveal":
-    from persona_reveal import persona_reveal_page
-    persona_reveal_page()
-elif st.session_state.page == "know_the_persona_intro":
-    from know_the_persona_intro import know_the_persona_intro_page
-    know_the_persona_intro_page()
-elif st.session_state.page == "know_the_persona":
-    from know_the_persona import know_the_persona_page
-    know_the_persona_page()
-elif st.session_state.page == "method_choose":
-    from methood_choose import method_choose_page
-    method_choose_page()
-elif st.session_state.page == "top_k_choose":
-    from top_k_choose import top_k_choose_page
-    top_k_choose_page()
-elif st.session_state.page == "compare_recommendations":
-    from compare_recommendations import compare_recommendations_page
-    compare_recommendations_page()
-elif st.session_state.page == "thank_you":
-    from thank_you import thank_you_page
-    thank_you_page()
-elif st.session_state.page == "research_page":
-    from research_page import research_page
-    research_page()
-elif st.session_state.page == "thank_you_research":
-    from thank_you_research import thank_you_research
-    thank_you_research()
-
-
