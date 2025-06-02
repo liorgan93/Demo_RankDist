@@ -55,7 +55,7 @@ def compare_recommendations_page():
 
         .title-text {
             text-align: center;
-            margin-top: 5px;
+            margin-top: 10px;
             margin-bottom: 28px;
             padding-top: 5px;
             font-size: 23px !important;
@@ -80,6 +80,22 @@ def compare_recommendations_page():
             font-size: 17px;
             font-weight: bold;
             text-align: center;
+        }
+        .stButton button {
+            width: 100%;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #800080;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 0px !important;
+        }
+
+        .stButton button:hover {
+            background-color: #660066;
         }
         </style>
         """,
