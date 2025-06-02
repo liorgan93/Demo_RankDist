@@ -8,7 +8,7 @@ def get_base64_image(image_path):
 
 
 def welcome_page():
-    st.set_page_config(page_title="RankDist Demo" , layout="wide")
+    st.set_page_config(page_title="RankDist Demo")
     def click_button():
         st.session_state.page = "opening"
 
@@ -20,6 +20,9 @@ def welcome_page():
     st.markdown(
         f"""
         <style>
+        body {{
+            overflow-x: hidden !important;
+        }}
         .container {{
             background: linear-gradient(135deg, rgba(10, 10, 40, 0.98), rgba(20, 20, 60, 0.98));
             border-radius: 20px;
