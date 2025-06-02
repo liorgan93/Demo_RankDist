@@ -55,7 +55,7 @@ def compare_recommendations_page():
 
         .title-text {
             text-align: center;
-            font-size: 30px;
+            font-size: 100px;
             font-weight: bold;
         }
 
