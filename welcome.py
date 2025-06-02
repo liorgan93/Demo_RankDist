@@ -57,7 +57,17 @@ def welcome_page():
 
     logo = get_base64_image("other images/logo.jpg")
     music = get_base64_image("other images/Music_notes.jpg")
-
+    st.markdown("""
+        <style>
+        html, body, [class*="main"] {
+            height: 100vh;
+            overflow-y: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    
     st.markdown(
         f"""
         <style>
@@ -148,14 +158,15 @@ def welcome_page():
     st.markdown("""
             <style>
             .st-key-start_button button {
-                width: 97px;
-                height: 97px;
+                width: 130px;
+                height: 130px;
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
                 border-radius: 50%;
                 transition: transform 0.6s ease-in-out, box-shadow 0.3s;
                 box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+                background-image: url('data:image/webp;base64,""" + start + """');
                 background-size: cover;
                 margin: auto;
                 display: flex;
