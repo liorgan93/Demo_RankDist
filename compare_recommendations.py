@@ -115,7 +115,7 @@ def compare_recommendations_page():
     def display_message(text, color):
         html = f"""
         <div style="
-            background: linear-gradient(135deg, rgba(30, 60, 120, 0.95), rgba(20, 40, 100, 0.95));
+            background: linear-gradient(135deg, #66ccff, #99ddff);
             border-radius: 10px;
             padding: 3px;
             margin-top: 3px;
@@ -127,7 +127,7 @@ def compare_recommendations_page():
         st.markdown(html, unsafe_allow_html=True)
 
     if match_percentage > 50:
-        display_message(algo_win_msg, "red")
+        display_message(algo_win_msg, "green")
     elif match_percentage < 50:
         display_message(user_win_msg, "green")
     else:
