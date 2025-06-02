@@ -14,7 +14,7 @@ def thank_you_page():
     file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
     encoded_file = get_base64_encoded_file(file_path)
 
-    set_background("other images/background.jpg")
+    set_background("other images/background.webp")
     st.balloons()
     st.markdown(
         """
