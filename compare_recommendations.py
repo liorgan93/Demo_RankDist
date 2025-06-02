@@ -60,6 +60,8 @@ def compare_recommendations_page():
             padding-top: 5px;
             font-size: 23px !important;
             font-weight: bold;
+            text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
+
         }
 
         .success-text {
@@ -126,8 +128,9 @@ def compare_recommendations_page():
             background: linear-gradient(135deg, #66ccff, #99ddff);
             border-radius: 10px;
             margin-top: 3px;
+            margin-bottom: 5px;
             text-align: center;
-            padding: 5px;
+            padding: 3px;
         ">
             <p style="color: black; font-size: 20px;">
                 <strong>{bold_part.strip()}</strong> — {regular_part.strip()}
