@@ -20,6 +20,10 @@ def welcome_page():
     st.markdown(
         f"""
         <style>
+        .block-container {{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }}
         .container {{
             background: linear-gradient(135deg, rgba(10, 10, 40, 0.98), rgba(20, 20, 60, 0.98));
             border-radius: 20px;
