@@ -18,13 +18,13 @@ def thank_you_page():
     st.markdown(
         """
         <style>
+            .block-container {
+                padding-bottom: 0px !important;
+    
+            }
             .flipped-emoji {
                 display: inline-block;
                 transform: scaleX(-1);
-            }
-            .block-container {
-                padding-left: 0px !important;
-                padding-right: 0px !important;
             }
             .thank-you-container {
                 font-family: 'Helvetica Neue', Arial, sans-serif;

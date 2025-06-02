@@ -21,6 +21,7 @@ def top_k_choose_page():
         .block-container {
             padding-top: 20px !important;
             padding-bottom: 2px !important;
+            padding-bottom: 0px !important;
             margin: 0px !important;
         }
 

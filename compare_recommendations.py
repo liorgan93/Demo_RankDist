@@ -40,6 +40,9 @@ def compare_recommendations_page():
         <style>
         .block-container {
             padding-top: 40px !important;
+            padding-bottom: 0px !important;
+
+        }
         }
 
         [data-testid="stAppViewContainer"] {

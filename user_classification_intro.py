@@ -28,10 +28,6 @@ def user_classification_intro_page():
     st.markdown(
         """
         <style>
-        .block-container {
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-        }
         .container {
             background: linear-gradient(135deg, rgba(42, 91, 168, 0.97), rgba(76, 130, 199, 0.97), rgba(59, 111, 179, 0.97));
             color: white;
@@ -47,6 +43,8 @@ def user_classification_intro_page():
         .block-container {
             padding-top: 25px !important;
             margin-top: 25px !important;
+            padding-bottom: 0px !important;
+
         }
         .header {
             margin-top: 10px;

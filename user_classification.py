@@ -64,6 +64,8 @@ def user_classification_page():
             .block-container {
                 padding-top: 5px !important;
                 margin-top: 5px !important;
+                padding-bottom: 0px !important;
+
             }
             .song-title {
                 margin: 0;             

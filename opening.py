@@ -36,8 +36,8 @@ def opening_page():
         .block-container {{
             padding-top: 30px !important;
             margin-top: 30px !important;
-            padding-left: 0px !important;
-            padding-right: 0px !important;
+            padding-bottom: 0px !important;
+
         }}
         .info-text-primary {{
             font-size: 16px;
