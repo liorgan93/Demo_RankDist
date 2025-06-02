@@ -85,7 +85,7 @@ def compare_recommendations_page():
         unsafe_allow_html=True
     )
     st.markdown(
-        '<p class="title-text">Comparison and Evaluation</p>',unsafe_allow_html=True)
+        '<h1 class="title-text">Comparison and Evaluation</h1>',unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
