@@ -112,27 +112,36 @@ def compare_recommendations_page():
     algo_win_msg = "The algorithm RankDist won! — looks like it can mimic and even surpass human intuition"
     tie_msg = "It’s a tie between you and the algorithm! - great minds think alike"
 
-    def display_message(text, color):
+    def display_message(text):
+        # חילוק לפי המפריד — או -
+        if "—" in text:
+            bold_part, regular_part = text.split("—", 1)
+        elif "-" in text:
+            bold_part, regular_part = text.split("-", 1)
+        else:
+            bold_part, regular_part = text, ""
+
         html = f"""
         <div style="
             background: linear-gradient(135deg, #66ccff, #99ddff);
             border-radius: 10px;
-            padding: 3px;
             margin-top: 3px;
             text-align: center;
+            padding: 10px;
         ">
-            <p style="color: {color}; font-size: 16px; font-weight: bold;">{text}</p>
+            <p style="color: black; font-size: 16px;">
+                <strong>{bold_part.strip()}</strong> — {regular_part.strip()}
+            </p>
         </div>
         """
         st.markdown(html, unsafe_allow_html=True)
 
     if match_percentage > 50:
-        display_message(algo_win_msg, "green")
+        display_message(algo_win_msg)
     elif match_percentage < 50:
-        display_message(user_win_msg, "green")
+        display_message(user_win_msg)
     else:
-        display_message(tie_msg, "white")
-
+        display_message(tie_msg)
 
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
