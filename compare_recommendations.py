@@ -108,35 +108,31 @@ def compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    message_container = """
-    <div style="
-        background: linear-gradient(135deg, rgba(80, 40, 120, 0.95), rgba(60, 60, 150, 0.95));
-        border-radius: 15px;
-        padding: 15px;
-        margin-top: 10px;
-        text-align: center;
-    ">
-        <p class="success-text" style="color: white; font-size: 16px; font-weight: bold;">{}</p>
-    </div>
-    """
+    user_win_msg = "You won! — your intuition beat the algorithm"
+    algo_win_msg = "The algorithm RankDist won! — looks like it can mimic and even surpass human intuition"
+    tie_msg = "It’s a tie between you and the algorithm! - great minds think alike"
 
-    tie_message = """
-    <div style="
-        background: linear-gradient(135deg, rgba(80, 40, 120, 0.95), rgba(60, 60, 150, 0.95));
-        border-radius: 15px;
-        padding: 15px;
-        margin-top: 10px;
-        text-align: center;
-    ">
-        <p class="tie-text" style="color: white; font-size: 16px; font-weight: bold;">it’s a tie between you and the algorithm! - great minds think alike</p>
-    </div>
-    """
+    def display_message(text, color):
+        html = f"""
+        <div style="
+            background: linear-gradient(135deg, rgba(30, 60, 120, 0.95), rgba(20, 40, 100, 0.95));
+            border-radius: 10px;
+            padding: 3px;
+            margin-top: 3px;
+            text-align: center;
+        ">
+            <p style="color: {color}; font-size: 16px; font-weight: bold;">{text}</p>
+        </div>
+        """
+        st.markdown(html, unsafe_allow_html=True)
 
-    if match_percentage > 50 or match_percentage < 50:
-        msg = "The algorithm RankDist won! — look like it can mimic and even surpass human intuition"
-        st.markdown(message_container.format(msg), unsafe_allow_html=True)
+    if match_percentage > 50:
+        display_message(algo_win_msg, "red")
+    elif match_percentage < 50:
+        display_message(user_win_msg, "green")
     else:
-        st.markdown(tie_message, unsafe_allow_html=True)
+        display_message(tie_msg, "white")
+
 
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
