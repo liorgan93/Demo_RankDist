@@ -108,13 +108,35 @@ def compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    if match_percentage > 50:
-        st.markdown('<p class="success-text">The algorithm RankDist won! — look like it can mimic and even surpass human intuition</p>', unsafe_allow_html=True)
+    message_container = """
+    <div style="
+        background: linear-gradient(135deg, rgba(80, 40, 120, 0.95), rgba(60, 60, 150, 0.95));
+        border-radius: 15px;
+        padding: 15px;
+        margin-top: 10px;
+        text-align: center;
+    ">
+        <p class="success-text" style="color: white; font-size: 16px; font-weight: bold;">{}</p>
+    </div>
+    """
+
+    tie_message = """
+    <div style="
+        background: linear-gradient(135deg, rgba(80, 40, 120, 0.95), rgba(60, 60, 150, 0.95));
+        border-radius: 15px;
+        padding: 15px;
+        margin-top: 10px;
+        text-align: center;
+    ">
+        <p class="tie-text" style="color: white; font-size: 16px; font-weight: bold;">it’s a tie between you and the algorithm! - great minds think alike</p>
+    </div>
+    """
+
+    if match_percentage > 50 or match_percentage < 50:
+        msg = "The algorithm RankDist won! — look like it can mimic and even surpass human intuition"
+        st.markdown(message_container.format(msg), unsafe_allow_html=True)
     else:
-        if match_percentage < 50:
-            st.markdown('<p class="success-text">The algorithm RankDist won! — look like it can mimic and even surpass human intuition</p>',unsafe_allow_html=True)
-        else:
-            st.markdown('<p class="tie-text">it’s a tie between you and the algorithm! - great minds think alike</p>', unsafe_allow_html=True)
+        st.markdown(tie_message, unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
