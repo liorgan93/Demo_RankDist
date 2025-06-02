@@ -29,7 +29,7 @@ def compare_recommendations_page():
     real_top_k_column = real_top_k + [""] * (max_length - len(real_top_k))
 
     comparison_df = pd.DataFrame({
-        "Your choice": user_column,
+        "Your picks": user_column,
         "RankDist's output": algorithm_column,
         "True preference": real_top_k_column
     })
@@ -54,6 +54,7 @@ def compare_recommendations_page():
             text-align: center;
             margin-top: 0px;
             padding-top: 0px;
+            font-size: 16px;
         }
 
         .stDataFrame iframe{
@@ -86,7 +87,7 @@ def compare_recommendations_page():
         unsafe_allow_html=True
     )
 
-    st.markdown('<h3 class="center-text">Here\'s a direct comparison of your song choices and what the algorithm RankDist picked for you:</h3>',
+    st.markdown('<h3 class="center-text">Let\'s a compare between your picks, the algorithm’s choices, and the true preferences</h3>',
         unsafe_allow_html=True
     )
 
@@ -95,10 +96,10 @@ def compare_recommendations_page():
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
     if match_percentage > 50:
-        st.markdown('<p class="success-text">The algorithm RankDist won! — look like the it’s can mimic and even surpass human intuition</p>', unsafe_allow_html=True)
+        st.markdown('<p class="success-text">The algorithm RankDist won! — look like it can mimic and even surpass human intuition</p>', unsafe_allow_html=True)
     else:
         if match_percentage < 50:
-            st.markdown('<p class="success-text">The algorithm RankDist won! — look like the it’s can mimic and even surpass human intuition</p>',unsafe_allow_html=True)
+            st.markdown('<p class="success-text">The algorithm RankDist won! — look like it can mimic and even surpass human intuition</p>',unsafe_allow_html=True)
         else:
             st.markdown('<p class="tie-text">it’s a tie between you and the algorithm! - great minds think alike</p>', unsafe_allow_html=True)
 
