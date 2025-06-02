@@ -8,7 +8,7 @@ def get_base64_image(image_path):
 
 
 def welcome_page():
-    st.set_page_config(page_title="RankDist Demo")
+    st.set_page_config(page_title="RankDist Demo" , layout="wide")
     def click_button():
         st.session_state.page = "opening"
 
@@ -26,15 +26,16 @@ def welcome_page():
             padding: 8px;
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
             text-align: center;
-            margin: 0 auto 10px auto;
-            width: 95%;
-            max-width: 800px;
+            margin: auto;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             overflow-x: hidden;
-            box-sizing: border-box;
+            
         }}
         .block-container {{
             padding-top: 25px !important;
