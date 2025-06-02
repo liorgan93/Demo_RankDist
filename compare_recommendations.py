@@ -80,6 +80,8 @@ def compare_recommendations_page():
             font-size: 17px;
             font-weight: bold;
             text-align: center;
+            text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
+
         }
         .stButton button {
             width: 100%;
@@ -113,7 +115,6 @@ def compare_recommendations_page():
     tie_msg = "It’s a tie between you and the algorithm! - great minds think alike"
 
     def display_message(text):
-        # חילוק לפי המפריד — או -
         if "—" in text:
             bold_part, regular_part = text.split("—", 1)
         elif "-" in text:
@@ -127,7 +128,9 @@ def compare_recommendations_page():
             border-radius: 10px;
             margin-top: 3px;
             text-align: center;
-            padding: 5px;
+            padding: 3px;
+            margin-bottom: 8px;
+
         ">
             <p style="color: black; font-size: 20px;">
                 <strong>{bold_part.strip()}</strong> — {regular_part.strip()}
