@@ -50,11 +50,12 @@ def compare_recommendations_page():
             padding: 0;
         }
 
-        .center-text {
+        .title-text {
             text-align: center;
             margin-top: 0px;
             padding-top: 0px;
-            font-size: 16px;
+            font-size: 13px;
+            color: blue;
         }
 
         .stDataFrame iframe{
@@ -86,10 +87,8 @@ def compare_recommendations_page():
         """,
         unsafe_allow_html=True
     )
-
-    st.markdown('<p class="center-text">Let\'s a compare between your picks, the algorithm’s choices, and the true preferences<p>',
-        unsafe_allow_html=True
-    )
+    st.markdown(
+        '<p class="title-text">Let\'s a compare between your picks, the algorithm’s choices, and the true preferences</p>',unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
