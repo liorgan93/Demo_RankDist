@@ -54,7 +54,8 @@ def compare_recommendations_page():
             text-align: center;
             margin-top: 0px;
             padding-top: 0px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: bold;
         }
 
         .stDataFrame iframe{
