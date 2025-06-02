@@ -94,7 +94,7 @@ def compare_recommendations_page():
         st.markdown('<p class="success-text">The algorithm RankDist won! — look like the it’s can mimic and even surpass human intuition</p>', unsafe_allow_html=True)
     else:
         if match_percentage < 50:
-            st.markdown('<p class="failure-text">You beat the algorithm Randist! — algorithms probably still has some learning to do</p>', unsafe_allow_html=True)
+            st.markdown('<p class="success-text">The algorithm RankDist won! — look like the it’s can mimic and even surpass human intuition</p>',unsafe_allow_html=True)
         else:
             st.markdown('<p class="tie-text">it’s a tie between you and the algorithm! - great minds think alike</p>', unsafe_allow_html=True)
 

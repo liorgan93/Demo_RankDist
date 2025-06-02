@@ -22,7 +22,10 @@ def thank_you_page():
                 display: inline-block;
                 transform: scaleX(-1);
             }
-
+            .block-container {
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
             .thank-you-container {
                 font-family: 'Helvetica Neue', Arial, sans-serif;
                 text-align: center;
