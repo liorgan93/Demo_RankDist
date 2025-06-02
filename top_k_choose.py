@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 import base64
 
 def top_k_choose_page():
-    st.set_page_config(page_title="Select Your Songs", layout="wide")
+    st.set_page_config(page_title="RankDist Demo", layout="wide")
     from user_classification_intro import set_background
     set_background("other images/background.webp")
 

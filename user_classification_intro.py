@@ -23,6 +23,7 @@ def set_background(image_file):
         st.markdown(page_background, unsafe_allow_html=True)
 
 def user_classification_intro_page():
+    st.set_page_config(page_title="RankDist Demo")
     set_background("other images/background.webp")
 
     st.markdown(

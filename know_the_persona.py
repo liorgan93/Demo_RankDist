@@ -10,6 +10,7 @@ def get_songs_by_persona(persona_num):
     return songs_df
 
 def know_the_persona_page():
+    st.set_page_config(page_title="RankDist Demo")
     persona_name = st.session_state.persona
     st.session_state.persona_songs_df = get_songs_by_persona(st.session_state.chosen_person_number)
 

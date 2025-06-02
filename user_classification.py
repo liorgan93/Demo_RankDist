@@ -8,6 +8,7 @@ import time
 
 
 def user_classification_page():
+    st.set_page_config(page_title="RankDist Demo")
     set_background("other images/background.webp")
     all_songs_df = pd.read_csv('playlists_excel/15_songs_classify.csv')
     max_attempts = 150

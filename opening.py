@@ -9,6 +9,7 @@ def get_base64_image(image_path):
 
 
 def opening_page():
+    st.set_page_config(page_title="RankDist Demo")
     image_base64 = get_base64_image("other images/RankDist_VS_Human.jpg")
     def click_button():
         st.session_state.page = "user_classification_intro"

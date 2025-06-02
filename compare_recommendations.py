@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def compare_recommendations_page():
-
+    st.set_page_config(page_title="RankDist Demo")
     selected_songs = st.session_state.user_choice
     algorithm_df = pd.read_csv("alg_results.csv")
 
@@ -29,12 +29,11 @@ def compare_recommendations_page():
     real_top_k_column = real_top_k + [""] * (max_length - len(real_top_k))
 
     comparison_df = pd.DataFrame({
-        "User's Choice": user_column,
-        "RankDist's Choice": algorithm_column,
-        "Real Top K": real_top_k_column
+        "Your choice": user_column,
+        "RankDist's output": algorithm_column,
+        "True preference": real_top_k_column
     })
 
-    # CSS for styling
     st.markdown(
         """
         <style>
@@ -57,8 +56,10 @@ def compare_recommendations_page():
             padding-top: 0px;
         }
 
-        .stDataFrame {
+        .stDataFrame iframe{
             max-width: 100%;
+            font-size: 5px !important;
+
         }
 
         .success-text {
@@ -89,9 +90,9 @@ def compare_recommendations_page():
         unsafe_allow_html=True
     )
 
-    col1, col2, col3 = st.columns([0.2, 0.6, 0.2])
+    col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
-        st.dataframe(comparison_df, hide_index=True, use_container_width=True)
+        st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
     if match_percentage > 50:
         st.markdown('<p class="success-text">The algorithm RankDist won! — look like the it’s can mimic and even surpass human intuition</p>', unsafe_allow_html=True)

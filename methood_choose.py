@@ -16,6 +16,7 @@ def get_base64_image(image_path):
         return base64.b64encode(image_file.read()).decode()
 
 def method_choose_page():
+    st.set_page_config(page_title="RankDist Demo")
     from user_classification_intro import set_background
     set_background("other images/background.webp")
 
