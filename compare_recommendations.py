@@ -127,9 +127,9 @@ def compare_recommendations_page():
             border-radius: 10px;
             margin-top: 3px;
             text-align: center;
-            padding: 10px;
+            padding: 5px;
         ">
-            <p style="color: black; font-size: 16px;">
+            <p style="color: black; font-size: 20px;">
                 <strong>{bold_part.strip()}</strong> — {regular_part.strip()}
             </p>
         </div>
