@@ -113,6 +113,7 @@ def compare_recommendations_page():
     tie_msg = "It’s a tie between you and the algorithm! - great minds think alike"
 
     def display_message(text):
+        # חילוק לפי המפריד — או -
         if "—" in text:
             bold_part, regular_part = text.split("—", 1)
         elif "-" in text:
@@ -126,9 +127,7 @@ def compare_recommendations_page():
             border-radius: 10px;
             margin-top: 3px;
             text-align: center;
-            padding: 3px;
-            margin-bottom: 8px;
-
+            padding: 5px;
         ">
             <p style="color: black; font-size: 20px;">
                 <strong>{bold_part.strip()}</strong> — {regular_part.strip()}
