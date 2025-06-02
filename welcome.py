@@ -26,16 +26,15 @@ def welcome_page():
             padding: 8px;
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
             text-align: center;
-            margin: auto;
-            margin-bottom: 10px;
-            width: 100%;
-            max-width: 100%;
+            margin: 0 auto 10px auto;
+            width: 95%;
+            max-width: 800px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             overflow-x: hidden;
-            
+            box-sizing: border-box;
         }}
         .block-container {{
             padding-top: 25px !important;
