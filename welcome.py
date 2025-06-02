@@ -57,17 +57,7 @@ def welcome_page():
 
     logo = get_base64_image("other images/logo.jpg")
     music = get_base64_image("other images/Music_notes.jpg")
-    st.markdown("""
-        <style>
-        html, body, [class*="main"] {
-            height: 100vh;
-            overflow-y: hidden;
-            margin: 0;
-            padding: 0;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-    
+
     st.markdown(
         f"""
         <style>
@@ -89,8 +79,8 @@ def welcome_page():
             
         }}
         .block-container {{
-            padding-top: 25px !important;
-            margin-top: 25px !important;
+            padding-top: 20px !important;
+            margin-top: 20px !important;
         }}
         .title-text {{
             font-size: 22px !important;
