@@ -80,8 +80,6 @@ def compare_recommendations_page():
             font-size: 17px;
             font-weight: bold;
             text-align: center;
-            text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
-
         }
         .stButton button {
             width: 100%;
