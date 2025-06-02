@@ -57,7 +57,7 @@ def compare_recommendations_page():
             text-align: center;
             margin-top: 5px;
             padding-top: 5px;
-            font-size: 5px;
+            font-size: 30px;
             font-weight: bold;
         }
 
