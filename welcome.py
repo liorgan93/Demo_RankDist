@@ -148,15 +148,14 @@ def welcome_page():
     st.markdown("""
             <style>
             .st-key-start_button button {
-                width: 130px;
-                height: 130px;
+                width: 97px;
+                height: 97px;
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
                 border-radius: 50%;
                 transition: transform 0.6s ease-in-out, box-shadow 0.3s;
                 box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-                background-image: url('data:image/webp;base64,""" + start + """');
                 background-size: cover;
                 margin: auto;
                 display: flex;
@@ -172,7 +171,7 @@ def welcome_page():
     col1, col2, col3 = st.columns([1, 1, 1])
 
     with col2:
-        st.button("", key="start_button", on_click=click_button, use_container_width=True)
+        st.button("", key="start_button", on_click=click_button)
 
 if st.session_state.page == "welcome":
     welcome_page()
