@@ -87,7 +87,7 @@ def compare_recommendations_page():
         unsafe_allow_html=True
     )
 
-    st.markdown('<h3 class="center-text">Let\'s a compare between your picks, the algorithm’s choices, and the true preferences</h3>',
+    st.markdown('<p class="center-text">Let\'s a compare between your picks, the algorithm’s choices, and the true preferences<p>',
         unsafe_allow_html=True
     )
 

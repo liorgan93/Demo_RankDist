@@ -85,7 +85,7 @@ def welcome_page():
 
         }}
         .title-text {{
-            font-size: 21px !important;
+            font-size: 20px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
@@ -121,8 +121,8 @@ def welcome_page():
             margin-top: 5px;
         }}
         .logo-img {{
-            width: 180px; 
-            height: 85px; 
+            width: 170px; 
+            height: 80px; 
             margin-bottom: 3px;
         }}
         .time_est {{
