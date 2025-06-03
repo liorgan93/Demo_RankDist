@@ -39,13 +39,20 @@ def thank_you_page():
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             }
             .thank-you-title {
-                font-size: 30px;
+                font-size: 32px;
                 font-weight: bold;
-                color: #222;
-                margin-bottom: 15px;
+                color: #ffffff;
+                text-align: center;
+                padding: 20px 10px;
+                margin-bottom: 25px;
+                background: linear-gradient(135deg, #1e1e3f, #3a3a8a, #6a1b9a);
+                border-radius: 15px;
+                box-shadow: 0 4px 25px rgba(58, 58, 138, 0.6), 0 0 15px rgba(106, 27, 154, 0.5);
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6), 0 0 10px rgba(106, 27, 154, 0.9);
+                transition: all 0.3s ease-in-out;
             }
             .thank-you-message {
-                font-size: 17px;
+                font-size: 19px;
                 color: #444;
                 margin-bottom: 10px;
                 padding: 0 15px;
