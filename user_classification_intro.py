@@ -44,8 +44,8 @@ def user_classification_intro_page():
         .block-container {
             padding-top: 30px !important;
             margin-top: 30px !important;
-            padding-bottom: 0px !important;
-            margin-bottom: 50px !important;
+            padding-bottom: 500px !important;
+            margin-bottom: 500px !important;
 
 
         }
