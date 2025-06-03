@@ -45,7 +45,8 @@ def opening_page():
             color: #BBDEFB;
             font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
-            margin-bottom: 30px;
+            margin-top: 5px;
+            margin-bottom: 26px;
             padding-top: 5px;
         }}
         .info-text-secondary {{
