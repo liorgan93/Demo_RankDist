@@ -40,6 +40,7 @@ def know_the_persona_intro_page():
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             max-width: 450px;
+            margin: auto;
             font-family: 'Poppins', sans-serif;
         }
         .header-small {
@@ -59,7 +60,6 @@ def know_the_persona_intro_page():
 
         }
         .header {
-            margin-top: 13px;
             font-size: 28px;
             font-weight: 600;
             color: #ffffff;
