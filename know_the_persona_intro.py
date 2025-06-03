@@ -54,8 +54,8 @@ def know_the_persona_intro_page():
             
         }
         .block-container {
-            padding-top: 25px !important;
-            margin-top: 25px !important;
+            padding-top: 20px !important;
+            margin-top: 20px !important;
             padding-bottom: 0px !important;
 
         }
