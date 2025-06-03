@@ -46,7 +46,7 @@ def opening_page():
             font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-bottom: 18px;
-            padding-top: 10px;
+            padding-top: 2px;
         }}
         .info-text-secondary {{
             font-size: 21px;
