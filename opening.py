@@ -37,7 +37,6 @@ def opening_page():
         .block-container {{
             padding-top: 25px !important;
             margin-top: 25px !important;
-            margin-left: 25px !important;
             padding-bottom: 0px !important;
 
         }}
@@ -47,6 +46,7 @@ def opening_page():
             font-weight: 600;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-bottom: 30px;
+            margin-left: 10px !important;
             padding-top: 5px;
         }}
         .info-text-secondary {{
