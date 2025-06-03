@@ -60,6 +60,7 @@ def know_the_persona_intro_page():
 
         }
         .header {
+            margin-top: 13px;
             font-size: 28px;
             font-weight: 600;
             color: #ffffff;
