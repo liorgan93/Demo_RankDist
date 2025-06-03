@@ -76,6 +76,7 @@ def know_the_persona_intro_page():
         .description {
             font-size: 20px;
             font-weight: 400;
+            margin-top: 20px;
             color: #ffffff;
         }
         .green-text {
