@@ -44,7 +44,7 @@ def user_classification_intro_page():
         .block-container {
             padding-top: 30px !important;
             margin-top: 30px !important;
-            padding-bottom: 30px !important;
+            padding-bottom: 0px !important;
 
         }
         .header {
@@ -111,6 +111,7 @@ def user_classification_intro_page():
                 cursor: pointer;
                 border-radius: 50%;
                 margin-bottom: 0px;
+                margin-top: 50px;
                 transition: transform 0.6s ease-in-out, box-shadow 0.3s;
                 box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
                 background-image: url('data:image/webp;base64,""" + lets_go + """');
