@@ -46,8 +46,8 @@ def user_classification_intro_page():
             margin-top: 30px !important;
             padding-bottom: 0px !important;
 
-
         }
+        
         .header {
             margin-top: 10px;
             font-size: 28px;
@@ -66,7 +66,7 @@ def user_classification_intro_page():
         .description {
             font-size: 22px;
             font-weight: 300;
-            margin-top: 17px;
+            margin-top: 14px;
             margin-bottom: 10px;
             color: #ffffff;
         }
