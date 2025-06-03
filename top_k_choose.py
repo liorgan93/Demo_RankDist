@@ -162,22 +162,20 @@ def top_k_choose_page():
             return None
 
     for idx, row in songs_data.iterrows():
-        break
         song_name = row["song"]
-        audio_path = os.path.join(audio_folder, f"{song_name}.mp3")
 
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
-                audio_base64 = encode_audio(audio_path)
-
-                if audio_base64:
-                    audio_html = f"""
-                    <audio controls style="width: 100%; height: 30px;">
-                        <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mpeg">
-                    </audio>
-                    """
-                    components.html(audio_html, height=40)
-                else:
-                    st.error(f"Could not load audio for {song_name}.")
+                embed_html = """
+                <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/track/3V4B7W0svTALLSvEKZLmoX?utm_source=generator" 
+                    width="100%" 
+                    height="80" 
+                    frameBorder="0" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+                """
+                components.html(embed_html, height=85)
 
     st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
