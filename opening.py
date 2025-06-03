@@ -46,7 +46,7 @@ def opening_page():
             font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-bottom: 18px;
-            padding-top: 2px;
+            padding-top: 5px;
         }}
         .info-text-secondary {{
             font-size: 21px;
@@ -57,7 +57,7 @@ def opening_page():
         }}
         .alg-image {{
             max-width: 100%;
-            max-height: 100px;
+            max-height: 90px;
             margin-bottom: 10px;
             border-radius: 20px;
         }}
