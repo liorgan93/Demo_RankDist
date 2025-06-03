@@ -58,7 +58,7 @@ def user_classification_intro_page():
             font-weight: 500;
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
-            margin-bottom: 5px;
+            margin-bottom: 100px;
             margin-top: 0px;
 
         }
@@ -111,7 +111,6 @@ def user_classification_intro_page():
                 cursor: pointer;
                 border-radius: 50%;
                 margin-bottom: 0px;
-                margin-top: 50px;
                 transition: transform 0.6s ease-in-out, box-shadow 0.3s;
                 box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
                 background-image: url('data:image/webp;base64,""" + lets_go + """');
