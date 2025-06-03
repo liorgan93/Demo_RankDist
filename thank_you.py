@@ -39,13 +39,13 @@ def thank_you_page():
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             }
             .thank-you-title {
-                font-size: 25px;
+                font-size: 30px;
                 font-weight: bold;
                 color: #222;
                 margin-bottom: 15px;
             }
             .thank-you-message {
-                font-size: 15px;
+                font-size: 17px;
                 color: #444;
                 margin-bottom: 10px;
                 padding: 0 15px;
@@ -71,7 +71,7 @@ def thank_you_page():
     st.markdown(f"""
     <div class="thank-you-container">
         <div class="thank-you-title">
-            🎉 Thank You for Participating! <span class="flipped-emoji">🎉</span>
+            Thank You for Participating!
         </div>
         <div class="thank-you-message">
             We appreciate your time and hope you enjoyed the demo. If you'd like to To learn more about the methods demonstrated in this demo, You're welcome to download the paper below!

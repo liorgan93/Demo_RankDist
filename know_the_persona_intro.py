@@ -45,13 +45,13 @@ def know_the_persona_intro_page():
             font-family: 'Poppins', sans-serif;
         }
         .header-small {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
             color: #FFFFFF; 
             background-color: rgba(94, 35, 157, 0.8); 
-            padding: 2px 6px; 
+            padding: 1px 6px; 
             border-radius: 8px; 
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             
         }
         .block-container {
@@ -67,7 +67,7 @@ def know_the_persona_intro_page():
             color: #ffffff;
         }
         .sub-header {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 500;
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
@@ -101,9 +101,9 @@ def know_the_persona_intro_page():
 
     st.markdown(f"""
         <div class="container">
-            <div class="header-small">Soon you'll recommend songs for {persona_name}, based on your familiarity with {gender_value}!</div>
+            <div class="header-small">Soon you'll recommend songs for {persona_name} — but first, let’s know {gender_value} better to make better recommendations</div>
             <div class="header"> Know or Don't Know? </div>
-            <div class="sub-header">We’ll now show you <strong> songs that {persona_name} likes</strong>. Listen to them to get to know {gender_value} better and Indicate for each song if you know it or not</div>
+            <div class="sub-header">We’ll now show you <strong> songs that {persona_name} likes</strong>. Listen to them in order to know {gender_value} better and Indicate for each song if you know it or not</div>
             <div class="description">
                 <span class="green-text">Know this song?</span> Tap ✅<br>
                 <span class="red-text">Never heard of it?</span> Tap ✖️️
