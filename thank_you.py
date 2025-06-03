@@ -54,8 +54,8 @@ def thank_you_page():
             .thank-you-message {
                 font-size: 19px;
                 color: #444;
-                margin-bottom: 10px;
-                padding: 0 15px;
+                margin-bottom: 20px;
+                padding: 3px 15px;
             }
             .download-button a {
                 display: inline-block;
