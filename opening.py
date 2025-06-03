@@ -25,7 +25,7 @@ def opening_page():
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
             text-align: center;
             margin: auto;
-            margin-bottom: 10px;
+            margin-bottom: 3px;
             width: 98%;
             max-width: 98%;
             display: flex;
