@@ -30,24 +30,24 @@ def thank_you_page():
             .thank-you-container {
                 font-family: 'Helvetica Neue', Arial, sans-serif;
                 text-align: center;
-                padding-top: 60px;
-                padding-bottom: 60px;
+                padding-top: 40px;
+                padding-bottom: 30px;
                 background: linear-gradient(135deg, rgba(225, 200, 255, 0.95), rgba(200, 220, 255, 0.95));
                 border-radius: 30px;
-                max-width: 90%;
+                max-width: 100%;
                 margin: auto;
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             }
             .thank-you-title {
-                font-size: 35px;
+                font-size: 25px;
                 font-weight: bold;
                 color: #222;
                 margin-bottom: 15px;
             }
             .thank-you-message {
-                font-size: 20px;
+                font-size: 15px;
                 color: #444;
-                margin-bottom: 25px;
+                margin-bottom: 10px;
                 padding: 0 15px;
             }
             .download-button a {

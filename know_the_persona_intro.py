@@ -67,7 +67,7 @@ def know_the_persona_intro_page():
             color: #ffffff;
         }
         .sub-header {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
@@ -101,7 +101,7 @@ def know_the_persona_intro_page():
 
     st.markdown(f"""
         <div class="container">
-            <div class="header-small">Soon you'll recommend songs for {persona_name}. But first, let’s get familiar with {gender_value}!</div>
+            <div class="header-small">Soon you'll recommend songs for {persona_name}, based on your familiarity with {gender_value}!</div>
             <div class="header"> Know or Don't Know? </div>
             <div class="sub-header">We’ll now show you <strong> songs that {persona_name} likes</strong>. Listen to them to get to know {gender_value} better and Indicate for each song if you know it or not</div>
             <div class="description">

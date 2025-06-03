@@ -24,6 +24,7 @@ def method_choose_page():
     record_personalization = get_base64_image("other images/green.jpg")
     record_advanced = get_base64_image("other images/red.jpg")
     persona_name = st.session_state.persona
+    gender_value = st.session_state.gender_pronoun
 
 
 
@@ -71,7 +72,7 @@ def method_choose_page():
 
     st.markdown(f"""
         <div class="header-container">
-            <p class="header-text">Now that you know {persona_name} and ready to recommend songs!</p>
+            <p class="header-text">Now that you know {persona_name} you ready to recommend songs for {gender_value}!</p>
             <p class="sub-header-text">Choose a task</p>
         </div>
 
