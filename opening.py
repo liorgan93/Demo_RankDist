@@ -25,7 +25,7 @@ def opening_page():
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
             text-align: center;
             margin: auto;
-            margin-bottom: 3px;
+            margin-bottom: 0px;
             width: 98%;
             max-width: 98%;
             display: flex;
@@ -43,7 +43,7 @@ def opening_page():
         .info-text-primary {{
             font-size: 18px;
             color: #BBDEFB;
-            font-weight: 500;
+            font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-bottom: 18px;
             padding-top: 10px;
