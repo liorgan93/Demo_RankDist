@@ -35,8 +35,8 @@ def opening_page():
             overflow-x: hidden;
         }}
         .block-container {{
-            padding-top: 25px !important;
-            margin-top: 25px !important;
+            padding-top: 28px !important;
+            margin-top: 28px !important;
             padding-bottom: 0px !important;
 
         }}
@@ -46,8 +46,8 @@ def opening_page():
             font-weight: 600;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-bottom: 30px;
-            margin-left: 2px !important;
-            margin-right: 2px !important;
+            margin-left: 4px !important;
+            margin-right: 4px !important;
             padding-top: 5px;
         }}
         .info-text-secondary {{
