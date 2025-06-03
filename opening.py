@@ -41,15 +41,15 @@ def opening_page():
 
         }}
         .info-text-primary {{
-            font-size: 16px;
+            font-size: 18px;
             color: #BBDEFB;
-            font-weight: 600;
+            font-weight: 500;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-bottom: 18px;
             padding-top: 10px;
         }}
         .info-text-secondary {{
-            font-size: 18px;
+            font-size: 19px;
             color: #4DD0E1;
             font-weight: 700;
             text-shadow: 1px 1px 6px rgba(0, 200, 255, 0.5);
@@ -65,7 +65,7 @@ def opening_page():
 
         <div class="info-container">
             <div class="info-text-primary">
-                In this demo you’ll recommend songs for someone, and we’ll compare your picks to Algorithm RankDist’s suggestions to demonstrate its performance
+                In this demo you’ll recommend songs for someone, and we’ll compare your picks to Algorithm RankDist’s output to demonstrate its performance
             </div>
             <div class="info-text-secondary">
                 Let’s find out how your intuition compares to data-driven recommendations!
