@@ -41,7 +41,7 @@ def opening_page():
 
         }}
         .info-text-primary {{
-            font-size: 18px;
+            font-size: 19px;
             color: #BBDEFB;
             font-weight: 600;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
