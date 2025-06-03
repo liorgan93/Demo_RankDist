@@ -37,6 +37,7 @@ def opening_page():
         .block-container {{
             padding-top: 25px !important;
             margin-top: 25px !important;
+            margin-left: 25px !important;
             padding-bottom: 0px !important;
 
         }}
