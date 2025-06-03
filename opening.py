@@ -41,13 +41,11 @@ def opening_page():
 
         }}
         .info-text-primary {{
-            font-size: 19px;
+            font-size: 18px;
             color: #BBDEFB;
-            font-weight: 600;
+            font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-bottom: 30px;
-            margin-left: 4px !important;
-            margin-right: 4px !important;
             padding-top: 5px;
         }}
         .info-text-secondary {{
@@ -81,8 +79,8 @@ def opening_page():
     st.markdown("""
         <style>
         .st-key-Next_button button {
-            width: 130px;
-            height: 130px;
+            width: 125px;
+            height: 125px;
             background-color: transparent;
             border: none;
             cursor: pointer;

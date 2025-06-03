@@ -50,7 +50,7 @@ def know_the_persona_intro_page():
             color: #FFFFFF; 
             background-color: rgba(94, 35, 157, 0.8); 
             padding: 1px 6px; 
-            border-radius: 8px; 
+            border-radius: 15px; 
             margin-bottom: 12px;
             
         }
@@ -101,7 +101,7 @@ def know_the_persona_intro_page():
 
     st.markdown(f"""
         <div class="container">
-            <div class="header-small">Soon you'll recommend songs for {persona_name} — but first, let’s know {gender_value} better to make better recommendations</div>
+            <div class="header-small">Soon you'll recommend songs for {persona_name}. but first, let’s know {gender_value} better to make better recommendations</div>
             <div class="header"> Know or Don't Know? </div>
             <div class="sub-header">We’ll now show you <strong> songs that {persona_name} likes</strong>. Listen to them in order to know {gender_value} better and Indicate for each song if you know it or not</div>
             <div class="description">
@@ -116,8 +116,8 @@ def know_the_persona_intro_page():
     st.markdown("""
                 <style>
                 .st-key-lets_go button{
-                    width: 130px;
-                    height: 130px;
+                    width: 125px;
+                    height: 125px;
                     background-color: transparent;
                     border: none;
                     cursor: pointer;

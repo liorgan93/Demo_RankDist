@@ -105,8 +105,8 @@ def user_classification_intro_page():
     st.markdown("""
             <style>
             .st-key-lets_go button{
-                width: 130px;
-                height: 130px;
+                width: 125px;
+                height: 125px;
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
