@@ -35,8 +35,8 @@ def opening_page():
             overflow-x: hidden;
         }}
         .block-container {{
-            padding-top: 30px !important;
-            margin-top: 30px !important;
+            padding-top: 25px !important;
+            margin-top: 25px !important;
             padding-bottom: 0px !important;
 
         }}
