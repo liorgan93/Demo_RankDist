@@ -34,7 +34,7 @@ def user_classification_intro_page():
             color: white;
             border-radius: 25px;
             padding: 8px;
-            padding-bottom: 10px;
+            padding-bottom: 17px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             max-width: 400px;
@@ -63,9 +63,10 @@ def user_classification_intro_page():
 
         }
         .description {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 300;
-            margin-bottom: 20px;
+            margin-top: 17px;
+            margin-bottom: 15px;
             color: #ffffff;
         }
         .footer {
