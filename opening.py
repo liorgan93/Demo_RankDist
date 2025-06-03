@@ -19,7 +19,7 @@ def opening_page():
     st.markdown(f"""
         <style>
         .info-container {{
-            background: linear-gradient(135deg, rgba(10, 10, 40, 0.97), rgba(20, 20, 60, 0.97));
+            background: linear-gradient(135deg, rgba(10, 10, 40, 0.99), rgba(20, 20, 60, 0.99));
             border-radius: 20px;
             padding: 4px;
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
@@ -45,11 +45,11 @@ def opening_page():
             color: #BBDEFB;
             font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
-            margin-bottom: 18px;
+            margin-bottom: 22px;
             padding-top: 5px;
         }}
         .info-text-secondary {{
-            font-size: 21px;
+            font-size: 20px;
             color: #4DD0E1;
             font-weight: 700;
             text-shadow: 1px 1px 6px rgba(0, 200, 255, 0.5);
