@@ -43,9 +43,9 @@ def opening_page():
         .info-text-primary {{
             font-size: 18px;
             color: #BBDEFB;
-            font-weight: 550;
+            font-weight: 600;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             padding-top: 5px;
         }}
         .info-text-secondary {{
