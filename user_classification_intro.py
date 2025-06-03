@@ -34,7 +34,7 @@ def user_classification_intro_page():
             color: white;
             border-radius: 25px;
             padding: 8px;
-            padding-bottom: 0px;
+            padding-bottom: 10px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             max-width: 400px;
@@ -95,8 +95,6 @@ def user_classification_intro_page():
         """,
         unsafe_allow_html=True,
     )
-
-    st.divider()
 
     def handle_start_click():
         st.session_state.page = "user_classification"
