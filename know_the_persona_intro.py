@@ -50,7 +50,7 @@ def know_the_persona_intro_page():
             background-color: rgba(94, 35, 157, 0.8); 
             padding: 1px 6px; 
             border-radius: 15px; 
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             
         }
         .block-container {
