@@ -112,7 +112,7 @@ def relevant_set_compare_recommendations_page():
             margin-top: 10px;
             margin-bottom: 10px;
             text-align: center;
-            padding: 10px 5px;
+            padding: 8px 3px;
         ">
             <div style="color: black; font-size: 22px; font-weight: bold; margin-bottom: 6px;">
                 {bold_part.strip()}
