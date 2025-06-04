@@ -58,7 +58,7 @@ def ordered_list_compare_recommendations_page():
             padding: 0;
         }
         iframe[data-testid="stDataFrame"] {
-            margin-bottom: -10px !important;
+            margin-bottom: -20px !important;
         }
         .title-text {
             text-align: center;
