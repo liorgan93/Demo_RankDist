@@ -126,7 +126,7 @@ def ordered_list_compare_recommendations_page():
                  {regular_part.strip()}
              </div>
          </div>
-         <div style="color: white; font-size: 14px; font-style: italic; margin-top: 0px;">
+         <div style="color: white; font-size: 14px; font-style: italic; margin-top: 0px; margin-bottom: 5px;">
          * Score calculated using accuracy
          </div>
          """
