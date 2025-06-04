@@ -126,7 +126,7 @@ def perfect_precision_compare_recommendations_page():
                 {regular_part.strip()}
             </div>
         </div>
-         <div style="color: black; font-size: 14px; font-style: italic; margin-top: 1px;">
+         <div style="color: white; font-size: 14px; font-style: italic; margin-top: 0px;">
          * Score calculated using accuracy
          </div>
         """
