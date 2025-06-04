@@ -32,7 +32,7 @@ def know_the_persona_intro_page():
         """
         <style>
         .container {
-            background: linear-gradient(135deg, rgba(42, 91, 168, 0.97), rgba(76, 130, 199, 0.97), rgba(59, 111, 179, 0.97));
+            background: linear-gradient(135deg, rgba(42, 91, 168, 0.97), rgba(76, 130, 199, 0.98), rgba(59, 111, 179, 0.98));
             color: white;
             border-radius: 25px;
             padding-bottom: 10px;
@@ -100,9 +100,9 @@ def know_the_persona_intro_page():
 
     st.markdown(f"""
         <div class="container">
-            <div class="header-small">Soon you'll recommend songs for {persona_name}. but first, let’s know {gender_value} better to make better recommendations</div>
+            <div class="header-small">Soon you'll recommend songs for {persona_name} 📝 but first, let’s get to know {gender_value} better better to make better recommendations 🎯</div>
             <div class="header"> Know or Don't Know? </div>
-            <div class="sub-header">We’ll now show you <strong> songs that {persona_name} likes</strong>. Listen to them in order to know {gender_value} better and Indicate for each song if you know it</div>
+            <div class="sub-header">We’ll now show you <strong>songs that {persona_name} likes</strong>. Listen to them to know {gender_value} better, and indicate for each song whether you know it</div>
             <div class="description">
                 <span class="green-text">Know this song?</span> Tap ✅<br>
                 <span class="red-text">Never heard of it?</span> Tap ✖️️

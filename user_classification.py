@@ -110,7 +110,7 @@ def user_classification_page():
 
             }
             img {
-                border-radius: 15px;
+                border-radius: 20px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 max-height: 25vh;
                 display: flex;

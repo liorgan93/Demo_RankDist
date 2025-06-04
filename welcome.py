@@ -5,43 +5,6 @@ from user_classification_intro import set_background
 if "page" not in st.session_state:
     st.session_state.page = "welcome"
 
-elif st.session_state.page == "opening":
-    from opening import opening_page
-    opening_page()
-elif st.session_state.page == "user_classification_intro":
-    from user_classification_intro import user_classification_intro_page
-    user_classification_intro_page()
-elif st.session_state.page == "user_classification":
-    from user_classification import user_classification_page
-    user_classification_page()
-elif st.session_state.page == "persona_reveal":
-    from persona_reveal import persona_reveal_page
-    persona_reveal_page()
-elif st.session_state.page == "know_the_persona_intro":
-    from know_the_persona_intro import know_the_persona_intro_page
-    know_the_persona_intro_page()
-elif st.session_state.page == "know_the_persona":
-    from know_the_persona import know_the_persona_page
-    know_the_persona_page()
-elif st.session_state.page == "method_choose":
-    from methood_choose import method_choose_page
-    method_choose_page()
-elif st.session_state.page == "top_k_choose":
-    from top_k_choose import top_k_choose_page
-    top_k_choose_page()
-elif st.session_state.page == "compare_recommendations":
-    from compare_recommendations import compare_recommendations_page
-    compare_recommendations_page()
-elif st.session_state.page == "thank_you":
-    from thank_you import thank_you_page
-    thank_you_page()
-elif st.session_state.page == "research_page":
-    from research_page import research_page
-    research_page()
-elif st.session_state.page == "thank_you_research":
-    from thank_you_research import thank_you_research
-    thank_you_research()
-
 
 def get_base64_image(image_path):
     with open(image_path, "rb") as file:
@@ -134,7 +97,7 @@ def welcome_page():
         </style>
         <div class="container">
             <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
-            <p class="title-text">Welcome to our Music Recommendation Experience!</p>
+            <p class="title-text">Welcome to our Music Recommendation Experience 🎼</p>
             <div class="subtitle">Can you beat the algorithm RankDist in music recommendation?</div>
             <img src="data:image/webp;base64,{music}" class="music-image">
             <div class="time_est"> Estimated time: <strong> 8–10 minutes </strong> </div>
@@ -178,3 +141,45 @@ def welcome_page():
 
 if st.session_state.page == "welcome":
     welcome_page()
+elif st.session_state.page == "opening":
+    from opening import opening_page
+    opening_page()
+elif st.session_state.page == "user_classification_intro":
+    from user_classification_intro import user_classification_intro_page
+    user_classification_intro_page()
+elif st.session_state.page == "user_classification":
+    from user_classification import user_classification_page
+    user_classification_page()
+elif st.session_state.page == "persona_reveal":
+    from persona_reveal import persona_reveal_page
+    persona_reveal_page()
+elif st.session_state.page == "know_the_persona_intro":
+    from know_the_persona_intro import know_the_persona_intro_page
+    know_the_persona_intro_page()
+elif st.session_state.page == "know_the_persona":
+    from know_the_persona import know_the_persona_page
+    know_the_persona_page()
+elif st.session_state.page == "method_choose":
+    from method_choose import method_choose_page
+    method_choose_page()
+elif st.session_state.page == "perfect_precision_choose":
+    from perfect_precision_choose import perfect_precision_choose_page
+    perfect_precision_choose_page()
+elif st.session_state.page == "relevant_set_choose":
+    from relevant_set_choose import relevant_set_choose_page
+    relevant_set_choose_page()
+elif st.session_state.page == "ordered_list_choose":
+    from ordered_list_choose import ordered_list_choose_page
+    ordered_list_choose_page()
+elif st.session_state.page == "compare_recommendations":
+    from compare_recommendations import compare_recommendations_page
+    compare_recommendations_page()
+elif st.session_state.page == "thank_you":
+    from thank_you import thank_you_page
+    thank_you_page()
+elif st.session_state.page == "research_page":
+    from research_page import research_page
+    research_page()
+elif st.session_state.page == "thank_you_research":
+    from thank_you_research import thank_you_research
+    thank_you_research()

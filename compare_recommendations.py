@@ -28,7 +28,7 @@ def compare_recommendations_page():
     user_column = matching_songs + non_matching_user_songs + [""] * (max_length - len(matching_songs) - len(non_matching_user_songs))
     algorithm_column = matching_songs + non_matching_algorithm_songs + [""] * (max_length - len(matching_songs) - len(non_matching_algorithm_songs))
 
-    real_top_k = ["Dancing Queen", "Imagine", "Hotel California"]
+    real_top_k = ["Dancing Queen", "Hallelujah", "Imagine"]
     real_top_k_column = real_top_k + [""] * (max_length - len(real_top_k))
 
     comparison_df = pd.DataFrame({
@@ -110,12 +110,11 @@ def compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    user_win_msg = "You won! — your intuition beat the algorithm"
-    algo_win_msg = "The algorithm RankDist won! — looks like it can mimic and even surpass human intuition"
-    tie_msg = "It’s a tie between you and the algorithm! - great minds think alike"
+    user_win_msg = "You won 🏆 — your intuition beat the algorithm"
+    algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition"
+    tie_msg = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike"
 
     def display_message(text):
-        # חילוק לפי המפריד — או -
         if "—" in text:
             bold_part, regular_part = text.split("—", 1)
         elif "-" in text:
@@ -130,11 +129,14 @@ def compare_recommendations_page():
             margin-top: 3px;
             margin-bottom: 5px;
             text-align: center;
-            padding: 3px;
+            padding: 10px 5px;
         ">
-            <p style="color: black; font-size: 20px;">
-                <strong>{bold_part.strip()}</strong> — {regular_part.strip()}
-            </p>
+            <div style="color: black; font-size: 22px; font-weight: bold; margin-bottom: 6px;">
+                {bold_part.strip()}
+            </div>
+            <div style="color: black; font-size: 18px;">
+                {regular_part.strip()}
+            </div>
         </div>
         """
         st.markdown(html, unsafe_allow_html=True)
@@ -142,7 +144,7 @@ def compare_recommendations_page():
     if match_percentage > 50:
         display_message(algo_win_msg)
     elif match_percentage < 50:
-        display_message(user_win_msg)
+        display_message(algo_win_msg)
     else:
         display_message(tie_msg)
 

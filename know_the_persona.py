@@ -96,7 +96,7 @@ def know_the_persona_page():
 
             }
             img {
-                border-radius: 15px;
+                border-radius: 20px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 max-height: 25vh;
                 display: flex;
@@ -126,7 +126,6 @@ def know_the_persona_page():
         )
         total_steps = 5
         completed_steps = current_index + 1
-        progress = " ".join(["●" if i < completed_steps else "○" for i in range(total_steps)])
 
         st.markdown(
             f"""<div class="container">

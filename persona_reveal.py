@@ -106,8 +106,12 @@ def persona_reveal_page():
     st.markdown(
         f"""
             <div class="container">
-                <div class="title">Meet {st.session_state.persona}!</div>
-                <div class="sub_title"> Based on your musical taste you share the same vibe! </div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <span style="font-size: 24px; transform: scaleX(-1);">🎉</span>
+                <div class="title">Meet {st.session_state.persona}</div>
+                <span style="font-size: 24px;">🎉</span>
+            </div>
+            <div class="sub_title"> Based on your musical taste you share the same vibe! 🎶 </div>
             </div>
             """,
         unsafe_allow_html=True,

@@ -66,7 +66,7 @@ def opening_page():
 
         <div class="info-container">
             <div class="info-text-primary">
-                In this demo you’ll recommend songs for someone, and we’ll compare your picks to Algorithm RankDist’s output to demonstrate its performance
+                In this demo you’ll recommend songs for someone 🧠🎵 and we’ll compare your picks to the RankDist algorithm’s output to demonstrate its performance 📊
             </div>
             <div class="info-text-secondary">
                 Let’s find out how your intuition compares to data-driven recommendations!
