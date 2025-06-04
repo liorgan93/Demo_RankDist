@@ -5,14 +5,14 @@ from user_classification_intro import set_background
 
 
 def calculate_user_score():
-    return random.randint(0, 100)
+    return random.random()
 
 
 def calculate_alg_score():
-    return random.randint(0, 100)
+    return random.random()
 
 
-def compare_recommendations_page():
+def relevant_set_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
     set_background("other images/blue_b.jpg")
     selected_songs = st.session_state.user_choice

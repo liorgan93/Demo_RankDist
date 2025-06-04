@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 import streamlit.components.v1 as components
 from user_classification_intro import set_background
 
@@ -10,8 +11,11 @@ def relevant_set_choose_page():
     csv_file_path = "playlists_excel/top_k_songs.csv"
     songs_data = pd.read_csv(csv_file_path)
     persona_name = st.session_state.persona
+    persona_number = st.session_state.chosen_person_number
+    cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
+    if os.path.exists(cluster_file_path):
+        cluster_data = pd.read_csv(cluster_file_path)
 
-    # CSS styles
     st.markdown("""
     <style>
         .block-container {
@@ -126,7 +130,7 @@ def relevant_set_choose_page():
             justify-content: center;
             background: linear-gradient(135deg, rgba(80, 40, 120, 0.95), rgba(60, 60, 150, 0.95));
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             padding: 2px 0;
             border-radius: 50px;
@@ -144,7 +148,7 @@ def relevant_set_choose_page():
                     Relevant Set
                 </div>
                 <div class="text_choose">
-                    Choose 3 songs you’d strongly recommend to {persona_name} 🎧
+                    Choose TOP 3 songs that you’d strongly recommend to {persona_name} 🎧
                 </div>
             </div>
         """, unsafe_allow_html=True)
@@ -156,7 +160,7 @@ def relevant_set_choose_page():
             if len(selected_songs) != 3:
                 st.session_state.error_msg = "You must select exactly 3 songs before continuing"
             else:
-                st.session_state.page = "compare_recommendations"
+                st.session_state.page = "relevant_set_compare_recommendations"
                 st.session_state.user_choice = selected_songs
 
         col_next = st.columns([0.15, 0.7, 0.15])
@@ -181,20 +185,28 @@ def relevant_set_choose_page():
 
     cols = st.columns(3, gap="small")
 
-    for idx, row in songs_data.iterrows():
-        song_name = row["song"]
+    for idx, row in cluster_data.iterrows():
+        song_name = row["relevant_set_songs"]
+        track_url = row["relevant_set_songs_links"]
+
+        if "track/" in track_url:
+            track_id = track_url.split("track/")[-1].split("?")[0]
+            embed_url = f"https://open.spotify.com/embed/track/{track_id}"
+        else:
+            embed_url = track_url
+
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
-                embed_html = """
-                <iframe style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/3V4B7W0svTALLSvEKZLmoX?utm_source=generator" 
-                    width="100%" 
-                    height="80" 
-                    frameBorder="0" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                </iframe>
-                """
+                embed_html = f"""
+                    <iframe style="border-radius:12px" 
+                        src="{embed_url}" 
+                        width="100%" 
+                        height="80" 
+                        frameBorder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    """
                 components.html(embed_html, height=85)
 
     st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)

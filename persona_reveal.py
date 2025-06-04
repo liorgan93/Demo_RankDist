@@ -53,7 +53,7 @@ def persona_reveal_page():
         }
 
         .title {
-            font-size: 30px;
+            font-size: 28px;
             font-weight: 900;
             background: linear-gradient(to bottom, #000000, #222222, #444444); /* שחור עם עומק */
             -webkit-background-clip: text;
@@ -111,7 +111,7 @@ def persona_reveal_page():
                 <div class="title">Meet {st.session_state.persona}</div>
                 <span style="font-size: 24px;">🎉</span>
             </div>
-            <div class="sub_title"> Based on your musical taste you share the same vibe! 🎶 </div>
+            <div class="sub_title"> Based on your musical taste you share the same vibe!</div>
             </div>
             """,
         unsafe_allow_html=True,

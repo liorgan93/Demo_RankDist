@@ -211,7 +211,6 @@ def user_classification_page():
                 st.session_state.song_feedback.append([1])
                 st.session_state.current_song_index += 1
                 if st.session_state.current_song_index >= len(st.session_state.songs_df):
-
                     st.session_state.page = "persona_reveal"
 
         def handle_dislike():

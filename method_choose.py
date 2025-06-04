@@ -45,7 +45,7 @@ def method_choose_page():
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 17px !important;
+                font-size: 18px !important;
                 margin: 0;
                 font-weight: bold;
             }
@@ -64,7 +64,7 @@ def method_choose_page():
             }
             .explanation-container p {
                 color: #FFFFFF;
-                font-size: 14px;
+                font-size: 13.5px;
                 margin: 0 5px;
             }
         </style>
@@ -123,6 +123,6 @@ def method_choose_page():
     col1, col2, col3 = st.columns([1,1,1])
 
     with col2:
-        st.button("", key="aa", on_click=click_a, use_container_width=True)
-        st.button("", key="bb", on_click=click_b, use_container_width=True)
         st.button("", key="cc", on_click=click_c, use_container_width=True)
+        st.button("", key="bb", on_click=click_b, use_container_width=True)
+        st.button("", key="aa", on_click=click_a, use_container_width=True)

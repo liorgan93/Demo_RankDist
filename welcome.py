@@ -171,9 +171,18 @@ elif st.session_state.page == "relevant_set_choose":
 elif st.session_state.page == "ordered_list_choose":
     from ordered_list_choose import ordered_list_choose_page
     ordered_list_choose_page()
+elif st.session_state.page == "relevant_set_compare_recommendations":
+    from relevant_set_compare_recommendations import relevant_set_compare_recommendations_page
+    relevant_set_compare_recommendations_page()
+elif st.session_state.page == "perfect_precision_compare_recommendations":
+    from perfect_precision_compare_recommendations import perfect_precision_compare_recommendations_page
+    perfect_precision_compare_recommendations_page()
+elif st.session_state.page == "ordered_list_compare_recommendations":
+    from ordered_list_compare_recommendations import ordered_list_compare_recommendations_page
+    ordered_list_compare_recommendations_page()
 elif st.session_state.page == "compare_recommendations":
-    from compare_recommendations import compare_recommendations_page
-    compare_recommendations_page()
+    from relevant_set_compare_recommendations import relevant_set_compare_recommendations_page
+    relevant_set_compare_recommendations_page()
 elif st.session_state.page == "thank_you":
     from thank_you import thank_you_page
     thank_you_page()

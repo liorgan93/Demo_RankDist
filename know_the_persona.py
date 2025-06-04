@@ -12,7 +12,8 @@ def get_songs_by_persona(persona_num):
 def know_the_persona_page():
     st.set_page_config(page_title="RankDist Demo")
     persona_name = st.session_state.persona
-    st.session_state.persona_songs_df = get_songs_by_persona(st.session_state.chosen_person_number)
+    persona_number = st.session_state.chosen_person_number
+    st.session_state.persona_songs_df = get_songs_by_persona(persona_number)
 
     if "song_index" not in st.session_state:
         st.session_state.song_index = 0

@@ -44,7 +44,7 @@ def know_the_persona_intro_page():
             font-family: 'Poppins', sans-serif;
         }
         .header-small {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: #FFFFFF; 
             background-color: rgba(94, 35, 157, 0.8); 
