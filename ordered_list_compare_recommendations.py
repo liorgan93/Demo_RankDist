@@ -62,7 +62,7 @@ def ordered_list_compare_recommendations_page():
             margin-top: 10px;
             margin-bottom: 28px;
             padding-top: 5px;
-            font-size: 23px !important;
+            font-size: 24px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
         }

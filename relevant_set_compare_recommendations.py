@@ -62,7 +62,7 @@ def relevant_set_compare_recommendations_page():
             margin-top: 10px;
             margin-bottom: 28px;
             padding-top: 5px;
-            font-size: 23px !important;
+            font-size: 24px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
         }
@@ -91,7 +91,7 @@ def relevant_set_compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    st.markdown(f"<div style='text-align:center; font-size:16px; margin-top:10px;'>🎧 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>Alg Score:</b> {alg_score}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center; font-size:16px; margin-top:10px;'>🧍 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>RankDist Score:</b> {alg_score}</div>", unsafe_allow_html=True)
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm"
     algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition"
