@@ -126,6 +126,9 @@ def ordered_list_compare_recommendations_page():
                  {regular_part.strip()}
              </div>
          </div>
+         <div style="color: black; font-size: 14px; font-style: italic; margin-top: 1px;">
+         * Score calculated using accuracy
+         </div>
          """
         st.markdown(html, unsafe_allow_html=True)
 
