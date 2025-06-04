@@ -91,13 +91,14 @@ def perfect_precision_compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    st.markdown(f"<div style='text-align:center; font-size:18px; margin-top:3px;'>🎧 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>Algorithm Score:</b> {alg_score}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center; font-size:18px; margin-top:-5px !important;'>🎧 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>Algorithm Score:</b> {alg_score}</div>", unsafe_allow_html=True)
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm"
     algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition"
     tie_msg = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike"
 
     def display_message(text):
+        is_tie = (text == tie_msg)
         if "—" in text:
             bold_part, regular_part = text.split("—", 1)
         elif "-" in text:
@@ -105,6 +106,7 @@ def perfect_precision_compare_recommendations_page():
         else:
             bold_part, regular_part = text, ""
 
+        bold_font_size = "17px" if is_tie else "22px"
         html = f"""
         <div style="
             background: linear-gradient(135deg, #66ccff, #99ddff);
@@ -114,10 +116,10 @@ def perfect_precision_compare_recommendations_page():
             text-align: center;
             padding: 8px 3px;
         ">
-            <div style="color: black; font-size: 22px; font-weight: bold; margin-bottom: 6px;">
+            <div style="color: black; font-size: {bold_font_size}; font-weight: bold; margin-bottom: 6px;">
                 {bold_part.strip()}
             </div>
-            <div style="color: black; font-size: 18px;">
+            <div style="color: black; font-size: 17px;">
                 {regular_part.strip()}
             </div>
         </div>
