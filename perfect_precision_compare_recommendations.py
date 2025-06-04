@@ -5,7 +5,7 @@ from user_classification_intro import set_background
 
 
 def calculate_user_score():
-    return random.random() 
+    return random.random()
 
 
 def calculate_alg_score():

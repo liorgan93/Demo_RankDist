@@ -44,11 +44,11 @@ def know_the_persona_intro_page():
             font-family: 'Poppins', sans-serif;
         }
         .header-small {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
             color: #FFFFFF; 
             background-color: rgba(94, 35, 157, 0.8); 
-            padding: 1px 6px; 
+            padding: 1px 4px; 
             border-radius: 15px; 
             margin-bottom: 17px;
             
