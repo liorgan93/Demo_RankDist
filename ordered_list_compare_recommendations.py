@@ -57,6 +57,9 @@ def ordered_list_compare_recommendations_page():
             overflow-x: hidden;
             padding: 0;
         }
+        iframe[data-testid="stDataFrame"] {
+            margin-bottom: -10px !important;
+        }
         .title-text {
             text-align: center;
             margin-top: 10px;
@@ -106,7 +109,7 @@ def ordered_list_compare_recommendations_page():
         else:
             bold_part, regular_part = text, ""
 
-        bold_font_size = "17px" if is_tie else "22px"
+        bold_font_size = "17px" if is_tie else "21px"
         html = f"""
          <div style="
              background: linear-gradient(135deg, #66ccff, #99ddff);
@@ -119,7 +122,7 @@ def ordered_list_compare_recommendations_page():
              <div style="color: black; font-size: {bold_font_size}; font-weight: bold; margin-bottom: 6px;">
                  {bold_part.strip()}
              </div>
-             <div style="color: black; font-size: 17px;">
+             <div style="color: black; font-size: 17px; line-height: 1.2;">
                  {regular_part.strip()}
              </div>
          </div>
