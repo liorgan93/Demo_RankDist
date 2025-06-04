@@ -148,7 +148,7 @@ def relevant_set_choose_page():
                     Relevant Set
                 </div>
                 <div class="text_choose">
-                    Choose TOP 3 songs that you’d strongly recommend to {persona_name} 🎧
+                    Choose TOP 3 songs you’d recommend to {persona_name} 🎧
                 </div>
             </div>
         """, unsafe_allow_html=True)
