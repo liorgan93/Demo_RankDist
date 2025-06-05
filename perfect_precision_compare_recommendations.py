@@ -13,9 +13,9 @@ def calculate_score(predicted_items, true_items):
         return 0, "Missed❌"
 
 def html_table(df):
-    html = """
+    html = f"""
     <style>
-        .dark-table {
+        .dark-table {{
             width: 100%;
             border-collapse: collapse;
             margin: 0 auto;
@@ -27,35 +27,35 @@ def html_table(df):
             overflow: hidden;
             text-align: left;
             table-layout: fixed;
-        }
-        .dark-table th, .dark-table td {
+        }}
+        .dark-table th, .dark-table td {{
             border: 1px solid #444;
             padding: 5px;
             font-size: 11px;
             font-weight: 600;
-            width: calc(100% / 3); /* 3 עמודות שוות ברוחב */
-        }
-        .dark-table th {
+            width: calc(100% / {df.shape[1]});
+        }}
+        .dark-table th {{
             background-color: #1f1f2e;
             color: #aaaaaa;
             font-size: 12.5px;
             font-weight: bold;
-        }
-        .dark-table tr {
+        }}
+        .dark-table tr {{
             background-color: #000000;
-        }
-    </style>
-    """
-
+        }}
     </style>
     <table class="dark-table">
         <thead>
             <tr>
     """
+
+    # הוספת שמות העמודות
     for col in df.columns:
         html += f"<th>{col}</th>"
     html += "</tr></thead><tbody>"
 
+    # הוספת תוכן הטבלה
     for _, row in df.iterrows():
         html += "<tr>"
         for val in row:
@@ -64,6 +64,7 @@ def html_table(df):
 
     html += "</tbody></table>"
     return html
+
 
 
 
