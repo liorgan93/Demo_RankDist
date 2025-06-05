@@ -10,9 +10,6 @@ def calculate_score(predicted_items, true_items):
     return 1 , "Perfect✅" if predicted_set.issubset(true_set) else 0 , "Missed❌"
 
 
-def calculate_alg_score():
-    return random.random()
-
 
 def perfect_precision_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
