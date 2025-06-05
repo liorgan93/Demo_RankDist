@@ -104,7 +104,7 @@ def relevant_set_compare_recommendations_page():
             margin-top: 0px;
             margin-bottom: 25px;
             padding-top: 0px;
-            font-size: 27px !important;
+            font-size: 24px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
         }
