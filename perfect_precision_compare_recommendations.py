@@ -8,9 +8,9 @@ def calculate_score(predicted_items, true_items):
     predicted_set = set(predicted_items)
     true_set = set(true_items)
     if predicted_set.issubset(true_set):
-        return 1, "Perfect✅"
+        return 1, "Perfect"
     else:
-        return 0, "Missed❌"
+        return 0, "Missed"
 
 
 
