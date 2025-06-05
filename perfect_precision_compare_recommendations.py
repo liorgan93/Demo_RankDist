@@ -4,8 +4,10 @@ import random
 from user_classification_intro import set_background
 
 
-def calculate_user_score():
-    return random.random()
+def calculate_score(predicted_items, true_items):
+    predicted_set = set(predicted_items)
+    true_set = set(true_items)
+    return 1.00 if predicted_set.issubset(true_set) else 0.00
 
 
 def calculate_alg_score():
@@ -15,35 +17,33 @@ def calculate_alg_score():
 def perfect_precision_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
     set_background("other images/blue_b.jpg")
-    selected_songs = st.session_state.user_choice
-    algorithm_df = pd.read_csv("alg_results.csv")
 
-    if 'top_k' not in algorithm_df.columns:
-        st.error("Error: The file must contain a 'top_k' column.")
+    selected_songs = st.session_state.user_choice
+    persona_number = st.session_state.chosen_person_number
+    cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
+
+    cluster_df = pd.read_csv(cluster_file_path)
+    if 'perfect_precision_results_alg' not in cluster_df.columns or 'perfect_precision_results_true' not in cluster_df.columns:
+        st.error("Error: The file must contain 'perfect_precision_results_alg' and 'perfect_precision_results_true' columns.")
         return
 
-    algorithm_songs = sorted(set(algorithm_df['top_k'].dropna().tolist()))
-    user_songs = sorted(set(selected_songs))
+    user_songs = selected_songs
+    algorithm_songs = cluster_df["perfect_precision_results_alg"].dropna().tolist()
+    true_preference = cluster_df["perfect_precision_results_true"].dropna().tolist()
 
-    matching_songs = sorted(set(user_songs).intersection(set(algorithm_songs)))
-    non_matching_user_songs = sorted(set(user_songs) - set(algorithm_songs))
-    non_matching_algorithm_songs = sorted(set(algorithm_songs) - set(user_songs))
+    max_length = max(len(user_songs), len(algorithm_songs), len(true_preference))
 
-    max_length = max(len(matching_songs) + len(non_matching_user_songs), len(matching_songs) + len(non_matching_algorithm_songs))
-    user_column = matching_songs + non_matching_user_songs + [""] * (max_length - len(matching_songs) - len(non_matching_user_songs))
-    algorithm_column = matching_songs + non_matching_algorithm_songs + [""] * (max_length - len(matching_songs) - len(non_matching_algorithm_songs))
-
-    real_top_k = ["Dancing Queen", "Hallelujah", "Imagine"]
-    real_top_k_column = real_top_k + [""] * (max_length - len(real_top_k))
+    def pad_list(lst, length):
+        return lst + [""] * (length - len(lst))
 
     comparison_df = pd.DataFrame({
-        "Your picks": user_column,
-        "RankDist's output": algorithm_column,
-        "True preference": real_top_k_column
+        "Your picks": pad_list(user_songs, max_length),
+        "RankDist's output": pad_list(algorithm_songs, max_length),
+        "True preference": pad_list(true_preference, max_length)
     })
 
-    user_score = calculate_user_score()
-    alg_score = calculate_alg_score()
+    user_score = calculate_score(user_songs, true_preference)
+    alg_score = calculate_score(algorithm_songs, true_preference)
 
     st.markdown(
         """
@@ -65,7 +65,7 @@ def perfect_precision_compare_recommendations_page():
             margin-top: 10px;
             margin-bottom: 25px;
             padding-top: 5px;
-            font-size: 24px !important;
+            font-size: 27px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
         }
@@ -88,17 +88,27 @@ def perfect_precision_compare_recommendations_page():
         """,
         unsafe_allow_html=True
     )
-    st.markdown('<p class="title-text">Comparison and Evaluation</p>', unsafe_allow_html=True)
+    st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    st.markdown(f"<div style='text-align:center; font-size:18px; margin-top:-5px !important;'>🎧 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>Algorithm Score:</b> {alg_score}</div>", unsafe_allow_html=True)
+    st.markdown(
+        f"<div style='text-align:center; font-size:18px; margin-top:-5px !important;'>🎧 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>Algorithm Score:</b> {alg_score}</div>",
+        unsafe_allow_html=True
+    )
 
-    user_win_msg = "You won 🏆 — your intuition beat the algorithm"
-    algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition"
-    tie_msg = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike"
+    user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
+    algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition!"
+    tie_msg_1 = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike!"
+    tie_msg_0 = "It’s a tie between you and the algorithm - this time, neither of you found the exact preferred set"
+
+    if algo_win_msg == 1.00:
+        tie_msg = tie_msg_1
+    else:
+        tie_msg = tie_msg_0
+
 
     def display_message(text):
         is_tie = (text == tie_msg)

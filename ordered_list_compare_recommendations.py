@@ -63,7 +63,7 @@ def ordered_list_compare_recommendations_page():
         .title-text {
             text-align: center;
             margin-top: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 27px;
             padding-top: 5px;
             font-size: 24px !important;
             font-weight: bold;
@@ -88,7 +88,7 @@ def ordered_list_compare_recommendations_page():
         """,
         unsafe_allow_html=True
     )
-    st.markdown('<p class="title-text">Comparison and Evaluation</p>', unsafe_allow_html=True)
+    st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
@@ -96,9 +96,9 @@ def ordered_list_compare_recommendations_page():
 
     st.markdown(f"<div style='text-align:center; font-size:18px; margin-top:-5px !important;'>🎧 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>Algorithm Score:</b> {alg_score}</div>", unsafe_allow_html=True)
 
-    user_win_msg = "You won 🏆 — your intuition beat the algorithm"
-    algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition"
-    tie_msg = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike"
+    user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
+    algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition!"
+    tie_msg = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike!"
 
     def display_message(text):
         is_tie = (text == tie_msg)
