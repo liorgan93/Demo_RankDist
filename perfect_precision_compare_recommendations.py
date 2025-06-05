@@ -31,7 +31,7 @@ def html_table(df):
         .dark-table th, .dark-table td {{
             border: 1px solid #444;
             padding: 5px;
-            font-size: 11px;
+            font-size: 10.5px;
             font-weight: 600;
             width: calc(100% / {df.shape[1]});
         }}
@@ -62,8 +62,6 @@ def html_table(df):
 
     html += "</tbody></table>"
     return html
-
-
 
 
 
@@ -137,7 +135,7 @@ def perfect_precision_compare_recommendations_page():
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
     st.markdown('<div style="text-align:center; margin-top:-28px; font-size:15px; font-weight: bold; font-family: Segoe UI, sans-serif;">Your picks VS the RankDist algorithm</div>', unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
+    col1, col2, col3 = st.columns([0.025, 0.95, 0.025])
     with col2:
         st.markdown(html_table(comparison_df), unsafe_allow_html=True)
 

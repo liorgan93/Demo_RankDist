@@ -11,9 +11,9 @@ def calculate_alg_score():
     return 1, "3/3"
 
 def html_table(df):
-    html = """
+    html = f"""
     <style>
-        .dark-table {
+        .dark-table {{
             width: 100%;
             border-collapse: collapse;
             margin: 0 auto;
@@ -23,30 +23,31 @@ def html_table(df):
             border: 1px solid #333;
             border-radius: 8px;
             overflow: hidden;
-        }
-        .dark-table td {
+            text-align: left;
+            table-layout: fixed;
+        }}
+        .dark-table th, .dark-table td {{
             border: 1px solid #444;
             padding: 5px;
-            text-align: left;
-            font-size: 11px;
-            font-weight: 600 !important;
-
-        }
-        .dark-table th {
-            text-align: left;
-            background-color: #1f1f2e; 
-            color: #aaaaaa;           
-            font-weight: bold;
+            font-size: 10.5px;
+            font-weight: 600;
+            width: calc(100% / {df.shape[1]});
+        }}
+        .dark-table th {{
+            background-color: #1f1f2e;
+            color: #aaaaaa;
             font-size: 12px;
-        }
-        .dark-table tr {
+            font-weight: bold;
+        }}
+        .dark-table tr {{
             background-color: #000000;
-        }
+        }}
     </style>
     <table class="dark-table">
         <thead>
             <tr>
     """
+
     for col in df.columns:
         html += f"<th>{col}</th>"
     html += "</tr></thead><tbody>"
@@ -131,7 +132,7 @@ def relevant_set_compare_recommendations_page():
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
     st.markdown('<div style="text-align:center; margin-top:-28px; font-size:15px; font-weight: bold; font-family: Segoe UI, sans-serif;">Your picks VS the RankDist algorithm</div>', unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
+    col1, col2, col3 = st.columns([0.025, 0.95, 0.025])
     with col2:
         st.markdown(html_table(comparison_df), unsafe_allow_html=True)
 
