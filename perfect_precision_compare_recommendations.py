@@ -62,7 +62,7 @@ def perfect_precision_compare_recommendations_page():
         }
         .title-text {
             text-align: center;
-            margin-top: 8px;
+            margin-top: 3px;
             margin-bottom: 25px;
             padding-top: 3px;
             font-size: 27px !important;
