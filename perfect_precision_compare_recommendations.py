@@ -38,7 +38,7 @@ def html_table(df):
         .dark-table th {{
             background-color: #1f1f2e;
             color: #aaaaaa;
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: bold;
         }}
         .dark-table tr {{
@@ -50,12 +50,10 @@ def html_table(df):
             <tr>
     """
 
-    # הוספת שמות העמודות
     for col in df.columns:
         html += f"<th>{col}</th>"
     html += "</tr></thead><tbody>"
 
-    # הוספת תוכן הטבלה
     for _, row in df.iterrows():
         html += "<tr>"
         for val in row:
