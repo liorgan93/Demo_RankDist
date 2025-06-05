@@ -132,9 +132,9 @@ def relevant_set_compare_recommendations_page():
          """
         st.markdown(html, unsafe_allow_html=True)
 
-    if user_score > alg_score[0]:
+    if user_score[0] > alg_score[0]:
         display_message(user_win_msg)
-    elif alg_score > user_score[0]:
+    elif alg_score [0]> user_score[0]:
         display_message(algo_win_msg)
     else:
         display_message(tie_msg)
