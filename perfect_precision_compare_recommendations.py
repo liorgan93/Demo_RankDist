@@ -35,6 +35,7 @@ def html_table(df):
 
         }
         .dark-table th {
+            text-align: left;
             background-color: #1f1f2e; 
             color: #aaaaaa;           
             font-weight: bold;
