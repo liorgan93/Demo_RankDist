@@ -40,7 +40,7 @@ def html_table(df):
             background-color: #1f1f2e; 
             color: #aaaaaa;           
             font-weight: bold;
-            font-size: 12.5px;
+            font-size: 17.5px;
         }
         .dark-table tr {
             background-color: #000000;
