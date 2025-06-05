@@ -12,6 +12,56 @@ def calculate_score(predicted_items, true_items):
     else:
         return 0, "Missed❌"
 
+def html_table(df):
+    html = """
+    <style>
+        .dark-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-family: 'Segoe UI', sans-serif;
+            color: #e5e5e5;
+            background-color: #000000;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .dark-table th, .dark-table td {
+            border: 1px solid #444;
+            padding: 5px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600 !important;
+
+        }
+        .dark-table th {
+            background-color: #1f1f2e; 
+            color: #aaaaaa;           
+            font-weight: bold;
+            font-size: 13.5px;
+        }
+        .dark-table tr {
+            background-color: #000000;
+        }
+    </style>
+    <table class="dark-table">
+        <thead>
+            <tr>
+    """
+    for col in df.columns:
+        html += f"<th>{col}</th>"
+    html += "</tr></thead><tbody>"
+
+    for _, row in df.iterrows():
+        html += "<tr>"
+        for val in row:
+            html += f"<td>{val}</td>"
+        html += "</tr>"
+
+    html += "</tbody></table>"
+    return html
+
+
 
 
 def perfect_precision_compare_recommendations_page():
@@ -52,14 +102,6 @@ def perfect_precision_compare_recommendations_page():
             padding-top: 40px !important;
             padding-bottom: 0px !important;
         }
-        [data-testid="stAppViewContainer"] {
-            width: 100vw;
-            overflow-x: hidden;
-            padding: 0;
-        }
-        iframe[data-testid="stDataFrame"] {
-            margin-bottom: -20px !important;
-        }
         .title-text {
             text-align: center;
             margin-top: 0px;
@@ -92,9 +134,10 @@ def perfect_precision_compare_recommendations_page():
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
     st.markdown('<div style="text-align:center; margin-top:-28px; font-size:16.5px; font-weight: bold; font-family: Segoe UI, sans-serif;">Your picks VS the RankDist algorithm</div>', unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
+    col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
     with col2:
-        st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
+        st.markdown(html_table(comparison_df), unsafe_allow_html=True)
+
 
     st.markdown(f"<div style='text-align:center; font-size:14px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[1]}</div>", unsafe_allow_html=True)
 

@@ -6,6 +6,10 @@ from collections import Counter
 from classsification_functions import sample_unique_tracks_per_cluster
 import time
 
+def button_click_problem():
+    st.session_state.page = "user_classification_intro"
+    del st.session_state.song_feedback
+    del st.session_state.current_song_index
 
 def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
@@ -205,13 +209,43 @@ def user_classification_page():
         </script>
         """, height=85)
 
+        problem_msg = """
+        <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
+            <div style="
+                background-color: #2b2b2b;
+                padding: 5px 10px;
+                border-radius: 12px;
+                box-shadow: 0 0 15px rgba(0,0,0,0.3);
+                color: #eeeeee;
+                text-align: center;
+                max-width: 500px;
+                font-family: 'Segoe UI', sans-serif;
+            ">
+                <h4 style="margin-top: 0; color: #dddddd;">Oops! A minor technical issue happened 🛠️</h4>
+                <p style="font-size: 16px;">
+                    Due to a technical issue, we couldn’t save your song feedback.<br>
+                    We’re sorry about that! You’ll be taken back to the start of the rating process.<br>
+                    Thanks for your patience — we really appreciate it!
+                </p>
+            </div>
+        </div>
+        <div style="height: 10px;"></div>
+        """
+
         def handle_like():
             if not st.session_state.button_clicked:
                 st.session_state.button_clicked = True
                 st.session_state.song_feedback.append([1])
                 st.session_state.current_song_index += 1
                 if st.session_state.current_song_index >= len(st.session_state.songs_df):
+                    if len(st.session_state.song_feedback) > 10:
+                        st.markdown(problem_msg, unsafe_allow_html=True)
+                        col1, col2, col3 = st.columns([1, 1, 1])
+                        with col2:
+                            st.button("ok", key="ok", on_click=button_click_problem, use_container_width=True)
+                            return
                     st.session_state.page = "persona_reveal"
+
 
         def handle_dislike():
             if not st.session_state.button_clicked:
@@ -219,6 +253,12 @@ def user_classification_page():
                 st.session_state.song_feedback.append([0])
                 st.session_state.current_song_index += 1
                 if st.session_state.current_song_index >= len(st.session_state.songs_df):
+                    if len(st.session_state.song_feedback) > 10:
+                        st.markdown(problem_msg, unsafe_allow_html=True)
+                        col1, col2, col3 = st.columns([1, 1, 1])
+                        with col2:
+                            st.button("ok", key="ok", on_click=button_click_problem, use_container_width=True)
+                            return
                     st.session_state.page = "persona_reveal"
 
         col1, col2, col3 = st.columns(3)
@@ -228,3 +268,7 @@ def user_classification_page():
 
         with col1:
             st.button("👍", key="like", on_click=handle_like)
+    else:
+        st.session_state.page = "persona_reveal"
+
+

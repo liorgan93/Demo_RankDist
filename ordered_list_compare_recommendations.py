@@ -11,6 +11,55 @@ def calculate_user_score():
 def calculate_alg_score():
     return random.random()
 
+def html_table(df):
+    html = """
+    <style>
+        .dark-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-family: 'Segoe UI', sans-serif;
+            color: #e5e5e5;
+            background-color: #000000;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .dark-table th, .dark-table td {
+            border: 1px solid #444;
+            padding: 5px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600 !important;
+
+        }
+        .dark-table th {
+            background-color: #1f1f2e; 
+            color: #aaaaaa;           
+            font-weight: bold;
+            font-size: 13.5px;
+        }
+        .dark-table tr {
+            background-color: #000000;
+        }
+    </style>
+    <table class="dark-table">
+        <thead>
+            <tr>
+    """
+    for col in df.columns:
+        html += f"<th>{col}</th>"
+    html += "</tr></thead><tbody>"
+
+    for _, row in df.iterrows():
+        html += "<tr>"
+        for val in row:
+            html += f"<td>{val}</td>"
+        html += "</tr>"
+
+    html += "</tbody></table>"
+    return html
+
 
 def ordered_list_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
@@ -52,14 +101,6 @@ def ordered_list_compare_recommendations_page():
             padding-top: 40px !important;
             padding-bottom: 0px !important;
         }
-        [data-testid="stAppViewContainer"] {
-            width: 100vw;
-            overflow-x: hidden;
-            padding: 0;
-        }
-        iframe[data-testid="stDataFrame"] {
-            margin-bottom: -20px !important;
-        }
         .title-text {
             text-align: center;
             margin-top: 0px;
@@ -94,7 +135,7 @@ def ordered_list_compare_recommendations_page():
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
-        st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
+        st.markdown(html_table(comparison_df), unsafe_allow_html=True)
 
     st.markdown(f"<div style='text-align:center; font-size:17px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score}</div>", unsafe_allow_html=True)
 
