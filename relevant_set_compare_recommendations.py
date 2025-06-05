@@ -5,12 +5,10 @@ from user_classification_intro import set_background
 
 
 def calculate_user_score():
-    return 0.67
-
+    return 2 / 3
 
 def calculate_alg_score():
-    return 1.00
-
+    return 3 / 3
 
 def relevant_set_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
