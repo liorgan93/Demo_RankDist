@@ -93,7 +93,7 @@ def perfect_precision_compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    st.markdown(f"<div style='text-align:center; font-size:15px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[1]}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center; font-size:15px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[0]}</div>", unsafe_allow_html=True)
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
     algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition!"
