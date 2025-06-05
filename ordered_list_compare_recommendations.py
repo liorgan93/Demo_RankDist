@@ -62,9 +62,9 @@ def ordered_list_compare_recommendations_page():
         }
         .title-text {
             text-align: center;
-            margin-top: 8px;
+            margin-top: 0px;
             margin-bottom: 27px;
-            padding-top: 3px;
+            padding-top: 0px;
             font-size: 24px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
