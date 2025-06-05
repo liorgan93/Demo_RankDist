@@ -27,7 +27,8 @@ def html_table(df):
             overflow: hidden;
             text-align: left;
         }
-        .dark-table td {
+         .dark-table td {
+            text-align: left !important;
             border: 1px solid #444;
             padding: 5px;
             font-size: 11px;
@@ -35,6 +36,7 @@ def html_table(df):
 
         }
         .dark-table th {
+            text-align: left !important;
             background-color: #1f1f2e; 
             color: #aaaaaa;           
             font-weight: bold;
