@@ -95,7 +95,7 @@ def perfect_precision_compare_recommendations_page():
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
     st.markdown(
-        f"<div style='text-align:center; font-size:18px; margin-top:-5px !important;'>🎧 <b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>Algorithm Score:</b> {alg_score}</div>",
+        f"<div style='text-align:center; font-size:15px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp; 🤖 <b>ARankDist algorithm Score:</b> {alg_score}</div>",
         unsafe_allow_html=True
     )
 
