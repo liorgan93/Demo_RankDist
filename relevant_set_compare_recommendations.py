@@ -62,7 +62,7 @@ def relevant_set_compare_recommendations_page():
         }
         .title-text {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 8px;
             margin-bottom: 25px;
             padding-top: 5px;
             font-size: 27px !important;

@@ -62,7 +62,7 @@ def perfect_precision_compare_recommendations_page():
         }
         .title-text {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 8px;
             margin-bottom: 25px;
             padding-top: 5px;
             font-size: 27px !important;
@@ -90,7 +90,7 @@ def perfect_precision_compare_recommendations_page():
     )
 
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
-    st.markdown('<div style="text-align:center; margin-top:-28px; font-size:18px; font-weight: bold;">Your picks vs. the RankDist algorithm</div>',unsafe_allow_html=True)
+    st.markdown('<div style="text-align:center; margin-top:-28px; font-size:17px; font-weight: bold;">Your picks vs. the RankDist algorithm</div>',unsafe_allow_html=True)
 
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
