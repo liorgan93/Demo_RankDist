@@ -26,25 +26,27 @@ def html_table(df):
             border-radius: 8px;
             overflow: hidden;
             text-align: left;
+            table-layout: fixed;
         }
-         .dark-table td {
-            text-align: left !important;
+        .dark-table th, .dark-table td {
             border: 1px solid #444;
             padding: 5px;
             font-size: 11px;
-            font-weight: 600 !important;
-
+            font-weight: 600;
+            width: calc(100% / 3); /* 3 עמודות שוות ברוחב */
         }
         .dark-table th {
-            text-align: left !important;
-            background-color: #1f1f2e; 
-            color: #aaaaaa;           
+            background-color: #1f1f2e;
+            color: #aaaaaa;
+            font-size: 12.5px;
             font-weight: bold;
-            font-size: 12px;
         }
         .dark-table tr {
             background-color: #000000;
         }
+    </style>
+    """
+
     </style>
     <table class="dark-table">
         <thead>
