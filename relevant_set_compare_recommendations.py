@@ -5,10 +5,10 @@ from user_classification_intro import set_background
 
 
 def calculate_user_score():
-    return 2 / 3
+    return 0.67, "2/3"
 
 def calculate_alg_score():
-    return 3 / 3
+    return 1, "3/3"
 
 def relevant_set_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
@@ -93,7 +93,7 @@ def relevant_set_compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    st.markdown(f"<div style='text-align:center; font-size:17px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center; font-size:17px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[1]}</div>", unsafe_allow_html=True)
 
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
@@ -132,9 +132,9 @@ def relevant_set_compare_recommendations_page():
          """
         st.markdown(html, unsafe_allow_html=True)
 
-    if user_score > alg_score:
+    if user_score > alg_score[0]:
         display_message(user_win_msg)
-    elif alg_score > user_score:
+    elif alg_score > user_score[0]:
         display_message(algo_win_msg)
     else:
         display_message(tie_msg)
