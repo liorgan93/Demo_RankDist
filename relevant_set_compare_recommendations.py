@@ -89,7 +89,7 @@ def relevant_set_compare_recommendations_page():
         unsafe_allow_html=True
     )
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
-    st.markdown('<div style="text-align:center; margin-top:-20px; font-size:18px;">Your picks vs. the RankDist algorithm</div>',unsafe_allow_html=True)
+    st.markdown('<div style="text-align:center; margin-top:-25px; font-size:18px;">Your picks vs. the RankDist algorithm</div>',unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
