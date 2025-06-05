@@ -7,7 +7,10 @@ from user_classification_intro import set_background
 def calculate_score(predicted_items, true_items):
     predicted_set = set(predicted_items)
     true_set = set(true_items)
-    return 1 , "Perfect✅" if predicted_set.issubset(true_set) else 0 , "Missed❌"
+    if predicted_set.issubset(true_set):
+        return 1, "Perfect✅"
+    else:
+        return 0, "Missed❌"
 
 
 
@@ -93,7 +96,7 @@ def perfect_precision_compare_recommendations_page():
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
-    st.markdown(f"<div style='text-align:center; font-size:15px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[0]}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center; font-size:15px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[1]}</div>", unsafe_allow_html=True)
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
     algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition!"
