@@ -89,13 +89,13 @@ def relevant_set_compare_recommendations_page():
         unsafe_allow_html=True
     )
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
+    st.markdown('<div style="text-align:center; margin-top:-20px; font-size:16px;">Your picks vs. the RankDist algorithm</div>',unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.05, 0.9, 0.05])
     with col2:
         st.dataframe(comparison_df, hide_index=True, use_container_width=True, key="Next_button")
 
     st.markdown(f"<div style='text-align:center; font-size:17px; margin-top:-5px !important;'>🤖 <b>RankDist Score:</b> {alg_score} &nbsp;&nbsp;&nbsp; 🧍 <b>Your Score:</b> {user_score}</div>", unsafe_allow_html=True)
-    st.markdown('<div style="text-align:center; margin-top:-20px; font-size:16px;">Your picks vs. the RankDist algorithm</div>',unsafe_allow_html=True)
 
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
