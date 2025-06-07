@@ -31,14 +31,14 @@ def html_table(df):
         .dark-table th, .dark-table td {{
             border: 1px solid #444;
             padding: 5px;
-            font-size: 10.5px;
+            font-size: 10px;
             font-weight: 600;
             width: calc(100% / {df.shape[1]});
         }}
         .dark-table th {{
             background-color: #1f1f2e;
             color: #aaaaaa;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
         }}
         .dark-table tr {{
@@ -162,7 +162,7 @@ def perfect_precision_compare_recommendations_page():
         else:
             bold_part, regular_part = text, ""
 
-        bold_font_size = "17px" if is_tie else "21px"
+        bold_font_size = "18px" if is_tie else "21px"
         html = f"""
         <div style="
             background: linear-gradient(135deg, #66ccff, #99ddff);

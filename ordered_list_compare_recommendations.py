@@ -41,26 +41,26 @@ def html_table(df):
         .dark-table th, .dark-table td {{
             border: 1px solid #444;
             padding: 5px;
-            font-size: 10.5px;
+            font-size: 10px;
             font-weight: 600;
         }}
         .dark-table th {{
             background-color: #1f1f2e;
             color: #aaaaaa;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
         }}
         .dark-table td.index-col {{
-            width: 4%;
+            width: 7%;
             color: #777;
             font-weight: normal;
             text-align: center;
         }}
         .dark-table td.data-col {{
-            width: calc(96% / {num_data_cols});
+            width: calc(93% / {num_data_cols});
         }}
         .dark-table th.data-col {{
-            width: calc(96% / {num_data_cols});
+            width: calc(93% / {num_data_cols});
         }}
     </style>
     <table class="dark-table">
@@ -174,7 +174,7 @@ def ordered_list_compare_recommendations_page():
         else:
             bold_part, regular_part = text, ""
 
-        bold_font_size = "17px" if is_tie else "21px"
+        bold_font_size = "18px" if is_tie else "21px"
         html = f"""
          <div style="
              background: linear-gradient(135deg, #66ccff, #99ddff);
