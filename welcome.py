@@ -2,8 +2,6 @@ import streamlit as st
 import base64
 from user_classification_intro import set_background
 
-st.markdown("aaaaaaaaaa")
-
 if "page" not in st.session_state:
     st.session_state.page = "welcome"
 
