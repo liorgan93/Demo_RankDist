@@ -32,11 +32,12 @@ def sample_unique_tracks_per_cluster(df, cluster_col='cluster', track_col='track
 
         if cluster_samples:
             sampled_tracks.append(pd.concat(cluster_samples))
-
-    st.markdown(sampled_tracks)
+    st.dataframe(sampled_tracks)
     if sampled_tracks:
+        st.markdown("aaaaaaaaaa")
         return pd.concat(sampled_tracks).reset_index(drop=True)
     else:
+        st.markdown("bbbbbbbbbb")
         return pd.DataFrame(columns=df.columns)
 
 
