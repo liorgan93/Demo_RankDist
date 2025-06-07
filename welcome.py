@@ -3,7 +3,10 @@ import base64
 from user_classification_intro import set_background
 
 st.set_page_config(page_title="RankDist Demo")
-st.markdown("eeee")
+st.markdown("aaaaaaaaaa")
+for key in list(st.session_state.keys()):
+    st.markdown(st.session_state[key])
+    del st.session_state[key]
 
 if "page" not in st.session_state:
     st.session_state.page = "welcome"
