@@ -2,11 +2,6 @@ import streamlit as st
 import base64
 from user_classification_intro import set_background
 
-st.set_page_config(page_title="RankDist Demo")
-st.markdown("bbbbbbbbb")
-for key in list(st.session_state.keys()):
-    st.markdown(st.session_state[key])
-st.markdown("bbbbbbbbbbbb")
 
 
 if "page" not in st.session_state:
@@ -19,6 +14,11 @@ def get_base64_image(image_path):
 
 
 def welcome_page():
+    st.set_page_config(page_title="RankDist Demo")
+    st.markdown("bbbbbbbbb")
+    for key in list(st.session_state.keys()):
+        st.markdown(st.session_state[key])
+    st.markdown("bbbbbbbbbbbb")
     def click_button():
         st.session_state.page = "opening"
 
