@@ -173,7 +173,7 @@ def relevant_set_compare_recommendations_page():
              </div>
          </div>
          <div style="color: white; font-size: 14px; font-style: italic; margin-top: 0px; margin-bottom: 5px;">
-         * Score calculated using nDCG
+        * Score calculated using accuracy
          </div>
          """
         st.markdown(html, unsafe_allow_html=True)

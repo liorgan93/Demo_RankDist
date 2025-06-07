@@ -22,6 +22,7 @@ def calculate_score(predicted_items, true_items):
 
 
 def html_table(df):
+    num_data_cols = df.shape[1]
     html = f"""
     <style>
         .dark-table {{
@@ -50,31 +51,38 @@ def html_table(df):
             font-weight: bold;
         }}
         .dark-table td.index-col {{
-            width: 40px;
+            width: 4%;
             color: #777;
             font-weight: normal;
             text-align: center;
+        }}
+        .dark-table td.data-col {{
+            width: calc(96% / {num_data_cols});
+        }}
+        .dark-table th.data-col {{
+            width: calc(96% / {num_data_cols});
         }}
     </style>
     <table class="dark-table">
         <thead>
             <tr>
-                <th></th>  <!-- תא ריק לאינדקס -->
+                <th></th>
     """
 
     for col in df.columns:
-        html += f"<th>{col}</th>"
+        html += f"<th class='data-col'>{col}</th>"
     html += "</tr></thead><tbody>"
 
     for idx, row in df.iterrows():
         html += "<tr>"
         html += f"<td class='index-col'>{idx}</td>"
         for val in row:
-            html += f"<td>{val}</td>"
+            html += f"<td class='data-col'>{val}</td>"
         html += "</tr>"
 
     html += "</tbody></table>"
     return html
+
 
 
 def ordered_list_compare_recommendations_page():
@@ -184,7 +192,7 @@ def ordered_list_compare_recommendations_page():
              </div>
          </div>
          <div style="color: white; font-size: 14px; font-style: italic; margin-top: 0px; margin-bottom: 5px;">
-         * Score calculated using accuracy
+         * Score calculated using nDCG
          </div>
          """
         st.markdown(html, unsafe_allow_html=True)
