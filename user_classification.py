@@ -180,7 +180,7 @@ def user_classification_page():
         <div id="iframe-container" style="display: none;">
             <iframe style="border-radius:20px; margin-bottom: 0px;" 
                 src="{embed_url}"
-                width="100%" height="80px" frameBorder="0" allowfullscreen=""
+                width="80%" height="352px" frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                 loading="lazy">
             </iframe>
