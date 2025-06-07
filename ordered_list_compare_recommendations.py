@@ -2,18 +2,23 @@ import streamlit as st
 import pandas as pd
 import random
 from user_classification_intro import set_background
+import math
 
 
 def calculate_score(predicted_items, true_items):
-    predicted_set = set(predicted_items)
-    true_set = set(true_items)
-    correct = len(predicted_set & true_set)
-    total = len(predicted_set)
+    true_relevances = {item: len(true_items) - idx for idx, item in enumerate(true_items)}
+    dcg = 0.0
+    for i, item in enumerate(predicted_items):
+        rel = true_relevances.get(item, 0)
+        dcg += rel / math.log2(i + 2)
 
-    if total == 0:
+    ideal_relevances = sorted(true_relevances.values(), reverse=True)
+    idcg = sum(rel / math.log2(i + 2) for i, rel in enumerate(ideal_relevances[:len(predicted_items)]))
+
+    if idcg == 0:
         return 0.0, "0/0"
-    accuracy = correct / total
-    return accuracy, f"{correct}/{total}"
+    ndcg = dcg / idcg
+    return ndcg, f"{ndcg:.2f}"
 
 
 def html_table(df):
@@ -37,7 +42,6 @@ def html_table(df):
             padding: 5px;
             font-size: 10.5px;
             font-weight: 600;
-            width: calc(100% / {df.shape[1]});
         }}
         .dark-table th {{
             background-color: #1f1f2e;
@@ -45,27 +49,33 @@ def html_table(df):
             font-size: 12px;
             font-weight: bold;
         }}
-        .dark-table tr {{
-            background-color: #000000;
+        .dark-table td.index-col {{
+            width: 40px;
+            color: #777;
+            font-weight: normal;
+            text-align: center;
         }}
     </style>
     <table class="dark-table">
         <thead>
             <tr>
+                <th></th>  <!-- תא ריק לאינדקס -->
     """
 
     for col in df.columns:
         html += f"<th>{col}</th>"
     html += "</tr></thead><tbody>"
 
-    for _, row in df.iterrows():
+    for idx, row in df.iterrows():
         html += "<tr>"
+        html += f"<td class='index-col'>{idx}</td>"
         for val in row:
             html += f"<td>{val}</td>"
         html += "</tr>"
 
     html += "</tbody></table>"
     return html
+
 
 def ordered_list_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
@@ -141,11 +151,11 @@ def ordered_list_compare_recommendations_page():
     with col2:
         st.markdown(html_table(comparison_df), unsafe_allow_html=True)
 
-    st.markdown(f"<div style='text-align:center; font-size:17px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center; font-size:17px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[1]}</div>", unsafe_allow_html=True)
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
     algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition!"
-    tie_msg = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike!"
+    tie_msg = "You and the algorithm tied 🏆🏆 - great minds think alike!"
 
     def display_message(text):
         is_tie = (text == tie_msg)

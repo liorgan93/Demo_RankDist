@@ -144,8 +144,8 @@ def perfect_precision_compare_recommendations_page():
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
     algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition!"
-    tie_msg_1 = "It’s a tie between you and the algorithm 🏆🏆 - great minds think alike!"
-    tie_msg_0 = "It’s a tie between you and the algorithm - this time, neither of you found the exact preferred set"
+    tie_msg_1 = "You and the algorithm tied 🏆🏆 - great minds think alike!"
+    tie_msg_0 = "You and the algorithm tied - this time, neither of you found the exact preferred set"
 
     if algo_win_msg == 1.00:
         tie_msg = tie_msg_1
