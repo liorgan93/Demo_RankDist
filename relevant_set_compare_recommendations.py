@@ -4,11 +4,24 @@ import random
 from user_classification_intro import set_background
 
 
-def calculate_user_score():
-    return 0.67, "2/3"
+import math
 
-def calculate_alg_score():
-    return 1, "3/3"
+def calculate_score(predicted_items, true_items):
+    true_relevances = {item: len(true_items) - idx for idx, item in enumerate(true_items)}
+    dcg = 0.0
+    for i, item in enumerate(predicted_items):
+        rel = true_relevances.get(item, 0)
+        dcg += rel / math.log2(i + 2)
+
+    ideal_relevances = sorted(true_relevances.values(), reverse=True)
+    idcg = sum(rel / math.log2(i + 2) for i, rel in enumerate(ideal_relevances[:len(predicted_items)]))
+
+    if idcg == 0:
+        return 0.0, "0/0"
+    ndcg = dcg / idcg
+    return ndcg, f"{round(dcg, 2)}/{round(idcg, 2)}"
+
+
 
 def html_table(df):
     html = f"""
@@ -64,35 +77,33 @@ def html_table(df):
 def relevant_set_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
     set_background("other images/blue_b.jpg")
-    selected_songs = st.session_state.user_choice
-    algorithm_df = pd.read_csv("alg_results.csv")
 
-    if 'top_k' not in algorithm_df.columns:
-        st.error("Error: The file must contain a 'top_k' column.")
+    selected_songs = st.session_state.user_choice
+    persona_number = st.session_state.chosen_person_number
+    cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
+
+    cluster_df = pd.read_csv(cluster_file_path)
+    if 'relevant_set_results_alg' not in cluster_df.columns or 'relevant_set_results_true' not in cluster_df.columns:
+        st.error("Error: The file must contain 'relevant_set_results_alg' and 'relevant_set_results_true' columns.")
         return
 
-    algorithm_songs = sorted(set(algorithm_df['top_k'].dropna().tolist()))
-    user_songs = sorted(set(selected_songs))
+    user_songs = selected_songs
+    algorithm_songs = cluster_df["relevant_set_results_alg"].dropna().tolist()
+    true_preference = cluster_df["relevant_set_results_true"].dropna().tolist()
 
-    matching_songs = sorted(set(user_songs).intersection(set(algorithm_songs)))
-    non_matching_user_songs = sorted(set(user_songs) - set(algorithm_songs))
-    non_matching_algorithm_songs = sorted(set(algorithm_songs) - set(user_songs))
+    max_length = max(len(user_songs), len(algorithm_songs), len(true_preference))
 
-    max_length = max(len(matching_songs) + len(non_matching_user_songs), len(matching_songs) + len(non_matching_algorithm_songs))
-    user_column = matching_songs + non_matching_user_songs + [""] * (max_length - len(matching_songs) - len(non_matching_user_songs))
-    algorithm_column = matching_songs + non_matching_algorithm_songs + [""] * (max_length - len(matching_songs) - len(non_matching_algorithm_songs))
-
-    real_top_k = ["Dancing Queen", "Hallelujah", "Imagine"]
-    real_top_k_column = real_top_k + [""] * (max_length - len(real_top_k))
+    def pad_list(lst, length):
+        return lst + [""] * (length - len(lst))
 
     comparison_df = pd.DataFrame({
-        "Your picks": user_column,
-        "RankDist's output": algorithm_column,
-        "True preference": real_top_k_column
+        "Your picks": pad_list(user_songs, max_length),
+        "RankDist's output": pad_list(algorithm_songs, max_length),
+        "True preference": pad_list(true_preference, max_length)
     })
 
-    user_score = calculate_user_score()
-    alg_score = calculate_alg_score()
+    user_score = calculate_score(user_songs, true_preference)
+    alg_score = calculate_score(algorithm_songs, true_preference)
 
     st.markdown(
         """
@@ -129,6 +140,7 @@ def relevant_set_compare_recommendations_page():
         """,
         unsafe_allow_html=True
     )
+
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
     st.markdown('<div style="text-align:center; margin-top:-28px; font-size:15px; font-weight: bold; font-family: Segoe UI, sans-serif;">Your picks VS the RankDist algorithm</div>', unsafe_allow_html=True)
 
@@ -170,7 +182,7 @@ def relevant_set_compare_recommendations_page():
              </div>
          </div>
          <div style="color: white; font-size: 14px; font-style: italic; margin-top: 0px; margin-bottom: 5px;">
-         * Score calculated using accuracy
+         * Score calculated using nDCG
          </div>
          """
         st.markdown(html, unsafe_allow_html=True)
