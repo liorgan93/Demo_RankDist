@@ -1,10 +1,7 @@
 import numpy as np
 import pandas as pd
-import streamlit as st
 
 def sample_unique_tracks_per_cluster(df, cluster_col='cluster', track_col='track_id', artist_col='artist', n=2):
-    st.markdown('## Unique tracks per cluster')
-    st.markdown("cccccccc")
     sampled_tracks = []
     used_track_ids = set()
     used_artist_names = set()
