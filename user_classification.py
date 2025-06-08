@@ -163,7 +163,7 @@ def user_classification_page():
             embed_url = track_url
 
         st.components.v1.html(f"""
-            <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
+            <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
                 <div class="spinner"></div>
             </div>
 
@@ -195,8 +195,8 @@ def user_classification_page():
             <style>
             .spinner {{
               border: 4px solid rgba(0, 0, 0, 0.1);
-              width: 30px;
-              height: 30px;
+              width: 40px;
+              height: 40px;
               border-radius: 50%;
               border-left-color: #1DB954;
               animation: spin 1s linear infinite;
