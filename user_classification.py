@@ -172,8 +172,7 @@ def user_classification_page():
                 <iframe style="border-radius:30px; margin-bottom: 0px;" 
                     src="{embed_url}"
                     width="100%" height="352px" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
                 </iframe>
             </div>
         </div>
