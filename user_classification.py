@@ -187,7 +187,7 @@ def user_classification_page():
                 document.getElementById("iframe-container").appendChild(iframe);
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("iframe-container").style.display = "block";
-            }}, 50);
+            }}, 500);
             </script>
 
             <style>
