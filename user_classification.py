@@ -176,18 +176,14 @@ def user_classification_page():
             <div class="spinner"></div>
         </div>
 
-        <div style="width: 100%; display: flex; justify-content: center;">
-        <div style="transform: scale({scale}); transform-origin: top center;">
-            <iframe 
-                src="{embed_url}" 
-                width="500px" height="370px"
-                style="border: none; border-radius: 20px;"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
-        </div>
-    </div>
+        <div id="iframe-container" style="display: none;">
+                    <iframe style="border-radius:20px; margin-bottom: 0px;" 
+                        src="{embed_url}"
+                        width="70%" height="352px" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
 
         <style>
         .spinner {{
