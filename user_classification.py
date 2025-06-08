@@ -62,7 +62,8 @@ def user_classification_page():
                 font-family: Arial, sans-serif;
                 font-size: 20px;
                 border: 3px solid #a0c4ff;
-                margin-bottom: 3px !important;
+                margin-bottom: 0px !important;
+                padding-bottom: 0px !important;
                 padding-right: 0px;
                 padding-left: 0px;
             }
@@ -158,11 +159,6 @@ def user_classification_page():
             unsafe_allow_html=True,
         )
 
-        col1, col2, col3 = st.columns([0.25, 0.5, 0.25])
-
-        with col2:
-            image_path = f"classification_songs_images/{song_title}.jpg"
-            # st.image(image_path, use_container_width=True)
 
         track_url = st.session_state.songs_df.loc[current_index, 'embed_code']
 
