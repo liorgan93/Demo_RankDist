@@ -168,15 +168,6 @@ def user_classification_page():
         else:
             embed_url = track_url
 
-        st.components.v1.html("""
-        <iframe style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/6Xw2FLih8m5ItDbyP992HH?utm_source=generator&theme=0" 
-                width="100%" height="352" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-        </iframe>
-        """, height=370)
-
         st.components.v1.html(f"""
         <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 370px;">
             <div class="spinner"></div>

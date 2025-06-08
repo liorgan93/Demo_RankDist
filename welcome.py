@@ -103,8 +103,8 @@ def welcome_page():
             <img src="data:image/webp;base64,{music}" class="music-image">
             <div class="time_est"> Estimated time: <strong> 8–10 minutes </strong> </div>
             <div class="footer-note">
-                ✱ This demo offers an interactive music experience using songs played via Spotify.
-                All content remains the property of the respective rights holders and was used for educational and research purposes only.
+                ✱ This demo offers an interactive music experience using songs played via Spotify’s official embed feature.
+                All content is the property of the respective rights holders and is used solely for educational and research demonstration purposes.
             </div>
         </div>
         """,
