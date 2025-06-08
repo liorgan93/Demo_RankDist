@@ -140,11 +140,6 @@ def know_the_persona_page():
             unsafe_allow_html=True,
         )
 
-        col1, col2, col3 = st.columns([0.25, 0.5, 0.25])
-
-        with col2:
-            image_path = f"‏‏personas_songs_images/{song_title}.jpg"
-            st.image(image_path, use_container_width=True)
 
         track_url = st.session_state.persona_songs_df.iloc[current_index]["embed_code"]
 
@@ -159,13 +154,15 @@ def know_the_persona_page():
                     <div class="spinner"></div>
                 </div>
 
-                <div id="iframe-container" style="display: none;">
-                    <iframe style="border-radius:20px; margin-bottom: 0px;" 
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <div id="iframe-container" style="display: none; transform: scale(0.85); transform-origin: top center;">
+                        <iframe style="border-radius:20px; margin-bottom: 0px;" 
                         src="{embed_url}"
-                        width="100%" height="80px" frameBorder="0" allowfullscreen=""
+                        width="100%" height="352px" frameBorder="0" allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                         loading="lazy">
-                    </iframe>
+                        </iframe>
+                    </div>
                 </div>
 
                 <style>
@@ -189,7 +186,7 @@ def know_the_persona_page():
                     document.getElementById('iframe-container').style.display = 'block';
                 }}, 2000);
                 </script>
-                """, height=85)
+                """, height=310)
 
         def handle_know_song():
             st.session_state.song_index += 1

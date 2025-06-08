@@ -175,14 +175,14 @@ def user_classification_page():
         </div>
 
         <div style="width: 100%; display: flex; justify-content: center;">
-        <div id="iframe-container" style="display: none; transform: scale(0.85); transform-origin: top center;">
-        <iframe style="border-radius:20px; margin-bottom: 0px;" 
-                src="{embed_url}"
-                width="100%" height="352px" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-        </iframe>
-        </div>
+            <div id="iframe-container" style="display: none; transform: scale(0.85); transform-origin: top center;">
+                <iframe style="border-radius:20px; margin-bottom: 0px;" 
+                    src="{embed_url}"
+                    width="100%" height="352px" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
 
         <style>
