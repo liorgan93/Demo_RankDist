@@ -168,7 +168,7 @@ def user_classification_page():
         else:
             embed_url = track_url
 
-        original_height = 370
+        original_height = 352
 
         scale = 0.67
         st.components.v1.html(f"""
@@ -180,7 +180,7 @@ def user_classification_page():
         <div style="transform: scale({scale}); transform-origin: top center;">
             <iframe 
                 src="{embed_url}" 
-                width="500px" height="352px"
+                width="500px" height="370px"
                 style="border: none; border-radius: 20px;"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 allowfullscreen
