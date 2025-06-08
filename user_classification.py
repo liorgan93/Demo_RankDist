@@ -168,7 +168,7 @@ def user_classification_page():
         else:
             embed_url = track_url
 
-        original_height = 352
+        original_height = 370
 
         scale = 0.67
         st.components.v1.html(f"""
@@ -210,7 +210,7 @@ def user_classification_page():
             document.getElementById('iframe-container').style.display = 'block';
         }}, 2000);
         </script>
-        """, height=260)
+        """, height=270)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
