@@ -164,10 +164,18 @@ def user_classification_page():
 
         if "track/" in track_url:
             track_id = track_url.split("track/")[-1].split("?")[0]
-            embed_url = f"https://open.spotify.com/embed/track/{track_id}"
+            embed_url = f"https://open.spotify.com/embed/track/{track_id}?theme=0"
         else:
             embed_url = track_url
 
+        st.components.v1.html("""
+        <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/track/6Xw2FLih8m5ItDbyP992HH?utm_source=generator&theme=0" 
+                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+        </iframe>
+        """, height=370)
 
         st.components.v1.html(f"""
         <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 370px;">
@@ -175,7 +183,7 @@ def user_classification_page():
         </div>
 
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container" style="display: none; transform: scale(0.85); transform-origin: top center;">
+            <div id="iframe-container" style="display: none; transform: scale(0.75); transform-origin: top center;">
                 <iframe style="border-radius:20px; margin-bottom: 0px;" 
                     src="{embed_url}"
                     width="100%" height="352px" frameBorder="0" allowfullscreen=""
@@ -206,7 +214,7 @@ def user_classification_page():
             document.getElementById('iframe-container').style.display = 'block';
         }}, 2000);
         </script>
-        """, height=310)
+        """, height=270)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
