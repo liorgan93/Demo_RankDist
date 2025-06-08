@@ -178,7 +178,7 @@ def know_the_persona_page():
                 setTimeout(function() {{
                     document.getElementById('loader').style.display = 'none';
                     document.getElementById('iframe-container').style.display = 'block';
-                }}, 2000);
+                }}, 1000);
                 </script>
                 """, height=290)
 
