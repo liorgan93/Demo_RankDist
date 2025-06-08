@@ -55,15 +55,7 @@ def know_the_persona_page():
                 padding-bottom: 0px !important;
 
             }
-            .song-title {
-                margin: 0;             
-                padding: 0;         
-                line-height: 1.1;
-                font-size: 16px;
-                font-weight: bold;
-                color: #ecf0f1;
-                text-shadow: 3px 3px 6px rgba(0,0,0,0.7), 0 0 10px rgba(255, 255, 255, 0.6);
-            }
+
             .stButton button {
                 padding: 8px 45px !important;
                 border-radius: 15px !important;
@@ -104,7 +96,7 @@ def know_the_persona_page():
                 flex-direction: column;
             }
             .song-title {
-                font-size: 20px;
+                font-size: 19px;
                 font-weight: 600;
                 color: white;
                 margin-bottom: 0px;
@@ -113,7 +105,7 @@ def know_the_persona_page():
             }
 
             .song-artist {
-                font-size: 18px;
+                font-size: 17px;
                 color: #e0ffe3;
                 font-style: normal;
                 opacity: 0.9;
@@ -130,7 +122,7 @@ def know_the_persona_page():
 
         st.markdown(
             f"""<div class="container">
-                <div style="text-align: left; margin-bottom: 2px; font-size: 15px; padding-left: 10px; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
+                <div style="text-align: left; margin-bottom: 2px; font-size: 14px; padding-left: 10px; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
                     Songs that {persona_name} Likes – Song Number {completed_steps}
                 </div>
                 <div class="song-title">{song_title}</div>
