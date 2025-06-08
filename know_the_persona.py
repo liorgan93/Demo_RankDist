@@ -150,13 +150,13 @@ def know_the_persona_page():
             embed_url = track_url
 
         st.components.v1.html(f"""
-                <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 80px;">
+                <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
                     <div class="spinner"></div>
                 </div>
 
                 <div style="width: 100%; display: flex; justify-content: center;">
-                    <div id="iframe-container" style="display: none; transform: scale(0.75); transform-origin: top center;">
-                        <iframe style="border-radius:20px; margin-bottom: 0px;" 
+                    <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
+                        <iframe style="border-radius:30px; margin-bottom: 0px;" 
                         src="{embed_url}"
                         width="100%" height="352px" frameBorder="0" allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -186,7 +186,7 @@ def know_the_persona_page():
                     document.getElementById('iframe-container').style.display = 'block';
                 }}, 2000);
                 </script>
-                """, height=270)
+                """, height=290)
 
         def handle_know_song():
             st.session_state.song_index += 1

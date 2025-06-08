@@ -169,13 +169,13 @@ def user_classification_page():
             embed_url = track_url
 
         st.components.v1.html(f"""
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 370px;">
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
             <div class="spinner"></div>
         </div>
 
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container" style="display: none; transform: scale(0.75); transform-origin: top center;">
-                <iframe style="border-radius:20px; margin-bottom: 0px;" 
+            <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
+                <iframe style="border-radius:30px; margin-bottom: 0px;" 
                     src="{embed_url}"
                     width="100%" height="352px" frameBorder="0" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -205,7 +205,7 @@ def user_classification_page():
             document.getElementById('iframe-container').style.display = 'block';
         }}, 2000);
         </script>
-        """, height=270)
+        """, height=290)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
@@ -262,7 +262,7 @@ def user_classification_page():
         col1, col2, col3 = st.columns(3)
 
         with col3:
-            st.button("👎", key="dislike", on_click=handle_dislike)
+            st.button("👎", key="dislike aaaaaaaaaaaaaaaaaaaaaaaaaaaaa", on_click=handle_dislike)
 
         with col1:
             st.button("👍", key="like", on_click=handle_like)
