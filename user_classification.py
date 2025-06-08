@@ -167,7 +167,7 @@ def user_classification_page():
             <div class="spinner"></div>
         </div>
 
-        <div style="width: 100%; display: flex; justify-content: center;">
+        <div style="width: 100%; display: flex; justify-content: center; onload="document.getElementById('loader').style.display='none';">
             <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
                 <iframe style="border-radius:30px; margin-bottom: 0px;" 
                     src="{embed_url}"
