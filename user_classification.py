@@ -77,7 +77,7 @@ def user_classification_page():
                 margin: 0;             
                 padding: 0;         
                 line-height: 1.1;
-                font-size: 16px;
+                font-size: 150px;
                 font-weight: bold;
                 color: #ecf0f1;
                 text-shadow: 3px 3px 6px rgba(0,0,0,0.7), 0 0 10px rgba(255, 255, 255, 0.6);
