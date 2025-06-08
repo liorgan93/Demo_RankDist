@@ -172,7 +172,7 @@ def user_classification_page():
 
         scale = 0.67
         st.components.v1.html(f"""
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 370px;">
             <div class="spinner"></div>
         </div>
 
