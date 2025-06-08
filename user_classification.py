@@ -163,42 +163,37 @@ def user_classification_page():
             embed_url = track_url
 
         st.components.v1.html(f"""
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
-            <div class="spinner"></div>
-        </div>
-
-        <div style="width: 100%; display: flex; justify-content: center; onload="document.getElementById('loader').style.display='none';">
-            <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
-                <iframe style="border-radius:30px; margin-bottom: 0px;" 
-                    src="{embed_url}"
-                    width="100%" height="352px" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                </iframe>
+            <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
+                <div class="spinner"></div>
             </div>
-        </div>
 
-        <style>
-        .spinner {{
-          border: 4px solid rgba(0, 0, 0, 0.1);
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          border-left-color: #1DB954;
-          animation: spin 1s linear infinite;
-          margin: auto;
-        }}
-        @keyframes spin {{
-          to {{ transform: rotate(360deg); }}
-        }}
-        </style>
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
+                    <iframe 
+                        onload="document.getElementById('loader').style.display='none'; document.getElementById('iframe-container').style.display='block';"
+                        style="border-radius:30px; margin-bottom: 0px;" 
+                        src="{embed_url}"
+                        width="100%" height="352px" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
 
-        <script>
-        setTimeout(function() {{
-            document.getElementById('loader').style.display = 'none';
-            document.getElementById('iframe-container').style.display = 'block';
-        }}, 1000);
-        </script>
-        """, height=290)
+            <style>
+            .spinner {{
+              border: 4px solid rgba(0, 0, 0, 0.1);
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border-left-color: #1DB954;
+              animation: spin 1s linear infinite;
+              margin: auto;
+            }}
+            @keyframes spin {{
+              to {{ transform: rotate(360deg); }}
+            }}
+            </style>
+            """, height=290)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
