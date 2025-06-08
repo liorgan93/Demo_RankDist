@@ -149,16 +149,29 @@ def know_the_persona_page():
             </div>
 
             <div style="width: 100%; display: flex; justify-content: center;">
-                <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
-                    <iframe 
-                        onload="document.getElementById('loader').style.display='none'; document.getElementById('iframe-container').style.display='block';"
-                        style="border-radius:30px; margin-bottom: 0px;" 
-                        src="{embed_url}"
-                        width="100%" height="352px" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                    </iframe>
-                </div>
+                <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;"></div>
             </div>
+
+            <script>
+            window.addEventListener("DOMContentLoaded", function() {{
+                const iframe = document.createElement("iframe");
+                iframe.src = "{embed_url}";
+                iframe.width = "100%";
+                iframe.height = "352px";
+                iframe.style.borderRadius = "30px";
+                iframe.style.marginBottom = "0px";
+                iframe.frameBorder = "0";
+                iframe.allowFullscreen = true;
+                iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+
+                iframe.onload = function() {{
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("iframe-container").style.display = "block";
+                }};
+
+                document.getElementById("iframe-container").appendChild(iframe);
+            }});
+            </script>
 
             <style>
             .spinner {{
@@ -174,7 +187,7 @@ def know_the_persona_page():
               to {{ transform: rotate(360deg); }}
             }}
             </style>
-            """, height=290)
+        """, height=290)
 
         def handle_know_song():
             st.session_state.song_index += 1

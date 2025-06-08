@@ -206,7 +206,7 @@ def user_classification_page():
               to {{ transform: rotate(360deg); }}
             }}
             </style>
-        """, height=352)
+        """, height=290)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
