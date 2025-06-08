@@ -162,15 +162,14 @@ def user_classification_page():
         else:
             embed_url = track_url
 
+        ```python
         st.components.v1.html(f"""
             <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
                 <div class="spinner"></div>
             </div>
 
             <div style="width: 100%; display: flex; justify-content: center;">
-                <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
-                    <!-- iframe ייכנס לפה בדיליי דרך JavaScript -->
-                </div>
+                <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;"></div>
             </div>
 
             <script>
@@ -189,7 +188,7 @@ def user_classification_page():
                 document.getElementById("iframe-container").appendChild(iframe);
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("iframe-container").style.display = "block";
-            }}, 1000); // הטמעה אחרי 1 שנייה
+            }}, 4000);
             </script>
 
             <style>
