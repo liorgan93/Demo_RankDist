@@ -169,15 +169,28 @@ def user_classification_page():
 
             <div style="width: 100%; display: flex; justify-content: center;">
                 <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;">
-                    <iframe 
-                        onload="document.getElementById('loader').style.display='none'; document.getElementById('iframe-container').style.display='block';"
-                        style="border-radius:30px; margin-bottom: 0px;" 
-                        src="{embed_url}"
-                        width="100%" height="352px" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                    </iframe>
+                    <!-- iframe ייכנס לפה בדיליי דרך JavaScript -->
                 </div>
             </div>
+
+            <script>
+            setTimeout(function() {{
+                const iframe = document.createElement("iframe");
+                iframe.src = "{embed_url}";
+                iframe.width = "100%";
+                iframe.height = "352px";
+                iframe.style.borderRadius = "30px";
+                iframe.style.marginBottom = "0px";
+                iframe.frameBorder = "0";
+                iframe.allowFullscreen = true;
+                iframe.loading = "lazy";
+                iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+
+                document.getElementById("iframe-container").appendChild(iframe);
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("iframe-container").style.display = "block";
+            }}, 1000); // הטמעה אחרי 1 שנייה
+            </script>
 
             <style>
             .spinner {{
@@ -193,7 +206,7 @@ def user_classification_page():
               to {{ transform: rotate(360deg); }}
             }}
             </style>
-            """, height=290)
+        """, height=290)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
