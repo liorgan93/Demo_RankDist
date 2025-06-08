@@ -262,7 +262,7 @@ def user_classification_page():
         col1, col2, col3 = st.columns(3)
 
         with col3:
-            st.button("👎 aaaaaaa bbbbbbb ccccccc dddddd", key="dislike", on_click=handle_dislike)
+            st.button("👎 aaaaaaa bbbbbbb ccccccc dddddd eeeeeeeeeeeeee ffffffffffffffff hhhhhhhhhhhhh wwwwwwwwwwwww nnnnnnnnnn", key="dislike", on_click=handle_dislike)
 
         with col1:
             st.button("👍", key="like", on_click=handle_like)
