@@ -172,7 +172,7 @@ def user_classification_page():
             </div>
 
             <script>
-            setTimeout(function() {{
+            window.addEventListener("DOMContentLoaded", function() {{
                 const iframe = document.createElement("iframe");
                 iframe.src = "{embed_url}";
                 iframe.width = "100%";
@@ -181,13 +181,15 @@ def user_classification_page():
                 iframe.style.marginBottom = "0px";
                 iframe.frameBorder = "0";
                 iframe.allowFullscreen = true;
-                iframe.loading = "lazy";
                 iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
 
+                iframe.onload = function() {{
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("iframe-container").style.display = "block";
+                }};
+
                 document.getElementById("iframe-container").appendChild(iframe);
-                document.getElementById("loader").style.display = "none";
-                document.getElementById("iframe-container").style.display = "block";
-            }}, 500);
+            }});
             </script>
 
             <style>
@@ -204,7 +206,7 @@ def user_classification_page():
               to {{ transform: rotate(360deg); }}
             }}
             </style>
-        """, height=290)
+        """, height=352)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
