@@ -162,7 +162,6 @@ def user_classification_page():
         else:
             embed_url = track_url
 
-        ```python
         st.components.v1.html(f"""
             <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
                 <div class="spinner"></div>
