@@ -144,7 +144,7 @@ def know_the_persona_page():
             embed_url = track_url
 
         st.components.v1.html(f"""
-                    <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
+                    <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
                         <div class="spinner"></div>
                     </div>
 
