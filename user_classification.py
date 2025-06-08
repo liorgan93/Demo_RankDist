@@ -168,9 +168,7 @@ def user_classification_page():
         else:
             embed_url = track_url
 
-        desired_height = 280  # כל גובה שאתה רוצה, לדוגמה
         original_height = 352
-        scale = desired_height / original_height
 
         scale = 0.65
         st.components.v1.html(f"""
@@ -212,7 +210,7 @@ def user_classification_page():
             document.getElementById('iframe-container').style.display = 'block';
         }}, 2000);
         </script>
-        """, height=240)
+        """, height=260)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
