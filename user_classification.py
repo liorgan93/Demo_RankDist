@@ -170,7 +170,7 @@ def user_classification_page():
 
         original_height = 352
 
-        scale = 0.65
+        scale = 0.75
         st.components.v1.html(f"""
         <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
             <div class="spinner"></div>
