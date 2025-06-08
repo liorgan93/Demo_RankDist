@@ -162,7 +162,7 @@ def user_classification_page():
 
         with col2:
             image_path = f"classification_songs_images/{song_title}.jpg"
-            st.image(image_path, use_container_width=True)
+            # st.image(image_path, use_container_width=True)
 
         track_url = st.session_state.songs_df.loc[current_index, 'embed_code']
 
@@ -172,19 +172,28 @@ def user_classification_page():
         else:
             embed_url = track_url
 
+        desired_height = 280  # כל גובה שאתה רוצה, לדוגמה
+        original_height = 352
+        scale = desired_height / original_height
+
+        scale = 0.6
         st.components.v1.html(f"""
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 80px;">
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 352px;">
             <div class="spinner"></div>
         </div>
 
-        <div id="iframe-container" style="display: none;">
-            <iframe style="border-radius:20px; margin-bottom: 0px;" 
-                src="{embed_url}"
-                width="80%" height="352px" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        <div style="width: 100%; display: flex; justify-content: center;">
+        <div style="transform: scale({scale}); transform-origin: top center;">
+            <iframe 
+                src="{embed_url}" 
+                width="500px" height="352px"
+                style="border: none; border-radius: 20px;"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                allowfullscreen
                 loading="lazy">
             </iframe>
         </div>
+    </div>
 
         <style>
         .spinner {{
@@ -207,7 +216,7 @@ def user_classification_page():
             document.getElementById('iframe-container').style.display = 'block';
         }}, 2000);
         </script>
-        """, height=85)
+        """, height=240)
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
