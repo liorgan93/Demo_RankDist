@@ -99,7 +99,7 @@ def know_the_persona_page():
                 margin: 0;             
                 padding: 0;         
                 line-height: 1.1;
-                font-size: 20px;
+                font-size: 19px;
                 font-weight: 600;
                 color: white;
                 margin-bottom: 0px;
