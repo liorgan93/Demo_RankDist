@@ -96,14 +96,16 @@ def know_the_persona_page():
                 flex-direction: column;
             }
             .song-title {
-                font-size: 19px;
+                margin: 0;             
+                padding: 0;         
+                line-height: 1.1;
+                font-size: 20px;
                 font-weight: 600;
                 color: white;
                 margin-bottom: 0px;
                 margin-top: 0px;
                 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             }
-
             .song-artist {
                 font-size: 17px;
                 color: #e0ffe3;
