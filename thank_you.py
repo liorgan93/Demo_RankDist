@@ -40,8 +40,8 @@ def thank_you_page():
             }
 
             .thank-you-title {
-                font-family: 'Caveat', cursive;
-                font-size: 30px;
+                font-family: 'Caveat';
+                font-size: 35px;
                 font-weight: bold;
                 color: #155fa0;
                 padding: 0 4px;
@@ -54,6 +54,7 @@ def thank_you_page():
                 font-size: 17px;
                 color: #333;
                 margin-bottom: 20px;
+                font-weight: bold;
                 padding: 0 0px;
             }
 
@@ -92,3 +93,6 @@ def thank_you_page():
             <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
         </div>
     </div>""", unsafe_allow_html=True)
+
+
+thank_you_page()
