@@ -95,5 +95,3 @@ def thank_you_page():
         </div>
     </div>""", unsafe_allow_html=True)
 
-
-thank_you_page()
