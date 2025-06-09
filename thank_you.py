@@ -42,7 +42,7 @@ def thank_you_page():
             .thank-you-title {
                 font-family: 'Pacifico', cursive;
                 font-size: 30px;
-                font-weight: 1000;
+                font-weight: bold;
                 color: #155fa0;
                 padding: 0 4px;
                 margin-bottom: 20px;
@@ -51,10 +51,10 @@ def thank_you_page():
             }
 
             .thank-you-message {
-                font-size: 20px;
+                font-size: 17px;
                 color: #333;
                 margin-bottom: 20px;
-                padding: 0 10px;
+                padding: 0 2px;
             }
 
             .download-button a {
@@ -82,7 +82,7 @@ def thank_you_page():
     st.markdown(f"""
     <div class="thank-you-container">
         <div class="thank-you-title">
-            🎉 Thank You for Participating! 🎉
+            Thank You for Participating!
         </div>
         <div class="thank-you-message">
             We hope you enjoyed the demo!<br>
