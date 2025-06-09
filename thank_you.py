@@ -87,8 +87,7 @@ def thank_you_page():
         </div>
         <div class="thank-you-message">
             We hope you enjoyed the demo!<br>
-            If you'd like to learn more about the methods demonstrated in this demo <br>
-             feel free to download and read the paper below
+            If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
         </div>
         <div class="download-button">
             <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
