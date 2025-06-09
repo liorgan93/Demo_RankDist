@@ -40,7 +40,7 @@ def thank_you_page():
             }
 
             .thank-you-title {
-                font-family: 'Pacifico', cursive;
+                font-family: 'Caveat', cursive;
                 font-size: 30px;
                 font-weight: bold;
                 color: #155fa0;
@@ -54,7 +54,7 @@ def thank_you_page():
                 font-size: 17px;
                 color: #333;
                 margin-bottom: 20px;
-                padding: 0 2px;
+                padding: 0 0px;
             }
 
             .download-button a {
