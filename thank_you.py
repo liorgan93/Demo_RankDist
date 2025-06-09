@@ -51,7 +51,7 @@ def thank_you_page():
             }
 
             .thank-you-message {
-                font-style: normal;
+                font-family: Georgia, 'Times New Roman', serif;
                 font-size: 20px;
                 color: #333;
                 margin-bottom: 20px;
