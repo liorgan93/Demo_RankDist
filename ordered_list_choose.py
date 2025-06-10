@@ -183,15 +183,13 @@ def ordered_list_choose_page():
             placeholder2 = "Select the song for second place 🥈"
             placeholder3 = "Select the song for third place 🥉"
 
-            col_next = st.columns([0.15, 0.7, 0.15], gap="small")
-            with col_next[1]:
-                place_1 = st.selectbox("", [placeholder1] + songs, key="place_1", label_visibility="collapsed")
-                place_2 = st.selectbox("", [placeholder2] + songs, key="place_2", label_visibility="collapsed")
-                place_3 = st.selectbox("", [placeholder3] + songs, key="place_3", label_visibility="collapsed")
-                st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
+            place_1 = st.selectbox("", [placeholder1] + songs, key="place_1", label_visibility="collapsed")
+            place_2 = st.selectbox("", [placeholder2] + songs, key="place_2", label_visibility="collapsed")
+            place_3 = st.selectbox("", [placeholder3] + songs, key="place_3", label_visibility="collapsed")
+            st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
 
-                if st.session_state.error_msg:
-                    st.error(st.session_state.error_msg)
+            if st.session_state.error_msg:
+                st.error(st.session_state.error_msg)
 
         st.markdown("""
             <div style="width: 100%; text-align: center; margin: 25px 0;">
