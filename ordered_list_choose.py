@@ -192,7 +192,7 @@ def ordered_list_choose_page():
                 st.error(st.session_state.error_msg)
 
         st.markdown("""
-            <div style="width: 100%; text-align: center; margin-top: 0px; margin-bottom: 30px">
+            <div style="width: 100%; text-align: center; margin-top: 0px; margin-bottom: 25px; padding-top: 0px">
                 <div class="notice-text">
                     You can listen to the songs below💿
                 </div>
