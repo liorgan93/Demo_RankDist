@@ -149,18 +149,9 @@ def ordered_list_choose_page():
                     Ordered List
                 </div>
                 <div class="text_choose">
-                    Choose the TOP 3 songs you'd recommend tor {persona_name} in order🎧
+                    Choose the TOP 3 songs you'd recommend to {persona_name} in order🎧
                 </div>
             </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("""
-            <style>
-                .block-container div[data-testid="stSelectbox"] {
-                    margin-bottom: 0px;  
-                    padding-bottom: 0px;
-                }
-            </style>
         """, unsafe_allow_html=True)
 
         if "error_msg" not in st.session_state:
