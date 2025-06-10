@@ -200,30 +200,30 @@ def ordered_list_choose_page():
         """, unsafe_allow_html=True)
 
 
-    cols = st.columns(3, gap="small")
+        cols = st.columns(3, gap="small")
 
-    for idx, row in cluster_data.iterrows():
-        song_name = row["ordered_list_songs"]
-        track_url = row["ordered_list_songs_links"]
+        for idx, row in cluster_data.iterrows():
+            song_name = row["ordered_list_songs"]
+            track_url = row["ordered_list_songs_links"]
 
-        if "track/" in track_url:
-            track_id = track_url.split("track/")[-1].split("?")[0]
-            embed_url = f"https://open.spotify.com/embed/track/{track_id}"
-        else:
-            embed_url = track_url
+            if "track/" in track_url:
+                track_id = track_url.split("track/")[-1].split("?")[0]
+                embed_url = f"https://open.spotify.com/embed/track/{track_id}"
+            else:
+                embed_url = track_url
 
-        with cols[idx % 3]:
-            with st.expander(f"🎶 Listen to - {song_name}"):
-                embed_html = f"""
-                    <iframe style="border-radius:12px" 
-                        src="{embed_url}" 
-                        width="100%" 
-                        height="80" 
-                        frameBorder="0" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                    </iframe>
-                    """
-                components.html(embed_html, height=85)
+            with cols[idx % 3]:
+                with st.expander(f"🎶 Listen to - {song_name}"):
+                    embed_html = f"""
+                        <iframe style="border-radius:12px" 
+                            src="{embed_url}" 
+                            width="100%" 
+                            height="80" 
+                            frameBorder="0" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                        """
+                    components.html(embed_html, height=85)
 
-    st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
+        st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
