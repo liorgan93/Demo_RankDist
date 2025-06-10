@@ -192,9 +192,9 @@ def ordered_list_choose_page():
                 st.error(st.session_state.error_msg)
 
         st.markdown("""
-            <div style="width: 100%; text-align: center; margin-top: 0px; margin-bottom: 10px">
+            <div style="width: 100%; text-align: center; margin-top: 0px; margin-bottom: 30px">
                 <div class="notice-text">
-                    You can listen to the songs1 below💿
+                    You can listen to the songs below💿
                 </div>
             </div>
         """, unsafe_allow_html=True)
