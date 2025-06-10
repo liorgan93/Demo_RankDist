@@ -31,6 +31,7 @@ def ordered_list_choose_page():
             color: white;
             text-align: center;
             margin-bottom: 0px;
+            
             margin-top: 0px;
         }
 
@@ -157,6 +158,7 @@ def ordered_list_choose_page():
             <style>
                 .block-container div[data-testid="stSelectbox"] {
                     margin-bottom: 0px;  
+                    padding-bottom: 0px;
                 }
             </style>
         """, unsafe_allow_html=True)
