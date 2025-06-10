@@ -20,8 +20,8 @@ def ordered_list_choose_page():
     <style>
         .block-container {
             padding-top: 30px !important;
-            padding-bottom: 0pxx !important;
-            margin-botton: 0px !important;
+            padding-bottom: 0px !important;
+            margin-bottom: 0px !important;
             margin: 0px !important;
         }
 
