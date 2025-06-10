@@ -41,7 +41,7 @@ def thank_you_page():
 
             .thank-you-title {
                 font-family: 'Caveat';
-                font-size: 35px;
+                font-size: 30px;
                 font-weight: bold;
                 color: #155fa0;
                 padding: 0 4px;
@@ -52,11 +52,11 @@ def thank_you_page():
 
             .thank-you-message {
                 font-family: Georgia, 'Times New Roman', serif;
-                font-size: 20px;
+                font-size: 17px;
                 color: #333;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 font-weight: bold;
-                padding: 5px 0px;
+                padding: 3px 0px;
             }
 
             .download-button a {
