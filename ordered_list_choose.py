@@ -189,7 +189,7 @@ def ordered_list_choose_page():
 
         col_next = st.columns([1, 1, 1])
         with col_next[1]:
-            st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
+            st.button("Confirm", key="confirm_button1", on_click=handle_confirm_click, use_container_width=True)
         if st.session_state.error_msg:
             st.error(st.session_state.error_msg)
 
