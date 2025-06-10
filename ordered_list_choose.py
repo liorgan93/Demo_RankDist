@@ -20,7 +20,7 @@ def ordered_list_choose_page():
     <style>
         .block-container {
             padding-top: 30px !important;
-            padding-bottom: 0x !important;
+            padding-bottom: 0pxx !important;
             margin-botton: 0px !important;
             margin: 0px !important;
         }
@@ -185,9 +185,9 @@ def ordered_list_choose_page():
 
             col_next = st.columns([0.15, 0.7, 0.15])
             with col_next[1]:
-                place_1 = st.selectbox("", [placeholder1] + songs, key="place_1")
-                place_2 = st.selectbox("", [placeholder2] + songs, key="place_2")
-                place_3 = st.selectbox("", [placeholder3] + songs, key="place_3")
+                place_1 = st.selectbox("", [placeholder1] + songs, key="place_1", label_visibility="collapsed")
+                place_2 = st.selectbox("", [placeholder2] + songs, key="place_2", label_visibility="collapsed")
+                place_3 = st.selectbox("", [placeholder3] + songs, key="place_3", label_visibility="collapsed")
 
         col_next = st.columns([1, 1, 1])
         with col_next[1]:
