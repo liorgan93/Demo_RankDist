@@ -154,19 +154,6 @@ def ordered_list_choose_page():
             </div>
         """, unsafe_allow_html=True)
 
-        if "error_msg" not in st.session_state:
-            st.session_state.error_msg = ""
-
-        def handle_confirm_click():
-            selections = [place_1, place_2, place_3]
-            placeholders = [placeholder1, placeholder2, placeholder3]
-            if any(s in placeholders for s in selections):
-                st.session_state.error_msg = "Please select a song for each place"
-            elif len(set(selections)) < 3:
-                st.session_state.error_msg = "A song was selected for more than one place"
-            else:
-                st.session_state.user_choice = selections
-                st.session_state.page = "ordered_list_compare_recommendations"
 
         col_next = st.columns([0.15, 0.7, 0.15])
         with col_next[1]:
@@ -181,9 +168,23 @@ def ordered_list_choose_page():
                 place_2 = st.selectbox("", [placeholder2] + songs, key="place_2", label_visibility="collapsed")
                 place_3 = st.selectbox("", [placeholder3] + songs, key="place_3", label_visibility="collapsed")
 
+        if "error_msg" not in st.session_state:
+            st.session_state.error_msg = ""
+
+        def handle_confirm_click():
+            selections = [place_1, place_2, place_3]
+            placeholders = [placeholder1, placeholder2, placeholder3]
+            if any(s in placeholders for s in selections):
+                st.session_state.error_msg = "Please select a song for each place"
+            elif len(set(selections)) < 3:
+                st.session_state.error_msg = "A song was selected for more than one place"
+            else:
+                st.session_state.user_choice = selections
+                st.session_state.page = "ordered_list_compare_recommendations"
+                
         col_next = st.columns([1, 1, 1])
         with col_next[1]:
-            st.button("Confirm1", key="aaa", on_click=handle_confirm_click, use_container_width=True)
+            st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
         if st.session_state.error_msg:
             st.error(st.session_state.error_msg)
 
