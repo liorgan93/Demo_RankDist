@@ -149,7 +149,7 @@ def ordered_list_choose_page():
                     Ordered List
                 </div>
                 <div class="text_choose">
-                    Choose the TOP 3 songs you'd recommend to {persona_name} in order🎧
+                    Choose the TOP 3 songs you'd recommend tor {persona_name} in order🎧
                 </div>
             </div>
         """, unsafe_allow_html=True)
