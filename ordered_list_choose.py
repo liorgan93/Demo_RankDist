@@ -119,7 +119,7 @@ def ordered_list_choose_page():
         }
 
         .text_choose {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: bold;
             padding-top: 0px !important;
             line-height: 1.15;
@@ -148,9 +148,17 @@ def ordered_list_choose_page():
                     Ordered List
                 </div>
                 <div class="text_choose">
-                    Choose the top 3 songs you'd recommend to {persona_name} in order 🎧
+                    Choose the TOP 3 songs you'd recommend to {persona_name} in order🎧
                 </div>
             </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <style>
+                .block-container div[data-testid="stSelectbox"] {
+                    margin-bottom: 0px;  
+                }
+            </style>
         """, unsafe_allow_html=True)
 
         if "error_msg" not in st.session_state:
@@ -189,7 +197,7 @@ def ordered_list_choose_page():
         st.markdown("""
             <div style="width: 100%; text-align: center; margin: 25px 0;">
                 <div class="notice-text">
-                    You can listen to the songs below (Loading the songs may take a few moments) 🎧
+                    You can listen to the songs below💿
                 </div>
             </div>
         """, unsafe_allow_html=True)
