@@ -139,6 +139,11 @@ def ordered_list_choose_page():
             text-align: center;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
         }
+        .confirm_button {
+            padding-top: 0px !important;
+            margin-top: 0px !important;
+        
+        }
     </style>
     """, unsafe_allow_html=True)
 
@@ -181,7 +186,7 @@ def ordered_list_choose_page():
             else:
                 st.session_state.user_choice = selections
                 st.session_state.page = "ordered_list_compare_recommendations"
-                
+
         col_next = st.columns([1, 1, 1])
         with col_next[1]:
             st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
