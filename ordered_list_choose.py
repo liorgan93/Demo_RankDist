@@ -183,7 +183,7 @@ def ordered_list_choose_page():
             placeholder2 = "Select the song for second place 🥈"
             placeholder3 = "Select the song for third place 🥉"
 
-            col_next = st.columns([0.15, 0.7, 0.15])
+            col_next = st.columns([0.15, 0.7, 0.15], gap="small")
             with col_next[1]:
                 place_1 = st.selectbox("", [placeholder1] + songs, key="place_1", label_visibility="collapsed")
                 place_2 = st.selectbox("", [placeholder2] + songs, key="place_2", label_visibility="collapsed")
