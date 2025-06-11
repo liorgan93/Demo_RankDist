@@ -198,8 +198,7 @@ def user_classification_page():
               width: 40px;
               height: 40px;
               border-radius: 50%;
-              border-left-color: #007BFF;      
-              border-left-color: #1DB954;
+              border-left-color: #FFD700;      
               animation: spin 1s linear infinite;
               margin: auto;
             }}
