@@ -194,11 +194,11 @@ def user_classification_page():
 
             <style>
             .spinner {{
-              border: 7px solid rgba(0, 0, 0, 0.1);
+              border: 6px solid rgba(0, 0, 0, 0.1);
               width: 40px;
               height: 40px;
               border-radius: 50%;
-              border-left-color: #FFD700;      
+              border-left-color: #FFFFFF;      
               animation: spin 1s linear infinite;
               margin: auto;
             }}
