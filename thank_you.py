@@ -87,7 +87,7 @@ def thank_you_page():
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
-            We hope you enjoyed the demo!<br>
+            We hope you enjoyed the demo!
             If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
         </div>
         <div class="download-button">

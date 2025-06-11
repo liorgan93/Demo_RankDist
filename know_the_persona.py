@@ -182,6 +182,7 @@ def know_the_persona_page():
               border-left-color: #1DB954;
               animation: spin 1s linear infinite;
               margin: auto;
+              color: blue;
             }}
             @keyframes spin {{
               to {{ transform: rotate(360deg); }}

@@ -194,6 +194,7 @@ def user_classification_page():
 
             <style>
             .spinner {{
+              color: blue;
               border: 4px solid rgba(0, 0, 0, 0.1);
               width: 40px;
               height: 40px;
