@@ -170,7 +170,7 @@ def user_classification_page():
 
         <!-- Error Message and Retry Button -->
         <div id="error-msg" style="display: none; height: 290px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
-            <p style="margin: 10px; font-size: 27px; font-weight: 600; color: white;">The song failed to load</p>
+            <p style="margin: 10px; font-size: 22px; font-weight: 600; color: white;">The song failed to load</p>
             <div onclick="reloadIframe()" class="try-again-button">
                 <div class="arrow top-left">↺</div>
                 <div class="try-text">TRY AGAIN!</div>
@@ -223,7 +223,7 @@ def user_classification_page():
                     document.getElementById("iframe-container").style.display = "none";
                     document.getElementById("error-msg").style.display = "flex";
                 }}
-            }}, 300);
+            }}, 500);
         }}
 
         function reloadIframe() {{
