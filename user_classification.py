@@ -163,49 +163,142 @@ def user_classification_page():
             embed_url = track_url
 
         st.components.v1.html(f"""
-            <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
-                <div class="spinner"></div>
+        <!-- Loader -->
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Error Message and Retry Button -->
+        <div id="error-msg" style="display: none; height: 290px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
+            <p style="margin: 10px; font-size: 27px; font-weight: 600; color: white;">The song failed to load</p>
+            <div onclick="reloadIframe()" class="try-again-button">
+                <div class="arrow top-left">↺</div>
+                <div class="try-text">TRY AGAIN!</div>
+                <div class="arrow bottom-right">↻</div>
             </div>
+        </div>
 
-            <div style="width: 100%; display: flex; justify-content: center;">
-                <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;"></div>
-            </div>
+        <!-- Iframe container -->
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;"></div>
+        </div>
 
-            <script>
-            window.addEventListener("DOMContentLoaded", function() {{
-                const iframe = document.createElement("iframe");
-                iframe.src = "{embed_url}";
-                iframe.width = "100%";
-                iframe.height = "352px";
-                iframe.style.borderRadius = "30px";
-                iframe.style.marginBottom = "0px";
-                iframe.frameBorder = "0";
-                iframe.allowFullscreen = true;
-                iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+        <!-- Logic -->
+        <script>
+        let iframeLoaded = false;
+        let gaveUp = false;
 
-                iframe.onload = function() {{
+        function createIframe() {{
+            iframeLoaded = false;
+            gaveUp = false;
+
+            const iframeContainer = document.getElementById("iframe-container");
+            iframeContainer.innerHTML = "";
+
+            const iframe = document.createElement("iframe");
+            iframe.src = "{embed_url}";
+            iframe.width = "100%";
+            iframe.height = "352px";
+            iframe.style.borderRadius = "30px";
+            iframe.style.marginBottom = "0px";
+            iframe.frameBorder = "0";
+            iframe.allowFullscreen = true;
+            iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+
+            iframe.onload = function() {{
+                iframeLoaded = true;
+                if (!gaveUp) {{
                     document.getElementById("loader").style.display = "none";
                     document.getElementById("iframe-container").style.display = "block";
-                }};
+                    document.getElementById("error-msg").style.display = "none";
+                }}
+            }};
 
-                document.getElementById("iframe-container").appendChild(iframe);
-            }});
-            </script>
+            iframeContainer.appendChild(iframe);
 
-            <style>
-            .spinner {{
-              border: 6px solid rgba(0, 0, 0, 0.1);
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              border-left-color: #FFFFFF;      
-              animation: spin 1s linear infinite;
-              margin: auto;
-            }}
-            @keyframes spin {{
-              to {{ transform: rotate(360deg); }}
-            }}
-            </style>
+            setTimeout(function() {{
+                if (!iframeLoaded) {{
+                    gaveUp = true;
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("iframe-container").style.display = "none";
+                    document.getElementById("error-msg").style.display = "flex";
+                }}
+            }}, 300);
+        }}
+
+        function reloadIframe() {{
+            document.getElementById("loader").style.display = "flex";
+            document.getElementById("error-msg").style.display = "none";
+            document.getElementById("iframe-container").style.display = "none";
+            createIframe();
+        }}
+
+        window.addEventListener("DOMContentLoaded", function() {{
+            createIframe();
+        }});
+        </script>
+
+        <!-- Styles -->
+        <style>
+        .spinner {{
+          border: 4px solid rgba(0, 0, 0, 0.1);
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border-left-color: #1DB954;
+          animation: spin 1s linear infinite;
+          margin: auto;
+        }}
+
+        @keyframes spin {{
+          to {{ transform: rotate(360deg); }}
+        }}
+
+        .try-again-button {{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background-color: #4d4d4d;
+            border-radius: 50%;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            user-select: none;
+            transition: transform 0.2s;
+        }}
+
+        .try-again-button:hover {{
+            transform: scale(1.05);
+        }}
+
+        .try-text {{
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }}
+
+        .arrow {{
+            position: absolute;
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+        }}
+
+        .top-left {{
+            top: 12px;
+            left: 12px;
+        }}
+
+        .bottom-right {{
+            bottom: 12px;
+            right: 12px;
+        }}
+        </style>
         """, height=290)
 
         problem_msg = """
