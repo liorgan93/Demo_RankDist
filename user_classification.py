@@ -170,11 +170,9 @@ def user_classification_page():
 
         <!-- Error Message and Retry Button -->
         <div id="error-msg" style="display: none; height: 290px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
-            <p style="margin: 10px; font-size: 22px; font-weight: 600; color: white;">The song failed to load</p>
+        <p style="margin:10px; font-size:20px; font-weight:600; color:#fff; font-family:Arial, sans-serif;"> Oops! The song failed to load </p>
             <div onclick="reloadIframe()" class="try-again-button">
-                <div class="arrow top-left">↺</div>
-                <div class="try-text">TRY AGAIN!</div>
-                <div class="arrow bottom-right">↻</div>
+                <div class="try-text">TRY AGAIN ⟳</div>
             </div>
         </div>
 
@@ -282,12 +280,6 @@ def user_classification_page():
             z-index: 1;
         }}
 
-        .arrow {{
-            position: absolute;
-            font-size: 28px;
-            color: white;
-            font-weight: bold;
-        }}
 
         .top-left {{
             top: 12px;
