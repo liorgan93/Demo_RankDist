@@ -221,7 +221,7 @@ def user_classification_page():
                     document.getElementById("iframe-container").style.display = "none";
                     document.getElementById("error-msg").style.display = "flex";
                 }}
-            }}, 500);
+            }}, 4500);
         }}
 
         function reloadIframe() {{
