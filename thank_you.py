@@ -12,7 +12,8 @@ def thank_you_page():
             return base64.b64encode(file_data).decode()
 
     file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
-    encoded_file = get_base64_encoded_file(file_path)
+    with st.spinner("טוען קובץ…"):
+        encoded_file = get_base64_encoded_file(file_path)
 
     set_background("other images/background.webp")
 
@@ -78,8 +79,7 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
-    st.balloons()
-    st.balloons()
+
     st.markdown(f"""
     <div class="thank-you-container">
         <div class="thank-you-title">
@@ -93,4 +93,7 @@ def thank_you_page():
             <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
         </div>
     </div>""", unsafe_allow_html=True)
+
+    st.balloons()
+
 
