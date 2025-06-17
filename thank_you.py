@@ -4,18 +4,13 @@ import base64
 
 
 def thank_you_page():
-    st.set_page_config(page_title="RankDist Demo")
 
+    st.set_page_config(page_title="RankDist Demo")
     def get_base64_encoded_file(file_path):
         with open(file_path, "rb") as f:
             file_data = f.read()
             return base64.b64encode(file_data).decode()
 
-    file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
-
-    with st.spinner("טוען קובץ…"):
-        encoded_file = get_base64_encoded_file(file_path)
-    st.snow()
     set_background("other images/background.webp")
 
     st.markdown(
@@ -80,6 +75,9 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
+    file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
+    encoded_file = get_base64_encoded_file(file_path)
+    st.balloons()
 
     st.markdown(f"""
     <div class="thank-you-container">
@@ -95,6 +93,5 @@ def thank_you_page():
         </div>
     </div>""", unsafe_allow_html=True)
 
-    st.balloons()
 
 
