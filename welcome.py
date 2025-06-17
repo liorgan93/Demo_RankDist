@@ -20,7 +20,7 @@ def welcome_page():
     set_background("other images/background.webp")
 
     logo = get_base64_image("other images/logo.jpg")
-    music = get_base64_image("other images/Music_notes.jpg")
+    music = get_base64_image("other images/music notes.jpg")
 
     st.markdown(
         f"""

@@ -75,7 +75,7 @@ def opening_page():
         </div>
     """, unsafe_allow_html=True)
 
-    next = get_base64_image("other images/Next.jpg")
+    next = get_base64_image("other images/next.jpg")
 
     st.markdown("""
         <style>

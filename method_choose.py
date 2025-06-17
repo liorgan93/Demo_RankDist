@@ -2,14 +2,16 @@ import streamlit as st
 import base64
 import time
 
-def click_a():
-    st.session_state.page = "perfect_precision_choose"
+def click_relevant_set():
+    st.session_state.page = "relevant_set_choose"
 
-def click_b():
+def click_ordered_list():
     st.session_state.page = "ordered_list_choose"
 
-def click_c():
-    st.session_state.page = "relevant_set_choose"
+def click_perfect_precision():
+    st.session_state.page = "perfect_precision_choose"
+
+
 
 def get_base64_image(image_path):
     with open(image_path, "rb") as image_file:
@@ -20,9 +22,9 @@ def method_choose_page():
     from user_classification_intro import set_background
     set_background("other images/background.webp")
 
-    perfect_precision = get_base64_image("other images/blue.jpg")
-    relevant_set = get_base64_image("other images/green.jpg")
-    ordered_list = get_base64_image("other images/red.jpg")
+    perfect_precision = get_base64_image("other images/perfect_precision.jpg")
+    relevant_set = get_base64_image("other images/relevant_set.jpg")
+    ordered_list = get_base64_image("other images/ordered_list.jpg")
     persona_name = st.session_state.persona
     gender_value = st.session_state.gender_pronoun
 
@@ -89,7 +91,7 @@ def method_choose_page():
 
     st.markdown("""
         <style>
-        .st-key-aa button, .st-key-bb button, .st-key-cc button {
+        .st-key-perfect_precision button, .st-key-ordered_list button, .st-key-relevant_set button {
             width: 97px;
             height: 97px;
             background-color: transparent;
@@ -104,17 +106,17 @@ def method_choose_page():
             flex-direction: column;
 
         }
-        .st-key-aa button:hover, .st-key-bb button:hover, .st-key-cc button:hover {
+        .st-key-perfect_precision button:hover, .st-key-ordered_list button:hover, .st-key-relevant_set button:hover {
             transform: rotate(360deg) scale(1.1);
             box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.8);
         }
-        .st-key-cc button {
+        .st-key-relevant_set button {
             background-image: url('data:image/webp;base64,""" + relevant_set + """');
         }
-        .st-key-bb button {
+        .st-key-ordered_list button {
             background-image: url('data:image/webp;base64,""" + ordered_list + """');
         }
-        .st-key-aa button {
+        .st-key-perfect_precision button {
             background-image: url('data:image/webp;base64,""" + perfect_precision + """');
         }
         </style>
@@ -123,6 +125,6 @@ def method_choose_page():
     col1, col2, col3 = st.columns([1,1,1])
 
     with col2:
-        st.button("", key="cc", on_click=click_c, use_container_width=True)
-        st.button("", key="bb", on_click=click_b, use_container_width=True)
-        st.button("", key="aa", on_click=click_a, use_container_width=True)
+        st.button("", key="relevant_set", on_click=click_relevant_set, use_container_width=True)
+        st.button("", key="ordered_list", on_click=click_ordered_list, use_container_width=True)
+        st.button("", key="perfect_precision", on_click=click_perfect_precision, use_container_width=True)

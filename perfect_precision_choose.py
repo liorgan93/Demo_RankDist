@@ -148,7 +148,7 @@ def perfect_precision_choose_page():
                     Perfect Precision
                 </div>
                 <div class="text_choose">
-                    Choose exactly the TOP 3 songs you’d recommend to {persona_name}
+                    Choose exactly the TOP 3 songs you’d recommend to {persona_name}🎧
                 </div>
             </div>
         """, unsafe_allow_html=True)
@@ -174,7 +174,7 @@ def perfect_precision_choose_page():
         st.markdown("""
             <div style="width: 100%; text-align: center; margin: 25px 0;">
                 <div class="notice-text">
-                    You can listen to the songs below (Loading the songs may take a few moments) 🎧
+                    You can listen to the songs below💿
                 </div>
             </div>
         """, unsafe_allow_html=True)

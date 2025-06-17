@@ -67,7 +67,7 @@ def html_table(df):
 
 def perfect_precision_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
-    set_background("other images/blue_b.jpg")
+    set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice
     persona_number = st.session_state.chosen_person_number
