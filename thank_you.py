@@ -80,6 +80,7 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
+    st.markdown("aaa")
     time.sleep(10)
     st.balloons()
 
