@@ -15,8 +15,6 @@ def thank_you_page():
     encoded_file = get_base64_encoded_file(file_path)
 
     set_background("other images/background.webp")
-    st.balloons()
-
 
     st.markdown(
         """
@@ -80,7 +78,8 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
-
+    st.balloons()
+    st.balloons()
     st.markdown(f"""
     <div class="thank-you-container">
         <div class="thank-you-title">
