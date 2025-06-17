@@ -12,9 +12,10 @@ def thank_you_page():
             return base64.b64encode(file_data).decode()
 
     file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
+
     with st.spinner("טוען קובץ…"):
         encoded_file = get_base64_encoded_file(file_path)
-
+    st.snow()
     set_background("other images/background.webp")
 
     st.markdown(
