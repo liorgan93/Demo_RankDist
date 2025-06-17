@@ -94,7 +94,7 @@ def thank_you_page():
             <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
         </div>
     </div>""", unsafe_allow_html=True)
-    
+
     st.balloons()
 
 
