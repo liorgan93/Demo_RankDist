@@ -1,3 +1,5 @@
+import time
+
 import streamlit as st
 from user_classification_intro import set_background
 import base64
@@ -12,6 +14,9 @@ def thank_you_page():
             return base64.b64encode(file_data).decode()
 
     set_background("other images/background.webp")
+    file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
+    encoded_file = get_base64_encoded_file(file_path)
+
 
     st.markdown(
         """
@@ -75,8 +80,7 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
-    file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
-    encoded_file = get_base64_encoded_file(file_path)
+    time.sleep(10)
     st.balloons()
 
     st.markdown(f"""
