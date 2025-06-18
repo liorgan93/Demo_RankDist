@@ -80,6 +80,7 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
+    st.markdown(f"""<div> aaaa </div>""")
 
     st.markdown(f"""
     <div class="thank-you-container">
@@ -89,6 +90,9 @@ def thank_you_page():
         <div class="thank-you-message">
             We hope you enjoyed the demo!
             If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
+        </div>
+        <div class="download-button">
+            <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
         </div>
     </div>""", unsafe_allow_html=True)
 
