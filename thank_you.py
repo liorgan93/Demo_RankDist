@@ -31,8 +31,6 @@ def thank_you_page():
             .thank-you-container {
                 text-align: center;
                 padding: 35px 10px;
-                background-color: #ffffff; 
-                box-shadow: 0 0 0 1px rgba(255,255,255,0.001);
                 border-radius: 30px;
                 max-width: 800px;
                 background-color: white; !important;
