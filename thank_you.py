@@ -81,7 +81,18 @@ def thank_you_page():
         unsafe_allow_html=True
     )
 
+    st.markdown(f"""
+    <div class="thank-you-container">
+        <div class="thank-you-title">
+            Thank You for Participating!
+        </div>
+        <div class="thank-you-message">
+            We hope you enjoyed the demo!
+            If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
+        </div>
+    </div>""", unsafe_allow_html=True)
 
+    st.balloons()
 
 
 
