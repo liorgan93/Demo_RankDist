@@ -54,9 +54,7 @@ def thank_you_page():
                 color: #FFBF00;
                 padding: 0 4px;
                 margin-bottom: 15px;
-                text-shadow:
-                    0 1px 2px rgba(0, 0, 0, 0.25),   /* עומק */
-                    0 0 8px  rgba(255, 230, 150, 0.6);/* זוהר */
+                text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.5), 0 0 12px rgba(0, 0, 0, 0.2);
                 transition: all 0.4s ease-in-out;
                 letter-spacing: 0.5px;
             }
