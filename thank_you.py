@@ -18,6 +18,70 @@ def thank_you_page():
     encoded_file = get_base64_encoded_file(file_path)
 
 
+    st.markdown(
+        """
+        <style>
+            .block-container {
+                padding-bottom: 0px !important;
+                margin-bottom: 0px !important;
+                margin-top: 0px !important;
+                padding-top: 40px !important;
+            }
+
+            .thank-you-container {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+                padding: 50px 30px;
+                background: linear-gradient(135deg, rgba(240, 250, 255, 0.9), rgba(220, 235, 255, 0.95));
+                border-radius: 30px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+                max-width: 800px;
+                margin: auto;
+            }
+
+            .thank-you-title {
+                font-family: 'Caveat';
+                font-size: 30px;
+                font-weight: bold;
+                color: #155fa0;
+                padding: 0 4px;
+                margin-bottom: 15px;
+                text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.5), 0 0 12px rgba(0, 0, 0, 0.2);
+                transition: all 0.4s ease-in-out;
+            }
+
+            .thank-you-message {
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: 17px;
+                color: #333;
+                margin-bottom: 15px;
+                font-weight: bold;
+                padding: 3px 0px;
+            }
+
+            .download-button a {
+                display: inline-block;
+                text-decoration: none;
+                background-color: #1E90FF;
+                color: white;
+                padding: 14px 30px;
+                border-radius: 30px;
+                font-size: 17px;
+                font-weight: 600;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            }
+
+            .download-button a:hover {
+                background-color: #1C86EE;
+                transform: scale(1.05);
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+
 
 
 
