@@ -32,8 +32,11 @@ def thank_you_page():
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
                 padding: 35px 10px;
-                background: white;
+                /* כמעט-לבן עם נגיעה עדינה של כחול-שמיים בהיר */
+                background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
                 border-radius: 30px;
+                /* הצללה עדינה יותר כדי לשמור על תחושת “בהיר” */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
                 max-width: 800px;
             }
 
