@@ -56,7 +56,7 @@ def thank_you_page():
                 color: #333;
                 margin-bottom: 15px;
                 font-weight: bold;
-                padding: 3px 0px;
+                padding: 0px 0px;
             }
 
             .download-button a {
