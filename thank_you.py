@@ -33,7 +33,7 @@ def thank_you_page():
                 padding: 35px 10px;
                 border-radius: 30px;
                 max-width: 800px;
-                background-color: white; !important;
+                background: linear-gradient(135deg, #ffffff, #fdfdff);
             }
 
             .thank-you-title {
