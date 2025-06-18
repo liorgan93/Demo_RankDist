@@ -40,7 +40,7 @@ def thank_you_page():
             }
 
             .thank-you-title {
-                font-family: 'Caveat';
+                font-family: 'Cormorant Garamond', serif;
                 font-size: 30px;
                 font-weight: bold;
                 color: #FFBF00;
