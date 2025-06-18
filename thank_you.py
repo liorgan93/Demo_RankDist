@@ -32,14 +32,10 @@ def thank_you_page():
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
                 padding: 35px 10px;
-                /* גרדיאנט “לבן על לבן” – ייראה כמעט לבן מוחלט */
-                background: linear-gradient(135deg, #ffffff 0%, #fcfeff 100%);
+                color: white;
                 border-radius: 30px;
-                /* צל רך מאוד שלא יכהה את הרקע */
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
                 max-width: 800px;
             }
-
 
             .thank-you-title {
                 font-family: 'Cormorant Garamond', serif;
