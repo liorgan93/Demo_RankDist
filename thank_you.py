@@ -80,21 +80,39 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
-    st.markdown(f"""<div> aaaa </div>""")
 
-    st.markdown(f"""
+    # ----------------- קוד מתוקן עם ספינר לכפתור ההורדה -----------------
+    # (השורות שסומנו NEW/CHANGED הן התוספות או השינויים היחידים)
+
+    # ‼️ NEW – מפרידים את התוכן הקל מהכפתור הכבד
+    st.markdown("""
     <div class="thank-you-container">
         <div class="thank-you-title">
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
-            We hope you enjoyed the demo!
-            If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
+            We hope you enjoyed the demo!<br>
+            If you'd like to learn more about the methods demonstrated in this demo,<br>
+            feel free to download and read the paper below
         </div>
-        <div class="download-button">
-            <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
-        </div>
-    </div>""", unsafe_allow_html=True)
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ‼️ NEW – יוצר placeholder לכפתור
+    download_placeholder = st.empty()
+
+    # ‼️ NEW – מציג ספינר עד שה-HTML הכבד נשלח לדפדפן
+    with download_placeholder.container():
+        with st.spinner("טוען כפתור הורדה…"):
+            download_placeholder.markdown(f"""
+            <div class="download-button">
+                <a href="data:application/pdf;base64,{encoded_file}"
+                   download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">
+                   ⬇️ Download Paper (PDF)
+                </a>
+            </div>
+            """, unsafe_allow_html=True)
+    # --------------------------------------------------------------------
 
     st.balloons()
 
