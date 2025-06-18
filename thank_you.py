@@ -36,7 +36,6 @@ def thank_you_page():
                 border-radius: 30px;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
                 max-width: 800px;
-                margin: auto;
             }
 
             .thank-you-title {
@@ -56,7 +55,7 @@ def thank_you_page():
                 color: #333;
                 margin-bottom: 15px;
                 font-weight: bold;
-                padding: 0px 0px;
+                padding: 3px 0px;
             }
 
             .download-button a {
