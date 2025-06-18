@@ -4,6 +4,20 @@ import streamlit as st
 from user_classification_intro import set_background
 import base64
 
+def aaa(encoded_file):
+    st.markdown(f"""
+        <div class="thank-you-container">
+            <div class="thank-you-title">
+                Thank You for Participating!
+            </div>
+            <div class="thank-you-message">
+                We hope you enjoyed the demo!
+                If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
+            </div>
+            <div class="download-button">
+                <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
+            </div>
+        </div>""", unsafe_allow_html=True)
 
 def thank_you_page():
 
@@ -80,39 +94,7 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
-
-    # ----------------- קוד מתוקן עם ספינר לכפתור ההורדה -----------------
-    # (השורות שסומנו NEW/CHANGED הן התוספות או השינויים היחידים)
-
-    # ‼️ NEW – מפרידים את התוכן הקל מהכפתור הכבד
-    st.markdown("""
-    <div class="thank-you-container">
-        <div class="thank-you-title">
-            Thank You for Participating!
-        </div>
-        <div class="thank-you-message">
-            We hope you enjoyed the demo!<br>
-            If you'd like to learn more about the methods demonstrated in this demo,<br>
-            feel free to download and read the paper below
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # ‼️ NEW – יוצר placeholder לכפתור
-    download_placeholder = st.empty()
-
-    # ‼️ NEW – מציג ספינר עד שה-HTML הכבד נשלח לדפדפן
-    with download_placeholder.container():
-        with st.spinner("טוען כפתור הורדה…"):
-            download_placeholder.markdown(f"""
-            <div class="download-button">
-                <a href="data:application/pdf;base64,{encoded_file}"
-                   download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">
-                   ⬇️ Download Paper (PDF)
-                </a>
-            </div>
-            """, unsafe_allow_html=True)
-    # --------------------------------------------------------------------
+    aaa(encoded_file)
 
     st.balloons()
 
