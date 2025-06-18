@@ -43,7 +43,7 @@ def thank_you_page():
                 font-family: 'Caveat';
                 font-size: 30px;
                 font-weight: bold;
-                color: #D3AF37;
+                color: #FFBF00;
                 padding: 0 4px;
                 margin-bottom: 15px;
                 text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.5), 0 0 12px rgba(0, 0, 0, 0.2);
