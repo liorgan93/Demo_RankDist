@@ -31,7 +31,7 @@ def thank_you_page():
             .thank-you-container {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
-                padding: 50px 30px;
+                padding: 50px 10px;
                 background: linear-gradient(135deg, rgba(250, 252, 255, 1), rgba(235, 240, 255, 1));
                 border-radius: 30px;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
