@@ -33,6 +33,7 @@ def thank_you_page():
                 text-align: center;
                 padding: 35px 10px;
                 color: white;
+                background-color: white;
                 border-radius: 30px;
                 max-width: 800px;
             }
