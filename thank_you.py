@@ -35,7 +35,7 @@ def thank_you_page():
                 box-shadow: 0 0 0 1px rgba(255,255,255,0.001);
                 border-radius: 30px;
                 max-width: 800px;
-                background-color: #1C86EE;
+                background-color: white; !important;
             }
 
             .thank-you-title {
