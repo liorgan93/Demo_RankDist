@@ -32,7 +32,7 @@ def thank_you_page():
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
                 padding: 35px 10px;
-                background: white;
+                background: blue;
                 border-radius: 30px;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
                 max-width: 800px;
