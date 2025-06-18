@@ -32,7 +32,7 @@ def thank_you_page():
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
                 padding: 50px 30px;
-                background: linear-gradient(135deg, rgba(240, 250, 255, 0.98), rgba(220, 235, 255, 0.95));
+                background: linear-gradient(135deg, rgba(250, 252, 255, 0.98), rgba(235, 240, 255, 0.95));
                 border-radius: 30px;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
                 max-width: 800px;
@@ -43,11 +43,12 @@ def thank_you_page():
                 font-family: 'Cormorant Garamond', serif;
                 font-size: 30px;
                 font-weight: bold;
-                color: #D4AF37; 
+                color: #FFBF00;
                 padding: 0 4px;
                 margin-bottom: 15px;
                 text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.5), 0 0 12px rgba(0, 0, 0, 0.2);
                 transition: all 0.4s ease-in-out;
+                letter-spacing: 0.5px;
             }
 
             .thank-you-message {
