@@ -34,7 +34,7 @@ def thank_you_page():
                 padding: 35px 10px;
                 background: white;
                 border-radius: 30px;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
                 max-width: 800px;
             }
 
