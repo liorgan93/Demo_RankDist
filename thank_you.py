@@ -29,7 +29,6 @@ def thank_you_page():
             }
 
             .thank-you-container {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
                 padding: 35px 10px;
                 color: white;
