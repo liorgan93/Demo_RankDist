@@ -35,6 +35,7 @@ def thank_you_page():
                 box-shadow: 0 0 0 1px rgba(255,255,255,0.001);
                 border-radius: 30px;
                 max-width: 800px;
+                background-color: #1C86EE;
             }
 
             .thank-you-title {
@@ -80,7 +81,7 @@ def thank_you_page():
     )
 
     st.markdown(f"""
-    <div class="thank-you-container" background-color: #1C86EE;>
+    <div class="thank-you-container">
         <div class="thank-you-title">
             Thank You for Participating!
         </div>
