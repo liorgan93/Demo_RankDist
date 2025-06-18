@@ -13,7 +13,7 @@ def thank_you_page():
             file_data = f.read()
             return base64.b64encode(file_data).decode()
 
-    set_background("other images/thank_you background.webp.webp")
+    set_background("other images/thank_you background.webp")
     file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
     encoded_file = get_base64_encoded_file(file_path)
 
