@@ -40,7 +40,7 @@ def thank_you_page():
                 font-family: 'Cormorant Garamond', serif;
                 font-size: 28px;
                 font-weight: bold;
-                color: #DAA520;
+                color: #FFE066;
                 padding: 0 4px;
                 margin-bottom: 15px;
                 text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.8), 0 0 12px rgba(0, 0, 0, 0.6);
