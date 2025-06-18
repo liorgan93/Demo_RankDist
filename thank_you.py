@@ -43,7 +43,7 @@ def thank_you_page():
                 color: #FFE066;
                 padding: 0 4px;
                 margin-bottom: 15px;
-                text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.8), 0 0 12px rgba(0, 0, 0, 0.6);
+                text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.9), 0 0 12px rgba(0, 0, 0, 0.8);
                 letter-spacing: 0.7px;
             }
 
