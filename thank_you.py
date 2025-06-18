@@ -40,13 +40,6 @@ def thank_you_page():
             }
 
             .thank-you-title {
-                background: linear-gradient(
-                    135deg,
-                    #F8E8B0 0%,   /* היילייט בהיר */
-                    #E6C773 30%,  /* זהב רך */
-                    #D4AF37 60%,  /* זהב עמוק */
-                    #F1D99C 100%  /* ברק חוזר */
-                );
                 font-family: 'Cormorant Garamond', serif;
                 font-size: 30px;
                 font-weight: 700
