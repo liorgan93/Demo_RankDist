@@ -4,20 +4,6 @@ import streamlit as st
 from user_classification_intro import set_background
 import base64
 
-def aaa(encoded_file):
-    st.markdown(f"""
-        <div class="thank-you-container">
-            <div class="thank-you-title">
-                Thank You for Participating!
-            </div>
-            <div class="thank-you-message">
-                We hope you enjoyed the demo!
-                If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
-            </div>
-            <div class="download-button">
-                <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
-            </div>
-        </div>""", unsafe_allow_html=True)
 
 def thank_you_page():
 
@@ -57,7 +43,7 @@ def thank_you_page():
                 font-family: 'Caveat';
                 font-size: 30px;
                 font-weight: bold;
-                color: #155fa0;
+                color: gold;
                 padding: 0 4px;
                 margin-bottom: 15px;
                 text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.5), 0 0 12px rgba(0, 0, 0, 0.2);
@@ -94,7 +80,20 @@ def thank_you_page():
         """,
         unsafe_allow_html=True
     )
-    aaa(encoded_file)
+
+    st.markdown(f"""
+    <div class="thank-you-container">
+        <div class="thank-you-title">
+            Thank You for Participating!
+        </div>
+        <div class="thank-you-message">
+            We hope you enjoyed the demo!
+            If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
+        </div>
+        <div class="download-button">
+            <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
+        </div>
+    </div>""", unsafe_allow_html=True)
 
     st.balloons()
 
