@@ -31,8 +31,8 @@ def thank_you_page():
             .thank-you-container {
                 text-align: center;
                 padding: 35px 10px;
-                color: white;
-                background-color: white;
+                background-color: #ffffff; /* לבן מוחלט */
+                box-shadow: 0 0 0 1px rgba(255,255,255,0.001); /* טריק קטן למניעת צל */
                 border-radius: 30px;
                 max-width: 800px;
             }
