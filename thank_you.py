@@ -51,7 +51,7 @@ def thank_you_page():
                 font-family: Georgia, 'Times New Roman', serif;
                 font-size: 17px;
                 color: #333;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
                 font-weight: bold;
                 padding: 3px 0px;
             }
