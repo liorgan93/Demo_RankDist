@@ -41,7 +41,8 @@ def thank_you_page():
 
             .thank-you-title {
                 font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script',
-                 'Snell Roundhand', cursive;                font-size: 30px;
+                 'Snell Roundhand', cursive;
+                font-size: 50px;
                 font-weight: 700;
                 text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
                 font-weight: bold;
