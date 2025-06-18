@@ -42,7 +42,7 @@ def thank_you_page():
             .thank-you-title {
                 font-family: 'Cormorant Garamond', serif;
                 font-size: 28px;
-                font-weight: 700;
+                font-weight: 900;
                 color: #FFBF00;
                 padding: 0 4px;
                 margin-bottom: 15px;
