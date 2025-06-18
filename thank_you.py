@@ -40,13 +40,23 @@ def thank_you_page():
             }
 
             .thank-you-title {
+                background: linear-gradient(
+                    135deg,
+                    #F8E8B0 0%,   /* היילייט בהיר */
+                    #E6C773 30%,  /* זהב רך */
+                    #D4AF37 60%,  /* זהב עמוק */
+                    #F1D99C 100%  /* ברק חוזר */
+                );
                 font-family: 'Cormorant Garamond', serif;
                 font-size: 30px;
+                font-weight: 700
                 font-weight: bold;
                 color: #FFBF00;
                 padding: 0 4px;
                 margin-bottom: 15px;
-                text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.5), 0 0 12px rgba(0, 0, 0, 0.2);
+                text-shadow:
+                    0 1px 2px rgba(0, 0, 0, 0.25),   /* עומק */
+                    0 0 8px  rgba(255, 230, 150, 0.6);/* זוהר */
                 transition: all 0.4s ease-in-out;
                 letter-spacing: 0.5px;
             }
