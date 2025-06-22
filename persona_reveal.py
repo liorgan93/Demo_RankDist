@@ -71,7 +71,7 @@ def persona_reveal_page():
             color: black;
             font-weight: bold;
             margin-bottom: 15px;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
         }
 
         img {
