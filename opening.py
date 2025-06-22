@@ -52,9 +52,9 @@ def opening_page():
             color: #BBDEFB;
             font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
-            margin-top: 5px;
+            margin-top: 0px;
             margin-bottom: 26px;
-            padding-top: 5px;
+            padding-top: 0px;
         }}
         .alg-image {{
             max-width: 100%;
