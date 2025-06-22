@@ -17,8 +17,8 @@ def render_progress_bar(current_step, top_pad=55):
     .progress-bar-wrapper{{
         width:100%;
         background:linear-gradient(90deg,#0e1e40,#122750,#1a3366);
-        display:flex; justify-content:space-between; flex-wrap:nowrap;   /* שורה אחת */
-        padding:4px 3%;
+        display:flex; justify-content:space-between; flex-wrap:nowrap;   
+        padding:4px 5%;
         min-height:36px;
         position:sticky; top:0; z-index:9999; margin-top:6px; border-radius:3px;
     }}
@@ -27,9 +27,9 @@ def render_progress_bar(current_step, top_pad=55):
         flex:1;               
         min-width:0;              
         text-align:center;
-        font:500 13px 'Poppins',sans-serif;
+        font:400 12px 'Poppins',sans-serif;
         line-height:1.1;        
-        padding:2px 2px;        
+        padding:2px 8px;        
         color:#fff; background:#666;
         margin:0 3px; border-radius:8px;
         transition:background-color .3s;
@@ -42,7 +42,6 @@ def render_progress_bar(current_step, top_pad=55):
 
     .progress-step.active{{background:#fff;color:#000;}}
 
-    /* 3️⃣ מרווח מתחת לסרגל שלא יידרס */
     [data-testid="stAppViewContainer"] .block-container{{
         padding-top:{top_pad}px !important;
     }}
