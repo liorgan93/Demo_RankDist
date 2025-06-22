@@ -6,7 +6,7 @@ from other_functions import get_base64_image
 
 def user_classification_intro_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("aaa")
+    render_progress_bar("taste match")
     set_background("other images/background.webp")
 
     st.markdown(

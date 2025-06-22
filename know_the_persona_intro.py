@@ -27,6 +27,8 @@ def know_the_persona_intro_page():
             max-width: 450px;
             margin: auto;
             font-family: 'Poppins', sans-serif;
+            margin-top: -20px; !important;
+
         }
         .header-small {
             font-size: 14px;

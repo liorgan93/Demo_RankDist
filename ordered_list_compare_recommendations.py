@@ -86,8 +86,17 @@ def html_table(df):
 
 
 def ordered_list_compare_recommendations_page():
-    st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("ddd")
+    st.set_page_config(page_title="RankDist Demo", layout="wide")
+    render_progress_bar("ccc")
+    st.markdown("""
+            <style>
+                .progress-bar-wrapper{
+                    max-width: 700px;   /* שנה לפי הצורך */
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            </style>
+        """, unsafe_allow_html=True)
     set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice

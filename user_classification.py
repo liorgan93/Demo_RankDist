@@ -13,7 +13,7 @@ def button_click_problem():
 
 def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("aaa")
+    render_progress_bar("taste match")
     set_background("other images/background.webp")
     all_songs_df = pd.read_csv('playlists_excel/15_songs_classify.csv')
     max_attempts = 150
@@ -67,6 +67,7 @@ def user_classification_page():
                 padding-bottom: 0px !important;
                 padding-right: 0px;
                 padding-left: 0px;
+                margin-top: -20px; !important;
             }
             .block-container {
                 padding-top: 5px !important;

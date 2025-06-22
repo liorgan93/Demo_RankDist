@@ -6,8 +6,18 @@ from other_functions import set_background
 from other_functions import render_progress_bar
 
 def perfect_precision_choose_page():
-    st.set_page_config(page_title="RankDist Demo")
+    st.set_page_config(page_title="RankDist Demo", layout="wide")
     render_progress_bar("ccc")
+    st.markdown("""
+            <style>
+                .progress-bar-wrapper{
+                    max-width: 700px;   /* שנה לפי הצורך */
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+
     set_background("other images/background.webp")
 
     csv_file_path = "playlists_excel/top_k_songs.csv"
@@ -34,7 +44,7 @@ def perfect_precision_choose_page():
             color: white;
             text-align: center;
             margin-bottom: 0px;
-            margin-top: 0px;
+            margin-top: -20px; !important;
         }
 
         .custom-container h3 {

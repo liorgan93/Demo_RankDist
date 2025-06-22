@@ -1,32 +1,29 @@
 import streamlit as st
 import base64
 
-import streamlit as st
-import base64
-
 def render_progress_bar(current_step, top_pad=55):
-    steps = ['aaa', 'bbb', 'ccc', 'ddd']
+    steps = ['taste match', 'know the persona', 'recommend song', 'results']
 
     step_html = ""
     for step in steps:
         class_name = "progress-step active" if step == current_step else "progress-step"
         step_html += f'<div class="{class_name}">{step}</div>'
 
-    # CSS + HTML
     st.markdown(f"""
     <style>
-    /* הסרגל עצמו */
     .progress-bar-wrapper {{
         width: 100%;
         background: linear-gradient(90deg, #0e1e40, #122750, #1a3366);
         display: flex;
         justify-content: space-between;
-        padding: 4px 8%;
+        padding: 4px 3%;
         height: 36px;
         position: sticky;
         top: 0;
         z-index: 9999;
         margin-top: 6px;
+        border-radius: 3px;
+
     }}
 
     .progress-step {{
@@ -38,8 +35,8 @@ def render_progress_bar(current_step, top_pad=55):
         font-weight: 500;
         color: white;
         background-color: #666;
-        margin: 0 4px;
-        border-radius: 4px;
+        margin: 0 3px;
+        border-radius: 8px;
         transition: background-color 0.3s;
     }}
 

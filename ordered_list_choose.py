@@ -33,8 +33,7 @@ def ordered_list_choose_page():
             color: white;
             text-align: center;
             margin-bottom: 0px;
-            
-            margin-top: 0px;
+            margin-top: -20px; !important;
         }
 
         .custom-container h3 {

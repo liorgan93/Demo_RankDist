@@ -49,6 +49,8 @@ def know_the_persona_page():
                 margin-bottom: 3px !important;
                 padding-right: 0px;
                 padding-left: 0px;
+                margin-top: -20px; !important;
+
             }
             .block-container {
                 padding-top: 5px !important;
