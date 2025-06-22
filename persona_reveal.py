@@ -38,7 +38,7 @@ def persona_reveal_page():
         .container {
             background-color: #ffffff;
             border-radius: 30px;
-            padding: 1px;
+            padding: 0px;
             text-align: center;
             font-family: Arial, sans-serif;
             width: 80%;
@@ -58,12 +58,12 @@ def persona_reveal_page():
         .title {
             font-size: 28px;
             font-weight: 900;
-            background: linear-gradient(to bottom, #000000, #222222, #444444); /* שחור עם עומק */
+            background: linear-gradient(to bottom, #000000, #222222, #444444); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 
                 2px 2px 5px rgba(0, 0, 0, 0.3), 
-                4px 4px 10px rgba(0, 0, 0, 0.2); /* הוספת ברק */
+                4px 4px 10px rgba(0, 0, 0, 0.2); 
         }
 
         .sub_title {
