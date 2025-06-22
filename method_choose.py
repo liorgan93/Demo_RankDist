@@ -38,7 +38,7 @@ def method_choose_page():
                 background-color: rgba(0, 0, 50, 0.99);
                 padding: 1px;
                 text-align: center;
-                margin-top: -20px; !important;
+                margin-top: -23px; !important;
             }
 
             .header-text {
