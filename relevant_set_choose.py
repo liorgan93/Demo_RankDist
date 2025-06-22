@@ -34,7 +34,6 @@ def relevant_set_choose_page():
             padding-top: 30px !important;
             padding-top: 5px !important;
             margin-top: 5px !important;
-            margin: 0px !important;
         }
 
         .custom-container {
@@ -161,7 +160,7 @@ def relevant_set_choose_page():
                     Relevant Set
                 </div>
                 <div class="text_choose">
-                    Choose TOP aaa3 songs you’d recommend to {persona_name}🎧
+                    Choose TOP 3 songs you’d recommend to {persona_name}🎧
                 </div>
             </div>
         """, unsafe_allow_html=True)
