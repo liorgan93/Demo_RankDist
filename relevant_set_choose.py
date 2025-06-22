@@ -12,7 +12,7 @@ def relevant_set_choose_page():
     st.markdown("""
             <style>
                 .progress-bar-wrapper{
-                    max-width: 700px;   /* שנה לפי הצורך */
+                    max-width: 700px;   
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -49,6 +49,7 @@ def relevant_set_choose_page():
 
         .custom-container h3 {
             font-size: 18px;
+            margin-top: 15px;
         }
 
         div[data-testid="stExpander"] {
@@ -160,7 +161,7 @@ def relevant_set_choose_page():
                     Relevant Set
                 </div>
                 <div class="text_choose">
-                    Choose TOP 3 songs you’d recommend to {persona_name}🎧
+                    Choose TOP aaa3 songs you’d recommend to {persona_name}🎧
                 </div>
             </div>
         """, unsafe_allow_html=True)
