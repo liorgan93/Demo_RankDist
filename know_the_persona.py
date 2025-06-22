@@ -148,12 +148,12 @@ def know_the_persona_page():
 
         st.components.v1.html(f"""
         <!-- Loader -->
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 275px;">
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 265px;">
             <div class="spinner"></div>
         </div>
 
         <!-- Error Message and Retry Button -->
-        <div id="error-msg" style="display: none; height: 275px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
+        <div id="error-msg" style="display: none; height: 265px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
         <p style="margin:10px; font-size:20px; font-weight:600; color:#fff; font-family:Arial, sans-serif;"> Oops! The song failed to load </p>
             <div onclick="reloadIframe()" class="try-again-button">
                 <div class="try-text">TRY AGAIN ⟳</div>
@@ -162,7 +162,7 @@ def know_the_persona_page():
 
         <!-- Iframe container -->
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container" style="display: none; transform: scale(0.76); transform-origin: top center;"></div>
+            <div id="iframe-container" style="display: none; transform: scale(0.72); transform-origin: top center;"></div>
         </div>
 
         <!-- Logic -->
