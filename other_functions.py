@@ -29,7 +29,7 @@ def render_progress_bar(current_step, top_pad=55):
         text-align:center;
         font:400 11.5px 'Poppins',sans-serif;
         line-height:1.1;        
-        padding:2px 8px; !important;  
+        padding:2px 20px; !important;  
         color:#fff; background:#666;
         margin:0 3px; border-radius:8px;
         transition:background-color .3s;
