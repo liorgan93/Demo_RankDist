@@ -11,9 +11,64 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as file:
         return base64.b64encode(file.read()).decode()
 
+def render_progress_bar(current_step):
+    steps = ['aaa', 'bbb', 'ccc', 'ddd']
+
+    step_html = ""
+    for step in steps:
+        class_name = "progress-step active" if step == current_step else "progress-step"
+        step_html += f'<div class="{class_name}">{step}</div>'
+
+    import streamlit as st
+    st.markdown(f"""
+        <style>
+        .progress-bar-wrapper {{
+            width: 100%;
+            background: linear-gradient(90deg, #0e1e40, #122750, #1a3366);
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 8%;
+            height: 36px;
+            position: sticky;
+            top: 0px;
+            z-index: 9999;
+            margin-top: 6px;
+        }}
+
+        .block-container {{
+            padding-top: 55px !important;
+        }}
+
+        .progress-step {{
+            flex-grow: 1;
+            text-align: center;
+            line-height: 28px;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: white;
+            background-color: #666666;  /* אפור בינוני */
+            margin: 0 4px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }}
+
+        .progress-step.active {{
+            background-color: #ffffff;  /* לבן */
+            color: black;
+        }}
+        </style>
+
+        <div class="progress-bar-wrapper">
+            {step_html}
+        </div>
+    """, unsafe_allow_html=True)
+
 
 def welcome_page():
     st.set_page_config(page_title="RankDist Demo")
+    render_progress_bar("bbb")
+
     def click_button():
         st.session_state.page = "opening"
 
