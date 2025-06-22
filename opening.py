@@ -66,7 +66,7 @@ def opening_page():
 
         <div class="info-container">
             <div class="info-text-secondary">
-                think you can Recommend better than Rankdist algorithm?
+                Think you can Recommend better than Rankdist algorithm?
             </div>
             <img src="data:image/webp;base64,{image_base64}" class="alg-image"/">
         </div>
