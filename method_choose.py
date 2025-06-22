@@ -44,13 +44,13 @@ def method_choose_page():
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 18px !important;
+                font-size: 17px !important;
                 margin: 0;
                 font-weight: bold;
             }
             .sub-header-text {
                 color: #CCCCCC;
-                font-size: 20px !important;
+                font-size: 19px !important;
                 margin: 0;
                 font-weight: bold;
             }
