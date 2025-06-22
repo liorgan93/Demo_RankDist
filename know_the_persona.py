@@ -275,7 +275,7 @@ def know_the_persona_page():
             right: 12px;
         }}
         </style>
-        """, height=275)
+        """, height=270)
 
         def handle_know_song():
             st.session_state.song_index += 1
