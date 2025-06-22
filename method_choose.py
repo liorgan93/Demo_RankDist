@@ -57,7 +57,7 @@ def method_choose_page():
 
             .explanation-container {
                 background-color: rgba(30, 30, 60, 0.95);
-                padding: 3px;
+                padding: 2px;
                 border-radius: 20px;
                 margin-top: 0px;
                 margin-bottom: -30px;
