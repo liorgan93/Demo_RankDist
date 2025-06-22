@@ -38,7 +38,7 @@ def persona_reveal_page():
         .container {
             background-color: #ffffff;
             border-radius: 30px;
-            padding: 0px;
+            padding: 0.3px;
             text-align: center;
             font-family: Arial, sans-serif;
             width: 80%;
@@ -71,7 +71,7 @@ def persona_reveal_page():
             color: black;
             font-weight: bold;
             margin-bottom: 15px;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
         }
 
         img {
