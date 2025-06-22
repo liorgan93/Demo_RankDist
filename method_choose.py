@@ -44,7 +44,7 @@ def method_choose_page():
 
             .header-text {
                 color: #ADD8E6;
-                font-size: 17px !important;
+                font-size: 16px !important;
                 margin: 0;
                 font-weight: bold;
             }
