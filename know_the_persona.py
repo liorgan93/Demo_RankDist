@@ -148,7 +148,7 @@ def know_the_persona_page():
 
         st.components.v1.html(f"""
         <!-- Loader -->
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 275px;">
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
             <div class="spinner"></div>
         </div>
 
