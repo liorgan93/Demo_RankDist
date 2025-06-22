@@ -72,7 +72,7 @@ def persona_reveal_page():
             font-weight: bold;
             margin-bottom: 15px;
             letter-spacing: 1px;
-            line-height: 1;
+            line-height: 1.2;
         }
 
         img {
