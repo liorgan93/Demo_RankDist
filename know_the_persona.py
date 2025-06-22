@@ -148,7 +148,7 @@ def know_the_persona_page():
 
         st.components.v1.html(f"""
         <!-- Loader -->
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 275;">
             <div class="spinner"></div>
         </div>
 
@@ -275,7 +275,7 @@ def know_the_persona_page():
             right: 12px;
         }}
         </style>
-        """, height=290)
+        """, height=275)
 
         def handle_know_song():
             st.session_state.song_index += 1
