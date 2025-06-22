@@ -99,7 +99,6 @@ def welcome_page():
         <div class="container">
             <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
             <p class="title-text">Welcome to our Music Recommendation Experience</p>
-            <div class="subtitle">Can you beat the algorithm RankDist in music recommendation?</div>
             <img src="data:image/webp;base64,{music}" class="music-image">
             <div class="time_est"> Estimated time: <strong> 8–10 minutes </strong> </div>
             <div class="footer-note">
