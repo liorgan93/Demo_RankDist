@@ -61,6 +61,7 @@ def method_choose_page():
                 border-radius: 20px;
                 margin-top: 0px;
                 margin-bottom: -30px;
+                font-size: 30px;
             }
             .explanation-container p {
                 color: #FFFFFF;
