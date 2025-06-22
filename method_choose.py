@@ -78,9 +78,9 @@ def method_choose_page():
 
 
         <div class="explanation-container">
-            <p style="font-size: 14px"><strong>1️⃣<span style="text-decoration: underline;">Relevant Set:</span></strong> Choose the TOP 3, order doesn’t matter</p>
-            <p style="font-size: 14px"><strong>2️⃣<span style="text-decoration: underline;">Ordered List:</span></strong> Pick the TOP 3 songs in exact order – 1st, 2nd, 3rd</p>
-            <p style="font-size: 14px"><strong>3️⃣<span style="text-decoration: underline;">Perfect Precision:</span></strong> Choose exactly the TOP 3 songs – one mistake and it's wrong</p>
+            <p style="font-size: 13px"><strong>1️⃣<span style="text-decoration: underline;">Relevant Set:</span></strong> Choose the TOP 3, order doesn’t matter</p>
+            <p style="font-size: 13px"><strong>2️⃣<span style="text-decoration: underline;">Ordered List:</span></strong> Pick the TOP 3 songs in exact order – 1st, 2nd, 3rd</p>
+            <p style="font-size: 13px"><strong>3️⃣<span style="text-decoration: underline;">Perfect Precision:</span></strong> Choose exactly the TOP 3 songs – one mistake and it's wrong</p>
         </div>
     """, unsafe_allow_html=True)
 
