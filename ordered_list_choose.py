@@ -7,7 +7,7 @@ from other_functions import render_progress_bar
 
 def ordered_list_choose_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("ccc")
+    render_progress_bar("recommend song")
     set_background("other images/background.webp")
 
     csv_file_path = "playlists_excel/top_k_songs.csv"

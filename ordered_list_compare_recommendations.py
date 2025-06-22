@@ -87,7 +87,7 @@ def html_table(df):
 
 def ordered_list_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo", layout="wide")
-    render_progress_bar("ccc")
+    render_progress_bar("results")
     st.markdown("""
             <style>
                 .progress-bar-wrapper{

@@ -7,7 +7,7 @@ from other_functions import get_base64_image
 
 def know_the_persona_intro_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("bbb")
+    render_progress_bar("know the persona")
     set_background("other images/background.webp")
 
     def handle_start_click():

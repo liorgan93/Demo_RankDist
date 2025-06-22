@@ -12,7 +12,7 @@ def button_click():
 
 def persona_reveal_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("bbb")
+    render_progress_bar("know the persona")
     set_background("other images/background.webp")
     st.session_state.songs_df['like/dislike'] = st.session_state.song_feedback
     st.session_state.songs_df['weights'] = st.session_state.songs_df['weights'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)

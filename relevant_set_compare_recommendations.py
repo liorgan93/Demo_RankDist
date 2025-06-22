@@ -68,7 +68,7 @@ def html_table(df):
 
 def relevant_set_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("ddd")
+    render_progress_bar("results")
     set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice

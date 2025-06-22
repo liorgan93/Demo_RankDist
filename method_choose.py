@@ -15,7 +15,7 @@ def click_perfect_precision():
 
 def method_choose_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("ccc")
+    render_progress_bar("recommend song")
     set_background("other images/background.webp")
 
     perfect_precision = get_base64_image("other images/perfect_precision.jpg")

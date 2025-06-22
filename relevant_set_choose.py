@@ -8,7 +8,7 @@ from other_functions import render_progress_bar
 
 def relevant_set_choose_page():
     st.set_page_config(page_title="RankDist Demo", layout="wide")
-    render_progress_bar("ccc")
+    render_progress_bar("recommend song")
     st.markdown("""
             <style>
                 .progress-bar-wrapper{

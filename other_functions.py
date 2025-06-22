@@ -2,58 +2,55 @@ import streamlit as st
 import base64
 
 def render_progress_bar(current_step, top_pad=55):
-    steps = ['taste match', 'know the persona', 'recommend song', 'results']
+    steps = ['taste match',
+             'know the persona',
+             'recommend song',
+             'results']
 
-    step_html = ""
-    for step in steps:
-        class_name = "progress-step active" if step == current_step else "progress-step"
-        step_html += f'<div class="{class_name}">{step}</div>'
+    step_html = "".join(
+        f'<div class="progress-step{" active" if s==current_step else ""}">{s}</div>'
+        for s in steps
+    )
 
     st.markdown(f"""
     <style>
-    .progress-bar-wrapper {{
-        width: 100%;
-        background: linear-gradient(90deg, #0e1e40, #122750, #1a3366);
-        display: flex;
-        justify-content: space-between;
-        padding: 4px 3%;
-        height: 36px;
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-        margin-top: 6px;
-        border-radius: 3px;
-
+    .progress-bar-wrapper{{
+        width:100%;
+        background:linear-gradient(90deg,#0e1e40,#122750,#1a3366);
+        display:flex; justify-content:space-between; flex-wrap:nowrap;   /* שורה אחת */
+        padding:4px 3%;
+        min-height:36px;
+        position:sticky; top:0; z-index:9999; margin-top:6px; border-radius:3px;
     }}
 
-    .progress-step {{
-        flex-grow: 1;
-        text-align: center;
-        line-height: 28px;
-        font-size: 14px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        color: white;
-        background-color: #666;
-        margin: 0 3px;
-        border-radius: 8px;
-        transition: background-color 0.3s;
+    .progress-step{{
+        flex:1;               
+        min-width:0;              
+        text-align:center;
+        font:500 13px 'Poppins',sans-serif;
+        line-height:1.1;        
+        padding:2px 2px;        
+        color:#fff; background:#666;
+        margin:0 3px; border-radius:8px;
+        transition:background-color .3s;
+        white-space:normal;      
+        overflow-wrap:break-word; 
+        display:flex;          
+        align-items:center;    
+        justify-content:center;
     }}
 
-    .progress-step.active {{
-        background-color: #fff;
-        color: #000;
-    }}
+    .progress-step.active{{background:#fff;color:#000;}}
 
-    [data-testid="stAppViewContainer"] .block-container {{
-        padding-top: {top_pad}px !important;
+    /* 3️⃣ מרווח מתחת לסרגל שלא יידרס */
+    [data-testid="stAppViewContainer"] .block-container{{
+        padding-top:{top_pad}px !important;
     }}
     </style>
 
-    <div class="progress-bar-wrapper">
-        {step_html}
-    </div>
+    <div class="progress-bar-wrapper">{step_html}</div>
     """, unsafe_allow_html=True)
+
 
 
 def set_background(image_file):

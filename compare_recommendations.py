@@ -13,7 +13,7 @@ def calculate_alg_score():
 
 def compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("cccc")
+    render_progress_bar("results")
     set_background("other images/blue_b.jpg")
     selected_songs = st.session_state.user_choice
     algorithm_df = pd.read_csv("alg_results.csv")
