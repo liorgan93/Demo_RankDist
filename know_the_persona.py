@@ -148,7 +148,7 @@ def know_the_persona_page():
 
         st.components.v1.html(f"""
         <!-- Loader -->
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 290px;">
+        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 275px;">
             <div class="spinner"></div>
         </div>
 
@@ -162,7 +162,7 @@ def know_the_persona_page():
 
         <!-- Iframe container -->
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container" style="display: none; transform: scale(0.8); transform-origin: top center;"></div>
+            <div id="iframe-container" style="display: none; transform: scale(0.7); transform-origin: top center;"></div>
         </div>
 
         <!-- Logic -->
