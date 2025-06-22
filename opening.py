@@ -41,14 +41,14 @@ def opening_page():
 
         }}
         .info-text-primary {{
-            font-size: 20px;
+            font-size: 22px;
             color: #4DD0E1;
             font-weight: 700;
             text-shadow: 1px 1px 6px rgba(0, 200, 255, 0.5);
             padding-bottom: 15px;
         }}
         .info-text-secondary {{
-            font-size: 16px;
+            font-size: 19px;
             color: #BBDEFB;
             font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
