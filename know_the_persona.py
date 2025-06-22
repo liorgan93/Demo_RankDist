@@ -153,7 +153,7 @@ def know_the_persona_page():
         </div>
 
         <!-- Error Message and Retry Button -->
-        <div id="error-msg" style="display: none; height: 290px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
+        <div id="error-msg" style="display: none; height: 275px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
         <p style="margin:10px; font-size:20px; font-weight:600; color:#fff; font-family:Arial, sans-serif;"> Oops! The song failed to load </p>
             <div onclick="reloadIframe()" class="try-again-button">
                 <div class="try-text">TRY AGAIN ⟳</div>
