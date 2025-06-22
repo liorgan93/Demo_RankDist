@@ -39,6 +39,7 @@ def method_choose_page():
                 padding: 1px;
                 text-align: center;
                 margin-top: -23px; !important;
+                margin-bottom: 5px;
             }
 
             .header-text {
