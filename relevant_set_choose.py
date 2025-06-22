@@ -44,7 +44,6 @@ def relevant_set_choose_page():
             color: white;
             text-align: center;
             margin-bottom: 0px;
-            margin-top: -55px; !important;
         }
 
         .custom-container h3 {
