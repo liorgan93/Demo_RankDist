@@ -162,7 +162,7 @@ def know_the_persona_page():
 
         <!-- Iframe container -->
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container" style="display: none; transform: scale(0.7); transform-origin: top center;"></div>
+            <div id="iframe-container" style="display: none; transform: scale(0.75); transform-origin: top center;"></div>
         </div>
 
         <!-- Logic -->
