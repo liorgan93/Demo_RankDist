@@ -1,6 +1,8 @@
 import streamlit as st
 from other_functions import render_progress_bar
 from other_functions import set_background
+from other_functions import get_base64_image
+
 
 
 def know_the_persona_intro_page():
