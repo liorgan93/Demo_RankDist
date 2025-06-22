@@ -27,7 +27,7 @@ def render_progress_bar(current_step, top_pad=55):
         flex:1;               
         min-width:0;              
         text-align:center;
-        font:400 7px 'Poppins',sans-serif;
+        font:400 11px 'Poppins',sans-serif;
         line-height:1.1;        
         padding:2px 8px;        
         color:#fff; background:#666;
