@@ -76,7 +76,7 @@ def persona_reveal_page():
 
         img {
             border-radius: 15px;
-            max-height: 40vh;
+            max-height: 35vh;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
             margin-bottom: 0px;
