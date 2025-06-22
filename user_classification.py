@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-from user_classification_intro import set_background
 import ast
 from collections import Counter
 from classsification_functions import sample_unique_tracks_per_cluster
-import time
+from other_functions import set_background
+from other_functions import render_progress_bar
 
 def button_click_problem():
     st.session_state.page = "user_classification_intro"
@@ -13,6 +13,7 @@ def button_click_problem():
 
 def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
+    render_progress_bar("aaa")
     set_background("other images/background.webp")
     all_songs_df = pd.read_csv('playlists_excel/15_songs_classify.csv')
     max_attempts = 150

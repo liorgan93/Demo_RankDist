@@ -1,28 +1,11 @@
 import streamlit as st
-import base64
+from other_functions import render_progress_bar
+from other_functions import set_background
 
-def get_base64_image(image_path):
-    with open(image_path, "rb") as file:
-        return base64.b64encode(file.read()).decode()
-
-def set_background(image_file):
-    with open(image_file, "rb") as image:
-        encoded_image = base64.b64encode(image.read()).decode()
-        page_background = f"""
-        <style>
-        [data-testid="stAppViewContainer"] {{
-            background-image: url("data:image/jpeg;base64,{encoded_image}");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #FFFFFF;
-        }}
-        </style>
-        """
-        st.markdown(page_background, unsafe_allow_html=True)
 
 def know_the_persona_intro_page():
     st.set_page_config(page_title="RankDist Demo")
+    render_progress_bar("bbb")
     set_background("other images/background.webp")
 
     def handle_start_click():
@@ -104,8 +87,8 @@ def know_the_persona_intro_page():
             <div class="header"> Know or Don't Know? </div>
             <div class="sub-header">We’ll now show you <strong>songs that {persona_name} likes</strong>. Listen to them to know {gender_value} better, and indicate for each song whether you know it</div>
             <div class="description">
-                <span class="green-text">Know this song?</span> Tap ✅<br>
-                <span class="red-text">Never heard of it?</span> Tap ✖️️
+                <span class="green-text">Know this song?</span> Tap 💡<br>
+                <span class="red-text">Never heard of it?</span> Tap 🙈️
             </div>
         </div>
     """, unsafe_allow_html=True)

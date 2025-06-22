@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 import os
 import streamlit.components.v1 as components
-from user_classification_intro import set_background
+from other_functions import set_background
+from other_functions import render_progress_bar
 
 def perfect_precision_choose_page():
     st.set_page_config(page_title="RankDist Demo", layout="wide")
+    render_progress_bar("ccc")
     set_background("other images/background.webp")
 
     csv_file_path = "playlists_excel/top_k_songs.csv"

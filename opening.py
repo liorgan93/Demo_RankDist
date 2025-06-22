@@ -1,16 +1,12 @@
 import streamlit as st
-import base64
 from user_classification_intro import set_background
-
-
-def get_base64_image(image_path):
-    with open(image_path, "rb") as file:
-        return base64.b64encode(file.read()).decode()
+from user_classification_intro import get_base64_image
 
 
 def opening_page():
     st.set_page_config(page_title="RankDist Demo")
     image_base64 = get_base64_image("other images/RankDist_VS_Human.jpg")
+
     def click_button():
         st.session_state.page = "user_classification_intro"
 
@@ -34,27 +30,22 @@ def opening_page():
             justify-content: center;
             overflow-x: hidden;
         }}
-        .block-container {{
-            padding-top: 30px !important;
-            margin-top: 30px !important;
-            padding-bottom: 0px !important;
-
-        }}
         .info-text-primary {{
-            font-size: 16px;
-            color: #BBDEFB;
-            font-weight: 550;
-            text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
-            margin-top: 5px;
-            margin-bottom: 26px;
-            padding-top: 5px;
-        }}
-        .info-text-secondary {{
             font-size: 20px;
             color: #4DD0E1;
             font-weight: 700;
             text-shadow: 1px 1px 6px rgba(0, 200, 255, 0.5);
             padding-bottom: 15px;
+            padding-top: 8px
+        }}
+        .info-text-secondary {{
+            font-size: 16px;
+            color: #BBDEFB;
+            font-weight: 550;
+            text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding-top: 5px;
         }}
         .alg-image {{
             max-width: 100%;
@@ -65,10 +56,13 @@ def opening_page():
         </style>
 
         <div class="info-container">
-            <div class="info-text-secondary">
-                Think you can Recommend better than Rankdist algorithm?
+            <div class="info-text-primary">
+                Think you can Recommend better than RankDist algorithm?
             </div>
-            <img src="data:image/webp;base64,{image_base64}" class="alg-image"/">
+            <div class="info-text-secondary">
+                 In this demo, you’ll recommend songs and we’ll match them against RankDist’s
+            </div>
+            <img src="data:image/webp;base64,{image_base64}" class="alg-image"/>
         </div>
     """, unsafe_allow_html=True)
 
@@ -101,3 +95,4 @@ def opening_page():
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         st.button("", key="Next_button", on_click=click_button)
+

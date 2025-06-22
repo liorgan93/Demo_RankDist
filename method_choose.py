@@ -1,6 +1,7 @@
 import streamlit as st
-import base64
-import time
+from other_functions import get_base64_image
+from other_functions import render_progress_bar
+from other_functions import set_background
 
 def click_relevant_set():
     st.session_state.page = "relevant_set_choose"
@@ -12,14 +13,9 @@ def click_perfect_precision():
     st.session_state.page = "perfect_precision_choose"
 
 
-
-def get_base64_image(image_path):
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode()
-
 def method_choose_page():
     st.set_page_config(page_title="RankDist Demo")
-    from user_classification_intro import set_background
+    render_progress_bar("ccc")
     set_background("other images/background.webp")
 
     perfect_precision = get_base64_image("other images/perfect_precision.jpg")
@@ -81,9 +77,8 @@ def method_choose_page():
 
         <div class="explanation-container">
             <p><strong>1️⃣<span style="text-decoration: underline;">Relevant Set:</span></strong> Choose the TOP 3, order doesn’t matter</p>
-            <p><strong>2️⃣<span style="text-decoration: underline;">Ordered List:</span></strong> Select and rank the TOP 3 songs in the correct order</p>
-            <p><strong>3️⃣<span style="text-decoration: underline;">Perfect Precision:</span></strong> Pick exactly the TOP 3 songs, no mistakes allowed</p>
-
+            <p><strong>2️⃣<span style="text-decoration: underline;">Ordered List:</span></strong> Pick the TOP 3 songs in exact order – 1st, 2nd, 3rd</p>
+            <p><strong>3️⃣<span style="text-decoration: underline;">Perfect Precision:</span></strong> Choose exactly the TOP 3 songs – one mistake and it's wrong</p>
         </div>
     """, unsafe_allow_html=True)
 

@@ -1,29 +1,12 @@
 import streamlit as st
-import base64
-import time
+from other_functions import render_progress_bar
+from other_functions import set_background
+from other_functions import get_base64_image
 
-def get_base64_image(image_path):
-    with open(image_path, "rb") as file:
-        return base64.b64encode(file.read()).decode()
-
-def set_background(image_file):
-    with open(image_file, "rb") as image:
-        encoded_image = base64.b64encode(image.read()).decode()
-        page_background = f"""
-        <style>
-        [data-testid="stAppViewContainer"] {{
-            background-image: url("data:image/jpeg;base64,{encoded_image}");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #FFFFFF;
-        }}
-        </style>
-        """
-        st.markdown(page_background, unsafe_allow_html=True)
 
 def user_classification_intro_page():
     st.set_page_config(page_title="RankDist Demo")
+    render_progress_bar("aaa")
     set_background("other images/background.webp")
 
     st.markdown(

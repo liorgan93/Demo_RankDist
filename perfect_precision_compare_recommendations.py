@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import random
-from user_classification_intro import set_background
+from other_functions import set_background
+from other_functions import render_progress_bar
 
 
 def calculate_score(predicted_items, true_items):
@@ -67,6 +67,7 @@ def html_table(df):
 
 def perfect_precision_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
+    render_progress_bar("ddd")
     set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice
