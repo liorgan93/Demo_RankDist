@@ -88,8 +88,8 @@ def method_choose_page():
     st.markdown("""
         <style>
         .st-key-perfect_precision button, .st-key-ordered_list button, .st-key-relevant_set button {
-            width: 97px;
-            height: 97px;
+            width: 94px;
+            height: 94px;
             background-color: transparent;
             border: none;
             cursor: pointer;
