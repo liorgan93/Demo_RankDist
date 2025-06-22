@@ -25,8 +25,8 @@ def user_classification_intro_page():
             font-family: 'Poppins', sans-serif;
         }
         .block-container {
-            padding-top: 30px !important;
-            margin-top: 30px !important;
+            padding-top: 5px !important;
+            margin-top: 5px !important;
             padding-bottom: 0px !important;
 
         }

@@ -7,7 +7,7 @@ from other_functions import render_progress_bar
 
 
 def relevant_set_choose_page():
-    st.set_page_config(page_title="RankDist Demo", layout="wide")
+    st.set_page_config(page_title="RankDist Demo")
     render_progress_bar("ccc")
     set_background("other images/background.webp")
 
@@ -23,7 +23,8 @@ def relevant_set_choose_page():
     <style>
         .block-container {
             padding-top: 30px !important;
-            padding-bottom: 30x !important;
+            padding-top: 5px !important;
+            margin-top: 5px !important;
             margin: 0px !important;
         }
 

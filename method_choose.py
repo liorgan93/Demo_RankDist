@@ -29,7 +29,8 @@ def method_choose_page():
     st.markdown("""
         <style>
             .block-container {
-                padding-top: 30px !important;
+                padding-top: 5px !important;
+                margin-top: 5px !important;
                 padding-bottom: 0px !important;
 
             }

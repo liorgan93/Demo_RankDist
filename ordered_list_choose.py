@@ -6,7 +6,7 @@ from other_functions import set_background
 from other_functions import render_progress_bar
 
 def ordered_list_choose_page():
-    st.set_page_config(page_title="RankDist Demo", layout="wide")
+    st.set_page_config(page_title="RankDist Demo")
     render_progress_bar("ccc")
     set_background("other images/background.webp")
 
@@ -22,8 +22,8 @@ def ordered_list_choose_page():
     <style>
         .block-container {
             padding-top: 30px !important;
-            padding-bottom: 0px !important;
-            margin-bottom: 0px !important;
+            padding-top: 5px !important;
+            margin-top: 5px !important;
         }
 
         .custom-container {

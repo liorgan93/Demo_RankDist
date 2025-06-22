@@ -47,8 +47,8 @@ def persona_reveal_page():
             margin-right: auto;
         }
         .block-container {
-            padding-top: 20px !important;
-            margin-top: 20px !important;
+            padding-top: 5px !important;
+            margin-top: 5px !important;
             padding-bottom: 0px !important;
             margin-bottom: 0px !important;
         }
