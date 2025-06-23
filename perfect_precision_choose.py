@@ -20,6 +20,11 @@ def render_song_with_fallback(embed_url: str, height=85):
         </div>
     </div>
 
+    <!-- Iframe container -->
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <div id="iframe-container" style="display: none; transform-origin: top center;"></div>
+    </div>
+
     <!-- Logic -->
     <script>
     let iframeLoaded = false;
