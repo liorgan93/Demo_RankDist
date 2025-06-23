@@ -41,6 +41,9 @@ def persona_reveal_page():
             margin: auto;
             margin-top: -20px;
         }
+        .block-container {{
+            padding-bottom: 0px !important;
+        }}
         .title {
             font-size: 26px;
             font-weight: 900;
@@ -62,12 +65,10 @@ def persona_reveal_page():
             font-weight: 700;
             color: #FFFFFF;
             background: linear-gradient(90deg,
-  #1f3ba6 0%,
-  #2847b3 40%,
-  #3053bf 75%,
-  #3a5fcb 100%);
-
-
+              #1f3ba6 0%,
+              #2847b3 40%,
+              #3053bf 75%,
+              #3a5fcb 100%);
 
             padding: 15px 12px;     
             border-radius: 15px;
