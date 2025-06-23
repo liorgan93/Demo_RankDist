@@ -109,6 +109,8 @@ def persona_reveal_page():
             cursor: pointer;
             transition: background-color 0.3s ease;
             margin-top: 0px !important;
+            margin: 0 auto -13px auto;
+
         }
 
         .stButton button:hover {
@@ -160,7 +162,6 @@ def persona_reveal_page():
             padding: 10px 12px;     
             border-radius: 15px;
             text-align: center;     
-            margin: 0 auto -13px auto; !important
             width: 90%;
             display: block;
             margin-
