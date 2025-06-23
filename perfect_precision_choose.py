@@ -346,7 +346,7 @@ def perfect_precision_choose_page():
 
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
-                render_song_with_fallback_dynamic(embed_url, i)
+                render_song_with_fallback_dynamic(embed_url, idx)
                 embed_html = f"""
                     <iframe style="border-radius:12px" 
                         src="{embed_url}" 
