@@ -99,9 +99,9 @@ def persona_reveal_page():
         }
 
         .stButton button {
-            width: 100%;
+            width: 70%;
             font-size: 18px;
-            padding: 10px;
+            padding: 12px;
             border-radius: 15px;
             background-color: #800080;
             color: white;
@@ -160,7 +160,7 @@ def persona_reveal_page():
             padding: 10px 12px;     
             border-radius: 15px;
             text-align: center;     
-            margin-bottom: -10px; !important;
+            margin-bottom: -13px; !important;
             width: 90%;
             display: block;
             margin-
