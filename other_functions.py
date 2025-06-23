@@ -106,9 +106,6 @@ def render_progress_bar(current_step, top_pad=55):
 
 
 
-
-
-
 def set_background(image_file):
     with open(image_file, "rb") as image:
         encoded_image = base64.b64encode(image.read()).decode()
@@ -129,3 +126,5 @@ def set_background(image_file):
 def get_base64_image(image_path):
     with open(image_path, "rb") as file:
         return base64.b64encode(file.read()).decode()
+
+

@@ -159,10 +159,11 @@ def persona_reveal_page():
               #2c44a3 100%);
             padding: 10px 12px;     
             border-radius: 15px;
-            margin: 0 auto 17px;    
             text-align: center;     
+            margin-bottom: 0px; !important;
             width: 90%;
             display: block;
+            margin-
         }
         </style>
         """,

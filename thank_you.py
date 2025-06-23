@@ -40,10 +40,9 @@ def thank_you_page():
                 font-family: 'Cormorant Garamond', serif;
                 font-size: 28px;
                 font-weight: bold;
-                color: #FFE066;
+                color: blue;
                 padding: 0 4px;
                 margin-bottom: 15px;
-                text-shadow: 3px 3px 8px rgba(0, 80, 160, 0.95), 0 0 12px rgba(0, 0, 0, 0.9);
                 letter-spacing: 0.7px;
             }
 
@@ -59,7 +58,7 @@ def thank_you_page():
             .download-button a {
                 display: inline-block;
                 text-decoration: none;
-                background-color: #1E90FF;
+                background-color: black;
                 color: white;
                 padding: 14px 30px;
                 border-radius: 30px;
@@ -70,7 +69,6 @@ def thank_you_page():
             }
 
             .download-button a:hover {
-                background-color: #1C86EE;
                 transform: scale(1.05);
             }
         </style>
@@ -84,11 +82,11 @@ def thank_you_page():
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
-            We hope you enjoyed the demo!
-            If you'd like to learn more about the methods demonstrated in this demo feel free to download and read the paper below
+            We hope you enjoyed the demo! </br>
+            Curious about the RankDist algorithm? Feel free to download the paper below!
         </div>
         <div class="download-button">
-            <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">⬇️ Download Paper (PDF)</a>
+            <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">Download paper (PDF)</a>
         </div>
     </div>""", unsafe_allow_html=True)
 

@@ -45,7 +45,8 @@ def opening_page():
             color: #4DD0E1;
             font-weight: 700;
             text-shadow: 1px 1px 6px rgba(0, 200, 255, 0.5);
-            padding-bottom: 15px;
+            padding-bottom: 10px;
+            padding-top: 15px;
         }}
         .info-text-secondary {{
             font-size: 18px;
@@ -58,7 +59,7 @@ def opening_page():
         }}
         .alg-image {{
             max-width: 100%;
-            max-height: 90px;
+            max-height: 120px;
             margin-bottom: 10px;
             border-radius: 20px;
         }}
@@ -69,7 +70,7 @@ def opening_page():
                 Think you can recommend better than RankDist algorithm?
             </div>
             <div class="info-text-secondary">
-                In this demo you’ll recommend songs and they’re compared to RankDist
+                In this demo you’ll recommend songs and they’ll be compared to RankDist
             </div>
             <img src="data:image/webp;base64,{image_base64}" class="alg-image"/">
         </div>
