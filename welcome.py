@@ -53,7 +53,7 @@ def welcome_page():
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
             margin-top: 0px;
             padding-bottom: 3px;
             padding-top: 0px;
