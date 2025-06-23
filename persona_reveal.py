@@ -92,6 +92,7 @@ def persona_reveal_page():
             max-width: 80%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 0px;
+            margin-top: -20px; !important;
         }
 
         .persona-img:hover {
