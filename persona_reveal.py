@@ -160,7 +160,7 @@ def persona_reveal_page():
             padding: 10px 12px;     
             border-radius: 15px;
             text-align: center;     
-            margin-bottom: -13px; !important;
+            margin: 0 auto -13px auto; !important
             width: 90%;
             display: block;
             margin-
