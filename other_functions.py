@@ -37,7 +37,6 @@ def render_progress_bar(current_step, top_pad=55):
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 4px 5%;
-        min-height: auto;
         position: sticky;
         top: 0;
         z-index: 9999;
@@ -57,8 +56,7 @@ def render_progress_bar(current_step, top_pad=55):
         margin: 2px;
         border-radius: 8px;
         transition: all 0.4s ease;
-        word-break: break-word;
-        overflow-wrap: break-word;
+        overflow-wrap: break-word;  /* ✅ שובר רק בין מילים */
         white-space: normal;
         display: flex;
         align-items: center;
