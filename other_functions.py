@@ -47,6 +47,7 @@ def render_progress_bar(current_step, top_pad=55):
     .progress-step {{
         flex: 1;
         min-width: 0;
+        max-width: 100%;
         text-align: center;
         font: 400 11.5px 'Poppins', sans-serif;
         line-height: 1.2;
@@ -56,8 +57,9 @@ def render_progress_bar(current_step, top_pad=55):
         margin: 2px;
         border-radius: 8px;
         transition: all 0.4s ease;
-        overflow-wrap: break-word;  /* ✅ שובר רק בין מילים */
         white-space: normal;
+        word-break: normal;
+        overflow-wrap: anywhere;
         display: flex;
         align-items: center;
         justify-content: center;
