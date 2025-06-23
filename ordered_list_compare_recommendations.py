@@ -86,7 +86,7 @@ def html_table(df):
 
 
 def ordered_list_compare_recommendations_page():
-    st.set_page_config(page_title="RankDist Demo", layout="wide")
+    st.set_page_config(page_title="RankDist Demo")
     render_progress_bar("results")
     st.markdown("""
             <style>
@@ -141,6 +141,7 @@ def ordered_list_compare_recommendations_page():
             font-size: 24px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
+            margin-top: -20px; !important;
         }
         .stButton button {
             width: 100%;

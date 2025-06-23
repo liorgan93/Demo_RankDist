@@ -7,7 +7,7 @@ from other_functions import render_progress_bar
 
 def ordered_list_choose_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("recommend song")
+    render_progress_bar("recommend songs")
     set_background("other images/background.webp")
 
     csv_file_path = "playlists_excel/top_k_songs.csv"
@@ -33,7 +33,6 @@ def ordered_list_choose_page():
             color: white;
             text-align: center;
             margin-bottom: 0px;
-            margin-top: -20px; !important;
         }
 
         .custom-container h3 {
@@ -99,6 +98,7 @@ def ordered_list_choose_page():
             font-family: Arial, sans-serif;
             border: 3px solid #a0c4ff;
             margin-bottom: 0px !important;
+            margin-top: -20px; !important;
         }
 
         .method_name {

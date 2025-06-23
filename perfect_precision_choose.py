@@ -7,7 +7,7 @@ from other_functions import render_progress_bar
 
 def perfect_precision_choose_page():
     st.set_page_config(page_title="RankDist Demo", layout="wide")
-    render_progress_bar("recommend song")
+    render_progress_bar("recommend songs")
     st.markdown("""
             <style>
                 .progress-bar-wrapper{
@@ -31,10 +31,8 @@ def perfect_precision_choose_page():
     st.markdown("""
     <style>
         .block-container {
-            padding-top: 30px !important;
             padding-top: 5px !important;
             margin-top: 5px !important;
-            margin: 0px !important;
         }
 
         .custom-container {
@@ -44,7 +42,6 @@ def perfect_precision_choose_page():
             color: white;
             text-align: center;
             margin-bottom: 0px;
-            margin-top: -20px; !important;
         }
 
         .custom-container h3 {
@@ -110,6 +107,8 @@ def perfect_precision_choose_page():
             font-family: Arial, sans-serif;
             border: 3px solid #a0c4ff;
             margin-bottom: 0px !important;
+            margin-top: -20px; !important;
+
         }
 
         .method_name {
