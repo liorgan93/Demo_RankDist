@@ -225,89 +225,67 @@ def perfect_precision_choose_page():
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
                 components.html(f"""
-                    <!-- Loader -->
-                    <div id="loader-{idx}" style="display: flex; justify-content: center; align-items: center; height: 85px;">
-                        <div class="spinner"></div>
+                    <div id="container-{idx}" style="height: 85px; width: 100%;">
+                        <div id="loader-{idx}" style="display:flex; justify-content:center; align-items:center; height:85px;">
+                            <div class="spinner"></div>
+                        </div>
+
+                        <iframe id="iframe-{idx}"
+                            src="{embed_url}"
+                            width="100%"
+                            height="80"
+                            style="border-radius:12px; display:none;"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy">
+                        </iframe>
+
+                        <div id="error-msg-{idx}" style="display:none; height:85px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;">
+                            <p style="margin:0; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Failed to load song</p>
+                            <div onclick="retry_{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
+                        </div>
                     </div>
 
-                    <!-- Error Message and Retry -->
-                    <div id="error-msg-{idx}" style="display: none; height: 85px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
-                        <p style="margin:0; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Failed to load song</p>
-                        <div onclick="reloadIframe_{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
-                    </div>
-
-                    <!-- Iframe Container -->
-                    <div style="width: 100%; display: flex; justify-content: center;">
-                        <div id="iframe-container-{idx}" style="display: none;"></div>
-                    </div>
-
-                    <!-- Script -->
                     <script>
-                    let iframeLoaded_{idx} = false;
-                    let gaveUp_{idx} = false;
+                    const iframe_{idx} = document.getElementById("iframe-{idx}");
+                    const loader_{idx} = document.getElementById("loader-{idx}");
+                    const error_{idx} = document.getElementById("error-msg-{idx}");
 
-                    function createIframe_{idx}() {{
-                        iframeLoaded_{idx} = false;
-                        gaveUp_{idx} = false;
+                    let loaded_{idx} = false;
 
-                        const iframeContainer = document.getElementById("iframe-container-{idx}");
-                        iframeContainer.innerHTML = "";
+                    iframe_{idx}.onload = function() {{
+                        loaded_{idx} = true;
+                        loader_{idx}.style.display = "none";
+                        iframe_{idx}.style.display = "block";
+                    }};
 
-                        const iframe = document.createElement("iframe");
-                        iframe.src = "{embed_url}";
-                        iframe.width = "100%";
-                        iframe.height = "80";
-                        iframe.style.borderRadius = "12px";
-                        iframe.frameBorder = "0";
-                        iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-                        iframe.loading = "lazy";
+                    setTimeout(function() {{
+                        if (!loaded_{idx}) {{
+                            loader_{idx}.style.display = "none";
+                            error_{idx}.style.display = "flex";
+                        }}
+                    }}, 4000);
 
-                        iframe.onload = function() {{
-                            iframeLoaded_{idx} = true;
-                            if (!gaveUp_{idx}) {{
-                                document.getElementById("loader-{idx}").style.display = "none";
-                                document.getElementById("iframe-container-{idx}").style.display = "block";
-                                document.getElementById("error-msg-{idx}").style.display = "none";
-                            }}
-                        }};
-
-                        iframeContainer.appendChild(iframe);
-
-                        setTimeout(function() {{
-                            if (!iframeLoaded_{idx}) {{
-                                gaveUp_{idx} = true;
-                                document.getElementById("loader-{idx}").style.display = "none";
-                                document.getElementById("iframe-container-{idx}").style.display = "none";
-                                document.getElementById("error-msg-{idx}").style.display = "flex";
-                            }}
-                        }}, 4000);
+                    function retry_{idx}() {{
+                        error_{idx}.style.display = "none";
+                        loader_{idx}.style.display = "flex";
+                        iframe_{idx}.src = "{embed_url}";  // reloads iframe
                     }}
-
-                    function reloadIframe_{idx}() {{
-                        document.getElementById("loader-{idx}").style.display = "flex";
-                        document.getElementById("error-msg-{idx}").style.display = "none";
-                        document.getElementById("iframe-container-{idx}").style.display = "none";
-                        createIframe_{idx}();
-                    }}
-
-                    createIframe_{idx}();
                     </script>
 
-                    <!-- Spinner CSS -->
                     <style>
-                        .spinner {{
-                          border: 4px solid rgba(0, 0, 0, 0.1);
-                          width: 24px;
-                          height: 24px;
-                          border-radius: 50%;
-                          border-left-color: #1DB954;
-                          animation: spin 1s linear infinite;
-                          margin: auto;
-                        }}
-
-                        @keyframes spin {{
-                          to {{ transform: rotate(360deg); }}
-                        }}
+                    .spinner {{
+                        border: 4px solid rgba(0, 0, 0, 0.1);
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border-left-color: #1DB954;
+                        animation: spin 1s linear infinite;
+                        margin: auto;
+                    }}
+                    @keyframes spin {{
+                        to {{ transform: rotate(360deg); }}
+                    }}
                     </style>
                 """, height=85)
 
