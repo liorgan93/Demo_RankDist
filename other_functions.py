@@ -68,6 +68,7 @@ def render_progress_bar(current_step, top_pad=55):
     }}
 
     .progress-step.active {{
+        font-family: 'Arial Narrow', sans-serif;
         background: #ffffff;
         color: #000000;
         font-weight: 600;
