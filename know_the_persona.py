@@ -11,7 +11,7 @@ def get_songs_by_persona(persona_num):
 
 def know_the_persona_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("know the persona")
+    render_progress_bar("meet the persona")
     persona_name = st.session_state.persona
     persona_number = st.session_state.chosen_person_number
     st.session_state.persona_songs_df = get_songs_by_persona(persona_number)
@@ -287,7 +287,7 @@ def know_the_persona_page():
         col1, col2, col3 = st.columns(3)
 
         with col3:
-            st.button("Dont Know 🙈", key="dont_know", on_click=handle_dont_know_song)
+            st.button("Dont Know 🙉", key="dont_know", on_click=handle_dont_know_song)
 
         with col1:
             st.button("Know 💡", key="know", on_click=handle_know_song)

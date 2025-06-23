@@ -7,7 +7,7 @@ from other_functions import get_base64_image
 
 def know_the_persona_intro_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("know the persona")
+    render_progress_bar("meet the persona")
     set_background("other images/background.webp")
 
     def handle_start_click():
@@ -58,7 +58,7 @@ def know_the_persona_intro_page():
             color: #ffffff;
             font-family: 'Verdana', sans-serif; 
             margin-bottom: 5px;
-            margin-top: 0px;
+            margin-top: 5px;
 
         }
         .description {
@@ -87,12 +87,12 @@ def know_the_persona_intro_page():
 
     st.markdown(f"""
         <div class="container">
-            <div class="header-small">Soon you'll recommend songs for {persona_name} 📝 but first, let’s get to know {gender_value} better better to make better recommendations 🎯</div>
             <div class="header"> Know or Don't Know? </div>
-            <div class="sub-header">We’ll now show you <strong>songs that {persona_name} likes</strong>. Listen to them to know {gender_value} better, and indicate for each song whether you know it</div>
+            <div class="sub-header">Listen to <strong> {persona_name}'s favorite songs </strong> and mark the ones you know. Knowing {gender_value} musical taste will help you recommend songs to {gender_value} later</div>
+            <div> 
             <div class="description">
                 <span class="green-text">Know this song?</span> Tap 💡<br>
-                <span class="red-text">Never heard of it?</span> Tap 🙈️
+                <span class="red-text">Never heard of it?</span> Tap 🙉
             </div>
         </div>
     """, unsafe_allow_html=True)
