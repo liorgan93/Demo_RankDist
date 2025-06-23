@@ -230,85 +230,71 @@ def perfect_precision_choose_page():
                         <div class="spinner"></div>
                     </div>
 
-                    <!-- Error Message and Retry Button -->
+                    <!-- Error message -->
                     <div id="error-msg{idx}" style="display: none; height: 85px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
                         <p style="margin:0; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Failed to load song</p>
-                        <div onclick="reloadIframe{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
+                        <div onclick="retryIframe{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
                     </div>
 
                     <!-- Iframe container -->
-                    <div style="width: 100%; display: flex; justify-content: center;">
-                        <div id="iframe-container{idx}" style="display: none;"></div>
+                    <div id="iframe-container{idx}" style="display: none;">
+                        <iframe id="iframe{idx}" style="border-radius:12px" 
+                            src="{embed_url}" 
+                            width="100%" 
+                            height="80" 
+                            frameBorder="0" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
                     </div>
 
-                    <!-- Logic (immediately executed, not on DOMContentLoaded) -->
                     <script>
-                        var iframeLoaded{idx} = false;
-                        var gaveUp{idx} = false;
+                        var iframe = document.getElementById("iframe{idx}");
+                        var loader = document.getElementById("loader{idx}");
+                        var errorMsg = document.getElementById("error-msg{idx}");
+                        var container = document.getElementById("iframe-container{idx}");
 
-                        var iframeContainer = document.getElementById("iframe-container{idx}");
-                        iframeContainer.innerHTML = "";
-
-                        var iframe = document.createElement("iframe");
-                        iframe.src = "{embed_url}";
-                        iframe.width = "100%";
-                        iframe.height = "80";
-                        iframe.style.borderRadius = "12px";
-                        iframe.frameBorder = "0";
-                        iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-                        iframe.loading = "lazy";
-
+                        var loaded = false;
                         iframe.onload = function() {{
-                            iframeLoaded{idx} = true;
-                            if (!gaveUp{idx}) {{
-                                document.getElementById("loader{idx}").style.display = "none";
-                                iframeContainer.style.display = "block";
-                                document.getElementById("error-msg{idx}").style.display = "none";
-                            }}
+                            loaded = true;
+                            loader.style.display = "none";
+                            container.style.display = "block";
                         }};
 
-                        iframeContainer.appendChild(iframe);
-
                         setTimeout(function() {{
-                            if (!iframeLoaded{idx}) {{
-                                gaveUp{idx} = true;
-                                document.getElementById("loader{idx}").style.display = "none";
-                                iframeContainer.style.display = "none";
-                                document.getElementById("error-msg{idx}").style.display = "flex";
+                            if (!loaded) {{
+                                loader.style.display = "none";
+                                errorMsg.style.display = "flex";
                             }}
                         }}, 4500);
 
-                        function reloadIframe{idx}() {{
-                            document.getElementById("loader{idx}").style.display = "flex";
-                            document.getElementById("error-msg{idx}").style.display = "none";
-                            iframeContainer.style.display = "none";
+                        function retryIframe{idx}() {{
+                            errorMsg.style.display = "none";
+                            loader.style.display = "flex";
+                            container.style.display = "none";
                             iframe.src = "{embed_url}";
-                            iframeLoaded{idx} = false;
-                            gaveUp{idx} = false;
+                            loaded = false;
                             setTimeout(function() {{
-                                if (!iframeLoaded{idx}) {{
-                                    gaveUp{idx} = true;
-                                    document.getElementById("loader{idx}").style.display = "none";
-                                    iframeContainer.style.display = "none";
-                                    document.getElementById("error-msg{idx}").style.display = "flex";
+                                if (!loaded) {{
+                                    loader.style.display = "none";
+                                    errorMsg.style.display = "flex";
                                 }}
                             }}, 4500);
                         }}
                     </script>
 
-                    <!-- Spinner CSS -->
                     <style>
                         .spinner {{
-                            border: 4px solid rgba(0, 0, 0, 0.1);
-                            width: 24px;
-                            height: 24px;
-                            border-radius: 50%;
-                            border-left-color: #1DB954;
-                            animation: spin 1s linear infinite;
-                            margin: auto;
+                          border: 4px solid rgba(0, 0, 0, 0.1);
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          border-left-color: #1DB954;
+                          animation: spin 1s linear infinite;
+                          margin: auto;
                         }}
                         @keyframes spin {{
-                            to {{ transform: rotate(360deg); }}
+                          to {{ transform: rotate(360deg); }}
                         }}
                     </style>
                 """, height=85)
