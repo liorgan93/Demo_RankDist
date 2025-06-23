@@ -39,10 +39,13 @@ def persona_reveal_page():
         .container {
             background-color: #ffffff;
             border-radius: 30px;
-            padding: 0.3px;
+            padding: 0.25px 2px;
             text-align: center;
             font-family: Arial, sans-serif;
-            width: 80%;
+            width: 103%;                
+            position: relative;      
+            left: 50%;            
+            transform: translateX(-50%);
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -72,8 +75,9 @@ def persona_reveal_page():
             color: black;
             font-weight: bold;
             margin-bottom: 15px;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             line-height: 1.2;
+            
         }
 
         .persona-box {
@@ -92,7 +96,6 @@ def persona_reveal_page():
             max-width: 80%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 0px;
-            margin-top: -20px; !important;
         }
 
         .persona-img:hover {
@@ -123,23 +126,24 @@ def persona_reveal_page():
         """,
         unsafe_allow_html=True,
     )
-    st.markdown(
-        f"""
-            <div class="container">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <span style="font-size: 21px; transform: scaleX(-1);">🎉</span>
-                <div class="title">Meet {st.session_state.persona}</div>
-                <span style="font-size: 21px;">🎉</span>
-            </div>
-            <div class="sub_title"> Based on your musical taste you share the same vibe!</div>
-            </div>
-            """,
-        unsafe_allow_html=True,
-    )
+
 
     try:
         col1, col2, col3 = st.columns([0.2, 0.6, 0.2])
         with col2:
+            st.markdown(
+                f"""
+                        <div class="container">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <span style="font-size: 21px; transform: scaleX(-1);">🎉</span>
+                            <div class="title">Meet {st.session_state.persona}</div>
+                            <span style="font-size: 21px;">🎉</span>
+                        </div>
+                        <div class="sub_title"> Based on your musical taste you share the same vibe!</div>
+                        </div>
+                        """,
+                unsafe_allow_html=True,
+            )
             image_path = f"personas_images/{st.session_state.persona}.jpg"
             image_base64 = get_base64_image(image_path)
             st.markdown(f"""
@@ -167,7 +171,6 @@ def persona_reveal_page():
             text-align: center;     
             width: 90%;
             display: block;
-            margin-
         }
         </style>
         """,
