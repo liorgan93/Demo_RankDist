@@ -20,7 +20,7 @@ def welcome_page():
     set_background("other images/background.webp")
 
     logo = get_base64_image("other images/logo.jpg")
-    music = get_base64_image("other images/music notes.jpg")
+    music = get_base64_image("other images/music notes.png")
 
     st.markdown(
         f"""
@@ -55,7 +55,7 @@ def welcome_page():
             color: #B3E5FC;
             margin-bottom: 5px;
             margin-top: 0px;
-            padding-bottom: 5px;
+            padding-bottom: 10px;
             padding-top: 0px;
 
         }}
@@ -71,19 +71,14 @@ def welcome_page():
             padding-bottom: 0px;
 
         }}
-        .subtitle {{
-            font-size: 16px;
-            color: #81D4FA;
-            margin-bottom: 15px;
-            margin-top: 5px;
-        }}
+
         .logo-img {{
             width: 170px; 
             height: 80px; 
             margin-bottom: 3px;
         }}
         .time_est {{
-            font-size: 14px;
+            font-size: 16px;
             color: #CCCCCC;
             text-align: left;
             font-weight: bold;
@@ -151,7 +146,7 @@ def welcome_page():
             }}
 
             .footer-note {{
-                font-size: 12px;
+                font-size: 11px;
                 color: #CCCCCC;
                 text-align: left;
                 margin-left: auto;
