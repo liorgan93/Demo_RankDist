@@ -36,7 +36,7 @@ def render_progress_bar(current_step, top_pad=55):
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;   
-        padding: 4px 1%;
+        padding: 4px 0.5%;
         min-height: 36px;
         position: sticky;
         top: 0;
