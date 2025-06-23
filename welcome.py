@@ -115,6 +115,8 @@ def welcome_page():
                 margin: auto;
                 display: flex;
                 flex-direction: column;
+                margin-top: -12px;
+
             }
             .st-key-start_button button:hover {
                 transform: rotate(360deg) scale(1.1);
