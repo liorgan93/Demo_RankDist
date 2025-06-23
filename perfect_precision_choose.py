@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 from other_functions import set_background
 from other_functions import render_progress_bar
 
-def render_song_with_fallback(embed_url: str, height=265):
+def render_song_with_fallback(embed_url: str, height=85):
     st.components.v1.html(f"""
     <!-- Loader -->
     <div id="loader" style="display: flex; justify-content: center; align-items: center; height: {height}px;">
