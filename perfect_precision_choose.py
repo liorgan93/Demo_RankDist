@@ -40,7 +40,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
             const iframe = document.createElement("iframe");
             iframe.src = "{embed_url}";
             iframe.width = "100%";
-            iframe.height = "352";
+            iframe.height = "85";
             iframe.style.borderRadius = "30px";
             iframe.style.marginBottom = "0px";
             iframe.frameBorder = "0";
@@ -65,7 +65,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
                     document.getElementById("iframe-container{idx}").style.display = "none";
                     document.getElementById("error-msg{idx}").style.display = "flex";
                 }}
-            }}, 4500);
+            }}, 100);
         }}
 
         function reloadIframe{idx}() {{
