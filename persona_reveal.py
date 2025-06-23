@@ -154,11 +154,10 @@ def persona_reveal_page():
             font-weight: 700;
             color: #FFFFFF;
             background: linear-gradient(90deg,
-                          #1f3ba6 0%,
-                          #2847b3 40%,
-                          #3053bf 75%,
-                          #3a5fcb 100%);
-            padding: 6px 12px;     
+              #1f3ba6 0%,
+              #324fba 45%,
+              #2c44a3 100%);
+            padding: 10px 12px;     
             border-radius: 15px;
             margin: 0 auto 17px;    
             text-align: center;     
