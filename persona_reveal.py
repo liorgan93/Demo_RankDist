@@ -12,7 +12,7 @@ def button_click():
 
 def persona_reveal_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("know the persona")
+    render_progress_bar("meet the persona")
     set_background("other images/background.webp")
     st.session_state.songs_df['like/dislike'] = st.session_state.song_feedback
     st.session_state.songs_df['weights'] = st.session_state.songs_df['weights'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
@@ -128,6 +128,30 @@ def persona_reveal_page():
     except FileNotFoundError:
         st.error(f"Could not load the image for {st.session_state.persona}. Please check the file path.")
 
+    st.markdown(
+        """
+        <style>
+        .header-small {
+            font-size: 17px;      
+            font-weight: 700;
+            color: #FFFFFF;
+            background-color: rgb(94, 35, 157);
+            padding: 6px 12px;     
+            border-radius: 15px;
+            margin: 0 auto 17px;    
+            text-align: center;     
+            width: 90%;
+            display: block;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    col_next = st.columns([0.15, 0.7, 0.15])
+    with col_next[1]:
+        st.markdown(f"""
+                    <div class="header-small"> soon You’ll recommend songs for {st.session_state.persona}! </div>
+            """, unsafe_allow_html=True)
 
     col_next = st.columns([1, 1, 1])
     with col_next[1]:
