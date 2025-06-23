@@ -115,7 +115,7 @@ def welcome_page():
                 margin: auto;
                 display: flex;
                 flex-direction: column;
-                margin-top: -12px;
+                margin-top: -17px;
 
             }
             .st-key-start_button button:hover {
