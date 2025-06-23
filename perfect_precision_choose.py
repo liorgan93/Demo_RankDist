@@ -63,7 +63,7 @@ def render_song_with_fallback(embed_url: str, height=85):
                 document.getElementById("iframe-container").style.display = "none";
                 document.getElementById("error-msg").style.display = "flex";
             }}
-        }}, 4500);
+        }}, 300);
     }}
 
     function reloadIframe() {{
@@ -80,8 +80,8 @@ def render_song_with_fallback(embed_url: str, height=85):
     <style>
     .spinner {{
       border: 4px solid rgba(0, 0, 0, 0.1);
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       border-left-color: #1DB954;
       animation: spin 1s linear infinite;
