@@ -8,7 +8,7 @@ def render_progress_bar(current_step, top_pad=55):
 
     step_html = "".join(
         f'<div class="progress-step{" completed" if steps.index(s) < steps.index(current_step) else " active" if s==current_step else ""}">'
-        + (f'<span class="step-label">✓&nbsp;&nbsp;{s}</span>' if steps.index(s) < steps.index(current_step) else f'<span class="step-label">{s}</span>')
+        + (f'✓&nbsp;&nbsp;{s}' if steps.index(s) < steps.index(current_step) else s)
         + '</div>'
         for s in steps
     )
@@ -16,19 +16,18 @@ def render_progress_bar(current_step, top_pad=55):
     st.markdown(f"""
     <style>
     @keyframes popFade {{
-        0% {{ opacity: 0; transform: scale(0.92) translateY(6px); }}
-        60% {{ opacity: 0.8; transform: scale(1.02) translateY(-2px); }}
-        100% {{ opacity: 1; transform: scale(1) translateY(0); }}
-    }}
-
-    /* אפס את הפדינג של Streamlit */
-    [data-testid="stAppViewContainer"] > .main {{
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }}
-
-    [data-testid="stHeader"] {{
-        padding: 0 !important;
+        0% {{
+            opacity: 0;
+            transform: scale(0.92) translateY(6px);
+        }}
+        60% {{
+            opacity: 0.8;
+            transform: scale(1.02) translateY(-2px);
+        }}
+        100% {{
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }}
     }}
 
     .progress-bar-wrapper {{
@@ -36,37 +35,33 @@ def render_progress_bar(current_step, top_pad=55):
         background: linear-gradient(90deg, #1b2d59, #26366a, #2f4580);
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 4px 12px;
+        flex-wrap: nowrap;   
+        padding: 4px 5%;
+        min-height: 36px;
         position: sticky;
         top: 0;
         z-index: 9999;
-        border-radius: 0 0 6px 6px;
+        margin-top: 6px;
+        border-radius: 3px;
     }}
 
     .progress-step {{
         flex: 1;
         min-width: 0;
-        max-width: 100%;
         text-align: center;
         font: 400 11.5px 'Poppins', sans-serif;
-        line-height: 1.2;
-        padding: 3px 4px !important;
+        line-height: 1.1;        
+        padding: 2px 2px !important;  
         color: #fff;
         background: #444;
-        margin: 2px;
+        margin: 0 3px;
         border-radius: 8px;
         transition: all 0.4s ease;
+        white-space: normal;
+        overflow-wrap: break-word; 
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 36px;
-    }}
-
-    .step-label {{
-        white-space: normal;
-        word-break: keep-all;
-        overflow-wrap: normal;
     }}
 
     .progress-step.active {{
@@ -82,13 +77,6 @@ def render_progress_bar(current_step, top_pad=55):
         font-size: 11px;
         animation: popFade 1.3s ease-out;
         text-shadow: 0 0 1px #00000077;
-    }}
-
-    @media (max-width: 480px) {{
-        .progress-step {{
-            font-size: 10px;
-            padding: 2px 3px;
-        }}
     }}
 
     [data-testid="stAppViewContainer"] .block-container {{
