@@ -160,7 +160,7 @@ def relevant_set_choose_page():
                     Relevant Set
                 </div>
                 <div class="text_choose">
-                    Choose the TOP 3 songs you’d recommend to {persona_name}🎧
+                    Choose the TOP 3 songs you’d recommend to {persona_name}
                 </div>
             </div>
         """, unsafe_allow_html=True)
@@ -213,10 +213,9 @@ def relevant_set_choose_page():
 
 
     cols = st.columns(3, gap="small")
-
     for idx, row in cluster_data.iterrows():
-        song_name = row["relevant_set_songs"]
-        track_url = row["relevant_set_songs_links"]
+        song_name = row["perfect_precision_songs"]
+        track_url = row["perfect_precision_songs_links"]
 
         if "track/" in track_url:
             track_id = track_url.split("track/")[-1].split("?")[0]
@@ -226,16 +225,6 @@ def relevant_set_choose_page():
 
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
-                embed_html = f"""
-                    <iframe style="border-radius:12px" 
-                        src="{embed_url}" 
-                        width="100%" 
-                        height="80" 
-                        frameBorder="0" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                    </iframe>
-                    """
-                components.html(embed_html, height=85)
+                render_song(embed_url, idx)
 
     st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)

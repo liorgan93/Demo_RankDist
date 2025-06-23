@@ -150,7 +150,7 @@ def ordered_list_choose_page():
                     Ordered List
                 </div>
                 <div class="text_choose">
-                    Choose the TOP 3 songs you'd recommend to {persona_name} in order🎧
+                    Choose the TOP 3 songs you'd recommend to {persona_name} in order
                 </div>
             </div>
         """, unsafe_allow_html=True)
@@ -162,9 +162,9 @@ def ordered_list_choose_page():
             selections = [place_1, place_2, place_3]
             placeholders = [placeholder1, placeholder2, placeholder3]
             if any(s in placeholders for s in selections):
-                st.session_state.error_msg = "select a song for each position."
+                st.session_state.error_msg = "Please select a song for each place"
             elif len(set(selections)) < 3:
-                st.session_state.error_msg = "The same song was selected for multiple positions."
+                st.session_state.error_msg = "A song was selected for more than one place"
             else:
                 st.session_state.user_choice = selections
                 st.session_state.page = "ordered_list_compare_recommendations"
@@ -188,22 +188,6 @@ def ordered_list_choose_page():
             place_3 = st.selectbox("", [placeholder3] + songs, key="place_3", label_visibility="collapsed")
             st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
 
-            st.markdown("""
-                            <style>
-                            div[data-testid="stAlert"]{
-                                background-color: #C62828 !important;   
-                                padding-top: 0px !important;
-                                padding-bottom: 0px !important;
-                                margin-top: 0px !important;
-                                margin-bottom: 0px !important;
-                            }
-                            div[data-testid="stAlert"] p {
-                                text-align: center; !important;
-                                font-weight: 700 !important; 
-            }
-
-                            </style>
-                            """, unsafe_allow_html=True)
             if st.session_state.error_msg:
                 st.error(st.session_state.error_msg)
 
@@ -217,10 +201,9 @@ def ordered_list_choose_page():
 
 
         cols = st.columns(3, gap="small")
-
         for idx, row in cluster_data.iterrows():
-            song_name = row["ordered_list_songs"]
-            track_url = row["ordered_list_songs_links"]
+            song_name = row["perfect_precision_songs"]
+            track_url = row["perfect_precision_songs_links"]
 
             if "track/" in track_url:
                 track_id = track_url.split("track/")[-1].split("?")[0]
@@ -230,16 +213,6 @@ def ordered_list_choose_page():
 
             with cols[idx % 3]:
                 with st.expander(f"🎶 Listen to - {song_name}"):
-                    embed_html = f"""
-                        <iframe style="border-radius:12px" 
-                            src="{embed_url}" 
-                            width="100%" 
-                            height="80" 
-                            frameBorder="0" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                            loading="lazy">
-                        </iframe>
-                        """
-                    components.html(embed_html, height=85)
+                    render_song(embed_url, idx)
 
         st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)

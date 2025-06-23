@@ -1,5 +1,7 @@
 import streamlit as st
 import base64
+import streamlit.components.v1 as components
+
 def render_progress_bar(current_step, top_pad=55):
     steps = ['taste match',
              'meet the persona',
@@ -128,3 +130,121 @@ def get_base64_image(image_path):
         return base64.b64encode(file.read()).decode()
 
 
+def render_song(embed_url: str, idx: int, height=85):
+    st.components.v1.html(f"""
+        <!-- Loader -->
+        <div id="loader{idx}" style="display: flex; justify-content: center; align-items: center; height: {height}px;">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Error Message and Retry Button -->
+        <div id="error-msg{idx}" style="display: none; height: {height}px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 0px; gap: 5px;">
+            <p style="margin:10px; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Oops! The song failed to load</p>
+            <div onclick="reloadIframe{idx}()" class="try-again-button">
+                <div class="try-text">⟳</div>
+            </div>
+        </div>
+
+        <!-- Iframe container -->
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <div id="iframe-container{idx}" style="display: none; transform-origin: top center;"></div>
+        </div>
+
+        <!-- Logic -->
+        <script>
+        let iframeLoaded{idx} = false;
+        let gaveUp{idx} = false;
+
+        function createIframe{idx}() {{
+            iframeLoaded{idx} = false;
+            gaveUp{idx} = false;
+
+            const iframeContainer = document.getElementById("iframe-container{idx}");
+            iframeContainer.innerHTML = "";
+
+            const iframe = document.createElement("iframe");
+            iframe.src = "{embed_url}";
+            iframe.width = "100%";
+            iframe.height = "85";
+            iframe.style.marginBottom = "0px";
+            iframe.frameBorder = "0";
+            iframe.allowFullscreen = true;
+            iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+
+            iframe.onload = function() {{
+                iframeLoaded{idx} = true;
+                if (!gaveUp{idx}) {{
+                    document.getElementById("loader{idx}").style.display = "none";
+                    document.getElementById("iframe-container{idx}").style.display = "block";
+                    document.getElementById("error-msg{idx}").style.display = "none";
+                }}
+            }};
+
+            iframeContainer.appendChild(iframe);
+
+            setTimeout(function() {{
+                if (!iframeLoaded{idx}) {{
+                    gaveUp{idx} = true;
+                    document.getElementById("loader{idx}").style.display = "none";
+                    document.getElementById("iframe-container{idx}").style.display = "none";
+                    document.getElementById("error-msg{idx}").style.display = "flex";
+                }}
+            }}, 4500);
+        }}
+
+        function reloadIframe{idx}() {{
+            document.getElementById("loader{idx}").style.display = "flex";
+            document.getElementById("error-msg{idx}").style.display = "none";
+            document.getElementById("iframe-container{idx}").style.display = "none";
+            createIframe{idx}();
+        }}
+
+        window.addEventListener("DOMContentLoaded", function() {{
+            createIframe{idx}();
+        }});
+        </script>
+
+        <!-- Styles -->
+        <style>
+        .spinner {{
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border-left-color: #1DB954;
+            animation: spin 1s linear infinite;
+            margin: auto;
+        }}
+
+        @keyframes spin {{
+            to {{ transform: rotate(360deg); }}
+        }}
+
+        .try-again-button {{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: #4d4d4d;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            user-select: none;
+            transition: transform 0.2s;
+        }}
+
+        .try-again-button:hover {{
+            transform: scale(1.05);
+        }}
+
+        .try-text {{
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }}
+        </style>
+    """, height=height)
