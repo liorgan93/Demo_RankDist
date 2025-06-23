@@ -35,9 +35,9 @@ def render_progress_bar(current_step, top_pad=55):
         background: linear-gradient(90deg, #1b2d59, #26366a, #2f4580);
         display: flex;
         justify-content: space-between;
-        flex-wrap: nowrap;   
+        flex-wrap: wrap;
         padding: 4px 5%;
-        min-height: 36px;
+        min-height: auto;
         position: sticky;
         top: 0;
         z-index: 9999;
@@ -50,18 +50,20 @@ def render_progress_bar(current_step, top_pad=55):
         min-width: 0;
         text-align: center;
         font: 400 11.5px 'Poppins', sans-serif;
-        line-height: 1.1;        
-        padding: 2px 2px !important;  
+        line-height: 1.2;
+        padding: 3px 4px !important;
         color: #fff;
         background: #444;
-        margin: 0 3px;
+        margin: 2px;
         border-radius: 8px;
         transition: all 0.4s ease;
+        word-break: break-word;
+        overflow-wrap: break-word;
         white-space: normal;
-        overflow-wrap: break-word; 
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 36px;
     }}
 
     .progress-step.active {{
@@ -77,6 +79,13 @@ def render_progress_bar(current_step, top_pad=55):
         font-size: 11px;
         animation: popFade 1.3s ease-out;
         text-shadow: 0 0 1px #00000077;
+    }}
+
+    @media (max-width: 480px) {{
+        .progress-step {{
+            font-size: 10px;
+            padding: 2px 3px;
+        }}
     }}
 
     [data-testid="stAppViewContainer"] .block-container {{
