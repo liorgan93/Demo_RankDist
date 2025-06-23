@@ -77,7 +77,7 @@ def render_progress_bar(current_step, top_pad=55):
         background: #1DB954;
         color: #ffffff;
         font-weight: 300;
-        font-size: 11px;
+        font-size: 10px;
         animation: popFade 1.3s ease-out;
         text-shadow: 0 0 1px #00000077;
     }}
