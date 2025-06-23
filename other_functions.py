@@ -8,7 +8,7 @@ def render_progress_bar(current_step, top_pad=55):
 
     step_html = "".join(
         f'<div class="progress-step{" completed" if steps.index(s) < steps.index(current_step) else " active" if s==current_step else ""}">'
-        + (f'✓&nbsp;&nbsp;{s}' if steps.index(s) < steps.index(current_step) else s)
+        + (f'<span class="step-label">✓&nbsp;&nbsp;{s}</span>' if steps.index(s) < steps.index(current_step) else f'<span class="step-label">{s}</span>')
         + '</div>'
         for s in steps
     )
@@ -57,13 +57,16 @@ def render_progress_bar(current_step, top_pad=55):
         margin: 2px;
         border-radius: 8px;
         transition: all 0.4s ease;
-        white-space: normal;
-        word-break: normal;
-        overflow-wrap: anywhere;
         display: flex;
         align-items: center;
         justify-content: center;
         min-height: 36px;
+    }}
+
+    .step-label {{
+        white-space: normal;
+        word-break: keep-all;
+        overflow-wrap: normal;
     }}
 
     .progress-step.active {{
