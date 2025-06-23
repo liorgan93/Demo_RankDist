@@ -280,7 +280,7 @@ def perfect_precision_choose_page():
                                 document.getElementById("iframe-container-{idx}").style.display = "none";
                                 document.getElementById("error-msg-{idx}").style.display = "flex";
                             }}
-                        }}, 2000);
+                        }}, 4000);
                     }}
 
                     function reloadIframe_{idx}() {{
@@ -290,9 +290,7 @@ def perfect_precision_choose_page():
                         createIframe_{idx}();
                     }}
 
-                    window.addEventListener("DOMContentLoaded", function() {{
-                        createIframe_{idx}();
-                    }});
+                    createIframe_{idx}();
                     </script>
 
                     <!-- Spinner CSS -->
@@ -311,7 +309,7 @@ def perfect_precision_choose_page():
                           to {{ transform: rotate(360deg); }}
                         }}
                     </style>
-                """, height=90)
+                """, height=85)
 
     st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
 
