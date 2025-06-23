@@ -41,7 +41,6 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
             iframe.src = "{embed_url}";
             iframe.width = "100%";
             iframe.height = "85";
-            iframe.style.borderRadius = "30px";
             iframe.style.marginBottom = "0px";
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
