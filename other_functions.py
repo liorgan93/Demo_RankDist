@@ -31,7 +31,7 @@ def render_progress_bar(current_step, top_pad=55):
     }}
 
     .progress-bar-wrapper {{
-        width: 100%;
+        width: 120%;
         background: linear-gradient(90deg, #1b2d59, #26366a, #2f4580);
         display: flex;
         justify-content: space-between;
