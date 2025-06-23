@@ -22,7 +22,7 @@ def render_song_with_fallback(embed_url: str, height=85):
 
     <!-- Iframe container -->
     <div style="width: 100%; display: flex; justify-content: center;">
-        <div id="iframe-container" style="display: none; transform-origin: top center;"></div>
+        <div id="iframe-container" style="display: none; transform: scale(0.74); transform-origin: top center;"></div>
     </div>
 
     <!-- Logic -->
@@ -63,7 +63,7 @@ def render_song_with_fallback(embed_url: str, height=85):
                 document.getElementById("iframe-container").style.display = "none";
                 document.getElementById("error-msg").style.display = "flex";
             }}
-        }}, 300);
+        }}, 100);
     }}
 
     function reloadIframe() {{
@@ -80,8 +80,8 @@ def render_song_with_fallback(embed_url: str, height=85):
     <style>
     .spinner {{
       border: 4px solid rgba(0, 0, 0, 0.1);
-      width: 24px;
-      height: 24px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       border-left-color: #1DB954;
       animation: spin 1s linear infinite;
