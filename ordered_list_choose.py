@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 import os
-import streamlit.components.v1 as components
 from other_functions import set_background
 from other_functions import render_progress_bar
+from other_functions import render_song
+
 
 def ordered_list_choose_page():
     st.set_page_config(page_title="RankDist Demo")
