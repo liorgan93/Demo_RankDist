@@ -147,7 +147,7 @@ def welcome_page():
                 align-items: center;
                 justify-content: center;
                 overflow-x: hidden;
-                margin-top: 8px;
+                margin-top: 6px;
             }}
 
             .footer-note {{
