@@ -8,8 +8,8 @@ def render_progress_bar(current_step, top_pad=55):
 
     step_html = "".join(
         f'<div class="progress-step{" completed" if steps.index(s) < steps.index(current_step) else " active" if s==current_step else ""}">'
-        + (f'✓&nbsp;&nbsp;{s}' if steps.index(s) < steps.index(current_step) else s)
-        + '</div>'
+        + s +
+        '</div>'
         for s in steps
     )
 
@@ -43,6 +43,20 @@ def render_progress_bar(current_step, top_pad=55):
         z-index: 9999;
         margin-top: 3px;
         border-radius: 3px;
+        position: relative;
+    }}
+
+    .progress-bar-wrapper::before {{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        right: 3%;
+        height: 2px;
+        background-color: white;
+        opacity: 0.4;
+        z-index: 0;
+        transform: translateY(-50%);
     }}
 
     .progress-step {{
@@ -65,6 +79,12 @@ def render_progress_bar(current_step, top_pad=55):
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
+    }}
+
+    .progress-step:last-child {{
+        border-right: none;
     }}
 
     .progress-step.active {{
@@ -75,11 +95,11 @@ def render_progress_bar(current_step, top_pad=55):
     }}
 
     .progress-step.completed {{
-        background: #1DB954;
+        background: #25d366;
         color: #ffffff;
         font-family: 'Arial Narrow', sans-serif;
-        font-weight: 400;
-        font-size: 10px;
+        font-weight: 500;
+        font-size: 11px;
         animation: popFade 1.3s ease-out;
         text-shadow: 0 0 1px #00000077;
     }}
@@ -91,6 +111,7 @@ def render_progress_bar(current_step, top_pad=55):
 
     <div class="progress-bar-wrapper">{step_html}</div>
     """, unsafe_allow_html=True)
+
 
 
 
