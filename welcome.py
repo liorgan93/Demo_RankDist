@@ -51,7 +51,6 @@ def welcome_page():
         .title-text {{
             font-size: 22px !important;
             font-weight: bold;
-            font-family: 'Bungee', cursive;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
             margin-bottom: 5px;
