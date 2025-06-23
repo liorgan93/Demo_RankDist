@@ -98,21 +98,22 @@ def persona_reveal_page():
             transform: scale(1.05);
         }
 
-        .stButton button {
-            width: 70%;
-            font-size: 38px;
-            padding: 12px;
-            border-radius: 15px;
-            background-color: #800080;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 0px !important;
-            display: flex; !important;
-            justify-content: center; !important;
-            
-        }
+    .stButton {
+        display: flex;
+        justify-content: center;
+    }
+    .stButton button {
+        width: 70%;
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 15px;
+        background-color: #800080;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 0;
+    }
 
         .stButton button:hover {
             background-color: #660066;
