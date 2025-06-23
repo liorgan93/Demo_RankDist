@@ -7,26 +7,18 @@ def render_progress_bar(current_step, top_pad=55):
              'results']
 
     step_html = "".join(
-        f'<div class="progress-step{" completed" if steps.index(s) < steps.index(current_step) else " active" if s==current_step else ""}">'
-        + s +
-        '</div>'
+        f'<div class="progress-step{" completed" if steps.index(s) < steps.index(current_step) else " active" if s==current_step else ""}">{s}</div>'
         for s in steps
     )
 
     st.markdown(f"""
     <style>
-    @keyframes popFade {{
+    @keyframes fadeGreen {{
         0% {{
-            opacity: 0;
-            transform: scale(0.92) translateY(6px);
-        }}
-        60% {{
-            opacity: 0.8;
-            transform: scale(1.02) translateY(-2px);
+            background-color: #444;
         }}
         100% {{
-            opacity: 1;
-            transform: scale(1) translateY(0);
+            background-color: #25d366;
         }}
     }}
 
@@ -73,7 +65,7 @@ def render_progress_bar(current_step, top_pad=55):
         background: #444;
         margin: 0 3px;
         border-radius: 8px;
-        transition: all 0.4s ease;
+        transition: all 0.6s ease;
         white-space: normal;
         overflow-wrap: break-word; 
         display: flex;
@@ -88,7 +80,6 @@ def render_progress_bar(current_step, top_pad=55):
     }}
 
     .progress-step.active {{
-        font-family: 'Arial Narrow', sans-serif;
         background: #ffffff;
         color: #000000;
         font-weight: 600;
@@ -97,10 +88,10 @@ def render_progress_bar(current_step, top_pad=55):
     .progress-step.completed {{
         background: #25d366;
         color: #ffffff;
-        font-family: 'Arial Narrow', sans-serif;
+        animation: fadeGreen 0.8s ease-out;
         font-weight: 500;
         font-size: 11px;
-        animation: popFade 1.3s ease-out;
+        font-family: 'Arial Narrow', sans-serif;
         text-shadow: 0 0 1px #00000077;
     }}
 
@@ -111,6 +102,7 @@ def render_progress_bar(current_step, top_pad=55):
 
     <div class="progress-bar-wrapper">{step_html}</div>
     """, unsafe_allow_html=True)
+
 
 
 
