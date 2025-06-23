@@ -15,40 +15,27 @@ def render_progress_bar(current_step, top_pad=55):
 
     st.markdown(f"""
     <style>
-    /* אנימציה */
     @keyframes popFade {{
-        0% {{
-            opacity: 0;
-            transform: scale(0.92) translateY(6px);
-        }}
-        60% {{
-            opacity: 0.8;
-            transform: scale(1.02) translateY(-2px);
-        }}
-        100% {{
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }}
+        0% {{ opacity: 0; transform: scale(0.92) translateY(6px); }}
+        60% {{ opacity: 0.8; transform: scale(1.02) translateY(-2px); }}
+        100% {{ opacity: 1; transform: scale(1) translateY(0); }}
     }}
 
-    /* סרגל עליון מלא */
     .progress-bar-wrapper {{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
         width: 100vw;
+        margin-left: -5vw;
+        margin-right: -5vw;
         background: linear-gradient(90deg, #1b2d59, #26366a, #2f4580);
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 4px 5%;
-        min-height: 40px;
+        position: sticky;
+        top: 0;
         z-index: 9999;
         border-radius: 0 0 6px 6px;
     }}
 
-    /* שלב בודד */
     .progress-step {{
         flex: 1;
         min-width: 0;
@@ -68,7 +55,6 @@ def render_progress_bar(current_step, top_pad=55):
         min-height: 36px;
     }}
 
-    /* טקסט בשלב */
     .step-label {{
         white-space: normal;
         word-break: keep-all;
@@ -90,7 +76,6 @@ def render_progress_bar(current_step, top_pad=55):
         text-shadow: 0 0 1px #00000077;
     }}
 
-    /* מסכים קטנים */
     @media (max-width: 480px) {{
         .progress-step {{
             font-size: 10px;
@@ -98,9 +83,8 @@ def render_progress_bar(current_step, top_pad=55):
         }}
     }}
 
-    /* תן מקום מתחת לסרגל */
-    body {{
-        padding-top: {top_pad}px;
+    [data-testid="stAppViewContainer"] .block-container {{
+        padding-top: {top_pad}px !important;
     }}
     </style>
 
