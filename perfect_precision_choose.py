@@ -264,7 +264,7 @@ def perfect_precision_choose_page():
                             loader_{idx}.style.display = "none";
                             error_{idx}.style.display = "flex";
                         }}
-                    }}, 4000);
+                    }}, 8000);
 
                     function retry_{idx}() {{
                         error_{idx}.style.display = "none";
