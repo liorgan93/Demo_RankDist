@@ -13,7 +13,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
         </div>
 
         <!-- Error Message and Retry Button -->
-        <div id="error-msg{idx}" style="display: none; height: {height}px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 5px; gap: 2px;">
+        <div id="error-msg{idx}" style="display: none; height: {height}px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 3px; gap: 1px;">
             <p style="margin:10px; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Oops! The song failed to load</p>
             <div onclick="reloadIframe{idx}()" class="try-again-button">
                 <div class="try-text">⟳</div>
@@ -98,8 +98,8 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
 
         .try-again-button {{
             position: relative;
-            width: 24px;
-            height: 24px;
+            width: 30px;
+            height: 30px;
             background-color: #4d4d4d;
             border-radius: 50%;
             cursor: pointer;
@@ -116,7 +116,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
         }}
 
         .try-text {{
-            font-size: 12px;
+            font-size: 16px;
             font-weight: bold;
             color: white;
             text-align: center;
