@@ -11,7 +11,7 @@ def perfect_precision_choose_page():
     st.markdown("""
             <style>
                 .progress-bar-wrapper{
-                    max-width: 700px;   /* שנה לפי הצורך */
+                    max-width: 700px;   
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -160,7 +160,7 @@ def perfect_precision_choose_page():
                     Perfect Precision
                 </div>
                 <div class="text_choose">
-                    Choose exactly the TOP 3 songs you’d recommend to {persona_name}🎧
+                    Choose exactly the TOP 3 songs you’d recommend to {persona_name}
                 </div>
             </div>
         """, unsafe_allow_html=True)
@@ -224,17 +224,94 @@ def perfect_precision_choose_page():
 
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
-                embed_html = f"""
-                    <iframe style="border-radius:12px" 
-                        src="{embed_url}" 
-                        width="100%" 
-                        height="80" 
-                        frameBorder="0" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                    </iframe>
-                    """
-                components.html(embed_html, height=85)
+                components.html(f"""
+                    <!-- Loader -->
+                    <div id="loader-{idx}" style="display: flex; justify-content: center; align-items: center; height: 85px;">
+                        <div class="spinner"></div>
+                    </div>
+
+                    <!-- Error Message and Retry -->
+                    <div id="error-msg-{idx}" style="display: none; height: 85px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
+                        <p style="margin:0; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Failed to load song</p>
+                        <div onclick="reloadIframe_{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
+                    </div>
+
+                    <!-- Iframe Container -->
+                    <div style="width: 100%; display: flex; justify-content: center;">
+                        <div id="iframe-container-{idx}" style="display: none;"></div>
+                    </div>
+
+                    <!-- Script -->
+                    <script>
+                    let iframeLoaded_{idx} = false;
+                    let gaveUp_{idx} = false;
+
+                    function createIframe_{idx}() {{
+                        iframeLoaded_{idx} = false;
+                        gaveUp_{idx} = false;
+
+                        const iframeContainer = document.getElementById("iframe-container-{idx}");
+                        iframeContainer.innerHTML = "";
+
+                        const iframe = document.createElement("iframe");
+                        iframe.src = "{embed_url}";
+                        iframe.width = "100%";
+                        iframe.height = "80";
+                        iframe.style.borderRadius = "12px";
+                        iframe.frameBorder = "0";
+                        iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+                        iframe.loading = "lazy";
+
+                        iframe.onload = function() {{
+                            iframeLoaded_{idx} = true;
+                            if (!gaveUp_{idx}) {{
+                                document.getElementById("loader-{idx}").style.display = "none";
+                                document.getElementById("iframe-container-{idx}").style.display = "block";
+                                document.getElementById("error-msg-{idx}").style.display = "none";
+                            }}
+                        }};
+
+                        iframeContainer.appendChild(iframe);
+
+                        setTimeout(function() {{
+                            if (!iframeLoaded_{idx}) {{
+                                gaveUp_{idx} = true;
+                                document.getElementById("loader-{idx}").style.display = "none";
+                                document.getElementById("iframe-container-{idx}").style.display = "none";
+                                document.getElementById("error-msg-{idx}").style.display = "flex";
+                            }}
+                        }}, 300);
+                    }}
+
+                    function reloadIframe_{idx}() {{
+                        document.getElementById("loader-{idx}").style.display = "flex";
+                        document.getElementById("error-msg-{idx}").style.display = "none";
+                        document.getElementById("iframe-container-{idx}").style.display = "none";
+                        createIframe_{idx}();
+                    }}
+
+                    window.addEventListener("DOMContentLoaded", function() {{
+                        createIframe_{idx}();
+                    }});
+                    </script>
+
+                    <!-- Spinner CSS -->
+                    <style>
+                        .spinner {{
+                          border: 4px solid rgba(0, 0, 0, 0.1);
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          border-left-color: #1DB954;
+                          animation: spin 1s linear infinite;
+                          margin: auto;
+                        }}
+
+                        @keyframes spin {{
+                          to {{ transform: rotate(360deg); }}
+                        }}
+                    </style>
+                """, height=90)
 
     st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
 
