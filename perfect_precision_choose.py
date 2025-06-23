@@ -13,8 +13,8 @@ def render_song_with_fallback(embed_url: str, height=85):
     </div>
 
     <!-- Error Message and Retry Button -->
-    <div id="error-msg" style="display: none; height: {height}px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
-    <p style="margin:10px; font-size:20px; font-weight:600; color:#fff; font-family:Arial, sans-serif;"> Oops! The song failed to load </p>
+    <div id="error-msg" style="display: none; height: {height}px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+        <p style="margin:0; font-size:16px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Oops! The song failed to load</p>
         <div onclick="reloadIframe()" class="try-again-button">
             <div class="try-text">TRY AGAIN ⟳</div>
         </div>
@@ -22,7 +22,7 @@ def render_song_with_fallback(embed_url: str, height=85):
 
     <!-- Iframe container -->
     <div style="width: 100%; display: flex; justify-content: center;">
-        <div id="iframe-container" style="display: none; transform: scale(0.74); transform-origin: top center;"></div>
+        <div id="iframe-container" style="display: none;"></div>
     </div>
 
     <!-- Logic -->
@@ -40,16 +40,17 @@ def render_song_with_fallback(embed_url: str, height=85):
         const iframe = document.createElement("iframe");
         iframe.src = "{embed_url}";
         iframe.width = "100%";
-        iframe.height = "80px";
+        iframe.height = "{height}";
+        iframe.style.borderRadius = "12px";
         iframe.frameBorder = "0";
-        iframe.allowFullscreen = true;
         iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+        iframe.loading = "lazy";
 
         iframe.onload = function() {{
             iframeLoaded = true;
             if (!gaveUp) {{
                 document.getElementById("loader").style.display = "none";
-                document.getElementById("iframe-container").style.display = "block";
+                iframeContainer.style.display = "block";
                 document.getElementById("error-msg").style.display = "none";
             }}
         }};
@@ -60,10 +61,10 @@ def render_song_with_fallback(embed_url: str, height=85):
             if (!iframeLoaded) {{
                 gaveUp = true;
                 document.getElementById("loader").style.display = "none";
-                document.getElementById("iframe-container").style.display = "none";
+                iframeContainer.style.display = "none";
                 document.getElementById("error-msg").style.display = "flex";
             }}
-        }}, 400);
+        }}, 4500);
     }}
 
     function reloadIframe() {{
@@ -93,12 +94,11 @@ def render_song_with_fallback(embed_url: str, height=85):
     }}
 
     .try-again-button {{
-        position: relative;
-        width: 150px;
-        height: 150px;
+        width: 110px;
+        height: 40px;
         background-color: #4d4d4d;
-        border-radius: 50%;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -113,7 +113,7 @@ def render_song_with_fallback(embed_url: str, height=85):
     }}
 
     .try-text {{
-        font-size: 18px;
+        font-size: 14px;
         font-weight: bold;
         color: white;
         text-align: center;
@@ -121,6 +121,7 @@ def render_song_with_fallback(embed_url: str, height=85):
     }}
     </style>
     """, height=height)
+
 
 
 def perfect_precision_choose_page():
