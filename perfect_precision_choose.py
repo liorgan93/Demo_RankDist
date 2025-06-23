@@ -14,7 +14,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
 
         <!-- Error Message and Retry Button -->
         <div id="error-msg{idx}" style="display: none; height: {height}px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
-            <p style="margin:0; font-size:13px; font-weight:500; color:#333; font-family:Arial, sans-serif;">Couldn't load the song</p>
+            <p style="margin:0; font-size:13px; font-weight:500; color:#f0f0f0; font-family:Arial, sans-serif;">Couldn't load the song</p>
             <div onclick="reloadIframe{idx}()" class="try-again-button">
                 ⟳
             </div>
@@ -84,7 +84,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
         <!-- Styles -->
         <style>
         .spinner {{
-            border: 4px solid rgba(0, 0, 0, 0.1);
+            border: 4px solid rgba(255, 255, 255, 0.2);
             width: 24px;
             height: 24px;
             border-radius: 50%;
@@ -100,10 +100,10 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
         .try-again-button {{
             width: 28px;
             height: 28px;
-            background-color: #eeeeee;
+            background-color: transparent;
+            border: 1.5px solid #aaa;
             border-radius: 50%;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            color: #333;
+            color: #f0f0f0;
             font-size: 14px;
             font-weight: bold;
             display: flex;
@@ -111,12 +111,12 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
             justify-content: center;
             cursor: pointer;
             user-select: none;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: all 0.3s ease;
         }}
 
         .try-again-button:hover {{
-            background-color: #dddddd;
-            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1);
         }}
         </style>
     """, height=height)
