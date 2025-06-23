@@ -5,6 +5,126 @@ import streamlit.components.v1 as components
 from other_functions import set_background
 from other_functions import render_progress_bar
 
+def render_song_with_fallback(embed_url: str, height=265):
+    st.components.v1.html(f"""
+    <!-- Loader -->
+    <div id="loader" style="display: flex; justify-content: center; align-items: center; height: {height}px;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error Message and Retry Button -->
+    <div id="error-msg" style="display: none; height: {height}px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
+    <p style="margin:10px; font-size:20px; font-weight:600; color:#fff; font-family:Arial, sans-serif;"> Oops! The song failed to load </p>
+        <div onclick="reloadIframe()" class="try-again-button">
+            <div class="try-text">TRY AGAIN ⟳</div>
+        </div>
+    </div>
+
+    <!-- Iframe container -->
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <div id="iframe-container" style="display: none; transform: scale(0.74); transform-origin: top center;"></div>
+    </div>
+
+    <!-- Logic -->
+    <script>
+    let iframeLoaded = false;
+    let gaveUp = false;
+
+    function createIframe() {{
+        iframeLoaded = false;
+        gaveUp = false;
+
+        const iframeContainer = document.getElementById("iframe-container");
+        iframeContainer.innerHTML = "";
+
+        const iframe = document.createElement("iframe");
+        iframe.src = "{embed_url}";
+        iframe.width = "100%";
+        iframe.height = "352px";
+        iframe.style.borderRadius = "30px";
+        iframe.style.marginBottom = "0px";
+        iframe.frameBorder = "0";
+        iframe.allowFullscreen = true;
+        iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+
+        iframe.onload = function() {{
+            iframeLoaded = true;
+            if (!gaveUp) {{
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("iframe-container").style.display = "block";
+                document.getElementById("error-msg").style.display = "none";
+            }}
+        }};
+
+        iframeContainer.appendChild(iframe);
+
+        setTimeout(function() {{
+            if (!iframeLoaded) {{
+                gaveUp = true;
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("iframe-container").style.display = "none";
+                document.getElementById("error-msg").style.display = "flex";
+            }}
+        }}, 4500);
+    }}
+
+    function reloadIframe() {{
+        document.getElementById("loader").style.display = "flex";
+        document.getElementById("error-msg").style.display = "none";
+        document.getElementById("iframe-container").style.display = "none";
+        createIframe();
+    }}
+
+    createIframe();
+    </script>
+
+    <!-- Styles -->
+    <style>
+    .spinner {{
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border-left-color: #1DB954;
+      animation: spin 1s linear infinite;
+      margin: auto;
+    }}
+
+    @keyframes spin {{
+      to {{ transform: rotate(360deg); }}
+    }}
+
+    .try-again-button {{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background-color: #4d4d4d;
+        border-radius: 50%;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        user-select: none;
+        transition: transform 0.2s;
+    }}
+
+    .try-again-button:hover {{
+        transform: scale(1.05);
+    }}
+
+    .try-text {{
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        z-index: 1;
+    }}
+    </style>
+    """, height=height)
+
+
 def perfect_precision_choose_page():
     st.set_page_config(page_title="RankDist Demo", layout="wide")
     render_progress_bar("recommend songs")
@@ -221,83 +341,21 @@ def perfect_precision_choose_page():
             embed_url = f"https://open.spotify.com/embed/track/{track_id}"
         else:
             embed_url = track_url
+        render_song_with_fallback(embed_url)
 
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
-                components.html(f"""
-                    <!-- Loader -->
-                    <div id="loader{idx}" style="display: flex; justify-content: center; align-items: center; height: 85px;">
-                        <div class="spinner"></div>
-                    </div>
-
-                    <!-- Error message -->
-                    <div id="error-msg{idx}" style="display: none; height: 85px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
-                        <p style="margin:0; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Failed to load song</p>
-                        <div onclick="retryIframe{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
-                    </div>
-
-                    <!-- Iframe container -->
-                    <div id="iframe-container{idx}" style="display: none;">
-                        <iframe id="iframe{idx}" style="border-radius:12px" 
-                            src="{embed_url}" 
-                            width="100%" 
-                            height="80" 
-                            frameBorder="0" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                            loading="lazy">
-                        </iframe>
-                    </div>
-
-                    <script>
-                        var iframe = document.getElementById("iframe{idx}");
-                        var loader = document.getElementById("loader{idx}");
-                        var errorMsg = document.getElementById("error-msg{idx}");
-                        var container = document.getElementById("iframe-container{idx}");
-
-                        var loaded = false;
-                        iframe.onload = function() {{
-                            loaded = true;
-                            loader.style.display = "none";
-                            container.style.display = "block";
-                        }};
-
-                        setTimeout(function() {{
-                            if (!loaded) {{
-                                loader.style.display = "none";
-                                errorMsg.style.display = "flex";
-                            }}
-                        }}, 4500);
-
-                        function retryIframe{idx}() {{
-                            errorMsg.style.display = "none";
-                            loader.style.display = "flex";
-                            container.style.display = "none";
-                            iframe.src = "{embed_url}";
-                            loaded = false;
-                            setTimeout(function() {{
-                                if (!loaded) {{
-                                    loader.style.display = "none";
-                                    errorMsg.style.display = "flex";
-                                }}
-                            }}, 4500);
-                        }}
-                    </script>
-
-                    <style>
-                        .spinner {{
-                          border: 4px solid rgba(0, 0, 0, 0.1);
-                          width: 24px;
-                          height: 24px;
-                          border-radius: 50%;
-                          border-left-color: #1DB954;
-                          animation: spin 1s linear infinite;
-                          margin: auto;
-                        }}
-                        @keyframes spin {{
-                          to {{ transform: rotate(360deg); }}
-                        }}
-                    </style>
-                """, height=85)
+                embed_html = f"""
+                    <iframe style="border-radius:12px" 
+                        src="{embed_url}" 
+                        width="100%" 
+                        height="80" 
+                        frameBorder="0" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    """
+                components.html(embed_html, height=85)
 
     st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
 
