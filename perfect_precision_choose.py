@@ -241,71 +241,74 @@ def perfect_precision_choose_page():
                         <div id="iframe-container{idx}" style="display: none;"></div>
                     </div>
 
-                    <!-- Logic -->
+                    <!-- Logic (immediately executed, not on DOMContentLoaded) -->
                     <script>
                         var iframeLoaded{idx} = false;
                         var gaveUp{idx} = false;
 
-                        function createIframe{idx}() {{
-                            iframeLoaded{idx} = false;
-                            gaveUp{idx} = false;
+                        var iframeContainer = document.getElementById("iframe-container{idx}");
+                        iframeContainer.innerHTML = "";
 
-                            var iframeContainer = document.getElementById("iframe-container{idx}");
-                            iframeContainer.innerHTML = "";
+                        var iframe = document.createElement("iframe");
+                        iframe.src = "{embed_url}";
+                        iframe.width = "100%";
+                        iframe.height = "80";
+                        iframe.style.borderRadius = "12px";
+                        iframe.frameBorder = "0";
+                        iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+                        iframe.loading = "lazy";
 
-                            var iframe = document.createElement("iframe");
-                            iframe.src = "{embed_url}";
-                            iframe.width = "100%";
-                            iframe.height = "80";
-                            iframe.style.borderRadius = "12px";
-                            iframe.frameBorder = "0";
-                            iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-                            iframe.loading = "lazy";
+                        iframe.onload = function() {{
+                            iframeLoaded{idx} = true;
+                            if (!gaveUp{idx}) {{
+                                document.getElementById("loader{idx}").style.display = "none";
+                                iframeContainer.style.display = "block";
+                                document.getElementById("error-msg{idx}").style.display = "none";
+                            }}
+                        }};
 
-                            iframe.onload = function() {{
-                                iframeLoaded{idx} = true;
-                                if (!gaveUp{idx}) {{
-                                    document.getElementById("loader{idx}").style.display = "none";
-                                    document.getElementById("iframe-container{idx}").style.display = "block";
-                                    document.getElementById("error-msg{idx}").style.display = "none";
-                                }}
-                            }};
+                        iframeContainer.appendChild(iframe);
 
-                            iframeContainer.appendChild(iframe);
-
-                            setTimeout(function() {{
-                                if (!iframeLoaded{idx}) {{
-                                    gaveUp{idx} = true;
-                                    document.getElementById("loader{idx}").style.display = "none";
-                                    document.getElementById("iframe-container{idx}").style.display = "none";
-                                    document.getElementById("error-msg{idx}").style.display = "flex";
-                                }}
-                            }}, 4500);
-                        }}
+                        setTimeout(function() {{
+                            if (!iframeLoaded{idx}) {{
+                                gaveUp{idx} = true;
+                                document.getElementById("loader{idx}").style.display = "none";
+                                iframeContainer.style.display = "none";
+                                document.getElementById("error-msg{idx}").style.display = "flex";
+                            }}
+                        }}, 4500);
 
                         function reloadIframe{idx}() {{
                             document.getElementById("loader{idx}").style.display = "flex";
                             document.getElementById("error-msg{idx}").style.display = "none";
-                            document.getElementById("iframe-container{idx}").style.display = "none";
-                            createIframe{idx}();
+                            iframeContainer.style.display = "none";
+                            iframe.src = "{embed_url}";
+                            iframeLoaded{idx} = false;
+                            gaveUp{idx} = false;
+                            setTimeout(function() {{
+                                if (!iframeLoaded{idx}) {{
+                                    gaveUp{idx} = true;
+                                    document.getElementById("loader{idx}").style.display = "none";
+                                    iframeContainer.style.display = "none";
+                                    document.getElementById("error-msg{idx}").style.display = "flex";
+                                }}
+                            }}, 4500);
                         }}
-
-                        createIframe{idx}();
                     </script>
 
-                    <!-- Styles -->
+                    <!-- Spinner CSS -->
                     <style>
                         .spinner {{
-                          border: 4px solid rgba(0, 0, 0, 0.1);
-                          width: 24px;
-                          height: 24px;
-                          border-radius: 50%;
-                          border-left-color: #1DB954;
-                          animation: spin 1s linear infinite;
-                          margin: auto;
+                            border: 4px solid rgba(0, 0, 0, 0.1);
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            border-left-color: #1DB954;
+                            animation: spin 1s linear infinite;
+                            margin: auto;
                         }}
                         @keyframes spin {{
-                          to {{ transform: rotate(360deg); }}
+                            to {{ transform: rotate(360deg); }}
                         }}
                     </style>
                 """, height=85)
