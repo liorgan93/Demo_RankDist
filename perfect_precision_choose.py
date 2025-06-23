@@ -280,7 +280,7 @@ def perfect_precision_choose_page():
                                     document.getElementById("iframe-container{idx}").style.display = "none";
                                     document.getElementById("error-msg{idx}").style.display = "flex";
                                 }}
-                            }}, 300);
+                            }}, 4500);
                         }}
 
                         function reloadIframe{idx}() {{
