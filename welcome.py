@@ -49,7 +49,7 @@ def welcome_page():
 
         }}
         .title-text {{
-            font-size: 22px !important;
+            font-size: 21px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
@@ -66,7 +66,7 @@ def welcome_page():
         }}
         .music-image {{
             min-width: 100%;
-            max-height: 50px;
+            max-height: 55px;
             margin-bottom: 0px;
             padding-bottom: 0px;
 
