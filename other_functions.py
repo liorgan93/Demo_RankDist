@@ -21,15 +21,23 @@ def render_progress_bar(current_step, top_pad=55):
         100% {{ opacity: 1; transform: scale(1) translateY(0); }}
     }}
 
+    /* אפס את הפדינג של Streamlit */
+    [data-testid="stAppViewContainer"] > .main {{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }}
+
+    [data-testid="stHeader"] {{
+        padding: 0 !important;
+    }}
+
     .progress-bar-wrapper {{
-        width: 100vw;
-        margin-left: -5vw;
-        margin-right: -5vw;
+        width: 100%;
         background: linear-gradient(90deg, #1b2d59, #26366a, #2f4580);
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 4px 5%;
+        padding: 4px 12px;
         position: sticky;
         top: 0;
         z-index: 9999;
