@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 from other_functions import set_background
 from other_functions import render_progress_bar
 
-def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
+def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
     st.components.v1.html(f"""
         <!-- Loader -->
         <div id="loader{idx}" style="display: flex; justify-content: center; align-items: center; height: {height}px;">
@@ -22,7 +22,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
 
         <!-- Iframe container -->
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container{idx}" style="display: none; transform-origin: top center;"></div>
+            <div id="iframe-container{idx}" style="display: none; transform: scale(0.74); transform-origin: top center;"></div>
         </div>
 
         <!-- Logic -->
@@ -41,6 +41,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
             iframe.src = "{embed_url}";
             iframe.width = "100%";
             iframe.height = "85";
+            iframe.style.borderRadius = "30px";
             iframe.style.marginBottom = "0px";
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
@@ -64,7 +65,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
                     document.getElementById("iframe-container{idx}").style.display = "none";
                     document.getElementById("error-msg{idx}").style.display = "flex";
                 }}
-            }}, 400);
+            }}, 500);
         }}
 
         function reloadIframe{idx}() {{
@@ -83,8 +84,8 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
         <style>
         .spinner {{
             border: 4px solid rgba(0, 0, 0, 0.1);
-            width: 24px;
-            height: 24px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             border-left-color: #1DB954;
             animation: spin 1s linear infinite;
@@ -97,10 +98,11 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
 
         .try-again-button {{
             position: relative;
-            width: 240px;
-            height: 240px;
+            width: 150px;
+            height: 150px;
             background-color: #4d4d4d;
             border-radius: 50%;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -115,7 +117,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
         }}
 
         .try-text {{
-            font-size: 12px;
+            font-size: 18px;
             font-weight: bold;
             color: white;
             text-align: center;
