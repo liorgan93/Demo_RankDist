@@ -66,7 +66,7 @@ def welcome_page():
         }}
         .music-image {{
             max-width: 100%;
-            max-height: 80px;
+            max-height: 70px;
             margin-bottom: 0px;
             padding-bottom: 0px;
 
