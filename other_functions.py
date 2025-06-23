@@ -36,20 +36,23 @@ def render_progress_bar(current_step, top_pad=55):
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;   
-        padding: 4px 5%;
+        padding: 4px 1%;
         min-height: 36px;
         position: sticky;
         top: 0;
         z-index: 9999;
-        margin-top: 6px;
+        margin-top: 3px;
         border-radius: 3px;
     }}
 
     .progress-step {{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        letter-spacing: 0px;
         flex: 1;
         min-width: 0;
         text-align: center;
-        font: 400 11.5px 'Poppins', sans-serif;
         line-height: 1.1;        
         padding: 2px 2px !important;  
         color: #fff;
@@ -73,7 +76,7 @@ def render_progress_bar(current_step, top_pad=55):
     .progress-step.completed {{
         background: #1DB954;
         color: #ffffff;
-        font-weight: 500;
+        font-weight: 300;
         font-size: 11px;
         animation: popFade 1.3s ease-out;
         text-shadow: 0 0 1px #00000077;
