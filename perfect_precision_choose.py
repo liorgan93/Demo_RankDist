@@ -84,8 +84,8 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
         <style>
         .spinner {{
             border: 4px solid rgba(0, 0, 0, 0.1);
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             border-left-color: #1DB954;
             animation: spin 1s linear infinite;
@@ -346,17 +346,7 @@ def perfect_precision_choose_page():
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
                 render_song_with_fallback_dynamic(embed_url, idx)
-                embed_html = f"""
-                    <iframe style="border-radius:12px" 
-                        src="{embed_url}" 
-                        width="100%" 
-                        height="80" 
-                        frameBorder="0" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                    </iframe>
-                    """
-                components.html(embed_html, height=85)
+
 
     st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
 
