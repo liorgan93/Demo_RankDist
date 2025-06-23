@@ -341,7 +341,6 @@ def perfect_precision_choose_page():
             embed_url = f"https://open.spotify.com/embed/track/{track_id}"
         else:
             embed_url = track_url
-        render_song_with_fallback(embed_url)
 
         with cols[idx % 3]:
             with st.expander(f"🎶 Listen to - {song_name}"):
