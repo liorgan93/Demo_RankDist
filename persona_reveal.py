@@ -42,7 +42,7 @@ def persona_reveal_page():
             padding: 0.25px 2px;
             text-align: center;
             font-family: Arial, sans-serif;
-            width: 103%;                
+            width: 105%;                
             position: relative;      
             left: 50%;            
             transform: translateX(-50%);
