@@ -64,7 +64,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
                     document.getElementById("iframe-container{idx}").style.display = "none";
                     document.getElementById("error-msg{idx}").style.display = "flex";
                 }}
-            }}, 5500);
+            }}, 400);
         }}
 
         function reloadIframe{idx}() {{
