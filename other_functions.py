@@ -47,7 +47,7 @@ def render_progress_bar(current_step, top_pad=55):
 
     .progress-step {{
         font-family: 'Arial Narrow', sans-serif;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 11px;
         letter-spacing: 0px;
         flex: 1;
@@ -76,6 +76,7 @@ def render_progress_bar(current_step, top_pad=55):
     .progress-step.completed {{
         background: #1DB954;
         color: #ffffff;
+        font-family: 'Arial Narrow', sans-serif;
         font-weight: 400;
         font-size: 10px;
         animation: popFade 1.3s ease-out;
