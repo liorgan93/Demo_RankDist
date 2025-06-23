@@ -20,7 +20,7 @@ def welcome_page():
     set_background("other images/background.webp")
 
     logo = get_base64_image("other images/logo.jpg")
-    music = get_base64_image("other images/music notes.png")
+    music = get_base64_image("other images/music notes.jpg")
 
     st.markdown(
         f"""
@@ -49,13 +49,14 @@ def welcome_page():
 
         }}
         .title-text {{
-            font-size: 20px !important;
+            font-size: 22px !important;
             font-weight: bold;
+            font-family: 'Bungee', cursive;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
             margin-bottom: 5px;
             margin-top: 0px;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
             padding-top: 0px;
 
         }}
@@ -66,29 +67,43 @@ def welcome_page():
         }}
         .music-image {{
             max-width: 100%;
-            max-height: 95px;
+            max-height: 85px;
             margin-bottom: 0px;
             padding-bottom: 0px;
 
         }}
-
-        .logo-img {{
-            width: 170px; 
-            height: 80px; 
-            margin-bottom: 3px;
+        @keyframes pulse {{
+          0% {{ transform: scale(1); }}
+          50% {{ transform: scale(1.05); }}
+          100% {{ transform: scale(1); }}
         }}
+        
+        @keyframes glow {{
+          0%, 100% {{ filter: drop-shadow(0 0 0px rgba(0, 204, 255, 0)); }}
+          50% {{ filter: drop-shadow(0 0 5px rgba(0, 204, 255, 0.4)); }}
+        }}
+        
+        .logo-img {{
+          animation: glow 2.5s ease-in-out infinite, pulse 2.5s ease-in-out infinite;
+          width: 187px; 
+          height: 88px; 
+          margin-bottom: 3px;
+        }}
+
         .time_est {{
-            font-size: 16px;
+            font-size: 15px;
             color: #CCCCCC;
             text-align: left;
             font-weight: bold;
+            padding-bottom: 20px;
+
         }}
         </style>
         <div class="container">
             <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
             <p class="title-text">Welcome to our Music Recommendation Experience</p>
-            <img src="data:image/webp;base64,{music}" class="music-image">
             <div class="time_est"> Estimated time: <strong> 8–10 minutes </strong> </div>
+            <img src="data:image/webp;base64,{music}" class="music-image">
         </div>
         """,
         unsafe_allow_html=True,
