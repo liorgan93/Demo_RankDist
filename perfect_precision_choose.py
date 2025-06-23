@@ -100,9 +100,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
             position: relative;
             width: 150px;
             height: 150px;
-            background-color: #4d4d4d;
             border-radius: 50%;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             display: flex;
             align-items: center;
