@@ -53,9 +53,9 @@ def welcome_page():
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
-            margin-bottom: 0px;
+            margin-bottom: 5px;
             margin-top: 0px;
-            padding-bottom: 0px;
+            padding-bottom: 5px;
             padding-top: 0px;
 
         }}
@@ -70,13 +70,6 @@ def welcome_page():
             margin-bottom: 0px;
             padding-bottom: 0px;
 
-        }}
-        .footer-note {{
-            font-size: 9px;
-            color: #CCCCCC;
-            text-align: left;
-            margin-left: auto;
-            margin-right: auto;
         }}
         .subtitle {{
             font-size: 16px;
@@ -101,10 +94,6 @@ def welcome_page():
             <p class="title-text">Welcome to our Music Recommendation Experience</p>
             <img src="data:image/webp;base64,{music}" class="music-image">
             <div class="time_est"> Estimated time: <strong> 8–10 minutes </strong> </div>
-            <div class="footer-note">
-                ✱ This demo offers an interactive music experience using songs played via Spotify’s official embed feature.
-                All content is the property of the respective rights holders and is used solely for educational and research demonstration purposes.
-            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -138,6 +127,45 @@ def welcome_page():
 
     with col2:
         st.button("", key="start_button", on_click=click_button)
+
+    st.markdown(
+        f"""
+            <style>
+            .container-footer-note {{
+                background: linear-gradient(135deg, rgba(60, 60, 60, 1), rgba(80, 80, 80, 1));
+                border-radius: 3px;
+                padding: 8px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
+                text-align: center;
+                margin: auto;
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                overflow-x: hidden;
+                margin-top: 8px;
+            }}
+
+            .footer-note {{
+                font-size: 12px;
+                color: #CCCCCC;
+                text-align: left;
+                margin-left: auto;
+                margin-right: auto;
+            }}
+            </style>
+            <div class="container-footer-note">
+               <div class="footer-note">
+                ✱ This demo offers an interactive music experience using songs played via Spotify’s official embed feature.
+                All content is the property of the respective rights holders and is used solely for educational and research demonstration purposes.
+            </div>
+            </div>
+            """,
+        unsafe_allow_html=True,
+    )
+
 
 if st.session_state.page == "welcome":
     welcome_page()
