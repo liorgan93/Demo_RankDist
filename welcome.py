@@ -55,7 +55,7 @@ def welcome_page():
             color: #B3E5FC;
             margin-bottom: 5px;
             margin-top: 0px;
-            padding-bottom: 5px;
+            padding-bottom: 3px;
             padding-top: 0px;
 
         }}
@@ -94,7 +94,7 @@ def welcome_page():
             color: #CCCCCC;
             text-align: left;
             font-weight: bold;
-            padding-bottom: 20px;
+            padding-bottom: 13px;
 
         }}
         </style>
