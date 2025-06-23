@@ -4,9 +4,14 @@ import ast
 from other_functions import set_background
 from other_functions import render_progress_bar
 from classsification_functions import classify_user_by_preferences
+import base64
 
 def button_click():
     st.session_state.page = "know_the_persona_intro"
+
+def get_base64_image(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
 
 def persona_reveal_page():
     st.set_page_config(page_title="RankDist Demo")
@@ -26,13 +31,6 @@ def persona_reveal_page():
 
     st.markdown("""
         <style>
-        body {
-            background-color: #f7f7f7;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
         .container {
             background-color: #ffffff;
             border-radius: 30px;
@@ -40,16 +38,8 @@ def persona_reveal_page():
             text-align: center;
             font-family: Arial, sans-serif;
             width: 80%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -20px !important;
-        }
-        .block-container {
-            padding-top: 5px !important;
-            margin-top: 5px !important;
-            padding-bottom: -10px !important;
-            margin-bottom: -10px !important;
+            margin: auto;
+            margin-top: -20px;
         }
         .title {
             font-size: 26px;
@@ -57,9 +47,7 @@ def persona_reveal_page():
             background: linear-gradient(to bottom, #000000, #222222, #444444); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 
-                2px 2px 5px rgba(0, 0, 0, 0.3), 
-                4px 4px 10px rgba(0, 0, 0, 0.2); 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 4px 4px 10px rgba(0, 0, 0, 0.2); 
         }
         .sub_title {
             font-size: 15px;
@@ -69,15 +57,39 @@ def persona_reveal_page():
             letter-spacing: 1px;
             line-height: 1.2;
         }
-        img {
+        .header-small {
+            font-size: 17px;      
+            font-weight: 700;
+            color: #FFFFFF;
+            background: linear-gradient(90deg,
+  #1f3ba6 0%,
+  #2847b3 40%,
+  #3053bf 75%,
+  #3a5fcb 100%);
+
+
+
+            padding: 15px 12px;     
+            border-radius: 15px;
+            margin: 0 auto 17px;
+            text-align: center;     
+            width: 80%;
+            display: block;
+            line-height: 1.2;
+        }
+        .persona-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0px;
+        }
+        .persona-img {
             border-radius: 15px;
             max-height: 30vh;
+            width: 60%;
+            max-width: 80%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
             margin-bottom: 0px;
-        }
-        img:hover {
-            transform: scale(1.05);
         }
         .stButton button {
             width: 100%;
@@ -89,33 +101,10 @@ def persona_reveal_page():
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-top: 0px !important;
+            margin-top: 0;
         }
         .stButton button:hover {
             background-color: #660066;
-        }
-        .header-small {
-            font-size: 17px;      
-            font-weight: 700;
-            color: #FFFFFF;
-            background: linear-gradient(90deg,
-              #4a3cc7 0%,
-              #5f4acb 40%,
-              #6b3bbd 75%,
-              #5a2a9b 100%);
-            padding: 6px 12px;     
-            border-radius: 15px;
-            margin: 0 auto 17px;    
-            text-align: center;     
-            width: 90%;
-            display: block;
-        }
-        [data-testid="stImage"] {
-            margin-bottom: -20px !important;
-        }
-        div[data-testid="column"] > div:has(.header-small) {
-            margin-top: 0px !important;
-            padding-top: 0px !important;
         }
         </style>
     """, unsafe_allow_html=True)
@@ -132,15 +121,20 @@ def persona_reveal_page():
     """, unsafe_allow_html=True)
 
     try:
-        col1, col2, col3 = st.columns([0.3, 0.4, 0.3])
+        image_path = f"personas_images/{st.session_state.persona}.jpg"
+        image_base64 = get_base64_image(image_path)
+
+        col1, col2, col3 = st.columns([0.14, 0.7, 0.15])
         with col2:
-            st.image(f"personas_images/{st.session_state.persona}.jpg", use_container_width=True)
+            st.markdown(f"""
+                <div class="persona-box">
+                    <img class="persona-img" src="data:image/jpg;base64,{image_base64}" />
+                    <div class="header-small">soon You’ll recommend songs for {st.session_state.persona}!</div>
+                </div>
+            """, unsafe_allow_html=True)
+
     except FileNotFoundError:
         st.error(f"Could not load the image for {st.session_state.persona}. Please check the file path.")
-
-    col_next = st.columns([0.15, 0.7, 0.15])
-    with col_next[1]:
-        st.markdown(f"""<div class="header-small">soon You’ll recommend songs for {st.session_state.persona}!</div>""", unsafe_allow_html=True)
 
     col_next = st.columns([1, 1, 1])
     with col_next[1]:
