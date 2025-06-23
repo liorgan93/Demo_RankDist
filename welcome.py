@@ -49,7 +49,7 @@ def welcome_page():
 
         }}
         .title-text {{
-            font-size: 21px !important;
+            font-size: 28px !important;
             font-weight: bold;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
