@@ -226,82 +226,87 @@ def perfect_precision_choose_page():
             with st.expander(f"🎶 Listen to - {song_name}"):
                 components.html(f"""
                     <!-- Loader -->
-                    <div id="loader-{idx}" style="display: flex; justify-content: center; align-items: center; height: 85px;">
+                    <div id="loader{idx}" style="display: flex; justify-content: center; align-items: center; height: 85px;">
                         <div class="spinner"></div>
                     </div>
 
-                    <!-- Error Message and Retry -->
-                    <div id="error-msg-{idx}" style="display: none; height: 85px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
+                    <!-- Error Message and Retry Button -->
+                    <div id="error-msg{idx}" style="display: none; height: 85px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
                         <p style="margin:0; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Failed to load song</p>
-                        <div onclick="reloadIframe_{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
+                        <div onclick="reloadIframe{idx}()" style="padding: 5px 12px; background-color: #4d4d4d; color: white; border-radius: 20px; cursor: pointer; font-size: 12px;">Try Again ⟳</div>
                     </div>
 
                     <!-- Iframe container -->
                     <div style="width: 100%; display: flex; justify-content: center;">
-                        <div id="iframe-container-{idx}" style="display: none;"></div>
+                        <div id="iframe-container{idx}" style="display: none;"></div>
                     </div>
 
+                    <!-- Logic -->
                     <script>
-                    function createIframe_{idx}() {{
-                        let iframeLoaded = false;
-                        let gaveUp = false;
+                        var iframeLoaded{idx} = false;
+                        var gaveUp{idx} = false;
 
-                        const iframeContainer = document.getElementById("iframe-container-{idx}");
-                        iframeContainer.innerHTML = "";
+                        function createIframe{idx}() {{
+                            iframeLoaded{idx} = false;
+                            gaveUp{idx} = false;
 
-                        const iframe = document.createElement("iframe");
-                        iframe.src = "{embed_url}";
-                        iframe.width = "100%";
-                        iframe.height = "80";
-                        iframe.style.borderRadius = "12px";
-                        iframe.frameBorder = "0";
-                        iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-                        iframe.loading = "lazy";
+                            var iframeContainer = document.getElementById("iframe-container{idx}");
+                            iframeContainer.innerHTML = "";
 
-                        iframe.onload = function() {{
-                            iframeLoaded = true;
-                            if (!gaveUp) {{
-                                document.getElementById("loader-{idx}").style.display = "none";
-                                iframeContainer.style.display = "block";
-                                document.getElementById("error-msg-{idx}").style.display = "none";
-                            }}
-                        }};
+                            var iframe = document.createElement("iframe");
+                            iframe.src = "{embed_url}";
+                            iframe.width = "100%";
+                            iframe.height = "80";
+                            iframe.style.borderRadius = "12px";
+                            iframe.frameBorder = "0";
+                            iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+                            iframe.loading = "lazy";
 
-                        iframeContainer.appendChild(iframe);
+                            iframe.onload = function() {{
+                                iframeLoaded{idx} = true;
+                                if (!gaveUp{idx}) {{
+                                    document.getElementById("loader{idx}").style.display = "none";
+                                    document.getElementById("iframe-container{idx}").style.display = "block";
+                                    document.getElementById("error-msg{idx}").style.display = "none";
+                                }}
+                            }};
 
-                        setTimeout(function() {{
-                            if (!iframeLoaded) {{
-                                gaveUp = true;
-                                document.getElementById("loader-{idx}").style.display = "none";
-                                iframeContainer.style.display = "none";
-                                document.getElementById("error-msg-{idx}").style.display = "flex";
-                            }}
-                        }}, 4500);
-                    }}
+                            iframeContainer.appendChild(iframe);
 
-                    function reloadIframe_{idx}() {{
-                        document.getElementById("loader-{idx}").style.display = "flex";
-                        document.getElementById("error-msg-{idx}").style.display = "none";
-                        document.getElementById("iframe-container-{idx}").style.display = "none";
-                        createIframe_{idx}();
-                    }}
+                            setTimeout(function() {{
+                                if (!iframeLoaded{idx}) {{
+                                    gaveUp{idx} = true;
+                                    document.getElementById("loader{idx}").style.display = "none";
+                                    document.getElementById("iframe-container{idx}").style.display = "none";
+                                    document.getElementById("error-msg{idx}").style.display = "flex";
+                                }}
+                            }}, 4500);
+                        }}
 
-                    createIframe_{idx}();
+                        function reloadIframe{idx}() {{
+                            document.getElementById("loader{idx}").style.display = "flex";
+                            document.getElementById("error-msg{idx}").style.display = "none";
+                            document.getElementById("iframe-container{idx}").style.display = "none";
+                            createIframe{idx}();
+                        }}
+
+                        createIframe{idx}();
                     </script>
 
+                    <!-- Styles -->
                     <style>
-                    .spinner {{
-                        border: 4px solid rgba(0, 0, 0, 0.1);
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 50%;
-                        border-left-color: #1DB954;
-                        animation: spin 1s linear infinite;
-                        margin: auto;
-                    }}
-                    @keyframes spin {{
-                        to {{ transform: rotate(360deg); }}
-                    }}
+                        .spinner {{
+                          border: 4px solid rgba(0, 0, 0, 0.1);
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          border-left-color: #1DB954;
+                          animation: spin 1s linear infinite;
+                          margin: auto;
+                        }}
+                        @keyframes spin {{
+                          to {{ transform: rotate(360deg); }}
+                        }}
                     </style>
                 """, height=85)
 
