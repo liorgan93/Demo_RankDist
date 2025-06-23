@@ -170,7 +170,7 @@ def relevant_set_choose_page():
 
         def handle_confirm_click():
             if len(selected_songs) != 3:
-                st.session_state.error_msg = "You must select exactly 3 songs before continuing"
+                st.session_state.error_msg = "You must select exactly 3 songs."
             else:
                 st.session_state.page = "relevant_set_compare_recommendations"
                 st.session_state.user_choice = selected_songs
@@ -182,6 +182,23 @@ def relevant_set_choose_page():
         col_next = st.columns([1, 1, 1])
         with col_next[1]:
             st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
+
+        st.markdown("""
+                <style>
+                div[data-testid="stAlert"]{
+                    background-color: #C62828 !important;   
+                    padding-top: 0px !important;
+                    padding-bottom: 0px !important;
+                    margin-top: 0px !important;
+                    margin-bottom: 0px !important;
+                }
+                div[data-testid="stAlert"] p {
+                    text-align: center; !important;
+                    font-weight: 700 !important; 
+                }
+
+                </style>
+                """, unsafe_allow_html=True)
         if st.session_state.error_msg:
             st.error(st.session_state.error_msg)
 

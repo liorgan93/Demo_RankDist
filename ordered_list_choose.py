@@ -162,16 +162,15 @@ def ordered_list_choose_page():
             selections = [place_1, place_2, place_3]
             placeholders = [placeholder1, placeholder2, placeholder3]
             if any(s in placeholders for s in selections):
-                st.session_state.error_msg = "Please select a song for each place"
+                st.session_state.error_msg = "select a song for each position."
             elif len(set(selections)) < 3:
-                st.session_state.error_msg = "A song was selected for more than one place"
+                st.session_state.error_msg = "The same song was selected for multiple positions."
             else:
                 st.session_state.user_choice = selections
                 st.session_state.page = "ordered_list_compare_recommendations"
 
         st.markdown("""
             <style>
-                /* הקטנת מרווחים בין selectboxים */
                 div[data-testid="stSelectbox"] {
                     margin-bottom: 5px !important;
                 }
@@ -189,6 +188,22 @@ def ordered_list_choose_page():
             place_3 = st.selectbox("", [placeholder3] + songs, key="place_3", label_visibility="collapsed")
             st.button("Confirm", key="confirm_button", on_click=handle_confirm_click, use_container_width=True)
 
+            st.markdown("""
+                            <style>
+                            div[data-testid="stAlert"]{
+                                background-color: #C62828 !important;   
+                                padding-top: 0px !important;
+                                padding-bottom: 0px !important;
+                                margin-top: 0px !important;
+                                margin-bottom: 0px !important;
+                            }
+                            div[data-testid="stAlert"] p {
+                                text-align: center; !important;
+                                font-weight: 700 !important; 
+            }
+
+                            </style>
+                            """, unsafe_allow_html=True)
             if st.session_state.error_msg:
                 st.error(st.session_state.error_msg)
 
