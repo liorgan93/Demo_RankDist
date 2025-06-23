@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 from other_functions import set_background
 from other_functions import render_progress_bar
 
-def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
+def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=265):
     st.components.v1.html(f"""
         <!-- Loader -->
         <div id="loader{idx}" style="display: flex; justify-content: center; align-items: center; height: {height}px;">
@@ -13,16 +13,16 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
         </div>
 
         <!-- Error Message and Retry Button -->
-        <div id="error-msg{idx}" style="display: none; height: {height}px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
-            <p style="margin:0; font-size:13px; font-weight:500; color:#f0f0f0; font-family:Arial, sans-serif;">Couldn't load the song</p>
+        <div id="error-msg-{idx}" style="display: none; height: {height}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
+            <p style="margin:0; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Failed to load song</p>
             <div onclick="reloadIframe{idx}()" class="try-again-button">
-                ⟳
+                <div class="try-text">TRY AGAIN ⟳</div>
             </div>
         </div>
 
         <!-- Iframe container -->
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container{idx}" style="display: none;"></div>
+            <div id="iframe-container{idx}" style="display: none; transform-origin: top center;"></div>
         </div>
 
         <!-- Logic -->
@@ -41,12 +41,11 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
             iframe.src = "{embed_url}";
             iframe.width = "100%";
             iframe.height = "85";
-            iframe.style.borderRadius = "12px";
+            iframe.style.borderRadius = "30px";
             iframe.style.marginBottom = "0px";
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
             iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-            iframe.loading = "lazy";
 
             iframe.onload = function() {{
                 iframeLoaded{idx} = true;
@@ -66,7 +65,7 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
                     document.getElementById("iframe-container{idx}").style.display = "none";
                     document.getElementById("error-msg{idx}").style.display = "flex";
                 }}
-            }}, 4500);
+            }}, 500);
         }}
 
         function reloadIframe{idx}() {{
@@ -84,9 +83,9 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
         <!-- Styles -->
         <style>
         .spinner {{
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            width: 24px;
-            height: 24px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             border-left-color: #1DB954;
             animation: spin 1s linear infinite;
@@ -98,29 +97,33 @@ def render_song_with_fallback_dynamic(embed_url: str, idx: int, height=85):
         }}
 
         .try-again-button {{
-            width: 28px;
-            height: 28px;
-            background-color: transparent;
-            border: 1.5px solid #aaa;
+            position: relative;
+            width: 24px;
+            height: 24px;
+            background-color: #4d4d4d;
             border-radius: 50%;
-            color: #f0f0f0;
-            font-size: 14px;
-            font-weight: bold;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
+            font-family: sans-serif;
             user-select: none;
-            transition: all 0.3s ease;
+            transition: transform 0.2s;
         }}
 
         .try-again-button:hover {{
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: scale(1.1);
+            transform: scale(1.05);
+        }}
+
+        .try-text {{
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            z-index: 1;
         }}
         </style>
     """, height=height)
-
 
 
 
