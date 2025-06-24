@@ -50,13 +50,14 @@ def welcome_page():
         }}
         .title-text {{
             font-size: 21px !important;
-            font-weight: bold;
+            font-family: 'Rubik Mono One', sans-serif;
+            font-weight: 900;
             text-shadow: 4px 4px 15px rgba(0,150,255,0.9);
             color: #B3E5FC;
             margin-bottom: 3px;
             margin-top: 0px;
             padding-bottom: 3px;
-            padding-top: 0px;
+            padding-top: 3px;
 
         }}
         .treble-clef {{
@@ -103,7 +104,7 @@ def welcome_page():
         <div class="container">
             <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
             <p class="title-text">Welcome to our Music Recommendation Experience</p>
-            <div class="time_est"> Estimated time: <strong> 8–10 minutes </strong> </div>
+            <div class="time_est"> ⏱ Estimated time: <strong> 8–10 minutes </strong>  </div>
             <img src="data:image/webp;base64,{music}" class="music-image">
         </div>
         """,
