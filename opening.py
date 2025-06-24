@@ -51,7 +51,7 @@ def opening_page():
         .info-text-secondary {{
             font-size: 17px;
             color: #BBDEFB;
-            font-weight: 550;
+            font-weight: 600;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
             margin-top: 0px;
             margin-bottom: 26px;
