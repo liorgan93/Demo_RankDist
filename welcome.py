@@ -69,7 +69,7 @@ def welcome_page():
             margin-bottom: 0px;
             padding-bottom: 0px;
             height: 50px; 
-            width: 375px;
+            width: 875px;
 
         }}
         @keyframes pulse {{
