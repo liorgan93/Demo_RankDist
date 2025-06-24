@@ -20,7 +20,7 @@ def welcome_page():
     set_background("other images/background.webp")
 
     logo = get_base64_image("other images/logo.jpg")
-    music = get_base64_image("other images/music notes.jpg")
+    music = get_base64_image("other images/music notes.png")
 
     st.markdown(
         f"""
@@ -28,7 +28,7 @@ def welcome_page():
         .container {{
             background: linear-gradient(135deg, rgba(10, 10, 40, 0.98), rgba(20, 20, 60, 0.98));
             border-radius: 20px;
-            padding: 8px;
+            padding: 5px;
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
             text-align: center;
             margin: auto;
@@ -67,7 +67,7 @@ def welcome_page():
         .music-image {{
             margin-bottom: 0px;
             padding-bottom: 0px;
-            height: 100px;
+            height: 70px;
             width: auto;
             object-fit: contain;
 
@@ -112,8 +112,8 @@ def welcome_page():
     st.markdown("""
             <style>
             .st-key-start_button button {
-                width: 125px;
-                height: 125px;
+                width: 115px;
+                height: 115px;
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
