@@ -22,8 +22,10 @@ def persona_reveal_page():
         names = pd.read_csv("playlists_excel/names.csv")
         names_list = names[names["cluster"] == st.session_state.chosen_person_number]["name"].tolist()
         st.session_state.persona = ", ".join(names_list)
-        gender_value = names[names["cluster"] == st.session_state.chosen_person_number]["her/him"].iloc[0]
-        st.session_state.gender_pronoun = gender_value
+        gender_pronoun = names[names["cluster"] == st.session_state.chosen_person_number]["her/him"].iloc[0]
+        gender_possessive = names[names["cluster"] == st.session_state.chosen_person_number]["her/his"].iloc[0]
+        st.session_state.gender_pronoun = gender_pronoun
+        st.session_state.possessive = gender_possessive
 
     st.markdown(
         """

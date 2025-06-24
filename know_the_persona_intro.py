@@ -83,12 +83,13 @@ def know_the_persona_intro_page():
     )
 
     persona_name = st.session_state.persona
-    gender_value = st.session_state.gender_pronoun
+    gender_pronoun = st.session_state.gender_pronoun
+    gender_possessive = st.session_state.possessive
 
     st.markdown(f"""
         <div class="container">
             <div class="header"> Know or Don't Know? </div>
-            <div class="sub-header">Listen to <strong> {persona_name}'s favorite songs </strong> and mark the ones you know. Knowing {gender_value} musical taste will help you recommend songs to {gender_value} later</div>
+            <div class="sub-header">Listen to <strong> {persona_name}'s favorite songs </strong> and mark those you know. Knowing {gender_possessive} musical taste will help you recommend songs to {gender_pronoun} later</div>
             <div> 
             <div class="description">
                 <span class="green-text">Know this song?</span> Tap 💡<br>

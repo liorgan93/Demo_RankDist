@@ -122,7 +122,6 @@ def know_the_persona_page():
             """,
             unsafe_allow_html=True,
         )
-        total_steps = 5
         completed_steps = current_index + 1
 
         st.markdown(
