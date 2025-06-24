@@ -65,10 +65,11 @@ def welcome_page():
             max-width: 100%;
         }}
         .music-image {{
-            min-width: 100%;
-            max-height: 55px;
             margin-bottom: 0px;
             padding-bottom: 0px;
+            height: 100px;
+            width: auto;
+            object-fit: contain;
 
         }}
         @keyframes pulse {{

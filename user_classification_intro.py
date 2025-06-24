@@ -34,8 +34,10 @@ def user_classification_intro_page():
         .header {
             margin-top: 10px;
             font-size: 28px;
-            font-weight: 600;
             color: #ffffff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0,0,0,1);
         }
         .sub-header {
             font-size: 20px;
