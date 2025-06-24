@@ -70,7 +70,7 @@ def welcome_page():
             padding-bottom: 0px;
             height: 50px;
             
-            width: 250px;
+            width: 350px;
             object-fit: contain;
 
         }}
