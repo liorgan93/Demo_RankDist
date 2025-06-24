@@ -43,13 +43,13 @@ def opening_page():
         .info-text-primary {{
             font-size: 20px;
             color: #4DD0E1;
-            font-weight: 700;
+            font-weight: bold;
             text-shadow: 1px 1px 6px rgba(0, 200, 255, 0.5);
             padding-bottom: 10px;
             padding-top: 15px;
         }}
         .info-text-secondary {{
-            font-size: 17px;
+            font-size: 16px;
             color: #BBDEFB;
             font-weight: 550;
             text-shadow: 1px 1px 5px rgba(100, 180, 255, 0.4);
