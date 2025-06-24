@@ -21,7 +21,7 @@ def opening_page():
         .info-container {{
             background: linear-gradient(135deg, rgba(10, 10, 40, 0.99), rgba(20, 20, 60, 0.99));
             border-radius: 20px;
-            padding: 4px 16px;;
+            padding: 4px 6px;;
             box-shadow: 0px 0px 20px rgba(0, 0, 100, 0.8);
             text-align: center;
             margin: auto;
