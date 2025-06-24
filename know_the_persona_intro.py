@@ -89,7 +89,7 @@ def know_the_persona_intro_page():
     st.markdown(f"""
         <div class="container">
             <div class="header"> Know or Don't Know? </div>
-            <div class="sub-header">Listen to <strong style="color: #d29ce6"> {persona_name}'s favorite songs </strong> and mark the ones you know. Knowing {gender_possessive} musical taste will help you recommend songs to {gender_pronoun}</div>
+            <div class="sub-header">Listen to <strong style="color: #d29ce6"> {persona_name}'s favorite songs </strong> and mark the ones you know. Knowing {gender_possessive} musical taste <strong style="color: #d29ce6"> will help you recommend songs to {gender_pronoun}</strong></div>
             <div> 
             <div class="description">
                 <span class="green-text">Know this song?</span> Tap 💡<br>
