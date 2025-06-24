@@ -68,7 +68,7 @@ def welcome_page():
         .music-image {{
             margin-bottom: 0px;
             padding-bottom: 0px;
-            height: 70px;
+            height: 60px;
             
             width: auto;
             object-fit: contain;
