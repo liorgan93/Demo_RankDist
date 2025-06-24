@@ -168,6 +168,7 @@ def welcome_page():
                 margin-left: auto;
                 margin-right: auto;
                 line-height: 1.2;
+                text-align: justify;
             }}
             </style>
             <div class="container-footer-note">
