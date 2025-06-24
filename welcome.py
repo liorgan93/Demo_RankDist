@@ -68,10 +68,8 @@ def welcome_page():
         .music-image {{
             margin-bottom: 0px;
             padding-bottom: 0px;
-            height: 45px;
-            
-            width: 350px;
-            object-fit: contain;
+            height: 45px; 
+            width: 400px;
 
         }}
         @keyframes pulse {{
