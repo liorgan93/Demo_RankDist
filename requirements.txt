@@ -2,12 +2,11 @@ ipython==8.27.0
 matplotlib==3.10.3
 numpy==2.3.1
 pandas==2.3.0
-pyro==3.16
+pyro-ppl==1.9.0
 pytorch_lightning==2.5.2
 scikit_learn==1.7.0
 scipy==1.16.0
 seaborn==0.13.2
-setuptools==75.1.0
 spotlight==3.3.0
 streamlit==1.43.1
 tabulate==0.9.0
