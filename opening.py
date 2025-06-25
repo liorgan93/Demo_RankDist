@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 from user_classification_intro import set_background
-
+from tester_choicer import run_clusters
 
 def get_base64_image(image_path):
     with open(image_path, "rb") as file:
@@ -81,8 +81,8 @@ def opening_page():
     st.markdown("""
         <style>
         .st-key-Next_button button {
-            width: 125px;
-            height: 125px;
+            width: 115px;
+            height: 115px;
             background-color: transparent;
             border: none;
             cursor: pointer;
@@ -105,3 +105,5 @@ def opening_page():
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         st.button("", key="Next_button", on_click=click_button)
+    x = run_clusters()
+    st.markdown(x, unsafe_allow_html=True)
