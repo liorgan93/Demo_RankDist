@@ -189,7 +189,7 @@ def render_song(embed_url: str, idx: int, height=85):
                     document.getElementById("iframe-container{idx}").style.display = "none";
                     document.getElementById("error-msg{idx}").style.display = "flex";
                 }}
-            }}, 4500);
+            }}, 4000);
         }}
 
         function reloadIframe{idx}() {{

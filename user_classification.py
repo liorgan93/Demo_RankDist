@@ -15,7 +15,7 @@ def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
     render_progress_bar("taste match")
     set_background("other images/background.webp")
-    all_songs_df = pd.read_csv('playlists_excel/15_songs_classify.csv')
+    all_songs_df = pd.read_csv('playlists_excel/songs_for_classification.csv')
     max_attempts = 150
     sample_size = 10
     n_clusters = 5
@@ -223,7 +223,7 @@ def user_classification_page():
                     document.getElementById("iframe-container").style.display = "none";
                     document.getElementById("error-msg").style.display = "flex";
                 }}
-            }}, 4500);
+            }}, 4000);
         }}
 
         function reloadIframe() {{

@@ -204,7 +204,7 @@ def know_the_persona_page():
                     document.getElementById("iframe-container").style.display = "none";
                     document.getElementById("error-msg").style.display = "flex";
                 }}
-            }}, 4500);
+            }}, 4000);
         }}
 
         function reloadIframe() {{
