@@ -78,14 +78,14 @@ def user_classification_intro_page():
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
         }
         .red-text {
-            color: #FF4D4D; 
+            color: #ff3239; 
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
         }
         </style>
         <div class="container">
             <div class="header"> Like or Dislike? </div>
-            <div class="sub-header">Let’s start by<strong style="color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.22);"> getting familiar </strong> with your <strong style="color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.22);"> musical taste! </strong> </div>
+            <div class="sub-header">Let’s start by<strong style="color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);"> getting familiar </strong> with your <strong style="color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);"> musical taste! </strong> </div>
             <div class="description">
                 <span class="green-text">Like the song?</span>&nbsp;&nbsp;Tap 👍 <br>
                 <span class="red-text">Not your vibe?</span>&nbsp;&nbsp;Tap 👎
