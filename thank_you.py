@@ -6,8 +6,8 @@ import base64
 
 
 def thank_you_page():
-
     st.set_page_config(page_title="RankDist Demo")
+    st.empty()
     def get_base64_encoded_file(file_path):
         with open(file_path, "rb") as f:
             file_data = f.read()
