@@ -73,7 +73,7 @@ def user_classification_intro_page():
         </style>
         <div class="container">
             <div class="header"> Like or Dislike? </div>
-            <div class="sub-header">Let’s start by<strong style="color: #ddb0f7"> getting familiar </strong> with your <strong style="color: #ddb0f7"> musical taste! </strong> </div>
+            <div class="sub-header">Let’s start by<strong style="color: #e0aaff"> getting familiar </strong> with your <strong style="color: #e0aaff"> musical taste! </strong> </div>
             <div class="description">
                 <span class="green-text">Like the song?</span>&nbsp;&nbsp;Tap 👍 <br>
                 <span class="red-text">Not your vibe?</span>&nbsp;&nbsp;Tap 👎
