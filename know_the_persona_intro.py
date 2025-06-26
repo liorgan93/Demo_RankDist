@@ -69,15 +69,14 @@ def know_the_persona_intro_page():
 
         }
         .description {
-            animation: pulse 3s infinite ease-in-out;
-            font-size: 20px;
-            font-weight: 300;
+            animation: pulse 2s infinite ease-in-out;
+            font-size: 23px;
             margin-top: 14px;
             color: #ffffff;
         }
         @keyframes pulse {
             0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.03); opacity: 0.95; }
+            50% { transform: scale(1.05); opacity: 0.95; }
             100% { transform: scale(1); opacity: 1; }
         }
         .green-text {
@@ -88,7 +87,7 @@ def know_the_persona_intro_page():
         .red-text {
             color: #FF4D4D; 
             font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         }
         </style>
         """,
