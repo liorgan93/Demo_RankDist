@@ -8,6 +8,7 @@ from other_functions import render_song
 
 def ordered_list_choose_page():
     st.set_page_config(page_title="RankDist Demo")
+    st.empty()
     render_progress_bar("recommend songs")
     set_background("other images/background.webp")
 
