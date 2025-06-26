@@ -13,6 +13,7 @@ def user_classification_intro_page():
         """
         <style>
         .container {
+            animation: fadeIn 0.7s ease-out both;
             background: linear-gradient(135deg, rgba(42, 91, 168, 0.98), rgba(76, 130, 199, 0.97), rgba(59, 111, 179, 0.98));
             color: white;
             border-radius: 25px;
@@ -23,7 +24,13 @@ def user_classification_intro_page():
             max-width: 400px;
             margin: auto;
             font-family: 'Poppins', sans-serif;
+
         }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         .block-container {
             padding-top: 5px !important;
             margin-top: 5px !important;
@@ -49,11 +56,17 @@ def user_classification_intro_page():
 
         }
         .description {
+            animation: pulse 3s infinite ease-in-out;
             font-size: 22px;
             font-weight: 300;
             margin-top: 14px;
             margin-bottom: 10px;
             color: #ffffff;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.95; }
+            100% { transform: scale(1); opacity: 1; }
         }
         .footer {
             font-size: 16px;
@@ -61,19 +74,19 @@ def user_classification_intro_page():
             color: #ffffff;
         }
         .green-text {
-            color: #50c878;
+            color: #32ff3e;
             font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.95);
         }
         .red-text {
-            color: #FF1A1A; 
+            color: #FF4D4D; 
             font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.95);
         }
         </style>
         <div class="container">
             <div class="header"> Like or Dislike? </div>
-            <div class="sub-header">Let’s start by<strong style="color: #8e3ab7"> getting familiar </strong> with your <strong style="color: #8e3ab7"> musical taste! </strong> </div>
+            <div class="sub-header">Let’s start by<strong style="color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.22);"> getting familiar </strong> with your <strong style="color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.22);"> musical taste! </strong> </div>
             <div class="description">
                 <span class="green-text">Like the song?</span>&nbsp;&nbsp;Tap 👍 <br>
                 <span class="red-text">Not your vibe?</span>&nbsp;&nbsp;Tap 👎
