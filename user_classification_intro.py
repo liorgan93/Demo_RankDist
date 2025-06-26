@@ -66,7 +66,7 @@ def user_classification_intro_page():
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
         }
         .red-text {
-            color: #FF4747; 
+            color: #FF1A1A; 
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
         }
