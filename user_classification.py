@@ -13,6 +13,7 @@ def button_click_problem():
 
 def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
+    st.empty()
     if not st.session_state.problem:
         render_progress_bar("taste match")
     set_background("other images/background.webp")

@@ -102,8 +102,8 @@ def relevant_set_compare_recommendations_page():
         """
         <style>
         .block-container {
-            padding-top: 40px !important;
-            padding-bottom: 0px !important;
+            padding-top: 5px !important;
+            margin-top: 5px !important;
         }
         .title-text {
             text-align: center;
@@ -193,4 +193,5 @@ def relevant_set_compare_recommendations_page():
     with col2:
         if st.button("Next!", key="next-btn", use_container_width=True):
             st.session_state.page = "thank_you"
+            st.empty()
             st.rerun()

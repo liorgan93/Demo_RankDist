@@ -111,14 +111,14 @@ def persona_reveal_page():
     .stButton button {
         width: 70%;
         font-size: 18px;
-        padding: 12px;
+        padding: 8px;
         border-radius: 15px;
         background-color: #800080;
         color: white;
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        margin-top: -15px; !important;
+        margin-top: -10px; !important;
     }
 
         .stButton button:hover {
@@ -161,20 +161,22 @@ def persona_reveal_page():
         """
         <style>
         .header-small {
-            font-size: 17px;      
+            font-size: 17px;
             font-weight: 700;
             color: #FFFFFF;
             background: linear-gradient(90deg,
-              #1f3ba6 0%,
-              #324fba 45%,
-              #2c44a3 100%);
-            padding: 10px 12px;     
+                #2748c0 0%,    
+                #3556cc 20%,  
+                #3a60d6 45%,  
+                #3555be 70%,    
+                #2748c0 100%); 
+            padding: 10px 12px;
             border-radius: 15px;
-            text-align: center;     
+            text-align: center;
             width: 90%;
             display: block;
         }
-        </style>
+    </style>
         """,
         unsafe_allow_html=True,
     )

@@ -15,6 +15,7 @@ def click_perfect_precision():
 
 def method_choose_page():
     st.set_page_config(page_title="RankDist Demo")
+    st.empty()
     render_progress_bar("recommend songs")
     set_background("other images/background.webp")
 

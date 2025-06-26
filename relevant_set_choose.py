@@ -19,15 +19,14 @@ def relevant_set_choose_page():
                 }
             </style>
         """, unsafe_allow_html=True)
+
     set_background("other images/background.webp")
 
-    csv_file_path = "playlists_excel/top_k_songs.csv"
-    songs_data = pd.read_csv(csv_file_path)
     persona_name = st.session_state.persona
     persona_number = st.session_state.chosen_person_number
     cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
     if os.path.exists(cluster_file_path):
-        cluster_data = pd.read_csv(cluster_file_path)
+        songs_data = pd.read_csv(cluster_file_path)
 
     st.markdown("""
     <style>
@@ -178,7 +177,7 @@ def relevant_set_choose_page():
 
         col_next = st.columns([0.15, 0.7, 0.15])
         with col_next[1]:
-            selected_songs = st.multiselect("", songs_data["song"].tolist(), max_selections=3)
+            selected_songs = st.multiselect("", songs_data["relevant_set_songs"].tolist(), max_selections=3)
 
         col_next = st.columns([1, 1, 1])
         with col_next[1]:
@@ -214,9 +213,9 @@ def relevant_set_choose_page():
 
 
     cols = st.columns(3, gap="small")
-    for idx, row in cluster_data.iterrows():
-        song_name = row["perfect_precision_songs"]
-        track_url = row["perfect_precision_songs_links"]
+    for idx, row in songs_data.iterrows():
+        song_name = row["relevant_set_songs"]
+        track_url = row["relevant_set_songs_links"]
 
         if "track/" in track_url:
             track_id = track_url.split("track/")[-1].split("?")[0]

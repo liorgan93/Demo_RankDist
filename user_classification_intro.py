@@ -169,7 +169,7 @@ def user_classification_intro_page():
 
     typewriter_html_safe_chars(
         f"Let’s start by<strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);'> getting familiar </strong> with your <strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);'> musical taste! </strong>",
-        speed=20
+        speed=23
     )
 
 

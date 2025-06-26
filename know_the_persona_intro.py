@@ -159,5 +159,5 @@ def know_the_persona_intro_page():
 
     typewriter_html_safe_chars(
         f"Listen to <strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0,0,0,0.28);'>{persona_name}'s favorite songs</strong> and mark those you know. Knowing {gender_possessive} musical taste <strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0,0,0,0.28);'>will help you recommend songs later</strong>",
-        speed=20
+        speed=23
     )

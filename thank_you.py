@@ -7,6 +7,10 @@ import base64
 
 def thank_you_page():
     st.set_page_config(page_title="RankDist Demo")
+    page_clearer = st.empty()
+    page_clearer.markdown(
+        "<style>html,body{background:#fff;}</style>",
+        unsafe_allow_html=True)
     def get_base64_encoded_file(file_path):
         with open(file_path, "rb") as f:
             file_data = f.read()
