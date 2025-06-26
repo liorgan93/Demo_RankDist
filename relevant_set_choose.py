@@ -9,7 +9,6 @@ from other_functions import render_song
 
 def relevant_set_choose_page():
     st.set_page_config(page_title="RankDist Demo", layout="wide")
-    st.empty()
     render_progress_bar("recommend songs")
     st.markdown("""
             <style>

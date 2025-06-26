@@ -54,6 +54,7 @@ def typewriter_html_safe_chars(full_html_text: str, speed: float = 30.0):
 def user_classification_intro_page():
     st.set_page_config(page_title="RankDist Demo")
     st.empty()
+    st.session_state.problem = False
     render_progress_bar("taste match")
     set_background("other images/background.webp")
 

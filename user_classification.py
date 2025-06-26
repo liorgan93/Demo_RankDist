@@ -13,13 +13,15 @@ def button_click_problem():
 
 def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
-    render_progress_bar("taste match")
+    if not st.session_state.problem:
+        render_progress_bar("taste match")
     set_background("other images/background.webp")
     all_songs_df = pd.read_csv('playlists_excel/songs_for_classification.csv')
     max_attempts = 150
     sample_size = 10
     n_clusters = 5
     sample = None
+
     if "song_feedback" not in st.session_state:
         st.session_state.song_feedback = []
     if "current_song_index" not in st.session_state:
@@ -43,6 +45,7 @@ def user_classification_page():
     if "songs_df" not in st.session_state:
         st.session_state.songs_df = sample
     current_index = st.session_state.current_song_index
+
     if current_index < len(st.session_state.songs_df):
         st.session_state.button_clicked = False
         song_title = st.session_state.songs_df.loc[current_index, 'name']
@@ -307,11 +310,11 @@ def user_classification_page():
                 max-width: 500px;
                 font-family: 'Segoe UI', sans-serif;
             ">
-                <h4 style="margin-top: 0; color: #dddddd;">Oops! A minor technical issue happened 🛠️</h4>
-                <p style="font-size: 16px;">
+                <p style="margin-top: 0; color: #dddddd; font-size:22px;">Oops! A minor technical issue happened 🛠️</p>
+                <p style="font-size: 15px;">
                     Due to a technical issue, we couldn’t save your song feedback.<br>
-                    We’re sorry about that! You’ll be taken back to the start of the rating process.<br>
-                    Thanks for your patience — we really appreciate it!
+                    We’re sorry about that - We’ll restart the rating process for you.<br>
+                    Thanks for your patience!
                 </p>
             </div>
         </div>
@@ -324,7 +327,8 @@ def user_classification_page():
                 st.session_state.song_feedback.append([1])
                 st.session_state.current_song_index += 1
                 if st.session_state.current_song_index >= len(st.session_state.songs_df):
-                    if len(st.session_state.song_feedback) > 10:
+                    if len(st.session_state.song_feedback) != 10:
+                        st.session_state.problem = True
                         st.markdown(problem_msg, unsafe_allow_html=True)
                         col1, col2, col3 = st.columns([1, 1, 1])
                         with col2:
@@ -339,7 +343,8 @@ def user_classification_page():
                 st.session_state.song_feedback.append([0])
                 st.session_state.current_song_index += 1
                 if st.session_state.current_song_index >= len(st.session_state.songs_df):
-                    if len(st.session_state.song_feedback) > 10:
+                    if len(st.session_state.song_feedback) != 10:
+                        st.session_state.problem = True
                         st.markdown(problem_msg, unsafe_allow_html=True)
                         col1, col2, col3 = st.columns([1, 1, 1])
                         with col2:
