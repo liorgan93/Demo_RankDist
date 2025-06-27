@@ -73,7 +73,7 @@ def know_the_persona_intro_page():
                 text-align: center;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 max-width: 450px;
-                min-height: 288px;
+                min-height: 285px;
                 margin: auto;
                 font-family: 'Poppins', sans-serif;
                 margin-top: -20px !important;
@@ -88,7 +88,7 @@ def know_the_persona_intro_page():
                 to {{ opacity: 1; transform: translateY(0); }}
             }}
             .header {{
-                margin-top: 8px;
+                margin-top: 6px;
                 font-size: 28px;
                 color: #ffffff;
                 font-family: 'Bebas Neue', sans-serif;
