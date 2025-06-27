@@ -77,8 +77,8 @@ def thank_you_page():
             }
             .logo-img {{
               animation: glow 2.5s ease-in-out infinite, pulse 2.5s ease-in-out infinite;
-              width: 170px; 
-              height: 80px; 
+              width: 113px; 
+              height: 53px; 
               margin-bottom: 3px;
         }}
         </style>
@@ -88,7 +88,7 @@ def thank_you_page():
     logo = get_base64_image("other images/logo.jpg")
     st.markdown(f"""
     <div class="thank-you-container">
-        <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
+        <img src="data:image/webp;base64,{logo}" class="logo-image">
         <div class="thank-you-title">
             Thank You for Participating!
         </div>
