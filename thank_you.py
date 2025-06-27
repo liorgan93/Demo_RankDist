@@ -29,7 +29,7 @@ def thank_you_page():
                 padding-bottom: 0px !important;
                 margin-bottom: 0px !important;
                 margin-top: 0px !important;
-                padding-top: 50px !important;
+                padding-top: 40px !important;
             }
 
             .thank-you-container {
