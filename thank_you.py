@@ -87,8 +87,8 @@ def thank_you_page():
     logo = get_base64_image("other images/logo.jpg")
     st.markdown(f"""
     <div class="thank-you-container">
-        <img src="data:image/webp;base64,{logo}" class="logo-image">
-        <div class="thank-you-title">
+        <img class="logo-image" src="data:image/webp;base64,{logo}" class="logo-image">
+        <div class="thank-you-titlew">
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
