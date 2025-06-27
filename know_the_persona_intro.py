@@ -88,7 +88,7 @@ def know_the_persona_intro_page():
                 to {{ opacity: 1; transform: translateY(0); }}
             }}
             .header {{
-                margin-top: 10px;
+                margin-top: 8px;
                 font-size: 28px;
                 color: #ffffff;
                 font-family: 'Bebas Neue', sans-serif;
