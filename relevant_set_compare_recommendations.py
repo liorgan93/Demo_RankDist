@@ -104,6 +104,8 @@ def relevant_set_compare_recommendations_page():
         .block-container {
             padding-top: 5px !important;
             margin-top: 5px !important;
+            margin-bottom: 0px: !important;
+            padding-bottom: 0px !important;
         }
         .title-text {
             text-align: center;

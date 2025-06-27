@@ -103,6 +103,8 @@ def perfect_precision_compare_recommendations_page():
         .block-container {
             padding-top: 5px !important;
             margin-top: 5px !important;
+            margin-bottom: 0px: !important;
+            padding-bottom: 0px !important;
         }
         .title-text {
             text-align: center;
@@ -142,7 +144,7 @@ def perfect_precision_compare_recommendations_page():
         st.markdown(html_table(comparison_df), unsafe_allow_html=True)
 
 
-    st.markdown(f"<div style='text-align:center; font-size:14px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[1]}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center; font-size:13px; margin-top:-5px !important;'>🧍<b>Your Score:</b> {user_score[1]} &nbsp;&nbsp;&nbsp;🤖<b>RankDist Score:</b> {alg_score[1]}</div>", unsafe_allow_html=True)
 
     user_win_msg = "You won 🏆 — your intuition beat the algorithm!"
     algo_win_msg = "The RankDist algorithm won 🏆 — looks like it can mimic and even surpass human intuition!"
