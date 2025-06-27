@@ -46,7 +46,7 @@ def thank_you_page():
                 font-weight: 1000;
                 color: blue;
                 padding: 0 4px;
-                margin-bottom: 15px;
+                margin-bottom: 18px;
                 margin-top: 8px;
                 letter-spacing: 0.7px;
             }
