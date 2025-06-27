@@ -76,9 +76,8 @@ def thank_you_page():
                 transform: scale(1.05);
             }
             .logo-img {{
-              animation: glow 2.5s ease-in-out infinite, pulse 2.5s ease-in-out infinite;
               width: 113px; 
-              height: 53px; 
+              height: 530px; 
               margin-bottom: 3px;
         }}
         </style>
