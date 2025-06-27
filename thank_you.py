@@ -47,7 +47,7 @@ def thank_you_page():
                 color: blue;
                 padding: 0 4px;
                 margin-bottom: 15px;
-                margin-top: 5px;
+                margin-top: 8px;
                 letter-spacing: 0.7px;
             }
 
