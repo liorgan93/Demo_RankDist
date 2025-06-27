@@ -73,9 +73,9 @@ def welcome_page():
 
         }}
         @keyframes pulse {{
-          0% {{ transform: scale(1); }}
-          50% {{ transform: scale(1.05); }}
-          100% {{ transform: scale(1); }}
+          0% {{ transform: scale(0.97); }}
+          50% {{ transform: scale(1.07); }}
+          100% {{ transform: scale(0.97); }}
         }}
         
         @keyframes glow {{

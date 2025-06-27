@@ -3,6 +3,7 @@ import time
 import streamlit as st
 from user_classification_intro import set_background
 import base64
+from other_functions import get_base64_image
 
 
 def thank_you_page():
@@ -74,13 +75,20 @@ def thank_you_page():
             .download-button a:hover {
                 transform: scale(1.05);
             }
+            .logo-img {{
+              animation: glow 2.5s ease-in-out infinite, pulse 2.5s ease-in-out infinite;
+              width: 170px; 
+              height: 80px; 
+              margin-bottom: 3px;
+        }}
         </style>
         """,
         unsafe_allow_html=True
     )
-
+    logo = get_base64_image("other images/logo.jpg")
     st.markdown(f"""
     <div class="thank-you-container">
+        <img class="logo-img" src="data:image/webp;base64,{logo}" class="logo-image">
         <div class="thank-you-title">
             Thank You for Participating!
         </div>
