@@ -77,9 +77,9 @@ def thank_you_page():
             }
             .logo-img {
               width: 113px; 
-              height: 530px; 
+              height: 130px; 
               margin-bottom: 3px;
-        }
+            }
         </style>
         """,
         unsafe_allow_html=True
@@ -92,7 +92,7 @@ def thank_you_page():
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
-            le hope you enjoyed the demo! </br>
+            we hope you enjoyed the demo! </br>
             Curious about the RankDist algorithm? Feel free to download the paper below!
         </div>
         <div class="download-button">
