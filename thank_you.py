@@ -92,7 +92,7 @@ def thank_you_page():
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
-            We hope you enjoyed the demo! </br>
+            le hope you enjoyed the demo! </br>
             Curious about the RankDist algorithm? Feel free to download the paper below!
         </div>
         <div class="download-button">
