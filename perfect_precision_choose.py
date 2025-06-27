@@ -131,10 +131,10 @@ def perfect_precision_choose_page():
         }
 
         .text_choose {
-            font-size: 23px;
+            font-size: 20px;
             font-weight: bold;
             padding-top: 0px !important;
-            line-height: 1.2;
+            line-height: 1.15;
         }
 
         .notice-text {
