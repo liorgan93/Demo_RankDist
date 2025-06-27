@@ -87,12 +87,12 @@ def thank_you_page():
     logo = get_base64_image("other images/logo.jpg")
     st.markdown(f"""
     <div class="thank-you-container">
-        <img class="logo-image" src="data:image/webp;base64,{logo}" class="logo-image">
+        <img style="width: 113px;height: 130px;" src="data:image/webp;base64,{logo}">
         <div class="thank-you-title">
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
-            we hope you enjoyed the demo! </br>
+            le hope you enjoyed the demo! </br>
             Curious about the RankDist algorithm? Feel free to download the paper below!
         </div>
         <div class="download-button">
