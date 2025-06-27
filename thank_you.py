@@ -43,7 +43,7 @@ def thank_you_page():
             .thank-you-title {
                 font-family: 'Cormorant Garamond', serif;
                 font-size: 28px;
-                font-weight: bold;
+                font-weight: 1000;
                 color: blue;
                 padding: 0 4px;
                 margin-bottom: 15px;
@@ -92,7 +92,7 @@ def thank_you_page():
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
-            le hope you enjoyed the demo! </br>
+            we hope you enjoyed the demo! </br>
             Curious about the RankDist algorithm? Feel free to download the paper below!
         </div>
         <div class="download-button">
