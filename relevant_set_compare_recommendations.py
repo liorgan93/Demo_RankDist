@@ -47,7 +47,6 @@ def html_table(df):
             font-weight: 600;
             padding: 6px 8px;
             border: 1px solid #2b2d38;
-            text-overflow: ellipsis;         
             overflow: hidden;
             white-space: nowrap;
         }}

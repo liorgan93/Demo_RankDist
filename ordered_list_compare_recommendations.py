@@ -24,7 +24,6 @@ def calculate_score(predicted_items, true_items):
 def html_table(df):
     html = f"""
     <style>
-        /* טבלת רקע כהה – כמו בקוד המקורי */
         .dark-table {{
             width: 100%;
             table-layout: fixed;
@@ -38,7 +37,6 @@ def html_table(df):
             color: #e6e8f1;
         }}
 
-        /* כותרות עמודות (כולל עמודת המספור) */
         .dark-table th {{
             background: linear-gradient(135deg, #29314f 0%, #1d243c 100%);
             color: #ffffff;
@@ -48,19 +46,16 @@ def html_table(df):
             border: none;
         }}
 
-        /* תוכן תאים רגיל */
         .dark-table td {{
             background-color: #0f111a;
             font-size: 10px;
             font-weight: 600;
             padding: 6px 8px;
             border: 1px solid #2b2d38;
-            text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
         }}
 
-        /* עמודת המספור – עיצוב מעט שונה כדי להבדיל */
         .dark-table th.row-num,
         .dark-table td.row-num {{
             width: 6%;
@@ -70,7 +65,6 @@ def html_table(df):
             font-weight: 600;
         }}
 
-        /* הדגשת שורה במעבר עכבר */
         .dark-table tr:hover td {{
             background-color: #1a1d29;
         }}
