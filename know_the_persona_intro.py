@@ -73,7 +73,7 @@ def know_the_persona_intro_page():
                 text-align: center;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 max-width: 450px;
-                min-height: 276px;
+                min-height: 280px;
                 margin: auto;
                 font-family: 'Poppins', sans-serif;
                 margin-top: -20px !important;
