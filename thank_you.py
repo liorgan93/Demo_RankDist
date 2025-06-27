@@ -75,11 +75,11 @@ def thank_you_page():
             .download-button a:hover {
                 transform: scale(1.05);
             }
-            .logo-img {{
+            .logo-img {
               width: 113px; 
               height: 530px; 
               margin-bottom: 3px;
-        }}
+        }
         </style>
         """,
         unsafe_allow_html=True
