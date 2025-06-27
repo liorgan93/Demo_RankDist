@@ -17,34 +17,43 @@ def html_table(df):
     <style>
         .dark-table {{
             width: 100%;
+            table-layout: fixed;
             border-collapse: collapse;
             margin: 0 auto;
             font-family: 'Segoe UI', sans-serif;
-            color: #e5e5e5;
-            background-color: #000000;
-            border: 1px solid #333;
+
+            background-color: #0f111a;      
+            border: 1px solid #2b2d38;       
             border-radius: 8px;
-            overflow: hidden;
-            text-align: left;
-            table-layout: fixed;
+            overflow: hidden;                
+            color: #e6e8f1;                
         }}
-        .dark-table th, .dark-table td {{
-            border: 1px solid #444;
-            padding: 5px;
+
+        .dark-table th {{
+            background: linear-gradient(135deg, #29314f 0%, #1d243c 100%);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px;
+            border: none;                   
+        }}
+
+        .dark-table td {{
+            background-color: #0f111a;        
             font-size: 10px;
             font-weight: 600;
-            width: calc(100% / {df.shape[1]});
+            padding: 6px 8px;
+            border: 1px solid #2b2d38;
+            text-overflow: ellipsis;         
+            overflow: hidden;
+            white-space: nowrap;
         }}
-        .dark-table th {{
-            background-color: #1f1f2e;
-            color: #aaaaaa;
-            font-size: 11px;
-            font-weight: bold;
-        }}
-        .dark-table tr {{
-            background-color: #000000;
+
+        .dark-table tr:hover td {{
+            background-color: #1a1d29;
         }}
     </style>
+
     <table class="dark-table">
         <thead>
             <tr>

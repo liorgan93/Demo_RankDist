@@ -22,62 +22,77 @@ def calculate_score(predicted_items, true_items):
 
 
 def html_table(df):
-    num_data_cols = df.shape[1]
     html = f"""
     <style>
+        /* טבלת רקע כהה – כמו בקוד המקורי */
         .dark-table {{
             width: 100%;
+            table-layout: fixed;
             border-collapse: collapse;
             margin: 0 auto;
             font-family: 'Segoe UI', sans-serif;
-            color: #e5e5e5;
-            background-color: #000000;
-            border: 1px solid #333;
+            background-color: #0f111a;
+            border: 1px solid #2b2d38;
             border-radius: 8px;
             overflow: hidden;
-            text-align: left;
-            table-layout: fixed;
+            color: #e6e8f1;
         }}
-        .dark-table th, .dark-table td {{
-            border: 1px solid #444;
-            padding: 5px;
+
+        /* כותרות עמודות (כולל עמודת המספור) */
+        .dark-table th {{
+            background: linear-gradient(135deg, #29314f 0%, #1d243c 100%);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px;
+            border: none;
+        }}
+
+        /* תוכן תאים רגיל */
+        .dark-table td {{
+            background-color: #0f111a;
             font-size: 10px;
             font-weight: 600;
+            padding: 6px 8px;
+            border: 1px solid #2b2d38;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }}
-        .dark-table th {{
-            background-color: #1f1f2e;
-            color: #aaaaaa;
-            font-size: 11px;
-            font-weight: bold;
-        }}
-        .dark-table td.index-col {{
-            width: 7%;
-            color: #777;
-            font-weight: normal;
+
+        /* עמודת המספור – עיצוב מעט שונה כדי להבדיל */
+        .dark-table th.row-num,
+        .dark-table td.row-num {{
+            width: 6%;
             text-align: center;
+            background-color: #1a1d29;
+            color: #9aa0b5;
+            font-weight: 600;
         }}
-        .dark-table td.data-col {{
-            width: calc(93% / {num_data_cols});
-        }}
-        .dark-table th.data-col {{
-            width: calc(93% / {num_data_cols});
+
+        /* הדגשת שורה במעבר עכבר */
+        .dark-table tr:hover td {{
+            background-color: #1a1d29;
         }}
     </style>
+
     <table class="dark-table">
         <thead>
             <tr>
-                <th></th>
+                <th class="row-num">#</th>
     """
 
+    # כותרות הנתונים
     for col in df.columns:
-        html += f"<th class='data-col'>{col}</th>"
+        html += f"<th>{col}</th>"
     html += "</tr></thead><tbody>"
 
-    for idx, row in df.iterrows():
+    # שורות הטבלה + מספור
+    for i, (_, row) in enumerate(df.iterrows(), start=1):
         html += "<tr>"
-        html += f"<td class='index-col'>{idx}</td>"
+        html += f"<td class='row-num'>{i}</td>"
         for val in row:
-            html += f"<td class='data-col'>{val}</td>"
+            html += f"<td>{val}</td>"
         html += "</tr>"
 
     html += "</tbody></table>"
@@ -85,18 +100,10 @@ def html_table(df):
 
 
 
+
 def ordered_list_compare_recommendations_page():
     st.set_page_config(page_title="RankDist Demo")
     render_progress_bar("results")
-    st.markdown("""
-            <style>
-                .progress-bar-wrapper{
-                    max-width: 700px;   /* שנה לפי הצורך */
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            </style>
-        """, unsafe_allow_html=True)
     set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice
