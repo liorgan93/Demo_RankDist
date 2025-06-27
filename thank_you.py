@@ -78,7 +78,7 @@ def thank_you_page():
             .logo-img {
               width: 113px; 
               height: 130px; 
-              margin-bottom: 3px;
+              margin-bottom: 50px;
             }
         </style>
         """,
@@ -88,7 +88,7 @@ def thank_you_page():
     st.markdown(f"""
     <div class="thank-you-container">
         <img class="logo-image" src="data:image/webp;base64,{logo}" class="logo-image">
-        <div class="thank-you-titlew">
+        <div class="thank-you-title">
             Thank You for Participating!
         </div>
         <div class="thank-you-message">
