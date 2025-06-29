@@ -69,14 +69,19 @@ def know_the_persona_intro_page():
                 background: linear-gradient(135deg, rgba(42, 91, 168, 0.97), rgba(76, 130, 199, 0.98), rgba(59, 111, 179, 0.98));
                 color: white;
                 border-radius: 25px;
-                padding: 15px;
+                padding: 8px;
                 text-align: center;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 max-width: 450px;
-                min-height: 285px;
+                min-height: 275px;
                 margin: auto;
                 font-family: 'Poppins', sans-serif;
                 margin-top: -20px !important;
+            }}
+            .container * {{
+                position: relative;
+                z-index: 1;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
             }}
             .block-container {{
                 padding-top: 5px !important;
@@ -158,6 +163,6 @@ def know_the_persona_intro_page():
         st.button("", key="lets_go", on_click=handle_start_click)
 
     typewriter_html_safe_chars(
-        f"Listen to <strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0,0,0,0.28);'>{persona_name}'s favorite songs</strong> and mark those you know. Knowing {gender_possessive} musical taste <strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0,0,0,0.28);'>will help you recommend songs later</strong>",
+        f"Listen to <strong style='color: #df73ff; text-shadow: 1px 1px 3px rgba(0,0,0,0.55);'>{persona_name}'s favorite songs</strong> and mark those you know. Knowing {gender_possessive} musical taste <strong style='color: #df73ff; text-shadow: 1px 1px 3px rgba(0,0,0,0.55);'>will help you recommend songs later</strong>",
         speed=23
     )

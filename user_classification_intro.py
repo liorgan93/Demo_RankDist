@@ -70,11 +70,10 @@ def user_classification_intro_page():
         <style>
         .container {{
             animation: fadeIn 0.7s ease-out both;
-            background: linear-gradient(135deg, rgba(42, 91, 168, 0.98), rgba(76, 130, 199, 0.97), rgba(59, 111, 179, 0.98));
+            background: linear-gradient(135deg, rgba(42, 91, 168, 0.97), rgba(76, 130, 199, 0.98), rgba(59, 111, 179, 0.98));
             color: white;
             border-radius: 25px;
             padding: 8px;
-            padding-bottom: 15px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             max-width: 400px;
@@ -83,6 +82,11 @@ def user_classification_intro_page():
             font-family: 'Poppins', sans-serif;
             margin-top: -20px !important;
             
+        }}
+        .container * {{
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
         }}
         .block-container {{
                 padding-top: 5px !important;
@@ -168,7 +172,7 @@ def user_classification_intro_page():
         st.button("", key="lets_go", on_click=handle_start_click)
 
     typewriter_html_safe_chars(
-        f"Let’s start by<strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);'> getting familiar </strong> with your <strong style='color: #e64bff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);'> musical taste! </strong>",
+        f"Let’s start by<strong style='color: #df73ff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);'> getting familiar </strong> with your <strong style='color: #df73ff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);'> musical taste! </strong>",
         speed=23
     )
 

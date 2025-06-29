@@ -205,8 +205,9 @@ def ordered_list_compare_recommendations_page():
                  {regular_part.strip()}
              </div>
          </div>
-         <div style="color: white; font-size: 14px; font-style: italic; margin-top: 0px; margin-bottom: 5px;">
-         * Score calculated using nDCG
+         <div style="color: white; font-size: 13px; font-style: italic; margin-top: 0px; margin-bottom: 5px; line-height: 1.1;">
+         * RankDist algorithm optimized DCG in expectation <br>
+         * Score calculated using nDCG for convenience
          </div>
          """
         st.markdown(html, unsafe_allow_html=True)

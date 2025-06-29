@@ -198,6 +198,22 @@ def ordered_list_choose_page():
 
             if st.session_state.error_msg:
                 st.error(st.session_state.error_msg)
+        st.markdown("""
+                <style>
+                div[data-testid="stAlert"]{
+                    background-color: #C62828 !important;   
+                    padding-top: 0px !important;
+                    padding-bottom: 0px !important;
+                    margin-top: 0px !important;
+                    margin-bottom: 0px !important;
+                }
+                div[data-testid="stAlert"] p {
+                    text-align: center; !important;
+                    font-weight: 700 !important; 
+                }
+
+                </style>
+                """, unsafe_allow_html=True)
 
         st.markdown("""
             <div style="width: 100%; text-align: center; margin-top: 0px; margin-bottom: 25px;">
