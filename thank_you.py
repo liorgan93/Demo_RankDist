@@ -1,9 +1,6 @@
-import time
-
 import streamlit as st
 from user_classification_intro import set_background
-import base64
-from other_functions import get_base64_image
+from other_functions import get_base64_encoded_file
 
 
 def thank_you_page():
@@ -12,10 +9,7 @@ def thank_you_page():
     page_clearer.markdown(
         "<style>html,body{background:#fff;}</style>",
         unsafe_allow_html=True)
-    def get_base64_encoded_file(file_path):
-        with open(file_path, "rb") as f:
-            file_data = f.read()
-            return base64.b64encode(file_data).decode()
+
 
     set_background("other images/thank_you background.webp")
     file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"

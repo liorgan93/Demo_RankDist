@@ -1,15 +1,12 @@
 import streamlit as st
 import base64
 from user_classification_intro import set_background
+from other_functions import get_base64_encoded_file
 
 
 if "page" not in st.session_state:
     st.session_state.page = "welcome"
 
-
-def get_base64_image(image_path):
-    with open(image_path, "rb") as file:
-        return base64.b64encode(file.read()).decode()
 
 def welcome_page():
     st.set_page_config(page_title="RankDist Demo")
@@ -19,8 +16,8 @@ def welcome_page():
 
     set_background("other images/background.webp")
 
-    logo = get_base64_image("other images/logo.jpg")
-    music = get_base64_image("other images/music notes.png")
+    logo = get_base64_encoded_file("other images/logo.jpg")
+    music = get_base64_encoded_file("other images/music notes.png")
 
     st.markdown(
         f"""
@@ -108,7 +105,7 @@ def welcome_page():
         """,
         unsafe_allow_html=True,
     )
-    start = get_base64_image("other images/start.jpg")
+    start = get_base64_encoded_file("other images/start.jpg")
     st.markdown("""
             <style>
             .st-key-start_button button {

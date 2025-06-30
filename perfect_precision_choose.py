@@ -6,7 +6,6 @@ from other_functions import render_progress_bar
 from other_functions import render_song
 
 
-
 def perfect_precision_choose_page():
     st.set_page_config(page_title="RankDist Demo", layout="wide")
     render_progress_bar("recommend songs")

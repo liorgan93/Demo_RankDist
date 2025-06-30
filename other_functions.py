@@ -2,6 +2,7 @@ import streamlit as st
 import base64
 import streamlit.components.v1 as components
 
+# Renders a visual progress bar, highlighting the current step.
 def render_progress_bar(current_step, top_pad=55):
     steps = ['taste match',
              'meet the persona',
@@ -124,12 +125,13 @@ def set_background(image_file):
         """
         st.markdown(page_background, unsafe_allow_html=True)
 
-
-def get_base64_image(image_path):
+# Encodes an image file to a base64 string for embedding in HTML.
+def get_base64_encoded_file(image_path):
     with open(image_path, "rb") as file:
         return base64.b64encode(file.read()).decode()
 
 
+# Embeds a Spotify song in an iframe with a loader.
 def render_song(embed_url: str, idx: int, height=85):
     st.components.v1.html(f"""
         <!-- Loader -->

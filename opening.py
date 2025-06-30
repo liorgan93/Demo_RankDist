@@ -1,15 +1,12 @@
 import streamlit as st
 import base64
 from user_classification_intro import set_background
-
-def get_base64_image(image_path):
-    with open(image_path, "rb") as file:
-        return base64.b64encode(file.read()).decode()
+from other_functions import get_base64_encoded_file
 
 
 def opening_page():
     st.set_page_config(page_title="RankDist Demo")
-    image_base64 = get_base64_image("other images/RankDist_VS_Human.jpg")
+    image_base64 = get_base64_encoded_file("other images/RankDist_VS_Human.jpg")
     def click_button():
         st.session_state.page = "user_classification_intro"
 

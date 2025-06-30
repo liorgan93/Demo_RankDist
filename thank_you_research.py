@@ -1,7 +1,6 @@
 import streamlit as st
 from user_classification_intro import set_background
-import time
-import base64
+from other_functions import base64
 
 
 def thank_you_research():

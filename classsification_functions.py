@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+# Samples up to `n` unique tracks per cluster, avoiding repeated tracks and artists
 def sample_unique_tracks_per_cluster(df, cluster_col='cluster', track_col='track_id', artist_col='artist', n=2):
     sampled_tracks = []
     used_track_ids = set()
@@ -38,7 +39,7 @@ def sample_unique_tracks_per_cluster(df, cluster_col='cluster', track_col='track
 
 
 
-
+# Classifies a user to the best-matching cluster based on preferences for liked/disliked items
 def classify_user_by_preferences(df, like_dislike_col='like/dislike', weights_col='weights'):
     if like_dislike_col not in df.columns or weights_col not in df.columns:
         raise ValueError(f"DataFrame must contain '{like_dislike_col}' and '{weights_col}' columns.")

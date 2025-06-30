@@ -1,5 +1,5 @@
 import streamlit as st
-from other_functions import get_base64_image
+from other_functions import get_base64_encoded_file
 from other_functions import render_progress_bar
 from other_functions import set_background
 
@@ -19,9 +19,9 @@ def method_choose_page():
     render_progress_bar("recommend songs")
     set_background("other images/background.webp")
 
-    perfect_precision = get_base64_image("other images/perfect_precision.jpg")
-    relevant_set = get_base64_image("other images/relevant_set.jpg")
-    ordered_list = get_base64_image("other images/ordered_list.jpg")
+    perfect_precision = get_base64_encoded_file("other images/perfect_precision.jpg")
+    relevant_set = get_base64_encoded_file("other images/relevant_set.jpg")
+    ordered_list = get_base64_encoded_file("other images/ordered_list.jpg")
     persona_name = st.session_state.persona
     gender_value = st.session_state.gender_pronoun
 

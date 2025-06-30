@@ -4,7 +4,7 @@ import ast
 from other_functions import set_background
 from other_functions import render_progress_bar
 from classsification_functions import classify_user_by_preferences
-from other_functions import get_base64_image
+from other_functions import get_base64_encoded_file
 
 
 
@@ -147,7 +147,7 @@ def persona_reveal_page():
                 unsafe_allow_html=True,
             )
             image_path = f"personas_images/{st.session_state.persona}.jpg"
-            image_base64 = get_base64_image(image_path)
+            image_base64 = get_base64_encoded_file(image_path)
             st.markdown(f"""
                             <div class="persona-box">
                                 <img class="persona-img" src="data:image/jpg;base64,{image_base64}" />

@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-from other_functions import render_progress_bar, set_background, get_base64_image
+from other_functions import render_progress_bar, set_background, get_base64_encoded_file
 
 
 def typewriter_html_safe_chars(full_html_text: str, speed: float = 30.0):
@@ -62,7 +62,7 @@ def user_classification_intro_page():
     def handle_start_click():
         st.session_state.page = "user_classification"
 
-    lets_go = get_base64_image("other images/lets go.jpg")
+    lets_go = get_base64_encoded_file("other images/lets go.jpg")
 
 
     st.markdown(
