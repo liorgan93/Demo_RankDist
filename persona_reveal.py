@@ -111,7 +111,7 @@ def persona_reveal_page():
     .stButton button {
         width: 70%;
         font-size: 18px;
-        padding: 8px;
+        padding: 10px;
         border-radius: 15px;
         background-color: #800080;
         color: white;

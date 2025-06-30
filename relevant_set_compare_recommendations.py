@@ -33,7 +33,7 @@ def html_table(df):
         }}
 
         .dark-table th {{
-            background: linear-gradient(135deg, #29314f 0%, #1d243c 100%);
+            background: linear-gradient(135deg, #4a5782 0%, #36426c 100%);
             color: #ffffff;
             font-size: 11px;
             font-weight: 700;
