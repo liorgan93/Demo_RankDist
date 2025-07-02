@@ -1,5 +1,4 @@
 import streamlit as st
-import base64
 from user_classification_intro import set_background
 from other_functions import get_base64_encoded_file
 
@@ -72,7 +71,7 @@ def opening_page():
         </div>
     """, unsafe_allow_html=True)
 
-    next = get_base64_image("other images/next.jpg")
+    next = get_base64_encoded_file("other images/next.jpg")
 
     st.markdown("""
         <style>
