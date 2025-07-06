@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e29e7a1-5d1d-483a-9eb9-bdb9c908744a" name="Changes" comment="demo">
-      <change beforePath="$PROJECT_DIR$/.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinalProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6e29e7a1-5d1d-483a-9eb9-bdb9c908744a" name="Changes" comment="demo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +35,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -53,6 +48,9 @@
     &quot;accountId&quot;: &quot;99194a11-1d01-495d-b98b-f410f6ac64c5&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -113,8 +111,33 @@
       <workItem from="1748418475552" duration="323000" />
       <workItem from="1748419289758" duration="566000" />
       <workItem from="1751712255714" duration="1384000" />
-      <workItem from="1751788213983" duration="159000" />
+      <workItem from="1751788213983" duration="1210000" />
     </task>
+    <task id="LOCAL‎-00001" summary="demo">
+      <option name="closed" value="true" />
+      <created>1751788649773</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL‎-00001" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1751788649773</updated>
+    </task>
+    <task id="LOCAL‎-00002" summary="demo">
+      <option name="closed" value="true" />
+      <created>1751788698000</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL‎-00002" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1751788698000</updated>
+    </task>
+    <task id="LOCAL‎-00003" summary="demo">
+      <option name="closed" value="true" />
+      <created>1751790010681</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL‎-00003" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1751790010681</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
