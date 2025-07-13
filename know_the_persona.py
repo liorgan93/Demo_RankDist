@@ -5,7 +5,7 @@ from other_functions import render_progress_bar
 
 def get_songs_by_persona(persona_num):
     set_background("other images/background.webp")
-    df = pd.read_csv('playlists_excel/personas_songs.csv')
+    df = pd.read_csv('csv_files/personas_songs.csv')
     songs_df = df[df['cluster'] == persona_num]
     return songs_df
 
@@ -222,11 +222,12 @@ def know_the_persona_page():
         <!-- Styles -->
         <style>
         .spinner {{
-          border: 4px solid rgba(0, 0, 0, 0.1);
-          width: 40px;
-          height: 40px;
+          border: 9px solid rgba(0, 0, 0, 0.1);
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
-          border-left-color: #1DB954;
+          border-left-color: #d6d6cb;
+          background:rgba(0,0,0,0.40);
           animation: spin 1s linear infinite;
           margin: auto;
         }}

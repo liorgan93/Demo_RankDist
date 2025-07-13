@@ -17,7 +17,7 @@ def user_classification_page():
     if not st.session_state.problem:
         render_progress_bar("taste match")
     set_background("other images/background.webp")
-    all_songs_df = pd.read_csv('playlists_excel/songs_for_classification.csv')
+    all_songs_df = pd.read_csv('csv_files/songs_for_classification.csv')
     max_attempts = 150
     sample_size = 10
     n_clusters = 5
@@ -245,11 +245,12 @@ def user_classification_page():
         <!-- Styles -->
         <style>
         .spinner {{
-          border: 4px solid rgba(0, 0, 0, 0.1);
-          width: 40px;
-          height: 40px;
+          border: 9px solid rgba(0, 0, 0, 0.1);
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
-          border-left-color: #1DB954;
+          border-left-color: #d6d6cb;
+          background:rgba(0,0,0,0.40);
           animation: spin 1s linear infinite;
           margin: auto;
         }}

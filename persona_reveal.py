@@ -19,7 +19,7 @@ def persona_reveal_page():
     st.session_state.songs_df['weights'] = st.session_state.songs_df['weights'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
     st.session_state.chosen_person_number, scores = classify_user_by_preferences(st.session_state.songs_df)
     if "persona" not in st.session_state:
-        names = pd.read_csv("playlists_excel/names.csv")
+        names = pd.read_csv("csv_files/names.csv")
         names_list = names[names["cluster"] == st.session_state.chosen_person_number]["name"].tolist()
         st.session_state.persona = ", ".join(names_list)
         gender_pronoun = names[names["cluster"] == st.session_state.chosen_person_number]["her/him"].iloc[0]

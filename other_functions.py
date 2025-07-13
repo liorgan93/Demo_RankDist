@@ -1,6 +1,10 @@
 import streamlit as st
 import base64
 import streamlit.components.v1 as components
+import pandas as pd
+import random
+from io import StringIO
+import os
 
 # Renders a visual progress bar, highlighting the current step.
 def render_progress_bar(current_step, top_pad=55):
@@ -250,3 +254,24 @@ def render_song(embed_url: str, idx: int, height=85):
         }}
         </style>
     """, height=height)
+
+
+def read_random_subtable(file_path):
+    with open(file_path, 'r', encoding='utf-8-sig') as f:
+        lines = f.read().splitlines()
+
+    table_indices = [i for i, line in enumerate(lines) if line.strip().startswith("#SET")]
+
+    table_ranges = []
+    for idx in range(len(table_indices)):
+        start = table_indices[idx] + 1
+        end = table_indices[idx + 1] if idx + 1 < len(table_indices) else len(lines)
+        table_ranges.append((start, end))
+
+
+    selected_start, selected_end = random.choice(table_ranges)
+    selected_lines = lines[selected_start:selected_end]
+
+    selected_text = "\n".join(selected_lines)
+    return pd.read_csv(StringIO(selected_text))
+

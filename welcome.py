@@ -1,12 +1,11 @@
 import streamlit as st
-import base64
 from user_classification_intro import set_background
 from other_functions import get_base64_encoded_file
 
 
 if "page" not in st.session_state:
     st.session_state.page = "welcome"
-#55
+
 
 def welcome_page():
     st.set_page_config(page_title="RankDist Demo")

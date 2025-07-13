@@ -4,10 +4,9 @@ from other_functions import set_background
 from other_functions import render_progress_bar
 
 def calculate_score(predicted_items, true_items):
-    predicted_set = set(predicted_items)
     true_set = set(true_items)
-    correct = len(predicted_set & true_set)
-    total = len(predicted_set)
+    correct = sum(1 for p in predicted_items if p in true_set)
+    total = len(predicted_items)
 
     if total == 0:
         return 0.0, "0/0"
@@ -43,7 +42,7 @@ def html_table(df):
 
         .dark-table td {{
             background-color: #0f111a;        
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 600;
             padding: 6px 8px;
             border: 1px solid #2b2d38;
@@ -80,10 +79,8 @@ def relevant_set_compare_recommendations_page():
     set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice
-    persona_number = st.session_state.chosen_person_number
-    cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
+    cluster_df = st.session_state.songs_data
 
-    cluster_df = pd.read_csv(cluster_file_path)
     if 'relevant_set_results_alg' not in cluster_df.columns or 'relevant_set_results_true' not in cluster_df.columns:
         st.error("Error: The file must contain 'relevant_set_results_alg' and 'relevant_set_results_true' columns.")
         return

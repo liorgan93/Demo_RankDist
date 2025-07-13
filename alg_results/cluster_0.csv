@@ -1,6 +1,350 @@
-﻿relevant_set_songs,relevant_set_songs_links,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_songs_links,ordered_list_results_alg,ordered_list_results_true,perfect_precision_songs,perfect_precision_songs_links,perfect_precision_results_alg,perfect_precision_results_true
-Dancing Queen,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Dancing Queen,Dancing Queen,Dancing Queen,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Dancing Queen,Dancing Queen,Dancing Queen,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Dancing Queen,Dancing Queen
-Hallelujah,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Hallelujah,Lose Yourself,Hallelujah,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Hallelujah,Lose Yourself,Hallelujah,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Hallelujah,Lose Yourself
-Hotel California,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Hotel California,Hotel California,Hotel California,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Hotel California,Hotel California,Hotel California,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",Hotel California,Hotel California
-Imagine,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",,,Imagine,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",,,Imagine,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",,
-Lose Yourself,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",,,Lose Yourself,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",,,Lose Yourself,"<iframe style=""border-radius:12px"" src=""https://open.spotify.com/embed/track/7n6elf6gl4POlFO2LlyIMy?utm_source=generator"" width=""100%"" height=""152"" frameBorder=""0"" allowfullscreen="""" allow=""autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"" loading=""lazy""></iframe>",,
+#SET1,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,In the Backseat,Vision One,Vision One,In the Backseat,Vision One,Vision One,Teen Creeps,Vision One
+In the Backseat,Vision One,In the Backseat,In the Backseat,Vision One,In the Backseat,In the Backseat,In the Backseat,In the Backseat
+Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Vision One,Teen Creeps
+A Song For Milly Michaelson,,,A Song For Milly Michaelson,,,A Song For Milly Michaelson,,
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+#SET2,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat
+Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade
+Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original)
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+Million Dollar Question,,,Million Dollar Question,,,Million Dollar Question,,
+#SET3,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Let's Have A War,Page of Cups,Let's Have A War,Let's Have A War,Page of Cups,Let's Have A War,Let's Have A War,Drug A Wheel,Let's Have A War
+Page of Cups,Let's Have A War,Page of Cups,Page of Cups,Let's Have A War,Page of Cups,Page of Cups,Page of Cups,Page of Cups
+Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Let's Have A War,Drug A Wheel
+Don't Cry (original),,,Don't Cry (original),,,Don't Cry (original),,
+A Song For Milly Michaelson,,,A Song For Milly Michaelson,,,A Song For Milly Michaelson,,
+#SET4,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,Let's Have A War,In the Backseat
+Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,In the Backseat,Let's Have A War
+Heaven's Gonna Burn Your Eyes,Killian's Red,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Killian's Red,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Killian's Red,Heaven's Gonna Burn Your Eyes
+A Song For Milly Michaelson,,,A Song For Milly Michaelson,,,A Song For Milly Michaelson,,
+Killian's Red,,,Killian's Red,,,Killian's Red,,
+#SET5,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Almost Full Moon,Let's Have A War,Almost Full Moon,Almost Full Moon,Let's Have A War,Almost Full Moon,Almost Full Moon,Passage To The Unknown,Almost Full Moon
+Let's Have A War,Almost Full Moon,Let's Have A War,Let's Have A War,Almost Full Moon,Let's Have A War,Let's Have A War,Almost Full Moon,Let's Have A War
+Inside the City of Glass,Passage To The Unknown,Inside the City of Glass,Inside the City of Glass,Passage To The Unknown,Inside the City of Glass,Inside the City of Glass,Let's Have A War,Inside the City of Glass
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+The Trickster,,,The Trickster,,,The Trickster,,
+#SET6,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Almost Full Moon,Get Innocuous!,Almost Full Moon,Almost Full Moon,Get Innocuous!,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon
+Get Innocuous!,Almost Full Moon,Get Innocuous!,Get Innocuous!,Almost Full Moon,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!
+Black Sands,Black Sands,Black Sands,Black Sands,Black Sands,Black Sands,Black Sands,Black Sands,Black Sands
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+I Need Some Sleep,,,I Need Some Sleep,,,I Need Some Sleep,,
+#SET7,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One
+Black Sands,Fake Out,Black Sands,Black Sands,Don't Cry (original),Black Sands,Black Sands,Don't Cry (original),Black Sands
+Fake Out,Black Sands,Fake Out,Fake Out,Black Sands,Fake Out,Fake Out,Black Sands,Fake Out
+Don't Cry (original),,,Don't Cry (original),,,Don't Cry (original),,
+Million Dollar Question,,,Million Dollar Question,,,Million Dollar Question,,
+#SET8,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Let's Have A War,Drug A Wheel,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Drug A Wheel,Let's Have A War
+The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance
+Drug A Wheel,Let's Have A War,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Let's Have A War,Drug A Wheel
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET9,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,The Brilliant Dance,Vision One
+The Brilliant Dance,Get Innocuous!,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,Get Innocuous!,The Brilliant Dance
+Get Innocuous!,The Brilliant Dance,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Vision One,Get Innocuous!
+Teen Creeps,,,Teen Creeps,,,Teen Creeps,,
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+#SET10,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Page of Cups,Vision One,Vision One,Page of Cups,Vision One,Vision One,Still Take You Home,Vision One
+Page of Cups,Vision One,Page of Cups,Page of Cups,Vision One,Page of Cups,Page of Cups,Page of Cups,Page of Cups
+I Need Some Sleep,Still Take You Home,I Need Some Sleep,I Need Some Sleep,Still Take You Home,I Need Some Sleep,I Need Some Sleep,Vision One,I Need Some Sleep
+The Trickster,,,The Trickster,,,The Trickster,,
+Still Take You Home,,,Still Take You Home,,,Still Take You Home,,
+#SET11,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Rejoicing in the Hands,Drug A Wheel,Rejoicing in the Hands,Rejoicing in the Hands,Exogenesis: Symphony Part 3 [Redemption],Rejoicing in the Hands,Rejoicing in the Hands,Drug A Wheel,Rejoicing in the Hands
+Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Drug A Wheel,Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption]
+Drug A Wheel,Rejoicing in the Hands,Drug A Wheel,Drug A Wheel,Still Take You Home,Drug A Wheel,Drug A Wheel,Still Take You Home,Drug A Wheel
+Million Dollar Question,,,Million Dollar Question,,,Million Dollar Question,,
+Still Take You Home,,,Still Take You Home,,,Still Take You Home,,
+#SET12,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust
+Let's Have A War,Nlogax,Let's Have A War,Let's Have A War,Nlogax,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War
+Fake Out,Let's Have A War,Fake Out,Fake Out,Let's Have A War,Fake Out,Fake Out,Nlogax,Fake Out
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+Nlogax,,,Nlogax,,,Nlogax,,
+#SET13,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,Nlogax,In the Backseat
+Almost Full Moon,Nlogax,Almost Full Moon,Almost Full Moon,Nlogax,Almost Full Moon,Almost Full Moon,In the Backseat,Almost Full Moon
+Rose Parade,Almost Full Moon,Rose Parade,Rose Parade,Almost Full Moon,Rose Parade,Rose Parade,Almost Full Moon,Rose Parade
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+Nlogax,,,Nlogax,,,Nlogax,,
+#SET14,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Rose Parade,Blue Beard
+Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Lost!,Rose Parade
+I Don't Wanna Die,Lost!,I Don't Wanna Die,I Don't Wanna Die,Lost!,I Don't Wanna Die,I Don't Wanna Die,Blue Beard,I Don't Wanna Die
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+Lost!,,,Lost!,,,Lost!,,
+#SET15,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Black Sands,Nlogax,Black Sands,Black Sands,Nlogax,Black Sands,Black Sands,Black Sands,Black Sands
+Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Nlogax,Drug A Wheel
+Inside the City of Glass,Black Sands,Inside the City of Glass,Inside the City of Glass,Black Sands,Inside the City of Glass,Inside the City of Glass,Drug A Wheel,Inside the City of Glass
+I Need Some Sleep,,,I Need Some Sleep,,,I Need Some Sleep,,
+Nlogax,,,Nlogax,,,Nlogax,,
+#SET16,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard
+Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!
+Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+Still Take You Home,,,Still Take You Home,,,Still Take You Home,,
+#SET17,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,Rose Parade,In the Backseat
+Rejoicing in the Hands,Rose Parade,Rejoicing in the Hands,Rejoicing in the Hands,Rose Parade,Rejoicing in the Hands,Rejoicing in the Hands,Rejoicing in the Hands,Rejoicing in the Hands
+Rose Parade,Rejoicing in the Hands,Rose Parade,Rose Parade,Passage To The Unknown,Rose Parade,Rose Parade,In the Backseat,Rose Parade
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+#SET18,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,Teen Creeps,In the Backseat
+Let's Have A War,Teen Creeps,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War
+Teen Creeps,Let's Have A War,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,In the Backseat,Teen Creeps
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+Killian's Red,,,Killian's Red,,,Killian's Red,,
+#SET19,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,The Brilliant Dance,In the Backseat
+Let's Have A War,The Brilliant Dance,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,In the Backseat,Let's Have A War
+The Brilliant Dance,Let's Have A War,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,Let's Have A War,The Brilliant Dance
+A Song For Milly Michaelson,,,A Song For Milly Michaelson,,,A Song For Milly Michaelson,,
+Million Dollar Question,,,Million Dollar Question,,,Million Dollar Question,,
+#SET20,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust
+The Brilliant Dance,Get Innocuous!,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,Get Innocuous!,The Brilliant Dance
+Get Innocuous!,The Brilliant Dance,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,The Brilliant Dance,Get Innocuous!
+I Need Some Sleep,,,I Need Some Sleep,,,I Need Some Sleep,,
+Killian's Red,,,Killian's Red,,,Killian's Red,,
+#SET21,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard
+Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,A Song For Milly Michaelson,Rose Parade
+A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,Rose Parade,A Song For Milly Michaelson
+I Need Some Sleep,,,I Need Some Sleep,,,I Need Some Sleep,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET22,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Let's Have A War,Get Innocuous!,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,The Brilliant Dance,Let's Have A War
+The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,Get Innocuous!,The Brilliant Dance
+Get Innocuous!,Let's Have A War,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Let's Have A War,Get Innocuous!
+Lost!,,,Lost!,,,Lost!,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET23,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+The Brilliant Dance,Exogenesis: Symphony Part 3 [Redemption],The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,Rose Parade,The Brilliant Dance
+Exogenesis: Symphony Part 3 [Redemption],The Brilliant Dance,Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption]
+Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,The Brilliant Dance,Rose Parade
+Don't Cry (original),,,Don't Cry (original),,,Don't Cry (original),,
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+#SET24,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,The Brilliant Dance,In the Backseat
+The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,Still Take You Home,The Brilliant Dance
+Fake Out,Still Take You Home,Fake Out,Fake Out,Still Take You Home,Fake Out,Fake Out,In the Backseat,Fake Out
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+Still Take You Home,,,Still Take You Home,,,Still Take You Home,,
+#SET25,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+The Brilliant Dance,Get Innocuous!,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,The Brilliant Dance,Lost!,The Brilliant Dance
+Get Innocuous!,The Brilliant Dance,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!,The Brilliant Dance,Get Innocuous!
+Black Sands,Lost!,Black Sands,Black Sands,Lost!,Black Sands,Black Sands,Get Innocuous!,Black Sands
+I Need Some Sleep,,,I Need Some Sleep,,,I Need Some Sleep,,
+Lost!,,,Lost!,,,Lost!,,
+#SET26,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Don't Cry (original),Nlogax,Don't Cry (original),Don't Cry (original),Nlogax,Don't Cry (original),Don't Cry (original),Nlogax,Don't Cry (original)
+Inside the City of Glass,Killian's Red,Inside the City of Glass,Inside the City of Glass,Killian's Red,Inside the City of Glass,Inside the City of Glass,Killian's Red,Inside the City of Glass
+Killian's Red,I Let Love In,Killian's Red,Killian's Red,I Let Love In,Killian's Red,Killian's Red,I Let Love In,Killian's Red
+Nlogax,,,Nlogax,,,Nlogax,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET27,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One
+Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Fake Out,Teen Creeps
+Fake Out,Fake Out,Fake Out,Fake Out,A Song For Milly Michaelson,Fake Out,Fake Out,Teen Creeps,Fake Out
+A Song For Milly Michaelson,,,A Song For Milly Michaelson,,,A Song For Milly Michaelson,,
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+#SET28,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,Principles of Lust,In the Backseat,In the Backseat,Principles of Lust,In the Backseat,In the Backseat,Principles of Lust,In the Backseat
+Principles of Lust,In the Backseat,Principles of Lust,Principles of Lust,In the Backseat,Principles of Lust,Principles of Lust,Let's Have A War,Principles of Lust
+Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,In the Backseat,Let's Have A War
+Teen Creeps,,,Teen Creeps,,,Teen Creeps,,
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+#SET29,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Teen Creeps,Vision One
+Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Vision One,Exogenesis: Symphony Part 3 [Redemption]
+Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Exogenesis: Symphony Part 3 [Redemption],Teen Creeps
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+Killian's Red,,,Killian's Red,,,Killian's Red,,
+#SET30,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Exogenesis: Symphony Part 3 [Redemption],Nlogax,Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Nlogax,Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption]
+I Don't Wanna Die,Exogenesis: Symphony Part 3 [Redemption],I Don't Wanna Die,I Don't Wanna Die,Exogenesis: Symphony Part 3 [Redemption],I Don't Wanna Die,I Don't Wanna Die,Nlogax,I Don't Wanna Die
+The Trickster,Lost!,The Trickster,The Trickster,Lost!,The Trickster,The Trickster,Lost!,The Trickster
+Nlogax,,,Nlogax,,,Nlogax,,
+Lost!,,,Lost!,,,Lost!,,
+#SET31,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Lost!,Principles of Lust
+Rejoicing in the Hands,Lost!,Rejoicing in the Hands,Rejoicing in the Hands,Lost!,Rejoicing in the Hands,Rejoicing in the Hands,Rejoicing in the Hands,Rejoicing in the Hands
+Don't Cry (original),Rejoicing in the Hands,Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original),Principles of Lust,Don't Cry (original)
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+Lost!,,,Lost!,,,Lost!,,
+#SET32,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Get Innocuous!,Nlogax,Get Innocuous!,Get Innocuous!,Nlogax,Get Innocuous!,Get Innocuous!,Get Innocuous!,Get Innocuous!
+Teen Creeps,Get Innocuous!,Teen Creeps,Teen Creeps,Get Innocuous!,Teen Creeps,Teen Creeps,Lost!,Teen Creeps
+Don't Cry (original),Lost!,Don't Cry (original),Don't Cry (original),Teen Creeps,Don't Cry (original),Don't Cry (original),Nlogax,Don't Cry (original)
+Nlogax,,,Nlogax,,,Nlogax,,
+Lost!,,,Lost!,,,Lost!,,
+#SET33,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Teen Creeps,Nlogax,Teen Creeps,Teen Creeps,Nlogax,Teen Creeps,Teen Creeps,Still Take You Home,Teen Creeps
+I Don't Wanna Die,Teen Creeps,I Don't Wanna Die,I Don't Wanna Die,Teen Creeps,I Don't Wanna Die,I Don't Wanna Die,Nlogax,I Don't Wanna Die
+Nlogax,Lost!,Nlogax,Nlogax,Lost!,Nlogax,Nlogax,Teen Creeps,Nlogax
+Lost!,,,Lost!,,,Lost!,,
+Still Take You Home,,,Still Take You Home,,,Still Take You Home,,
+#SET34,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One
+Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Killian's Red,Almost Full Moon
+Black Sands,Killian's Red,Black Sands,Black Sands,Killian's Red,Black Sands,Black Sands,Almost Full Moon,Black Sands
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+Killian's Red,,,Killian's Red,,,Killian's Red,,
+#SET35,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Lost!,Almost Full Moon
+Don't Cry (original),Lost!,Don't Cry (original),Don't Cry (original),Lost!,Don't Cry (original),Don't Cry (original),Don't Cry (original),Don't Cry (original)
+I Need Some Sleep,Don't Cry (original),I Need Some Sleep,I Need Some Sleep,Don't Cry (original),I Need Some Sleep,I Need Some Sleep,Almost Full Moon,I Need Some Sleep
+Million Dollar Question,,,Million Dollar Question,,,Million Dollar Question,,
+Lost!,,,Lost!,,,Lost!,,
+#SET36,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption],Exogenesis: Symphony Part 3 [Redemption]
+Heaven's Gonna Burn Your Eyes,I Let Love In,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,I Let Love In,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,I Let Love In,Heaven's Gonna Burn Your Eyes
+I Don't Wanna Die,Heaven's Gonna Burn Your Eyes,I Don't Wanna Die,I Don't Wanna Die,Heaven's Gonna Burn Your Eyes,I Don't Wanna Die,I Don't Wanna Die,Million Dollar Question,I Don't Wanna Die
+Million Dollar Question,,,Million Dollar Question,,,Million Dollar Question,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET37,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One
+Almost Full Moon,Let's Have A War,Almost Full Moon,Almost Full Moon,Let's Have A War,Almost Full Moon,Almost Full Moon,Let's Have A War,Almost Full Moon
+Let's Have A War,Almost Full Moon,Let's Have A War,Let's Have A War,Almost Full Moon,Let's Have A War,Let's Have A War,Almost Full Moon,Let's Have A War
+Rose Parade,,,Rose Parade,,,Rose Parade,,
+Fake Out,,,Fake Out,,,Fake Out,,
+#SET38,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Blue Beard,Drug A Wheel,Blue Beard
+Black Sands,Drug A Wheel,Black Sands,Black Sands,Drug A Wheel,Black Sands,Black Sands,Blue Beard,Black Sands
+Drug A Wheel,Black Sands,Drug A Wheel,Drug A Wheel,A Song For Milly Michaelson,Drug A Wheel,Drug A Wheel,I Let Love In,Drug A Wheel
+A Song For Milly Michaelson,,,A Song For Milly Michaelson,,,A Song For Milly Michaelson,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET39,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Principles of Lust,Rose Parade,Principles of Lust
+Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Rose Parade,Lost!,Rose Parade
+Teen Creeps,Lost!,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Principles of Lust,Teen Creeps
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+Lost!,,,Lost!,,,Lost!,,
+#SET40,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon,Almost Full Moon
+A Song For Milly Michaelson,I Let Love In,A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,A Song For Milly Michaelson,I Let Love In,A Song For Milly Michaelson
+I Don't Wanna Die,A Song For Milly Michaelson,I Don't Wanna Die,I Don't Wanna Die,I Let Love In,I Don't Wanna Die,I Don't Wanna Die,A Song For Milly Michaelson,I Don't Wanna Die
+The Trickster,,,The Trickster,,,The Trickster,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET41,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Heaven's Gonna Burn Your Eyes,Nlogax,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Nlogax,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Nlogax,Heaven's Gonna Burn Your Eyes
+Black Sands,I Let Love In,Black Sands,Black Sands,I Let Love In,Black Sands,Black Sands,I Let Love In,Black Sands
+I Don't Wanna Die,Black Sands,I Don't Wanna Die,I Don't Wanna Die,Black Sands,I Don't Wanna Die,I Don't Wanna Die,Black Sands,I Don't Wanna Die
+Nlogax,,,Nlogax,,,Nlogax,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET42,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Vision One,Still Take You Home,Vision One
+Black Sands,Still Take You Home,Black Sands,Black Sands,Still Take You Home,Black Sands,Black Sands,Vision One,Black Sands
+Fake Out,Fake Out,Fake Out,Fake Out,Black Sands,Fake Out,Fake Out,Fake Out,Fake Out
+I Need Some Sleep,,,I Need Some Sleep,,,I Need Some Sleep,,
+Still Take You Home,,,Still Take You Home,,,Still Take You Home,,
+#SET43,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Don't Cry (original),Let's Have A War
+Heaven's Gonna Burn Your Eyes,Don't Cry (original),Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Don't Cry (original),Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Black Sands,Heaven's Gonna Burn Your Eyes
+Black Sands,Black Sands,Black Sands,Black Sands,Black Sands,Black Sands,Black Sands,Let's Have A War,Black Sands
+Don't Cry (original),,,Don't Cry (original),,,Don't Cry (original),,
+Inside the City of Glass,,,Inside the City of Glass,,,Inside the City of Glass,,
+#SET44,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Rose Parade,Get Innocuous!,Rose Parade,Rose Parade,Get Innocuous!,Rose Parade,Rose Parade,Get Innocuous!,Rose Parade
+Get Innocuous!,Rose Parade,Get Innocuous!,Get Innocuous!,Rose Parade,Get Innocuous!,Get Innocuous!,Black Sands,Get Innocuous!
+Black Sands,Black Sands,Black Sands,Black Sands,Don't Cry (original),Black Sands,Black Sands,Rose Parade,Black Sands
+Don't Cry (original),,,Don't Cry (original),,,Don't Cry (original),,
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+#SET45,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Rejoicing in the Hands,Get Innocuous!,Rejoicing in the Hands,Rejoicing in the Hands,Let's Have A War,Rejoicing in the Hands,Rejoicing in the Hands,Rejoicing in the Hands,Rejoicing in the Hands
+Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Get Innocuous!,Let's Have A War,Let's Have A War,Get Innocuous!,Let's Have A War
+Get Innocuous!,Rejoicing in the Hands,Get Innocuous!,Get Innocuous!,A Song For Milly Michaelson,Get Innocuous!,Get Innocuous!,Let's Have A War,Get Innocuous!
+A Song For Milly Michaelson,,,A Song For Milly Michaelson,,,A Song For Milly Michaelson,,
+I Need Some Sleep,,,I Need Some Sleep,,,I Need Some Sleep,,
+#SET46,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War
+I Don't Wanna Die,I Let Love In,I Don't Wanna Die,I Don't Wanna Die,I Let Love In,I Don't Wanna Die,I Don't Wanna Die,Million Dollar Question,I Don't Wanna Die
+I Need Some Sleep,Million Dollar Question,I Need Some Sleep,I Need Some Sleep,I Need Some Sleep,I Need Some Sleep,I Need Some Sleep,I Let Love In,I Need Some Sleep
+Million Dollar Question,,,Million Dollar Question,,,Million Dollar Question,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET47,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Rejoicing in the Hands,Killian's Red,Rejoicing in the Hands,Rejoicing in the Hands,Killian's Red,Rejoicing in the Hands,Rejoicing in the Hands,Killian's Red,Rejoicing in the Hands
+Heaven's Gonna Burn Your Eyes,Rejoicing in the Hands,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Fake Out,Heaven's Gonna Burn Your Eyes,Heaven's Gonna Burn Your Eyes,Rejoicing in the Hands,Heaven's Gonna Burn Your Eyes
+Fake Out,Fake Out,Fake Out,Fake Out,Heaven's Gonna Burn Your Eyes,Fake Out,Fake Out,Fake Out,Fake Out
+I Don't Wanna Die,,,I Don't Wanna Die,,,I Don't Wanna Die,,
+Killian's Red,,,Killian's Red,,,Killian's Red,,
+#SET48,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Let's Have A War,Teen Creeps,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War,Let's Have A War
+Teen Creeps,Let's Have A War,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,Teen Creeps,I Let Love In,Teen Creeps
+I Don't Wanna Die,Killian's Red,I Don't Wanna Die,I Don't Wanna Die,Killian's Red,I Don't Wanna Die,I Don't Wanna Die,Teen Creeps,I Don't Wanna Die
+Killian's Red,,,Killian's Red,,,Killian's Red,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,
+#SET49,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat,In the Backseat
+Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel,Drug A Wheel
+Don't Cry (original),Still Take You Home,Don't Cry (original),Don't Cry (original),Still Take You Home,Don't Cry (original),Don't Cry (original),Still Take You Home,Don't Cry (original)
+Passage To The Unknown,,,Passage To The Unknown,,,Passage To The Unknown,,
+Still Take You Home,,,Still Take You Home,,,Still Take You Home,,
+#SET50,,,,,,,,
+relevant_set_songs,relevant_set_results_alg,relevant_set_results_true,ordered_list_songs,ordered_list_results_alg (by order),ordered_list_results_true (by order),perfect_precision_songs,perfect_precision_results_alg,perfect_precision_results_true
+Rejoicing in the Hands,The Brilliant Dance,Rejoicing in the Hands,Rejoicing in the Hands,The Brilliant Dance,Rejoicing in the Hands,Rejoicing in the Hands,Rose Parade,Rejoicing in the Hands
+The Brilliant Dance,Teen Creeps,The Brilliant Dance,The Brilliant Dance,Rose Parade,The Brilliant Dance,The Brilliant Dance,Rejoicing in the Hands,The Brilliant Dance
+Rose Parade,Rose Parade,Rose Parade,Rose Parade,Teen Creeps,Rose Parade,Rose Parade,The Brilliant Dance,Rose Parade
+Teen Creeps,,,Teen Creeps,,,Teen Creeps,,
+I Let Love In,,,I Let Love In,,,I Let Love In,,

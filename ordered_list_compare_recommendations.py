@@ -48,7 +48,7 @@ def html_table(df):
 
         .dark-table td {{
             background-color: #0f111a;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 600;
             padding: 6px 8px;
             border: 1px solid #2b2d38;
@@ -76,12 +76,10 @@ def html_table(df):
                 <th class="row-num">#</th>
     """
 
-    # כותרות הנתונים
     for col in df.columns:
         html += f"<th>{col}</th>"
     html += "</tr></thead><tbody>"
 
-    # שורות הטבלה + מספור
     for i, (_, row) in enumerate(df.iterrows(), start=1):
         html += "<tr>"
         html += f"<td class='row-num'>{i}</td>"
@@ -101,17 +99,15 @@ def ordered_list_compare_recommendations_page():
     set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice
-    persona_number = st.session_state.chosen_person_number
-    cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
+    cluster_df = st.session_state.songs_data
 
-    cluster_df = pd.read_csv(cluster_file_path)
-    if 'ordered_list_results_alg' not in cluster_df.columns or 'ordered_list_results_true' not in cluster_df.columns:
+    if 'ordered_list_results_alg (by order)' not in cluster_df.columns or 'ordered_list_results_true (by order)' not in cluster_df.columns:
         st.error("Error: The file must contain 'ordered_list_results_alg' and 'ordered_list_results_true' columns.")
         return
 
     user_songs = selected_songs
-    algorithm_songs = cluster_df["ordered_list_results_alg"].dropna().tolist()
-    true_preference = cluster_df["ordered_list_results_true"].dropna().tolist()
+    algorithm_songs = cluster_df["ordered_list_results_alg (by order)"].dropna().tolist()
+    true_preference = cluster_df["ordered_list_results_true (by order)"].dropna().tolist()
 
     max_length = max(len(user_songs), len(algorithm_songs), len(true_preference))
 

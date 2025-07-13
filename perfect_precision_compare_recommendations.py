@@ -40,7 +40,7 @@ def html_table(df):
 
         .dark-table td {{
             background-color: #0f111a;        
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 600;
             padding: 6px 8px;
             border: 1px solid #2b2d38;
@@ -79,10 +79,8 @@ def perfect_precision_compare_recommendations_page():
     set_background("other images/blue background.jpg")
 
     selected_songs = st.session_state.user_choice
-    persona_number = st.session_state.chosen_person_number
-    cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
+    cluster_df = st.session_state.songs_data
 
-    cluster_df = pd.read_csv(cluster_file_path)
     if 'perfect_precision_results_alg' not in cluster_df.columns or 'perfect_precision_results_true' not in cluster_df.columns:
         st.error("Error: The file must contain 'perfect_precision_results_alg' and 'perfect_precision_results_true' columns.")
         return

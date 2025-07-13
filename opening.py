@@ -1,11 +1,14 @@
 import streamlit as st
 from user_classification_intro import set_background
 from other_functions import get_base64_encoded_file
+from other_functions import read_random_subtable
+import pandas as pd
 
 
 def opening_page():
     st.set_page_config(page_title="RankDist Demo")
     image_base64 = get_base64_encoded_file("other images/RankDist_VS_Human.jpg")
+
     def click_button():
         st.session_state.page = "user_classification_intro"
 
