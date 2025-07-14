@@ -206,6 +206,11 @@ def relevant_set_choose_page():
                     margin-bottom: -10px !important;
                     min-height: 0 !important;
                 }
+                div[data-testid="stAlert"] svg{
+                    width: 14px !important;
+                    height: 14px !important;
+                    margin-right: 4px !important;  /* מעט רווח מהטקסט */
+                }
                 div[data-testid="stAlert"] p {
                     text-align: center; !important;
                     font-weight: 700 !important; 
