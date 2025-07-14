@@ -4,12 +4,11 @@ import streamlit.components.v1 as components
 import pandas as pd
 import random
 from io import StringIO
-import os
 
 # Renders a visual progress bar, highlighting the current step.
 def render_progress_bar(current_step, top_pad=55):
-    steps = ['taste match',
-             'meet the persona',
+    steps = ['set your taste',
+             'meet your match',
              'recommend songs',
              'results']
 

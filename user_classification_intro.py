@@ -55,7 +55,7 @@ def user_classification_intro_page():
     st.set_page_config(page_title="RankDist Demo")
     st.empty()
     st.session_state.problem = False
-    render_progress_bar("taste match")
+    render_progress_bar("set your taste")
     set_background("other images/background.webp")
 
 

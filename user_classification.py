@@ -15,7 +15,7 @@ def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
     st.empty()
     if not st.session_state.problem:
-        render_progress_bar("taste match")
+        render_progress_bar("set your taste")
     set_background("other images/background.webp")
     all_songs_df = pd.read_csv('csv_files/songs_for_classification.csv')
     max_attempts = 150

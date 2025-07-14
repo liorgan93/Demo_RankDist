@@ -54,7 +54,7 @@ def typewriter_html_safe_chars(full_html_text: str, speed: float = 30.0):
 def know_the_persona_intro_page():
     st.set_page_config(page_title="RankDist Demo")
     st.empty()
-    render_progress_bar("meet the persona")
+    render_progress_bar("meet your match")
     set_background("other images/background.webp")
 
     def handle_start_click():

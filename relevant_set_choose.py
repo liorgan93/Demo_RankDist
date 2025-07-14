@@ -23,6 +23,7 @@ def relevant_set_choose_page():
     set_background("other images/background.webp")
 
     persona_name = st.session_state.persona
+    gender_possessive = st.session_state.possessive
     persona_number = st.session_state.chosen_person_number
     if "songs_data" not in st.session_state:
         cluster_file_path = f"alg_results/cluster_{persona_number}.csv"
@@ -115,12 +116,13 @@ def relevant_set_choose_page():
         }
 
         .method_name {
-            font-size: 16px;
+            font-size: 15px;
             text-align: left;
             margin-bottom: 0px !important;
             padding-bottom: 0px !important;
             padding-left: 10px;
-            color: #FF1A1A;
+            color: #ff1a1a;
+            letter-spacing: 1px;
             text-shadow:
                 -1px -1px 0 #000,
                  1px -1px 0 #000,
@@ -130,14 +132,19 @@ def relevant_set_choose_page():
                  2px  0px 0 #000,
                  0px -2px 0 #000,
                  0px  2px 0 #000;
-            font-weight: bold;
         }
 
         .text_choose {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: bold;
             padding-top: 0px !important;
-            line-height: 1.15;
+            line-height: 1.1;
+        }
+        .parentheses {
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 0px !important;
+            line-height: 1.1;
         }
 
         .notice-text {
@@ -164,6 +171,9 @@ def relevant_set_choose_page():
                 </div>
                 <div class="text_choose">
                     Choose the TOP 3 songs you’d recommend to {persona_name}
+                </div>
+                <div class="parentheses">
+                    (based on {gender_possessive} taste)
                 </div>
             </div>
         """, unsafe_allow_html=True)
