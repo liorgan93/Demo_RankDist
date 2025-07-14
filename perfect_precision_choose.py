@@ -116,7 +116,7 @@ def perfect_precision_choose_page():
         }
 
         .method_name {
-            font-size: 15px;
+            font-size: 13px;
             text-align: left;
             margin-bottom: 0px !important;
             padding-bottom: 0px !important;
