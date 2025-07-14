@@ -204,7 +204,7 @@ def relevant_set_choose_page():
                     padding-bottom: 0px !important;
                     margin-top: -10px !important;
                     margin-bottom: 0px !important;
-                    padding: 2px 8px !important;
+                    padding: 2px 2px !important;
                 }
                 div[data-testid="stAlert"] p {
                     text-align: center; !important;
