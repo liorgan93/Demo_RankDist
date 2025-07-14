@@ -200,14 +200,14 @@ def relevant_set_choose_page():
                 <style>
                 div[data-testid="stAlert"]{
                     background-color: #C62828 !important;   
-                    padding-top: 0px !important;
+                    padding-top: -5px !important;
                     padding-bottom: 0px !important;
-                    margin-top: 0px !important;
+                    margin-top: -5px !important;
                     margin-bottom: 0px !important;
                 }
                 div[data-testid="stAlert"] p {
                     text-align: center; !important;
-                    font-weight: 500 !important; 
+                    font-weight: 700 !important; 
                 }
 
                 </style>

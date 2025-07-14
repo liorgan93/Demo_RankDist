@@ -207,7 +207,7 @@ def perfect_precision_choose_page():
                 }
                 div[data-testid="stAlert"] p {
                     text-align: center; !important;
-                    font-weight: 500 !important; 
+                    font-weight: 700 !important; 
                 }
 
                 </style>
