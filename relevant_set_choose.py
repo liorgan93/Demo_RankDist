@@ -200,7 +200,7 @@ def relevant_set_choose_page():
                 <style>
                 div[data-testid="stAlert"]{
                     background-color: #C62828 !important;   
-                    padding-top: 100px !important;
+                    padding-top: 0px !important;
                     padding-bottom: 0px !important;
                     margin-top: -15px !important;
                     margin-bottom: -10px !important;
