@@ -206,7 +206,7 @@ def relevant_set_choose_page():
                     margin-bottom: 0px !important;
                 }
                 div[data-testid="stAlert"] svg{
-                    height: 10px !important;
+                    height: 30px !important;
                 }
                 div[data-testid="stAlert"] p {
                     text-align: center; !important;
