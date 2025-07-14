@@ -193,7 +193,7 @@ def ordered_list_choose_page():
         st.markdown("""
             <style>
                 div[data-testid="stSelectbox"] {
-                    margin-bottom: 5px !important;
+                    margin-bottom: 4px !important;
                 }
             </style>
         """, unsafe_allow_html=True)
@@ -222,7 +222,7 @@ def ordered_list_choose_page():
                 }
                 div[data-testid="stAlert"] p {
                     text-align: center; !important;
-                    font-weight: 700 !important; 
+                    font-weight: 500 !important; 
                 }
 
                 </style>
