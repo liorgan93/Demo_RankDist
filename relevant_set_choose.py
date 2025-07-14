@@ -200,17 +200,12 @@ def relevant_set_choose_page():
                 <style>
                 div[data-testid="stAlert"]{
                     background-color: #C62828 !important;   
-                    padding-top: -10px !important;
+                    padding-top: 100px !important;
                     padding-bottom: 0px !important;
                     margin-top: -15px !important;
                     margin-bottom: -10px !important;
-                    min-height: 0 !important;
                 }
-                div[data-testid="stAlert"] svg{
-                    width: 14px !important;
-                    height: 14px !important;
-                    margin-right: 4px !important;  /* מעט רווח מהטקסט */
-                }
+                
                 div[data-testid="stAlert"] p {
                     text-align: center; !important;
                     font-weight: 700 !important; 
