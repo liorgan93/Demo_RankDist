@@ -224,9 +224,3 @@ elif st.session_state.page == "compare_recommendations":
 elif st.session_state.page == "thank_you":
     from thank_you import thank_you_page
     thank_you_page()
-elif st.session_state.page == "research_page":
-    from research_page import research_page
-    research_page()
-elif st.session_state.page == "thank_you_research":
-    from thank_you_research import thank_you_research
-    thank_you_research()

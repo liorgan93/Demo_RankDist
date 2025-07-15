@@ -80,7 +80,7 @@ def user_classification_page():
 
             }
             .stButton button {
-                padding: 8px 45px !important;
+                padding: 7px 45px !important;
                 border-radius: 15px !important;
                 margin: 0px auto !important;
                 display: flex !important;
