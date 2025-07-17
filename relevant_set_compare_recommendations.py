@@ -23,7 +23,7 @@ def html_table(df):
             border-collapse: collapse;
             margin: 0 auto;
             font-family: 'Segoe UI', sans-serif;
-            margin-top: -5px; !important;
+            margin-top: -15px; !important;
             background-color: #0f111a;      
             border: 1px solid #2b2d38;       
             border-radius: 8px;
