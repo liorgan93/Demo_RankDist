@@ -126,7 +126,7 @@ def know_the_persona_page():
 
         st.markdown(
             f"""<div class="container">
-                <div style="text-align: left; margin-bottom: 2px; font-size: 14px; padding-left: 10px; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
+                <div style="text-align: left; margin-bottom: 2px; font-size: 13px; padding-left: 10px; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
                     Songs that {persona_name} Likes – Song Number {completed_steps}
                 </div>
                 <div class="song-title">{song_title}</div>
