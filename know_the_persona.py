@@ -11,6 +11,7 @@ def get_songs_by_persona(persona_num):
 
 def know_the_persona_page():
     st.set_page_config(page_title="RankDist Demo")
+    st.empty()
     render_progress_bar("meet your match")
     persona_name = st.session_state.persona
     persona_number = st.session_state.chosen_person_number
