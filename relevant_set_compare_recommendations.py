@@ -144,7 +144,7 @@ def relevant_set_compare_recommendations_page():
     )
 
     st.markdown('<div class="title-text">Comparison and Evaluation</div>', unsafe_allow_html=True)
-    st.markdown('<div style="text-align:center; margin-top:-28px; margin-top:50px; !important font-size:15px; font-weight: bold; font-family: Segoe UI, sans-serif;">Your picks VS the RankDist algorithm</div>', unsafe_allow_html=True)
+    st.markdown('<div style="text-align:center; margin-top:-28px; margin-bottom:50px; !important font-size:15px; font-weight: bold; font-family: Segoe UI, sans-serif;">Your picks VS the RankDist algorithm</div>', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.025, 0.95, 0.025])
     with col2:
