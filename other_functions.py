@@ -147,7 +147,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         </div>
 
         <div style="position:relative;width:100%;display:flex;justify-content:center;">
-            <div style="width:100%;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;">
+            <div style="width:95%;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;">
                 <div id="iframe-container{idx}" style="display:none;flex-grow:1;"></div>
                 <div id="tiny-reload{idx}" class="tiny-reload" style="display:none;" onclick="reloadIframe{idx}()">↻</div>
             </div>
