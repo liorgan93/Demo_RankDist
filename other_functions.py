@@ -207,7 +207,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         @keyframes spin{{to{{transform:rotate(360deg);}}}}
 
         .try-again-button{{
-            width:30px;height:30px;background:#4d4d4d;border-radius:50%;
+            width:25px;height:25px;background:#4d4d4d;border-radius:50%;
             display:flex;align-items:center;justify-content:center;cursor:pointer;
             transition:transform .2s;
         }}
