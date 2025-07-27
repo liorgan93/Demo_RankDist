@@ -137,18 +137,15 @@ def get_base64_encoded_file(image_path):
 # Embeds a Spotify song in an iframe with a loader.
 def render_song(embed_url: str, idx: int, height: int = 85):
     st.components.v1.html(f"""
-        <!-- Loader -->
         <div id="loader{idx}" style="display:flex;justify-content:center;align-items:center;height:{height}px;">
             <div class="spinner"></div>
         </div>
 
-        <!-- Error message + retry -->
         <div id="error-msg{idx}" style="display:none;height:{height}px;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;">
             <p style="margin:10px;font-size:14px;font-weight:600;color:#fff;font-family:Arial,sans-serif;">Oops! The song failed to load</p>
             <div onclick="reloadIframe{idx}()" class="try-again-button"><div class="try-text">⟳</div></div>
         </div>
 
-        <!-- Iframe wrapper -->
         <div style="position:relative;width:100%;display:flex;justify-content:center;">
             <div id="tiny-reload{idx}" class="tiny-reload" style="display:none;" onclick="reloadIframe{idx}()">↻</div>
             <div id="iframe-container{idx}" style="display:none;"></div>
@@ -163,7 +160,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
             c.innerHTML="";
             const f=document.createElement("iframe");
             f.src="{embed_url}";
-            f.width="100%"; f.height="{height}";
+            f.width="90%"; f.height="{height}";
             f.frameBorder="0";
             f.allowFullscreen=true;
             f.allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
@@ -216,14 +213,15 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         .try-text{{font-size:16px;font-weight:bold;color:#fff;}}
 
         .tiny-reload{{
-            position:absolute;top:6px;left:6px;
-            width:24px;height:24px;background:#4d4d4d;border-radius:50%;
+            position:absolute;top:6px;right:0px;
+            width:21px;height:21px;background:#4d4d4d;border-radius:50%;
             display:flex;align-items:center;justify-content:center;cursor:pointer;
-            font-size:20px;color:#fff;transition:transform .2s;z-index:10;
+            font-size:12px;color:#fff;transition:transform .2s;z-index:10;
         }}
         .tiny-reload:hover{{transform:rotate(90deg) scale(1.05);}}
         </style>
     """, height=height)
+
 
 
 

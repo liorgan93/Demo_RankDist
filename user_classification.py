@@ -296,7 +296,7 @@ def user_classification_page():
         .tiny-reload {{
             position: absolute;
             top: 4px;       
-            right: 12px;
+            right: 6px;
             width: 26px;
             height: 26px;
             background-color: #4d4d4d;
@@ -306,7 +306,7 @@ def user_classification_page():
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 17px;
             color: white;
             transition: transform 0.2s;
             z-index: 10;
