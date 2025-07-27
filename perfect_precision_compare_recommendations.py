@@ -85,9 +85,9 @@ def perfect_precision_compare_recommendations_page():
         st.error("Error: The file must contain 'perfect_precision_results_alg' and 'perfect_precision_results_true' columns.")
         return
 
-    user_songs = selected_songs
-    algorithm_songs = cluster_df["perfect_precision_results_alg"].dropna().tolist()
-    true_preference = cluster_df["perfect_precision_results_true"].dropna().tolist()
+    user_songs = sorted(selected_songs, key=lambda x: str(x).lower())
+    algorithm_songs = sorted(cluster_df["relevant_set_results_alg"].dropna().tolist(), key=lambda x: str(x).lower())
+    true_preference = sorted(cluster_df["relevant_set_results_true"].dropna().tolist(), key=lambda x: str(x).lower())
 
     max_length = max(len(user_songs), len(algorithm_songs), len(true_preference))
 
