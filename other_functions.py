@@ -215,8 +215,8 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         .try-text{{font-size:16px;font-weight:bold;color:#fff;}}
 
         .tiny-reload{{
-            width:41px;
-            height:41px;
+            width:21px;
+            height:21px;
             min-width:21px;
             min-height:21px;
             background:#4d4d4d;
