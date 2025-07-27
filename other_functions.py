@@ -219,7 +219,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
             position:absolute;top:6px;left:6px;
             width:24px;height:24px;background:#4d4d4d;border-radius:50%;
             display:flex;align-items:center;justify-content:center;cursor:pointer;
-            font-size:17px;color:#fff;transition:transform .2s;z-index:10;
+            font-size:20px;color:#fff;transition:transform .2s;z-index:10;
         }}
         .tiny-reload:hover{{transform:rotate(90deg) scale(1.05);}}
         </style>
