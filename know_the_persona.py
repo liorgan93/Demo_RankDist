@@ -274,8 +274,8 @@ def know_the_persona_page():
              position: absolute;
              top: 4px;       
              right: 12px;
-             width: 36px;
-             height: 36px;
+             width: 26px;
+             height: 26px;
              background-color: #4d4d4d;
              border-radius: 50%;
              box-shadow: 0 4px 8px rgba(0,0,0,0.3);
