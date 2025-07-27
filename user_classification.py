@@ -297,8 +297,8 @@ def user_classification_page():
             position: absolute;
             top: 4px;       
             right: 6px;
-            width: 26px;
-            height: 26px;
+            width: 28px;
+            height: 28px;
             background-color: #4d4d4d;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
