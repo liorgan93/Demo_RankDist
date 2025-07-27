@@ -147,8 +147,10 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         </div>
 
         <div style="position:relative;width:100%;display:flex;justify-content:center;">
-            <div id="tiny-reload{idx}" class="tiny-reload" style="display:none;" onclick="reloadIframe{idx}()">↻</div>
-            <div id="iframe-container{idx}" style="display:none;"></div>
+            <div style="width:100%;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;">
+                <div id="iframe-container{idx}" style="display:none;flex-grow:1;"></div>
+                <div id="tiny-reload{idx}" class="tiny-reload" style="display:none;" onclick="reloadIframe{idx}()">↻</div>
+            </div>
         </div>
 
         <script>
@@ -160,7 +162,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
             c.innerHTML="";
             const f=document.createElement("iframe");
             f.src="{embed_url}";
-            f.width="90%"; f.height="{height}";
+            f.width="100%"; f.height="{height}";
             f.frameBorder="0";
             f.allowFullscreen=true;
             f.allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
@@ -199,7 +201,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         <style>
         .spinner{{
             border:4px solid rgba(0,0,0,0.1);
-            width:24px;height:24px;border-radius:50%;
+            width:27px;height:27px;border-radius:50%;
             border-left-color:#1DB954;animation:spin 1s linear infinite;
         }}
         @keyframes spin{{to{{transform:rotate(360deg);}}}}
@@ -213,14 +215,14 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         .try-text{{font-size:16px;font-weight:bold;color:#fff;}}
 
         .tiny-reload{{
-            position:absolute;top:6px;right:0px;
-            width:21px;height:21px;background:#4d4d4d;border-radius:50%;
+            width:22px;height:22px;background:#4d4d4d;border-radius:50%;
             display:flex;align-items:center;justify-content:center;cursor:pointer;
-            font-size:12px;color:#fff;transition:transform .2s;z-index:10;
+            font-size:12px;color:#fff;transition:transform .2s;
         }}
         .tiny-reload:hover{{transform:rotate(90deg) scale(1.05);}}
         </style>
     """, height=height)
+
 
 
 
