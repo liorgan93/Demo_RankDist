@@ -6,10 +6,12 @@ from classsification_functions import sample_unique_tracks_per_cluster
 from other_functions import set_background
 from other_functions import render_progress_bar
 
+
 def button_click_problem():
     st.session_state.page = "user_classification_intro"
     del st.session_state.song_feedback
     del st.session_state.current_song_index
+
 
 def user_classification_page():
     st.set_page_config(page_title="RankDist Demo")
@@ -153,12 +155,11 @@ def user_classification_page():
                 <div style="text-align: left; font-size: 12px; padding-left: 10px;">{progress} {completed_steps}/{total_steps}</div>
                 <div class="song-title">{song_title}</div>
                 <div class="song-artist">{song_artist}</div>
-                
+
             </div>
             """,
             unsafe_allow_html=True,
         )
-
 
         track_url = st.session_state.songs_df.loc[current_index, 'embed_code']
 
@@ -182,8 +183,12 @@ def user_classification_page():
             </div>
         </div>
 
-        <!-- Iframe container -->
-        <div style="width: 100%; display: flex; justify-content: center;">
+        <!-- Iframe container with small reload button -->
+        <div class="iframe-wrapper" style="position: relative; width: 100%; display: flex; justify-content: center; overflow: visible;">
+            <!-- SMALL RELOAD BUTTON (⟳) -->
+            <div class="tiny-reload" onclick="reloadIframe()">↻</div>
+
+            <!-- Original iframe container -->
             <div id="iframe-container" style="display: none; transform: scale(0.74); transform-origin: top center;"></div>
         </div>
 
@@ -287,18 +292,33 @@ def user_classification_page():
             z-index: 1;
         }}
 
-
-        .top-left {{
-            top: 12px;
-            left: 12px;
+        /* ---------- TINY RELOAD BUTTON STYLE ---------- */
+        .tiny-reload {{
+            position: absolute;
+            top: 4px;       
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            background-color: #4d4d4d;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            transition: transform 0.2s;
+            z-index: 10;
         }}
 
-        .bottom-right {{
-            bottom: 12px;
-            right: 12px;
+        .tiny-reload:hover {{
+            transform: rotate(90deg) scale(1.05);
         }}
         </style>
         """, height=265)
+
+        # -------------------------  end Spotify embed  -------------------------
 
         problem_msg = """
         <div style="display: flex; justify-content: center; align-items: center; min-height: 200px; flex-direction: column;">
@@ -338,7 +358,6 @@ def user_classification_page():
                             return
                     st.session_state.page = "persona_reveal"
 
-
         def handle_dislike():
             if not st.session_state.button_clicked:
                 st.session_state.button_clicked = True
@@ -363,5 +382,4 @@ def user_classification_page():
             st.button("👍", key="like", on_click=handle_like)
     else:
         st.session_state.page = "persona_reveal"
-
 

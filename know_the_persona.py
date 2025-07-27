@@ -147,136 +147,153 @@ def know_the_persona_page():
             embed_url = track_url
 
         st.components.v1.html(f"""
-        <!-- Loader -->
-        <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 265px;">
-            <div class="spinner"></div>
-        </div>
+         <!-- Loader -->
+         <div id="loader" style="display: flex; justify-content: center; align-items: center; height: 265px;">
+             <div class="spinner"></div>
+         </div>
 
-        <!-- Error Message and Retry Button -->
-        <div id="error-msg" style="display: none; height: 265px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
-        <p style="margin:10px; font-size:20px; font-weight:600; color:#fff; font-family:Arial, sans-serif;"> Oops! The song failed to load </p>
-            <div onclick="reloadIframe()" class="try-again-button">
-                <div class="try-text">TRY AGAIN ⟳</div>
-            </div>
-        </div>
+         <!-- Error Message and Retry Button -->
+         <div id="error-msg" style="display: none; height: 265px; background: linear-gradient(145deg, #000000, #1a1a1a); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px; gap: 10px;">
+         <p style="margin:10px; font-size:20px; font-weight:600; color:#fff; font-family:Arial, sans-serif;"> Oops! The song failed to load </p>
+             <div onclick="reloadIframe()" class="try-again-button">
+                 <div class="try-text">TRY AGAIN ⟳</div>
+             </div>
+         </div>
 
-        <!-- Iframe container -->
-        <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container" style="display: none; transform: scale(0.74); transform-origin: top center;"></div>
-        </div>
+         <!-- Iframe container with small reload button -->
+         <div class="iframe-wrapper" style="position: relative; width: 100%; display: flex; justify-content: center; overflow: visible;">
+             <!-- SMALL RELOAD BUTTON (⟳) -->
+             <div class="tiny-reload" onclick="reloadIframe()">↻</div>
 
-        <!-- Logic -->
-        <script>
-        let iframeLoaded = false;
-        let gaveUp = false;
+             <!-- Original iframe container -->
+             <div id="iframe-container" style="display: none; transform: scale(0.74); transform-origin: top center;"></div>
+         </div>
 
-        function createIframe() {{
-            iframeLoaded = false;
-            gaveUp = false;
+         <!-- Logic -->
+         <script>
+         let iframeLoaded = false;
+         let gaveUp = false;
 
-            const iframeContainer = document.getElementById("iframe-container");
-            iframeContainer.innerHTML = "";
+         function createIframe() {{
+             iframeLoaded = false;
+             gaveUp = false;
 
-            const iframe = document.createElement("iframe");
-            iframe.src = "{embed_url}";
-            iframe.width = "100%";
-            iframe.height = "352px";
-            iframe.style.borderRadius = "30px";
-            iframe.style.marginBottom = "0px";
-            iframe.frameBorder = "0";
-            iframe.allowFullscreen = true;
-            iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+             const iframeContainer = document.getElementById("iframe-container");
+             iframeContainer.innerHTML = "";
 
-            iframe.onload = function() {{
-                iframeLoaded = true;
-                if (!gaveUp) {{
-                    document.getElementById("loader").style.display = "none";
-                    document.getElementById("iframe-container").style.display = "block";
-                    document.getElementById("error-msg").style.display = "none";
-                }}
-            }};
+             const iframe = document.createElement("iframe");
+             iframe.src = "{embed_url}";
+             iframe.width = "100%";
+             iframe.height = "352px";
+             iframe.style.borderRadius = "30px";
+             iframe.style.marginBottom = "0px";
+             iframe.frameBorder = "0";
+             iframe.allowFullscreen = true;
+             iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
 
-            iframeContainer.appendChild(iframe);
+             iframe.onload = function() {{
+                 iframeLoaded = true;
+                 if (!gaveUp) {{
+                     document.getElementById("loader").style.display = "none";
+                     document.getElementById("iframe-container").style.display = "block";
+                     document.getElementById("error-msg").style.display = "none";
+                 }}
+             }};
 
-            setTimeout(function() {{
-                if (!iframeLoaded) {{
-                    gaveUp = true;
-                    document.getElementById("loader").style.display = "none";
-                    document.getElementById("iframe-container").style.display = "none";
-                    document.getElementById("error-msg").style.display = "flex";
-                }}
-            }}, 4000);
-        }}
+             iframeContainer.appendChild(iframe);
 
-        function reloadIframe() {{
-            document.getElementById("loader").style.display = "flex";
-            document.getElementById("error-msg").style.display = "none";
-            document.getElementById("iframe-container").style.display = "none";
-            createIframe();
-        }}
+             setTimeout(function() {{
+                 if (!iframeLoaded) {{
+                     gaveUp = true;
+                     document.getElementById("loader").style.display = "none";
+                     document.getElementById("iframe-container").style.display = "none";
+                     document.getElementById("error-msg").style.display = "flex";
+                 }}
+             }}, 4000);
+         }}
 
-        window.addEventListener("DOMContentLoaded", function() {{
-            createIframe();
-        }});
-        </script>
+         function reloadIframe() {{
+             document.getElementById("loader").style.display = "flex";
+             document.getElementById("error-msg").style.display = "none";
+             document.getElementById("iframe-container").style.display = "none";
+             createIframe();
+         }}
 
-        <!-- Styles -->
-        <style>
-        .spinner {{
-          border: 9px solid rgba(0, 0, 0, 0.1);
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          border-left-color: #d6d6cb;
-          background:rgba(0,0,0,0.40);
-          animation: spin 1s linear infinite;
-          margin: auto;
-        }}
+         window.addEventListener("DOMContentLoaded", function() {{
+             createIframe();
+         }});
+         </script>
 
-        @keyframes spin {{
-          to {{ transform: rotate(360deg); }}
-        }}
+         <!-- Styles -->
+         <style>
+         .spinner {{
+           border: 9px solid rgba(0, 0, 0, 0.1);
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           border-left-color: #d6d6cb;
+           background:rgba(0,0,0,0.40);
+           animation: spin 1s linear infinite;
+           margin: auto;
+         }}
 
-        .try-again-button {{
-            position: relative;
-            width: 150px;
-            height: 150px;
-            background-color: #4d4d4d;
-            border-radius: 50%;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: sans-serif;
-            user-select: none;
-            transition: transform 0.2s;
-        }}
+         @keyframes spin {{
+           to {{ transform: rotate(360deg); }}
+         }}
 
-        .try-again-button:hover {{
-            transform: scale(1.05);
-        }}
+         .try-again-button {{
+             position: relative;
+             width: 150px;
+             height: 150px;
+             background-color: #4d4d4d;
+             border-radius: 50%;
+             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+             cursor: pointer;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-family: sans-serif;
+             user-select: none;
+             transition: transform 0.2s;
+         }}
 
-        .try-text {{
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            z-index: 1;
-        }}
+         .try-again-button:hover {{
+             transform: scale(1.05);
+         }}
 
+         .try-text {{
+             font-size: 18px;
+             font-weight: bold;
+             color: white;
+             text-align: center;
+             z-index: 1;
+         }}
 
-        .top-left {{
-            top: 12px;
-            left: 12px;
-        }}
+         /* ---------- TINY RELOAD BUTTON STYLE ---------- */
+         .tiny-reload {{
+             position: absolute;
+             top: 4px;       
+             right: 12px;
+             width: 36px;
+             height: 36px;
+             background-color: #4d4d4d;
+             border-radius: 50%;
+             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             cursor: pointer;
+             font-size: 20px;
+             color: white;
+             transition: transform 0.2s;
+             z-index: 10;
+         }}
 
-        .bottom-right {{
-            bottom: 12px;
-            right: 12px;
-        }}
-        </style>
-        """, height=265)
+         .tiny-reload:hover {{
+             transform: rotate(90deg) scale(1.05);
+         }}
+         </style>
+         """, height=265)
 
         def handle_know_song():
             st.session_state.song_index += 1

@@ -135,124 +135,96 @@ def get_base64_encoded_file(image_path):
 
 
 # Embeds a Spotify song in an iframe with a loader.
-def render_song(embed_url: str, idx: int, height=85):
+def render_song(embed_url: str, idx: int, height: int = 85):
     st.components.v1.html(f"""
         <!-- Loader -->
-        <div id="loader{idx}" style="display: flex; justify-content: center; align-items: center; height: {height}px;">
+        <div id="loader{idx}" style="display:flex;justify-content:center;align-items:center;height:{height}px;">
             <div class="spinner"></div>
         </div>
 
-        <!-- Error Message and Retry Button -->
-        <div id="error-msg{idx}" style="display: none; height: {height}px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 0px; gap: 5px;">
-            <p style="margin:10px; font-size:14px; font-weight:600; color:#fff; font-family:Arial, sans-serif;">Oops! The song failed to load</p>
-            <div onclick="reloadIframe{idx}()" class="try-again-button">
-                <div class="try-text">⟳</div>
-            </div>
+        <!-- Error message + retry -->
+        <div id="error-msg{idx}" style="display:none;height:{height}px;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;">
+            <p style="margin:10px;font-size:14px;font-weight:600;color:#fff;font-family:Arial,sans-serif;">Oops! The song failed to load</p>
+            <div onclick="reloadIframe{idx}()" class="try-again-button"><div class="try-text">⟳</div></div>
         </div>
 
-        <!-- Iframe container -->
-        <div style="width: 100%; display: flex; justify-content: center;">
-            <div id="iframe-container{idx}" style="display: none; transform-origin: top center;"></div>
+        <!-- Iframe wrapper -->
+        <div style="position:relative;width:100%;display:flex;justify-content:center;">
+            <div id="tiny-reload{idx}" class="tiny-reload" style="display:none;" onclick="reloadIframe{idx}()">↻</div>
+            <div id="iframe-container{idx}" style="display:none;"></div>
         </div>
 
-        <!-- Logic -->
         <script>
-        let iframeLoaded{idx} = false;
-        let gaveUp{idx} = false;
+        let iframeLoaded{idx}=false, gaveUp{idx}=false;
 
-        function createIframe{idx}() {{
-            iframeLoaded{idx} = false;
-            gaveUp{idx} = false;
-
-            const iframeContainer = document.getElementById("iframe-container{idx}");
-            iframeContainer.innerHTML = "";
-
-            const iframe = document.createElement("iframe");
-            iframe.src = "{embed_url}";
-            iframe.width = "100%";
-            iframe.height = "85";
-            iframe.style.marginBottom = "0px";
-            iframe.frameBorder = "0";
-            iframe.allowFullscreen = true;
-            iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-
-            iframe.onload = function() {{
-                iframeLoaded{idx} = true;
-                if (!gaveUp{idx}) {{
-                    document.getElementById("loader{idx}").style.display = "none";
-                    document.getElementById("iframe-container{idx}").style.display = "block";
-                    document.getElementById("error-msg{idx}").style.display = "none";
+        function createIframe{idx}(){{
+            iframeLoaded{idx}=false; gaveUp{idx}=false;
+            const c=document.getElementById("iframe-container{idx}");
+            c.innerHTML="";
+            const f=document.createElement("iframe");
+            f.src="{embed_url}";
+            f.width="100%"; f.height="{height}";
+            f.frameBorder="0";
+            f.allowFullscreen=true;
+            f.allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+            f.onload=function(){{
+                iframeLoaded{idx}=true;
+                if(!gaveUp{idx}){{
+                    document.getElementById("loader{idx}").style.display="none";
+                    c.style.display="block";
+                    document.getElementById("error-msg{idx}").style.display="none";
+                    document.getElementById("tiny-reload{idx}").style.display="flex";
                 }}
             }};
-
-            iframeContainer.appendChild(iframe);
-
-            setTimeout(function() {{
-                if (!iframeLoaded{idx}) {{
-                    gaveUp{idx} = true;
-                    document.getElementById("loader{idx}").style.display = "none";
-                    document.getElementById("iframe-container{idx}").style.display = "none";
-                    document.getElementById("error-msg{idx}").style.display = "flex";
+            c.appendChild(f);
+            setTimeout(function(){{
+                if(!iframeLoaded{idx}){{
+                    gaveUp{idx}=true;
+                    document.getElementById("loader{idx}").style.display="none";
+                    c.style.display="none";
+                    document.getElementById("error-msg{idx}").style.display="flex";
+                    document.getElementById("tiny-reload{idx}").style.display="none";
                 }}
-            }}, 4000);
+            }},4000);
         }}
 
-        function reloadIframe{idx}() {{
-            document.getElementById("loader{idx}").style.display = "flex";
-            document.getElementById("error-msg{idx}").style.display = "none";
-            document.getElementById("iframe-container{idx}").style.display = "none";
+        function reloadIframe{idx}(){{
+            document.getElementById("loader{idx}").style.display="flex";
+            document.getElementById("error-msg{idx}").style.display="none";
+            document.getElementById("iframe-container{idx}").style.display="none";
+            document.getElementById("tiny-reload{idx}").style.display="none";
             createIframe{idx}();
         }}
 
-        window.addEventListener("DOMContentLoaded", function() {{
-            createIframe{idx}();
-        }});
+        window.addEventListener("DOMContentLoaded",createIframe{idx});
         </script>
 
-        <!-- Styles -->
         <style>
-        .spinner {{
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            border-left-color: #1DB954;
-            animation: spin 1s linear infinite;
-            margin: auto;
+        .spinner{{
+            border:4px solid rgba(0,0,0,0.1);
+            width:24px;height:24px;border-radius:50%;
+            border-left-color:#1DB954;animation:spin 1s linear infinite;
         }}
+        @keyframes spin{{to{{transform:rotate(360deg);}}}}
 
-        @keyframes spin {{
-            to {{ transform: rotate(360deg); }}
+        .try-again-button{{
+            width:30px;height:30px;background:#4d4d4d;border-radius:50%;
+            display:flex;align-items:center;justify-content:center;cursor:pointer;
+            transition:transform .2s;
         }}
+        .try-again-button:hover{{transform:scale(1.05);}}
+        .try-text{{font-size:16px;font-weight:bold;color:#fff;}}
 
-        .try-again-button {{
-            position: relative;
-            width: 30px;
-            height: 30px;
-            background-color: #4d4d4d;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: sans-serif;
-            user-select: none;
-            transition: transform 0.2s;
+        .tiny-reload{{
+            position:absolute;top:6px;left:6px;
+            width:24px;height:24px;background:#4d4d4d;border-radius:50%;
+            display:flex;align-items:center;justify-content:center;cursor:pointer;
+            font-size:14px;color:#fff;transition:transform .2s;z-index:10;
         }}
-
-        .try-again-button:hover {{
-            transform: scale(1.05);
-        }}
-
-        .try-text {{
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            z-index: 1;
-        }}
+        .tiny-reload:hover{{transform:rotate(90deg) scale(1.05);}}
         </style>
     """, height=height)
+
 
 
 def read_random_subtable(file_path):
