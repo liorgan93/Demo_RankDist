@@ -147,9 +147,9 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         </div>
 
         <div style="position:relative;width:100%;display:flex;justify-content:center;">
-            <div style="width:100%;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;">
-                <div id="iframe-container{idx}" style="display:none;flex-grow:1;"></div>
+            <div style="width:100%;display:flex;justify-content:space-between;align-items:center;">
                 <div id="tiny-reload{idx}" class="tiny-reload" style="display:none;" onclick="reloadIframe{idx}()">↻</div>
+                <div id="iframe-container{idx}" style="display:none;flex-grow:1;"></div>
             </div>
         </div>
 
@@ -215,7 +215,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         .try-text{{font-size:16px;font-weight:bold;color:#fff;}}
 
         .tiny-reload{{
-            width:18px;height:18px;
+            width:22px;height:22px;
             background:#4d4d4d;
             border-radius:50%;
             display:flex;
@@ -232,6 +232,7 @@ def render_song(embed_url: str, idx: int, height: int = 85):
         .tiny-reload:hover{{transform:rotate(90deg) scale(1.05);}}
         </style>
     """, height=height)
+
 
 
 
