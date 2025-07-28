@@ -13,8 +13,7 @@ def thank_you_page():
 
 
     set_background("other images/thank_you background.webp")
-    file_path = "A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf"
-    encoded_file = get_base64_encoded_file(file_path)
+
 
     # Custom CSS for visual styling
     st.markdown(
@@ -55,20 +54,20 @@ def thank_you_page():
                 padding: 3px 0px;
             }
 
-            .download-button a {
+            .link-button a {
                 display: inline-block;
                 text-decoration: none;
                 background-color: black;
                 color: white;
-                padding: 14px 30px;
+                padding: 12px 26px;
                 border-radius: 30px;
-                font-size: 17px;
+                font-size: 16px;
                 font-weight: 600;
                 transition: background-color 0.3s ease, transform 0.2s ease;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             }
 
-            .download-button a:hover {
+            .link-button a:hover {
                 transform: scale(1.05);
             }
             .logo-img {
@@ -91,10 +90,12 @@ def thank_you_page():
         </div>
         <div class="thank-you-message">
             we hope you enjoyed the demo! </br>
-            Curious about the RankDist algorithm? Feel free to download the paper below!
+            Curious about the RankDist algorithm? Check out the link below!
         </div>
-        <div class="download-button">
-            <a href="data:application/pdf;base64,{encoded_file}" download="A Rank-Based Approach to Recommender System's Top-K Queries with Uncertain Scores (Technical Report).pdf">Download paper (PDF)</a>
+        <div class="link-button">
+            <a href="https://dl.acm.org/doi/abs/10.1145/3709655" target="_blank" rel="noopener">
+                Click to read more 🔗
+            </a>
         </div>
     </div>""", unsafe_allow_html=True)
 
