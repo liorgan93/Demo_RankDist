@@ -3,7 +3,7 @@ import pandas as pd
 import ast
 from other_functions import set_background
 from other_functions import render_progress_bar
-from classsification_functions import classify_user_by_preferences
+from classification_functions import classify_user_by_preferences
 from other_functions import get_base64_encoded_file
 
 

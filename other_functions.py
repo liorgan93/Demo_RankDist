@@ -138,7 +138,7 @@ def get_base64_encoded_file(image_path):
 
 
 # Embeds a Spotify song in an iframe with a loader.
-def render_song(embed_url: str, idx: int, height: int = 85):
+def render_song(embed_url: str, idx: int, height: int = 85) -> object:
     st.components.v1.html(f"""
         <div id="loader{idx}" style="display:flex;justify-content:center;align-items:center;height:{height}px;">
             <div class="spinner"></div>

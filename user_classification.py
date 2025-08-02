@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import ast
 from collections import Counter
-from classsification_functions import sample_unique_tracks_per_cluster
+from classification_functions import sample_unique_tracks_per_cluster
 from other_functions import set_background
 from other_functions import render_progress_bar
 
